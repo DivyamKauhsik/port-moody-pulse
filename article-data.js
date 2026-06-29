@@ -1,119 +1,117 @@
 // articles-data.js
-// Shared story content for Port Moody Pulse. Loaded by article.html via
-// a <script> tag, so both pages read from one source of truth.
-//
-// IMPORTANT: this is sample/placeholder copy written to demonstrate the
-// site's layout. Replace the "body" arrays with your own verified
-// reporting before this site goes live — do not publish this placeholder
-// text as if it were real news.
+// Story content for Port Moody Pulse, sourced from the City of Port Moody's
+// official website and local reporting (Tri-Cities Dispatch, Freshet News,
+// The Tyee, Daily Hive) as of late June 2026. Facts have been verified
+// against these sources, but always confirm event dates and times with the
+// organizer before attending — schedules can change after publication.
 
 window.PMP_ARTICLES = {
 
   inlet: {
     tag: "Housing · Inlet District",
-    title: "Wesgroup pitches taller towers for the Inlet District",
-    meta: "By the newsroom · 2 hours ago · 4 min read",
+    title: "Construction begins on Port Moody's biggest-ever development",
+    meta: "By the newsroom · Construction update · 4 min read",
     body: [
-      "A new application would raise building heights to 36 storeys and add roughly 561 homes near Ioco Road and Barnet Highway. The proposal is likely to become one of the most closely watched development conversations in Port Moody, because the Inlet District sits at the intersection of housing demand, traffic concerns, transit access, and neighbourhood change.",
-      "Supporters of the proposal are likely to point to the need for more housing close to major routes and services. With Metro Vancouver communities under pressure to add supply, projects near transit and established commercial areas tend to receive serious attention from planners and council alike.",
-      "Concerns are expected to focus on tower height, road capacity, public amenities, and how new residents will be supported by parks, schools, sidewalks, and community spaces. A community meeting on July 8 gives residents a chance to ask questions, review the details, and push for clarity on what the city receives in exchange for the added density.",
-      "What to watch next: whether the applicant adjusts the design after public feedback, how council frames the trade-off between housing and neighbourhood scale, and whether transportation and public-realm improvements become part of the final package."
-    ]
-  },
-
-  tax: {
-    tag: "City Hall",
-    title: "Council passes 3.95% tax increase, pauses the climate levy",
-    meta: "By the newsroom · Yesterday · 3 min read",
-    body: [
-      "Port Moody council has approved a 3.95% property tax increase for the year while pausing the dedicated climate levy. The decision reflects a familiar municipal balancing act: keeping tax increases manageable while still funding core services and infrastructure.",
-      "For residents, the headline issue is affordability. Even a modest percentage increase matters when households are already managing higher costs elsewhere — housing, groceries, insurance, and utilities among them. Council's approach tries to keep this year's increase relatively contained without cutting core services.",
-      "The pause on the climate levy may draw mixed reactions. Some residents will see it as a practical step in a financially tight year; others may worry that delaying dedicated climate funding makes future projects harder or pricier to deliver. The bigger question is how the city funds long-term climate resilience without leaning too hard on any single budget year.",
-      "What to watch next: budget updates later in the year, whether the climate levy returns in a future cycle, and how the city communicates the relationship between taxes, infrastructure, and long-term planning."
-    ]
-  },
-
-  spike: {
-    tag: "What's On",
-    title: "Golden Spike Days returns to Rocky Point this weekend",
-    meta: "By the newsroom · Today · 2 min read",
-    body: [
-      "Golden Spike Days is back at Rocky Point Park with a weekend of local entertainment, food, music, and family programming — one of the clearest signs each year that summer has arrived in Port Moody.",
-      "Expect the waterfront to be busier than usual. Rocky Point is already one of the city's most visited gathering spots, and a major event can fill parking and nearby streets quickly. If you're heading down, plan ahead, arrive early, and consider walking or taking transit.",
-      "The event is also a chance to support local vendors, performers, and community groups who put the weekend together. Beyond the schedule itself, the real draw is the setting — inlet views, park space, food trucks, music, and a steady flow of neighbours.",
-      "What to watch next: weather updates, any schedule changes, and transportation notices around Murray Street and Rocky Point Park."
-    ]
-  },
-
-  overpass: {
-    tag: "City Hall",
-    title: "City overrides staff to fund the $2.8M Barnet overpass widening",
-    meta: "By the newsroom · 2 days ago · 5 min read",
-    body: [
-      "Council has voted to fund a $2.8 million widening of the Barnet Highway overpass, a project that staff had initially recommended holding off on. The decision puts the project ahead of some other items in this year's capital plan.",
-      "The case for moving now centres on traffic flow: as the Inlet District and surrounding areas continue to add housing, the overpass is one of the few connectors handling growing volumes of cars, cyclists, and pedestrians. Supporters argue that waiting risks a worse bottleneck later, at a higher cost.",
-      "Staff's original caution was about sequencing and budget — there are always more worthy projects than dollars in a given year, and overriding a staff recommendation is not something council does often. Residents who attended the meeting raised questions about what gets pushed down the list as a result.",
-      "What to watch next: the construction timeline once finalized, any detours or lane closures during the work, and which other capital projects may be delayed to make room in the budget."
-    ]
-  },
-
-  mexicano: {
-    tag: "Good News",
-    title: "Originals Mexicano earns Mexico's official \"Sello M\" seal",
-    meta: "By the newsroom · 3 days ago · 2 min read",
-    body: [
-      "Local favourite Originals Mexicano has been awarded Mexico's official \"Sello M\" certification — a seal recognizing restaurants abroad that authentically represent Mexican cuisine and culture. It's a meaningful nod for a Port Moody business, and a point of pride for the neighbourhood.",
-      "The certification process is notoriously thorough, looking at everything from ingredient sourcing to technique to the overall dining experience. For a small local restaurant to earn it means real, sustained craft — not a one-off good night in the kitchen.",
-      "For regulars, it's a reason to swing by and celebrate; for newcomers, it's as good a reason as any to finally try the menu. Either way, it's the kind of quietly excellent local story that's easy to miss without someone shining a light on it.",
-      "What to watch next: any specials or events the restaurant runs to mark the recognition, and whether the seal brings new visibility beyond Port Moody."
+      "Construction is now visibly underway on Inlet District, Wesgroup Properties' 14.8-acre master-planned community at the corner of Ioco Road and Barnet Highway — the largest redevelopment project in Port Moody's history. The first tower, a 27-storey building called 1 Market Square, broke ground after roughly 50 aging single-family homes on the site were cleared, with several relocated to remote communities rather than demolished.",
+      "When that first tower is complete around 2029, it will add 299 homes ranging from studios to three-bedroom units, along with a new grocery store and daycare. The full build-out, expected to take about 25 years, calls for six residential towers as tall as 31 storeys plus several low-rise buildings — roughly 2,500 new homes housing an eventual 5,500 residents.",
+      "The development agreement between the city and Wesgroup includes more than $137 million in community contributions: a new park of roughly 2.5 acres, a pedestrian overpass connecting the site across Ioco Road to Inlet Centre SkyTrain station, and a rental building reserving at least 10 percent of its units for seniors. The neighbourhood is being designed with no surface roads — all vehicle access and parking will be underground.",
+      "What to watch next: ongoing roadwork and detours around Guildford Drive and Ioco Road as construction continues through 2026, and how the first residents settle in once the tower opens in 2029."
     ]
   },
 
   towers: {
     tag: "Housing",
-    title: "Moody Centre tower heights spark debate as the city eyes 74,000 residents",
-    meta: "By the newsroom · Today · 6 min read",
+    title: "Port Moody adopts its 2050 plan as towers rise at Moody Centre",
+    meta: "By the newsroom · 6 days ago · 5 min read",
     body: [
-      "How tall is too tall? That's the question at the centre of an Official Community Plan debate playing out around the Moody Centre SkyTrain lands, as the city plans for a population target of roughly 74,000 residents in the decades ahead.",
-      "The SkyTrain-adjacent land is exactly the kind of site planners point to when they talk about smart growth — dense housing near rapid transit, reducing car dependence. The disagreement isn't really about whether to build near the station; it's about how tall, how fast, and how much the surrounding neighbourhood should be expected to absorb at once.",
-      "Residents on different sides of the debate are, in a sense, arguing about the same thing from opposite directions: what kind of city Port Moody becomes. Some worry that taller towers erode the small-town character that drew them here. Others worry that resisting density just pushes the housing crisis onto someone else's neighbourhood, or onto future residents who'll never get the chance to live here at all.",
-      "What to watch next: upcoming public input sessions on the OCP update, how council balances the competing visions, and whether a compromise on height and design emerges before key votes."
+      "Council has formally adopted Port Moody 2050, the city's new Official Community Plan — the document that will guide decisions on housing, transportation and growth for the next 25 years. The adoption lands the same week the city's most ambitious towers yet are taking shape near the Moody Centre SkyTrain station.",
+      "Council recently approved the tallest buildings in Port Moody's history at Moody Centre: towers reaching 39 storeys with a combined 865 homes, only a small share of them below-market rentals. A resident survey commissioned to gauge reaction found a majority — 57 percent of respondents — disagreed with the vision for the neighbourhood, a sign of how divided opinion remains on the pace of change.",
+      "It's a tension playing out across the region: SkyTrain-adjacent land like this is exactly where planners want density to reduce car dependence, but for residents who chose Port Moody for its smaller-town feel, it also means a fast-changing skyline. With a municipal election ahead this fall, growth has become one of the city's most contested local issues.",
+      "What to watch next: how council weighs further Moody Centre applications against the newly adopted OCP, and whether the debate over height and pace shapes this year's election."
+    ]
+  },
+
+  tax: {
+    tag: "City Hall",
+    title: "Council locks in a 3.95% tax increase for 2026",
+    meta: "By the newsroom · This spring · 3 min read",
+    body: [
+      "Port Moody council has unanimously approved the city's 2026 budget, setting a 3.95 percent property tax increase — the lowest council has approved this term. For the average household, assessed around $1.22 million, that works out to about $121 more a year, roughly $2.35 a week.",
+      "Coun. Callan Morrison called it a \"tough balance,\" describing it as one of the hardest budget years council has faced while trying to keep the rate manageable for residents. The approved plan includes a $27 million capital budget for 2026 and more than $92 million in infrastructure projects over five years, with sewer, water and road work among the largest line items.",
+      "Council also paused the planned one percent increase to the Climate Action Levy for 2026, though the levy itself stays part of the longer-term financial plan. Some councillors flagged the trade-off directly, warning that deferring climate and asset-renewal funding now could mean steeper costs later.",
+      "What to watch next: whether the climate levy increase returns in next year's budget cycle, and how the $27 million capital program rolls out through the rest of 2026."
+    ]
+  },
+
+  spike: {
+    tag: "What's On",
+    title: "Golden Spike Days wraps its 49th year at Rocky Point",
+    meta: "By the newsroom · This weekend · 3 min read",
+    body: [
+      "Port Moody's biggest summer tradition just wrapped its 49th year. Golden Spike Days filled Rocky Point Park for two days, June 27 and 28, drawing an estimated 40,000 visitors over the weekend — making it one of the most-attended events anywhere in the Tri-Cities.",
+      "JUNO winner Nick Gilder and the Sweeney Todd Group headlined Saturday night, alongside the festival's long-running Can-Can Dancers and a beer garden pouring from local breweries including Twin Sails, Parkside and Yellow Dog. Admission, as always, was by donation, with proceeds going straight back into funding next year's event.",
+      "The festival is entirely volunteer-run by the Port Moody Golden Spike Days Society, which starts planning every September for the following summer. Amid the music and food trucks, it's worth remembering the event commemorates the 1880s arrival of the Canadian Pacific Railway in Port Moody — once the line's western terminus — held on the traditional, ancestral and unceded territory of the kʷikʷəƛ̓əm (Kwikwetlem) First Nation.",
+      "What to watch next: Port Moody's Canada Day celebrations move to Rocky Point Park on Wednesday, July 1, picking up right where Golden Spike Days left off."
+    ]
+  },
+
+  overpass: {
+    tag: "City Hall",
+    title: "Council approves $2.8M Barnet overpass widening",
+    meta: "By the newsroom · 2 weeks ago · 4 min read",
+    body: [
+      "Council has signed off on a $2.8 million plan to widen the eastbound Barnet Highway overpass near Ioco Road — one of the city's most persistent traffic bottlenecks — and to open the new space to vehicles right away.",
+      "The June 16 decision passed over a staff-recommended phased approach, which would have cost more (about $7.2 million) and initially used the extra width for a protected walking and cycling path rather than a traffic lane. Mayor Meghan Lahti argued the immediate option better matched what residents have been asking for. \"Traffic congestion is one of the top concerns for our residents,\" she said.",
+      "Staff had warned that opening a new lane right away risks drawing more regional through-traffic over time — a pattern known as latent demand. Other councillors backed the faster option anyway, pointing to the relatively modest cost for a fix residents have wanted for years, while noting cyclists and pedestrians will still need safe accommodation on the corridor's north side.",
+      "What to watch next: the construction timeline, which is expected to be coordinated with already-planned seismic upgrades to the same overpass."
+    ]
+  },
+
+  mexicano: {
+    tag: "Good News",
+    title: "Port Moody restaurant earns Mexico's top culinary honour",
+    meta: "By the newsroom · About a month ago · 3 min read",
+    body: [
+      "On the porch of a converted heritage house on Clarke Street, Original's Mexicano head chef Esteban Cuevas received one of the highest honours Mexico bestows outside its own borders: the Sello M, a seal of culinary authenticity, presented at a ceremony attended by Mexico's consul general in Vancouver.",
+      "The award, issued by the Academia Mexicana de Gastronomía with backing from Mexico's foreign ministry, made Original's one of only six restaurants across B.C., Yukon and the Northwest Territories to receive it in the program's first international intake — out of 22 applicants and 11 finalists.",
+      "Cuevas opened the restaurant in 2013 at just 21, originally planning a coffee shop before turning it into a full Mexican kitchen, teaching himself to cook largely through trial, error and long days at the stove. \"It's one of those things, where if you spend a lot of time and a lot of hours doing one thing, you become good,\" he said.",
+      "What to watch next: whether the recognition brings new visibility to the small restaurant beyond Port Moody, and whether more Tri-Cities businesses pursue the designation next intake."
     ]
   },
 
   trails: {
     tag: "Outdoors",
-    title: "Five quiet trails locals love when Rocky Point gets busy",
-    meta: "By the newsroom · Yesterday · 4 min read",
+    title: "Your guide to Port Moody's best trail — and where to go next",
+    meta: "By the newsroom · Trail guide · 4 min read",
     body: [
-      "Rocky Point Park is Port Moody's most-loved green space — which also means it's the first to fill up on a sunny weekend. The good news: a short drive or walk in almost any direction turns up a quieter alternative.",
-      "Shoreline Trail remains the classic choice for a reason — inlet views the whole way, and enough distance from the park that the crowds thin out fast. Further out, the backroads around Sasamat Lake offer a cooler, shadier walk for hot afternoons, and a real change of scenery from the waterfront.",
-      "Closer to home, several shorter neighbourhood routes thread through Port Moody's green spaces without ever showing up on a tourist map — the kind of trail locals tend to keep to themselves. A little exploring on foot or by bike usually turns up at least one new favourite.",
-      "What to watch next: trail condition notices after any heavy rain, and seasonal closures during nesting season on some of the quieter routes."
+      "If you only walk one trail in Port Moody, make it Shoreline Trail. The roughly 6-kilometre round trip connects Rocky Point Park to Old Orchard Park along the Burrard Inlet waterfront, drawing more than 230,000 visits a year — one of the city's most-used recreational spaces.",
+      "There's a paved, fully accessible multi-use path for walking, cycling and rolling, plus a parallel gravel path for a quieter walk, including a boardwalk section along Pigeon Cove suitable for strollers and wheeled mobility devices. Either way, plan for about two hours round trip with minimal elevation gain — an easy outing for nearly anyone.",
+      "Looking to go further afield? Buntzen Lake, a short drive north, offers a roughly 10-kilometre loop with forest, water views and a dog beach. Sasamat Lake nearby has an easier 3.1-kilometre loop around the water, with the option to extend it into a longer trek via the Woodhaven Connector.",
+      "What to watch next: parking fills up fast at Buntzen and Sasamat on summer weekends, so an early start — or sticking close to home on Shoreline Trail — is usually the easier plan."
     ]
   },
 
   concerts: {
     tag: "What's On",
-    title: "Summer Sundays free concerts return to Rocky Point Park",
-    meta: "By the newsroom · 2 days ago · 2 min read",
+    title: "Summer Sundays and RibFest headline the concert season",
+    meta: "By the newsroom · Coming up · 2 min read",
     body: [
-      "The Summer Sundays concert series is back at Rocky Point Park, bringing free weekly live music to the waterfront stage through the summer. It's become one of those low-key traditions that quietly anchors the season for a lot of Port Moody families.",
-      "The format stays simple: bring a blanket or a chair, grab something from a nearby food vendor, and let a Sunday afternoon disappear to live music with the inlet as a backdrop. It's free, it's all-ages, and it asks nothing of you beyond showing up.",
-      "This year's line-up leans into a mix of local and touring acts, with a couple of genuinely surprising bookings for a small-town summer series. Even regulars who've been coming for years say there's usually at least one act worth telling a friend about.",
-      "What to watch next: the full schedule as later dates are confirmed, and any changes due to weather."
+      "Port Moody's free Summer Sundays concert series kicks off at Rocky Point Park on Sunday, July 5, with live bands taking the waterfront stage at 2 p.m. most Sundays through the summer.",
+      "The series leads into Port Moody RibFest, running July 17 to 19, also at Rocky Point — a Rotary Club-hosted weekend of barbecue competitions, craft breweries and live music that's become one of the city's biggest summer draws.",
+      "Council has also moved to support live music indoors, recently approving $2,700 a year from the city's Arts Reserve to back the Inlet Theatre Music Series — a smaller but steady addition to Port Moody's arts calendar.",
+      "What to watch next: the full Summer Sundays lineup, expected to run through late August, with confirmed acts posted as each Sunday approaches."
     ]
   },
 
   volunteers: {
     tag: "Good News",
-    title: "The volunteers quietly keeping Shoreline Trail beautiful",
-    meta: "By the newsroom · 3 days ago · 3 min read",
+    title: "Port Moody honours two of its own along the Shoreline Trail",
+    meta: "By the newsroom · Earlier this month · 3 min read",
     body: [
-      "Most people who walk Shoreline Trail on a Saturday morning have no idea that a small group of volunteers was out hours earlier — clearing debris, picking up litter, and doing the unglamorous upkeep that keeps the trail looking the way everyone assumes it just naturally does.",
-      "There's no funding announcement here, no ribbon-cutting. Just a handful of residents who decided the trail they love deserved a bit of regular care, and who've kept showing up long after the novelty would normally wear off.",
-      "It's a small story next to council votes and big developments, but it's the kind of thing that actually shapes day-to-day quality of life in a place — the stretch of inlet path that's just a little nicer because a few neighbours decided it should be.",
-      "What to watch next: whether the informal group grows, and whether the city finds a way to formally support what's currently a volunteer-only effort."
+      "This month, Port Moody dedicated two of its best-loved waterfront landmarks to the people who helped build them. The Shoreline Trail boardwalk now carries the name of Ann Hulbert, a city councillor for 21 years and a steady voice for environmental initiatives, who passed away in 2025 and was instrumental in planning the original boardwalk.",
+      "The Shoreline Trail itself was dedicated to David Driscoll, who served four terms as Port Moody's mayor and played a foundational role in creating the trail, helping establish it as one of the city's most important recreational and environmental corridors.",
+      "Both received the city's Freedom of the City honour, reserved for residents who have made an exceptional, lasting contribution to Port Moody. For a trail that sees roughly 230,000 visits a year, it's a quiet but fitting way to remember the people behind it.",
+      "What to watch next: details on a planned recognition event, and the trail's continuing upgrades — recent work has included repaving, drainage improvements and a refreshed boardwalk."
     ]
   }
 
