@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Port Moody Pulse</title>
+<meta name="description" content="Local news from Port Moody, B.C.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231A6E6B'/%3E%3Cstop offset='1' stop-color='%230A3537'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='50' fill='url(%23g)'/%3E%3Ccircle cx='50' cy='36.6' r='3.2' fill='%23E0A23C'/%3E%3Cpath d='M28.2 54.5 L37.2 54.5 L39.8 54.5 L42 47 L44.4 61.2 L46.6 54.5 Q50.3 46.8 54 54.5 Q57.7 62.2 61.4 54.5 Q65.1 47 68.8 54.5 L71.8 54.5' fill='none' stroke='%23fff' stroke-width='5.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --inlet-900:#0A3537; --inlet:#0E4F4E; --tide:#15706E;
+    --brass:#C7903B; --brass-bright:#E0A23C; --brass-deep:#9C6E22; --brass-text:#82591A;
+    --cta-bg:#8A5D17; --cta-hover:#6E4A10;
+    --paper:#FBF7EE; --paper-2:#F4EEDF; --card:#FFFFFF;
+    --ink:#15302E; --ink-2:#3B524F; --mist:#54655F; --line:#E7E0D0; --field-border:#7C8E8A;
+    --fd:'Newsreader',Georgia,'Times New Roman',serif;
+    --fb:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:var(--fb);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 28px;}
+  .vh{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+  .skip{position:absolute;left:10px;top:-60px;background:var(--inlet);color:#fff;padding:11px 18px;border-radius:0 0 10px 10px;z-index:100;font-weight:700;font-size:15px;transition:top .15s ease;}
+  .skip:focus{top:0;}
+  :focus-visible{outline:2.5px solid var(--inlet-900);outline-offset:2px;box-shadow:0 0 0 5px rgba(224,162,60,.55);border-radius:5px;}
+
+  .util{background:var(--inlet-900);color:#B6D0CC;font-size:12.5px;}
+  .util .uwrap{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;min-height:40px;}
+
+  .mast{background:var(--paper);border-bottom:1px solid var(--line);}
+  .mast .mwrap{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:14px;min-height:78px;}
+  .brand{display:flex;align-items:center;gap:13px;}
+  .brand svg{width:42px;height:42px;flex:none;}
+  .brand .word{font-family:var(--fd);font-weight:600;font-size:25px;color:var(--inlet);letter-spacing:-.015em;}
+  .brand .word b{color:var(--brass-deep);font-weight:600;}
+  .back{margin-left:auto;font-size:14.5px;font-weight:600;color:var(--ink-2);}
+
+  main{padding:42px 0 64px;}
+  .tag{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--brass-text);margin-bottom:14px;}
+  h1{font-family:var(--fd);font-weight:600;font-size:clamp(28px,4.4vw,42px);line-height:1.12;letter-spacing:-.015em;margin-bottom:14px;}
+  .meta{font-size:13.5px;color:var(--mist);border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:26px;}
+  .art-body p{font-size:18px;line-height:1.75;color:var(--ink-2);margin-bottom:20px;max-width:64ch;}
+  .art-body p:first-of-type{font-size:19.5px;color:var(--ink);}
+
+  .notfound{padding:80px 0;text-align:center;}
+  .notfound h1{margin-bottom:10px;}
+  .notfound p{color:var(--ink-2);margin-bottom:22px;}
+  .btn{display:inline-block;font-size:14.5px;font-weight:700;color:#fff;background:var(--cta-bg);border-radius:999px;padding:12px 24px;}
+  .btn:hover{background:var(--cta-hover);text-decoration:none;}
+
+  .cta{margin-top:46px;background:linear-gradient(155deg,#15706E,#0A3537);border-radius:18px;padding:32px;color:#EAF3F1;}
+  .cta h2{font-family:var(--fd);font-weight:600;font-size:23px;color:#fff;margin-bottom:8px;}
+  .cta p{color:#DCEAE6;font-size:14.5px;margin-bottom:16px;}
+  .cta form{display:flex;gap:10px;flex-direction:column;}
+  @media(min-width:480px){.cta form{flex-direction:row;}}
+  .cta input{flex:1;font-family:var(--fb);font-size:16px;border:1.5px solid var(--field-border);border-radius:11px;padding:13px 14px;color:var(--ink);background:#fff;}
+  .cta button{font-family:var(--fb);font-weight:800;font-size:15px;color:#231a08;background:var(--brass-bright);border:none;border-radius:11px;padding:13px 22px;cursor:pointer;white-space:nowrap;}
+  .cta button:hover{background:#EDB358;}
+  .cta .msg{font-size:13.5px;font-weight:700;color:#fff;margin-top:9px;min-height:18px;}
+  .cta .msg.err{color:#ffe0d4;}
+
+  footer.site{background:var(--inlet-900);color:#A8C0BD;padding:30px 0;margin-top:50px;}
+  footer.site .fwrap{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;}
+  footer.site .tagline{font-family:var(--fd);font-style:italic;color:#B6D0CC;}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<div class="util"><div class="uwrap"><span id="dateline">Port Moody Pulse</span></div></div>
+
+<header class="mast">
+  <div class="mwrap">
+    <a class="brand" href="index.html" aria-label="Port Moody Pulse, home">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <defs><linearGradient id="artLogoGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A6E6B"/><stop offset="1" stop-color="#0A3537"/></linearGradient></defs>
+        <circle cx="50" cy="50" r="50" fill="url(#artLogoGrad)"/>
+        <circle cx="50" cy="36.6" r="3.2" fill="#E0A23C"/>
+        <path d="M28.2 54.5 L37.2 54.5 L39.8 54.5 L42 47 L44.4 61.2 L46.6 54.5 Q50.3 46.8 54 54.5 Q57.7 62.2 61.4 54.5 Q65.1 47 68.8 54.5 L71.8 54.5" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="word">Port Moody <b>Pulse</b></span>
+    </a>
+    <a class="back" href="index.html">← Back to Port Moody Pulse</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <article id="art-found" hidden>
+      <span class="tag" id="art-tag"></span>
+      <h1 id="art-title"></h1>
+      <p class="meta" id="art-meta"></p>
+      <div class="art-body" id="art-body"></div>
+
+      <div class="cta">
+        <h2>Get the pulse of Port Moody, every week.</h2>
+        <p>Free, friendly, and yours every Thursday. Join your neighbours.</p>
+        <form data-form="article" novalidate>
+          <label class="vh" for="email-art">Email address</label>
+          <input id="email-art" type="email" placeholder="you@email.com" autocomplete="email" inputmode="email">
+          <button type="button" data-subscribe="article">Subscribe free →</button>
+        </form>
+        <p class="msg" data-msg="article" role="status" aria-live="polite"></p>
+      </div>
+    </article>
+
+    <div id="art-missing" class="notfound" hidden>
+      <h1>Story not found</h1>
+      <p>This story may have moved, or the link is out of date.</p>
+      <a class="btn" href="index.html">← Back to Port Moody Pulse</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="fwrap">
+    <div>© 2026 Port Moody Pulse · An independent community newsletter.</div>
+    <div class="tagline">The heartbeat of Port Moody.</div>
+  </div>
+</footer>
+
+<script src="articles-data.js"></script>
+<script>
+  (function(){
+    var d = new Date();
+    var f = d.toLocaleDateString('en-CA',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+    var el = document.getElementById('dateline');
+    if(el) el.textContent = f + '  ·  Port Moody, B.C.';
+  })();
+
+  (function render(){
+    var params = new URLSearchParams(window.location.search);
+    var slug = params.get('slug');
+    var data = (window.PMP_ARTICLES || {})[slug];
+    var found = document.getElementById('art-found');
+    var missing = document.getElementById('art-missing');
+
+    if(!data){
+      missing.hidden = false;
+      return;
+    }
+    found.hidden = false;
+    document.title = data.title + ' — Port Moody Pulse';
+    document.getElementById('art-tag').textContent = data.tag;
+    document.getElementById('art-title').textContent = data.title;
+    document.getElementById('art-meta').textContent = data.meta;
+    var bodyEl = document.getElementById('art-body');
+    data.body.forEach(function(para){
+      var p = document.createElement('p');
+      p.textContent = para;
+      bodyEl.appendChild(p);
+    });
+  })();
+
+  // subscribe — same backend as the homepage
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  async function subscribe(which){
+    var form = document.querySelector('[data-form="'+which+'"]');
+    var input = form.querySelector('input[type="email"]');
+    var button = form.querySelector('[data-subscribe]');
+    var email = input ? input.value.trim() : '';
+    var msg = document.querySelector('[data-msg="'+which+'"]');
+
+    if(!EMAIL.test(email)){
+      if(msg){ msg.textContent = 'Please enter a valid email address.'; msg.classList.add('err'); }
+      if(input) input.focus();
+      return;
+    }
+    if(button){ button.disabled = true; button.textContent = 'Subscribing...'; }
+    if(msg){ msg.classList.remove('err'); msg.textContent = ''; }
+
+    try{
+      var response = await fetch('/api/subscribe', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ email: email })
+      });
+      var data = await response.json();
+      if(!response.ok || !data.ok) throw new Error(data.message || 'Something went wrong. Please try again.');
+      if(msg) msg.textContent = data.message || "You're on the list!";
+      if(input) input.value = '';
+    }catch(err){
+      if(msg){ msg.classList.add('err'); msg.textContent = err.message || 'Something went wrong. Please try again.'; }
+    }finally{
+      if(button){ button.disabled = false; button.textContent = 'Subscribe free →'; }
+    }
+  }
+  document.querySelectorAll('[data-subscribe]').forEach(function(b){
+    b.addEventListener('click', function(e){ e.preventDefault(); subscribe(b.getAttribute('data-subscribe')); });
+  });
+</script>
+</body>
+</html>
