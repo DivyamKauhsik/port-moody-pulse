@@ -1540,16 +1540,139 @@
     });
   });
 
-  /*
-    Subscribe form note:
-    This is currently front-end demo behaviour only.
-    To collect real subscribers, connect this form to Beehiiv, Mailchimp,
-    Substack, Kit, Formspree, or another email/newsletter service.
-  */
+ <script>
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  (function(){
+    var d = new Date();
+    var f = d.toLocaleDateString('en-CA',{
+      weekday:'long',
+      month:'long',
+      day:'numeric',
+      year:'numeric'
+    });
+
+    var el = document.getElementById('dateline');
+
+    if(el){
+      el.textContent = f + '  ·  Port Moody, B.C.';
+    }
+  })();
+
+  function goTo(sel){
+    if(!sel || sel.length < 2) return;
+
+    var t = document.querySelector(sel);
+
+    if(t){
+      t.scrollIntoView({
+        behavior: reduce ? 'auto' : 'smooth',
+        block:'start'
+      });
+    }
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href');
+
+      if(id.length > 1 && document.querySelector(id)){
+        e.preventDefault();
+        goTo(id);
+      }
+    });
+  });
+
+  document.querySelectorAll('[data-goto]').forEach(function(b){
+    b.addEventListener('click', function(){
+      goTo(b.getAttribute('data-goto'));
+    });
+  });
 
   var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  function subscribe(which){
+  async function subscribe(which){
+    var form = document.querySelector('[data-form="'+which+'"]');
+
+    if(!form) return;
+
+    var input = form.querySelector('input[type="email"]');
+    var button = form.querySelector('[data-subscribe]');
+    var email = (input && input.value ? input.value : '').trim();
+    var msg = document.querySelector('[data-msg="'+which+'"]');
+
+    if(!EMAIL.test(email)){
+      if(msg){
+        msg.textContent = 'Please enter a valid email address.';
+        msg.classList.add('err');
+      }
+
+      if(input){
+        input.setAttribute('aria-invalid','true');
+        input.focus();
+      }
+
+      return;
+    }
+
+    if(input){
+      input.removeAttribute('aria-invalid');
+    }
+
+    if(button){
+      button.disabled = true;
+      button.textContent = 'Subscribing...';
+    }
+
+    if(msg){
+      msg.classList.remove('err');
+      msg.textContent = '';
+    }
+
+    try {
+      var response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: email
+        })
+      });
+
+      var data = await response.json();
+
+      if(!response.ok || !data.ok){
+        throw new Error(data.message || 'Something went wrong. Please try again.');
+      }
+
+      if(msg){
+        msg.classList.remove('err');
+        msg.textContent = data.message || "You're on the list — watch for issue #1.";
+      }
+
+      if(input){
+        input.value = '';
+      }
+    } catch(error) {
+      if(msg){
+        msg.classList.add('err');
+        msg.textContent = error.message || 'Something went wrong. Please try again.';
+      }
+    } finally {
+      if(button){
+        button.disabled = false;
+        button.textContent = 'Subscribe free →';
+      }
+    }
+  }
+
+  document.querySelectorAll('[data-subscribe]').forEach(function(b){
+    b.addEventListener('click', function(){
+      subscribe(b.getAttribute('data-subscribe'));
+    });
+  });
+</script>
     var form = document.querySelector('[data-form="'+which+'"]');
 
     if(!form) return;
