@@ -186,6 +186,67 @@
       .foot-grid { grid-template-columns: 1fr; }
     }
   </style>
+  
+<!-- Organization + NewsMediaOrganization schema for the homepage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "NewsMediaOrganization"],
+      "@id": "https://portmoodypulse.ca/#organization",
+      "name": "Port Moody Pulse",
+      "url": "https://portmoodypulse.ca",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://portmoodypulse.ca/email-assets/pmp-logo-email.png",
+        "width": 512,
+        "height": 512
+      },
+      "description": "Port Moody Pulse is an independent community newsletter covering local news, events, and city council decisions in Port Moody, British Columbia, Canada.",
+      "foundingDate": "2026",
+      "areaServed": {
+        "@type": "City",
+        "name": "Port Moody",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "British Columbia, Canada"
+        }
+      },
+      "sameAs": [
+        "https://www.instagram.com/portmoodypulse",
+        "https://www.facebook.com/portmoodypulse"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "editorial",
+        "email": "hello@portmoodypulse.ca"
+      },
+      "publishingPrinciples": "https://portmoodypulse.ca/#mission",
+      "diversityPolicy": "Port Moody Pulse is committed to serving all of Port Moody's diverse communities, publishing content in multiple languages including English, Chinese, Korean, and Farsi."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://portmoodypulse.ca/#website",
+      "url": "https://portmoodypulse.ca",
+      "name": "Port Moody Pulse",
+      "description": "Local news, events, and good news from Port Moody, B.C.",
+      "publisher": {
+        "@id": "https://portmoodypulse.ca/#organization"
+      },
+      "inLanguage": "en-CA",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://portmoodypulse.ca/article.html?slug={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
