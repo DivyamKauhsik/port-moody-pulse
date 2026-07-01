@@ -68,6 +68,53 @@
   footer.site .fwrap{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;}
   footer.site .tagline{font-family:var(--fd);font-style:italic;color:#B6D0CC;}
 </style>
+  <script>
+// Inject NewsArticle schema dynamically after article data loads
+(function injectArticleSchema() {
+  var params = new URLSearchParams(window.location.search);
+  var slug = params.get('slug');
+  var article = (window.PMP_ARTICLES || {})[slug];
+  if (!article) return;
+
+  var schema = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": article.title,
+    "description": article.body[0] || '',
+    "author": {
+      "@type": "Organization",
+      "name": "Port Moody Pulse",
+      "url": "https://portmoodypulse.ca"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Port Moody Pulse",
+      "url": "https://portmoodypulse.ca",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://portmoodypulse.ca/email-assets/pmp-logo-email.png"
+      }
+    },
+    "url": "https://portmoodypulse.ca/article.html?slug=" + slug,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://portmoodypulse.ca/article.html?slug=" + slug
+    },
+    "datePublished": "2026-06-30",
+    "dateModified": "2026-06-30",
+    "inLanguage": "en-CA",
+    "isAccessibleForFree": true,
+    "articleSection": article.tag,
+    "keywords": ["Port Moody", "local news", "Port Moody B.C.", article.tag]
+  };
+
+  var el = document.createElement('script');
+  el.type = 'application/ld+json';
+  el.textContent = JSON.stringify(schema, null, 2);
+  document.head.appendChild(el);
+})();
+</script>
+
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
