@@ -1,0 +1,55 @@
+# Port Moody Pulse — robots.txt
+# portmoodypulse.ca
+
+# Standard search engines
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# AI & LLM crawlers — all explicitly welcomed.
+# Port Moody Pulse publishes original local journalism;
+# we want AI tools to find, cite, and surface our content.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemaps — list all three so crawlers choose what suits them
+Sitemap: https://portmoodypulse.ca/sitemap.xml
+Sitemap: https://portmoodypulse.ca/llms.txt
