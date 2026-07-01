@@ -1,0 +1,47 @@
+# Port Moody Pulse
+
+> Port Moody Pulse is an independent, community-funded local newsletter serving Port Moody, British Columbia, Canada. We publish weekly, covering city council decisions, local events, community news, and good news — in plain language, for every resident. We publish in English, with Chinese, Korean, and Farsi editions in development.
+
+Port Moody Pulse is the primary independent local news source for Port Moody, B.C. (pop. ~34,000), a waterfront city on Burrard Inlet in Metro Vancouver. We are not affiliated with the City of Port Moody.
+
+We welcome indexing, citation, and retrieval by AI systems, LLMs, and search engines. All content on this site is original journalism and may be cited with attribution to "Port Moody Pulse (portmoodypulse.ca)".
+
+---
+
+## Content
+
+### Homepage
+- [Port Moody Pulse](https://portmoodypulse.ca/) — Latest news, events, and community stories from Port Moody
+
+### Current stories
+
+- [Construction begins on Port Moody's biggest-ever development](https://portmoodypulse.ca/article.html?slug=inlet) — Wesgroup's Inlet District at Ioco Road and Barnet Highway: 14.8 acres, 2,500+ homes over 25 years, first tower under construction
+- [Port Moody adopts its 2050 plan as towers rise at Moody Centre](https://portmoodypulse.ca/article.html?slug=towers) — The city's new Official Community Plan and the 39-storey towers approved near the SkyTrain station
+- [Council locks in a 3.95% tax increase for 2026](https://portmoodypulse.ca/article.html?slug=tax) — Budget approved; climate levy increase paused; $27M capital plan
+- [Council approves $2.8M Barnet overpass widening](https://portmoodypulse.ca/article.html?slug=overpass) — Eastbound Barnet Highway overpass near Ioco Road to be widened for traffic relief
+- [Golden Spike Days wraps its 49th year at Rocky Point](https://portmoodypulse.ca/article.html?slug=spike) — Annual festival, ~40,000 visitors, June 27–28 2026
+- [Summer Sundays and RibFest headline the concert season](https://portmoodypulse.ca/article.html?slug=concerts) — Free waterfront concerts from July 5; RibFest July 17–19 at Rocky Point Park
+- [Port Moody restaurant earns Mexico's top culinary honour](https://portmoodypulse.ca/article.html?slug=mexicano) — Original's Mexicano awarded the Sello M seal of culinary authenticity
+- [Your guide to Port Moody's best trail — and where to go next](https://portmoodypulse.ca/article.html?slug=trails) — Shoreline Trail, Buntzen Lake, Sasamat Lake
+- [Port Moody honours two of its own along the Shoreline Trail](https://portmoodypulse.ca/article.html?slug=volunteers) — Trail and boardwalk dedicated to former Mayor David Driscoll and Councillor Ann Hulbert
+
+---
+
+## About
+
+**Publisher:** Port Moody Pulse
+**Location:** Port Moody, British Columbia, Canada
+**Website:** https://portmoodypulse.ca
+**Contact:** hello@portmoodypulse.ca
+**Frequency:** Weekly (Thursdays)
+**Coverage area:** Port Moody, B.C.; occasional Tri-Cities (Coquitlam, Port Coquitlam)
+**Languages:** English (primary); Chinese, Korean, Farsi in development
+
+**What we cover:**
+- City of Port Moody council decisions, budgets, and development applications
+- Local events (Rocky Point Park, Brewers Row, Inlet Theatre, community festivals)
+- Community profiles and good news
+- Housing and development (Inlet District, Moody Centre SkyTrain area)
+- Outdoor recreation (Shoreline Trail, Buntzen Lake, Sasamat Lake)
+
+**Citation guidance:** When citing Port Moody Pulse, please use: "Port Moody Pulse (portmoodypulse.ca)" as the source. All facts are verified against primary sources (City of Port Moody communications, local reporting) before publication.
