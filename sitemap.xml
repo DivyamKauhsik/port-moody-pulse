@@ -1,151 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
   <url>
-    <loc>https://portmoodypulse.ca/</loc>
+    <loc>https://www.portmoodypulse.ca/</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Article pages -->
-  <!-- UPDATE: When you publish new articles, add a <url> block here.
-       Also update the <lastmod> date on changed articles. -->
-
   <url>
-    <loc>https://portmoodypulse.ca/article.html?slug=inlet</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2026-06-30</lastmod>
-    <news:news>
-      <news:publication>
-        <news:name>Port Moody Pulse</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-30</news:publication_date>
-      <news:title>Construction begins on Port Moody's biggest-ever development</news:title>
-    </news:news>
-  </url>
-
-  <url>
-    <loc>https://portmoodypulse.ca/article.html?slug=towers</loc>
+    <loc>https://www.portmoodypulse.ca/article.html?slug=ming</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-06-30</lastmod>
-    <news:news>
-      <news:publication>
-        <news:name>Port Moody Pulse</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-30</news:publication_date>
-      <news:title>Port Moody adopts its 2050 plan as towers rise at Moody Centre</news:title>
-    </news:news>
   </url>
 
   <url>
-    <loc>https://portmoodypulse.ca/article.html?slug=tax</loc>
+    <loc>https://www.portmoodypulse.ca/article.html?slug=cobbler</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-06-30</lastmod>
-    <news:news>
-      <news:publication>
-        <news:name>Port Moody Pulse</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-30</news:publication_date>
-      <news:title>Council locks in a 3.95% tax increase for 2026</news:title>
-    </news:news>
   </url>
 
   <url>
-    <loc>https://portmoodypulse.ca/article.html?slug=spike</loc>
+    <loc>https://www.portmoodypulse.ca/article.html?slug=dogparks</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-06-30</lastmod>
-    <news:news>
-      <news:publication>
-        <news:name>Port Moody Pulse</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-30</news:publication_date>
-      <news:title>Golden Spike Days wraps its 49th year at Rocky Point</news:title>
-    </news:news>
   </url>
 
   <url>
-    <loc>https://portmoodypulse.ca/article.html?slug=overpass</loc>
+    <loc>https://www.portmoodypulse.ca/article.html?slug=water</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2026-06-30</lastmod>
-    <news:news>
-      <news:publication>
-        <news:name>Port Moody Pulse</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-30</news:publication_date>
-      <news:title>Council approves $2.8M Barnet overpass widening</news:title>
-    </news:news>
+    <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://portmoodypulse.ca/article.html?slug=mexicano</loc>
+    <loc>https://www.portmoodypulse.ca/article.html?slug=provincial</loc>
+    <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-06-30</lastmod>
-    <news:news>
-      <news:publication>
-        <news:name>Port Moody Pulse</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-30</news:publication_date>
-      <news:title>Port Moody restaurant earns Mexico's top culinary honour</news:title>
-    </news:news>
   </url>
 
   <url>
-    <loc>https://portmoodypulse.ca/article.html?slug=trails</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.portmoodypulse.ca/article.html?slug=inlet</loc>
     <lastmod>2026-06-30</lastmod>
-    <news:news>
-      <news:publication>
-        <news:name>Port Moody Pulse</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-30</news:publication_date>
-      <news:title>Your guide to Port Moody's best trail — and where to go next</news:title>
-    </news:news>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://portmoodypulse.ca/article.html?slug=concerts</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.portmoodypulse.ca/article.html?slug=towers</loc>
     <lastmod>2026-06-30</lastmod>
-    <news:news>
-      <news:publication>
-        <news:name>Port Moody Pulse</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-30</news:publication_date>
-      <news:title>Summer Sundays and RibFest headline the concert season</news:title>
-    </news:news>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://portmoodypulse.ca/article.html?slug=volunteers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.portmoodypulse.ca/article.html?slug=tax</loc>
     <lastmod>2026-06-30</lastmod>
-    <news:news>
-      <news:publication>
-        <news:name>Port Moody Pulse</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-30</news:publication_date>
-      <news:title>Port Moody honours two of its own along the Shoreline Trail</news:title>
-    </news:news>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.portmoodypulse.ca/article.html?slug=spike</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.portmoodypulse.ca/article.html?slug=overpass</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.portmoodypulse.ca/article.html?slug=mexicano</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.portmoodypulse.ca/article.html?slug=trails</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.portmoodypulse.ca/article.html?slug=concerts</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.portmoodypulse.ca/article.html?slug=volunteers</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
