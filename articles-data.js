@@ -1,9 +1,9 @@
 // articles-data.js
 // Story content for Port Moody Pulse, sourced from the City of Port Moody's
 // official website and local reporting (Tri-Cities Dispatch, Freshet News,
-// The Tyee, Daily Hive) as of late June 2026. Facts have been verified
-// against these sources, but always confirm event dates and times with the
-// organizer before attending — schedules can change after publication.
+// The Tyee, Daily Hive, Global News) as of early August 2026. Facts have been
+// verified against these sources, but always confirm event dates and times
+// with the organizer before attending — schedules can change after publication.
 
 window.PMP_ARTICLES = {
 
@@ -153,13 +153,13 @@ window.PMP_ARTICLES = {
 
   water: {
     tag: "City Hall",
-    title: "Stage 3 water restrictions now in effect across Port Moody",
-    meta: "By the newsroom · This week · 2 min read",
+    title: "Water restrictions: what's actually in effect right now",
+    meta: "By the newsroom · Updated · 2 min read",
     body: [
-      "Port Moody has moved to Stage 3 water restrictions, meaning trees, shrubs and flower gardens can now only be watered by hand or drip irrigation. Sprinklers, automatic sprinkler systems and soaker hoses are no longer permitted under the current stage.",
-      "The restriction applies city-wide and is tied to regional water supply conditions during the drier summer months. Residents who rely on lawn or garden sprinkler systems will need to switch to hand watering or drip irrigation until restrictions ease.",
-      "Bylaw enforcement can issue tickets for non-compliance, so it's worth adjusting routines now rather than after a warning.",
-      "What to watch next: whether restrictions escalate further if dry conditions continue through late summer, or ease if the region sees meaningful rainfall."
+      "Correction: an earlier version of this piece reported Stage 3 water restrictions were in effect. On July 16, Metro Vancouver downgraded the region, including Port Moody, back to Stage 2 — we've updated this article to reflect that.",
+      "Under Stage 2, lawn watering remains banned across the region. Trees, shrubs, and flower gardens can be watered by hand, drip irrigation, soaker hose, or sprinkler — sprinklers are permitted 5–9am. Vegetable gardens can be watered at any time.",
+      "The restriction is tied to regional water supply conditions during the drier summer months, driven by low snowpack and a dry, hot forecast. Bylaw enforcement can issue tickets for non-compliance, so it's worth knowing exactly what stage is in effect before watering.",
+      "What to watch next: whether restrictions ease further if the region sees meaningful rainfall, or escalate again if dry conditions persist through late summer."
     ]
   },
 
@@ -172,6 +172,50 @@ window.PMP_ARTICLES = {
       "The plan calls for a mix of market rental and below-market housing aimed at middle-income and family households, alongside retail space, artist studios, and parks — with potential room for health facilities and childcare still being considered. It's part of a broader vision for Moody Centre that also includes a plaza fronting the SkyTrain station and a pedestrian overpass to Rocky Point Park, together expected to bring roughly 5,000 new residents to the area.",
       "The province has framed the project as part of a larger push to build near transit: since 2022 legislation let the Ministry of Transportation and Infrastructure buy land close to SkyTrain stations, it has put $394 million toward these purchases province-wide, aiming for 10,000 new homes on provincial land near transit within a decade. Mayor Meghan Lahti has previously said the project lines up with the city's own goals around transit use, climate resilience, and affordable housing.",
       "What to watch next: firmer details on unit counts, affordability levels, and construction timelines as the project moves from concept toward formal proposal. (Reporting draws on original coverage by Jeremy Shepherd, Tri-Cities Dispatch.)"
+    ]
+  },
+
+  artoutside: {
+    tag: "Arts · Art Out Side",
+    title: "40+ artists, 10 days, and a city full of surprises",
+    meta: "By the newsroom · Festival preview · 4 min read",
+    body: [
+      "For ten days in August, it's going to be hard to walk through Port Moody without bumping into art.",
+      "Art Out Side, PoMoArts' multidisciplinary arts festival, returns August 7–16 with over 80 artists, 14 community partners, and programming scattered across the city — waterfront to commercial hubs, alleyways to park benches, and a few locations the organizers are deliberately keeping secret. Nearly half the artists are local to the Tri-Cities.",
+      "\"Almost every single event is meant to surprise people who don't even know the event is happening,\" says Festival Manager Cristiana Ripeanu. \"We hope it will attract people who go out in Port Moody without necessarily seeking out an artistic experience.\"",
+      "This year's lineup spans nearly every artistic discipline: installations, dance, music, film, performance, painting — some to witness, others to interact with. One new addition Cristiana is particularly proud of: a one-evening film screening celebrating local filmmakers, hosted by Train Wreck Brewery and sponsored by Aftershock Roadshow — a partnership she hopes will become a festival staple in the years to come.",
+      "Asked which single day she'd recommend for a first-timer, Cristiana laughed. \"It feels like being asked which one of my children is my favourite. I can only promise that regardless of the day, you are sure to find something exciting and unusual happening just around the corner.\"",
+      "Port Moody calls itself the City of the Arts. For at least ten days in August, Cristiana says, that claim will be hard to argue with: \"It will be difficult for anyone to claim that Port Moody is a boring place.\"",
+      "What to watch next: Port Moody Pulse is covering the festival as a media partner, including artist profiles and on-the-ground coverage through the festival run. Art Out Side is free for all ages. Full schedule, artist lineup, and map at pomoarts.ca/artoutside."
+    ]
+  },
+
+  corus: {
+    tag: "Arts · Art Out Side",
+    title: "The artist who turns wind, birds, and water into collaborators",
+    meta: "By the newsroom · Artist preview · 4 min read",
+    body: [
+      "When Corus performs at Art Out Side this August, the wind, the birds, and the water won't be background noise. They'll be part of the show.",
+      "Corus is an Indigenous sound healer and multidisciplinary artist of Haisla and Kitasoo Xai'xais descent, based in British Columbia. Their work blends Native American flute, crystal singing bowls, and ambient soundscapes into immersive experiences designed to help people slow down and reconnect — with themselves, with nature, and with each other.",
+      "\"The Native flute immediately felt like an extension of my breath and spirit,\" Corus told Port Moody Pulse. \"As an Indigenous person, it became a way to express emotion without words and reconnect with nature. The crystal singing bowls came later — together they created something that felt complete. Earth and breath meeting resonance and stillness.\"",
+      "Corus runs a community called Co-Creating Love, which they describe as less about teaching people what they need and more about giving them room to rediscover it themselves. \"It's about creating spaces where people feel safe to show up as they are,\" they said.",
+      "For Art Out Side, Corus will present Ancestral Sound Currents — a live sound journey weaving flute, bowls, and ambient soundscapes in an outdoor setting where nature becomes a collaborator, not a backdrop. \"The wind, birds, trees, and water aren't distractions — they become collaborators,\" Corus said. \"It allows people who may never intentionally attend a sound journey to unexpectedly stumble upon a moment of peace.\"",
+      "The reactions, Corus says, are rarely predictable. \"One of the most meaningful reactions is when people tell me they finally felt still for the first time in years. Others have shared that the music brought back memories, or that visions came up for them.\"",
+      "Asked what they hope someone walking through Port Moody during the festival takes away, even if they only pause for a minute: \"I hope they leave feeling just a little lighter than when they arrived.\"",
+      "What to watch next: Art Out Side runs August 7–16 across Port Moody. Free, all ages. Full schedule at pomoarts.ca/artoutside."
+    ]
+  },
+
+  portwood: {
+    tag: "Housing · Development",
+    title: "A $122M lawsuit just hit one of Port Moody's biggest developments",
+    meta: "By the newsroom · Breaking · 4 min read",
+    body: [
+      "Creditors have filed a lawsuit in BC Supreme Court against the developers of Portwood Place, a 23-acre condo project in Port Moody, claiming the developers have defaulted on their financing and currently owe more than $122 million.",
+      "The project — which calls for 20 buildings ranging from four to 19 storeys, along with trails and a daycare — has its first phase nearly complete, with over 80 percent of units sold and move-in expected this fall.",
+      "The development manager told Global News that the lawsuit targets only the undeveloped portions of the project, meaning people who have already purchased condos and townhouses in the nearly completed first phase should not be affected.",
+      "It's the kind of development trouble the Lower Mainland hasn't seen in roughly 30 years, according to realtor Steve Saretsky, who pointed to rising interest rates as the key factor: \"As soon as interest rates started to go up, it changed the direction of the market, changed sentiment, changed borrowing costs and it just really killed the speculative fever in the market.\"",
+      "What to watch next: whether the undeveloped phases of the project find new financing or face further legal action, and what this means for buyers who were considering units beyond phase one. (Reporting draws on original coverage by Amy Judd and Paul Johnson, Global News.)"
     ]
   }
 
