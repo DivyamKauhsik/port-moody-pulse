@@ -236,7 +236,7 @@ window.PMP_ARTICLES = {
       "Twenty years in, six heritage houses restored, and Fred is still one of the people quietly shaping what this city becomes — one restaurant, one saved building, one advisory meeting at a time.",
       "Art Out Side runs August 7–16 across Port Moody. Full schedule at pomoarts.ca/artoutside."
     ]
-  }
+  },
 
   election: {
     tag: "City Hall · Election 2026",
