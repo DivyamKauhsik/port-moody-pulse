@@ -264,13 +264,14 @@ window.PMP_ARTICLES = {
 
   belcarrafire: {
     tag: "Public Safety",
-    title: "Wildfire near Belcarra closes Buntzen Lake — what it means for Port Moody",
-    meta: "By the newsroom · Update · 2 min read",
+    title: "Belcarra fire held, Buntzen Lake reopened",
+    meta: "By the newsroom · Updated · 3 min read",
     body: [
-      "A wildfire broke out in Belcarra Regional Park on Wednesday afternoon, near the Sugar Mountain Trail, about 2.5km from Port Moody. By Wednesday evening it had grown to roughly 1.5 hectares — as of Thursday morning, it's being held, not growing further.",
-      "Around 40 firefighters have been involved, drawing on BC Wildfire Service, Metro Vancouver, Sasamat Fire Department, Port Moody Fire Department, and volunteer crews, with helicopter and air tanker support. Two properties on Fern Drive in Anmore were evacuated Wednesday; that evacuation alert has since been lifted.",
-      "The practical impact for Port Moody residents: Buntzen Lake recreation area is closed until further notice due to wildfire-related safety concerns. There's no threat to Port Moody itself, and no evacuation orders or alerts affecting the city.",
-      "The cause remains under investigation, though officials suspect it was human-caused. What to watch next: whether Buntzen Lake reopens in time for the weekend, and any updates from BC Wildfire Service's Coastal Fire Centre."
+      "The wildfire near Belcarra Regional Park is now considered held, and crews are confident it won't grow beyond its current 1.5-hectare perimeter. \"This fire will not be growing beyond its current perimeter,\" said Metro Vancouver's director of protective services, Brant Arnold-Smith, at a Thursday press conference in Anmore.",
+      "Buntzen Lake recreation area reopened Thursday. Evacuation alerts for 35 Anmore properties have been rescinded, and the two households that were evacuated have been cleared to return.",
+      "New details have emerged on how the response unfolded: a downed power line forced ground crews to briefly pull back Wednesday evening near Sugar Mountain Trail, while BC Wildfire Service helicopters bucketed the fire from the air for over six hours. \"Having those two helicopters made a huge difference, especially as we had to wait to get ground crews in due to the downed transmission line,\" Arnold-Smith said. The power line was de-energized shortly before 8pm.",
+      "The fire, assessed at 0.8 hectares Wednesday afternoon, nearly doubled in size and was briefly considered out-of-control by 7pm that evening. Crews from BC Wildfire Service, Sasamat Volunteer Fire Department, Port Moody Fire Rescue, and Metro Vancouver Emergency Management brought it under control by Thursday night, working through steep terrain where the fire had embedded as deep as four feet into the ground.",
+      "The cause remains under investigation, including what role the downed power line may have played. No firefighters were injured. Crews may spend another week finding and dousing hot spots, with no rain in the forecast. (Reporting draws on original coverage by Jeremy Shepherd, Tri-Cities Dispatch.)"
     ]
   },
 
