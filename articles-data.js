@@ -217,6 +217,73 @@ window.PMP_ARTICLES = {
       "It's the kind of development trouble the Lower Mainland hasn't seen in roughly 30 years, according to realtor Steve Saretsky, who pointed to rising interest rates as the key factor: \"As soon as interest rates started to go up, it changed the direction of the market, changed sentiment, changed borrowing costs and it just really killed the speculative fever in the market.\"",
       "What to watch next: whether the undeveloped phases of the project find new financing or face further legal action, and what this means for buyers who were considering units beyond phase one. (Reporting draws on original coverage by Amy Judd and Paul Johnson, Global News.)"
     ]
+  },
+
+  fredsoofi: {
+    tag: "Community · People",
+    title: "The Man Who Saved a Piece of Port Moody's History",
+    meta: "By the newsroom · Art Out Side preview · 4 min read",
+    body: [
+      "If you've lived in Port Moody for more than a few years, you've probably crossed paths with Fred Soofi without necessarily knowing his whole story.",
+      "He opened Il Mercante on Queen Street in 2005, at a moment when there were no grocery stores, no wood-burning pizza ovens, and barely any coffee shops in the city. Residents kept telling him the same thing — this place needs something. So Fred built it: groceries, specialty coffee, Neapolitan wood-fired pizza, and gelato, all under one roof.",
+      "That instinct to fill a gap has defined two decades of his relationship with this city. Over the years, Fred has personally moved and restored six heritage houses in Port Moody — a scale of preservation work most residents have no idea one person is responsible for.",
+      "His most visible contribution might be one most people walk past without knowing the full story: the Apple Yard House, now on St Johns Street and part of the Port Moody Arts Centre.",
+      "\"When the Apple Yard House was going to be demolished, I was approached by someone who asked if I would buy and restore it,\" Fred told Port Moody Pulse. He bought it, moved it, and restored it — a few years later, it was turned into a pizza restaurant. Years after that, when SkyTrain planning threatened the site, the provincial government stepped in to save the heritage building — and handed it to the Port Moody Arts Centre. Fred was part of the consultation. \"Now it is a great addition to the Art Centre,\" he said.",
+      "Fred has stayed involved in nearly every corner of the community since — the Farmers Market, SHARE Food Bank, and now the PoMoArts Advisory Council. Asked what's kept him showing up for over 20 years: \"I found Port Moody a very unique community because the residents really care and are very involved. It is close to Vancouver, the water, nature, and is a city of arts — but most unique of all is that residents care and are involved in the city's affairs.\"",
+      "For Art Out Side this year, Fred is bringing his own craft into the festival: a cooking demonstration using entirely local ingredients, built around what he calls the art of nutritious food. \"I wanted to bring the art of cooking nutritious food, which maybe some people don't recognise,\" he said.",
+      "Asked whether \"City of the Arts\" feels earned after watching Port Moody evolve for two decades, Fred didn't just say yes. \"PoMo Arts Centre is doing great work, but as the population is increasing, they don't have enough space to accommodate the growth of the city,\" he said. \"There is also not enough affordable residential accommodation for artists to live in the city and contribute art. There is also very little visible, public and noticeable art in the city.\" He's hopeful the city's planned Kyle Centre expansion could help close that gap.",
+      "His outsider's-eye observation about the city itself: there are no hotels. \"The city has tried to bring a hotel, but it isn't viable for big hotel companies. I think a boutique hotel of 40 rooms would do well here.\" He'd also like to see more seniors housing and assisted living options in Port Moody.",
+      "Twenty years in, six heritage houses restored, and Fred is still one of the people quietly shaping what this city becomes — one restaurant, one saved building, one advisory meeting at a time.",
+      "Art Out Side runs August 7–16 across Port Moody. Full schedule at pomoarts.ca/artoutside."
+    ]
+  }
+
+  election: {
+    tag: "City Hall · Election 2026",
+    title: "Register to vote before August 18 — here's how",
+    meta: "By the newsroom · This week · 2 min read",
+    body: [
+      "Port Moody heads to the polls Saturday, October 17, 2026 to elect a mayor, six councillors, and two school trustees for a four-year term running through 2030.",
+      "If you want to save time on election day, you can register in advance with Elections BC — the deadline for advance registration is Tuesday, August 18. If you're already on the Provincial Voters List for Port Moody, you're already registered and don't need to do anything.",
+      "To be eligible, you need to be 18 or older, a Canadian citizen, a BC resident for at least six months immediately before registering, and a resident of Port Moody. Non-resident property owners register separately, directly with the city, at elections@portmoody.ca.",
+      "Miss the August 18 deadline? You can still register in person at your voting location on election day itself — advance registration just saves you the extra step. Full details, voting locations, and advance voting opportunities at portmoody.ca/vote."
+    ]
+  },
+
+  ambassador: {
+    tag: "Arts · Art Out Side",
+    title: "Port Moody Pulse is now an official Art Out Side Media Ambassador",
+    meta: "By the newsroom · Announcement · 2 min read",
+    body: [
+      "Art Out Side, PoMoArts' city-wide arts festival, officially opens today and runs through August 16 — and Port Moody Pulse is proud to be one of this year's Media Ambassadors.",
+      "That's part of why we've been able to bring you profiles on Corus and Fred Soofi ahead of the festival — we've had early access to the artists and festival team, and we'll be covering the festival on the ground throughout its run: photos, artist moments, and the small surprises the festival is built around.",
+      "Over 80 artists, 14 community partners, and programming scattered across the entire city — waterfront to alleyways to a few locations organizers are deliberately keeping secret. Free, all ages.",
+      "Full schedule at pomoarts.ca/artoutside — and follow along with us on Instagram and Facebook as we cover it live."
+    ]
+  },
+
+  belcarrafire: {
+    tag: "Public Safety",
+    title: "Wildfire near Belcarra closes Buntzen Lake — what it means for Port Moody",
+    meta: "By the newsroom · Update · 2 min read",
+    body: [
+      "A wildfire broke out in Belcarra Regional Park on Wednesday afternoon, near the Sugar Mountain Trail, about 2.5km from Port Moody. By Wednesday evening it had grown to roughly 1.5 hectares — as of Thursday morning, it's being held, not growing further.",
+      "Around 40 firefighters have been involved, drawing on BC Wildfire Service, Metro Vancouver, Sasamat Fire Department, Port Moody Fire Department, and volunteer crews, with helicopter and air tanker support. Two properties on Fern Drive in Anmore were evacuated Wednesday; that evacuation alert has since been lifted.",
+      "The practical impact for Port Moody residents: Buntzen Lake recreation area is closed until further notice due to wildfire-related safety concerns. There's no threat to Port Moody itself, and no evacuation orders or alerts affecting the city.",
+      "The cause remains under investigation, though officials suspect it was human-caused. What to watch next: whether Buntzen Lake reopens in time for the weekend, and any updates from BC Wildfire Service's Coastal Fire Centre."
+    ]
+  },
+
+  publicsafety: {
+    tag: "Public Safety",
+    title: "Police continue investigating targeted shooting near Union Street",
+    meta: "By the newsroom · Update · 2 min read",
+    body: [
+      "Port Moody Police are continuing to investigate a shooting that occurred August 1 near Union Street and Barnet Highway. A man was hospitalized with a gunshot wound and is in stable condition.",
+      "Police say initial indications suggest the incident was targeted, and witnesses reported a silver sedan fleeing the scene. No suspect has been identified.",
+      "Anyone with information or dashcam footage from the area at the time is asked to contact Port Moody Police at 604-461-3456.",
+      "What to watch next: updates from Port Moody Police as the investigation progresses."
+    ]
   }
 
 };
