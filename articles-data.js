@@ -1,7 +1,7 @@
 // articles-data.js
 // Story content for Port Moody Pulse, sourced from the City of Port Moody's
 // official website and local reporting (Tri-Cities Dispatch, Freshet News,
-// The Tyee, Daily Hive, Global News) as of early August 2026. Facts have been
+// The Tyee, Daily Hive, Global News) as of August 2026. Facts have been
 // verified against these sources, but always confirm event dates and times
 // with the organizer before attending — schedules can change after publication.
 
@@ -284,6 +284,21 @@ window.PMP_ARTICLES = {
       "Police say initial indications suggest the incident was targeted, and witnesses reported a silver sedan fleeing the scene. No suspect has been identified.",
       "Anyone with information or dashcam footage from the area at the time is asked to contact Port Moody Police at 604-461-3456.",
       "What to watch next: updates from Port Moody Police as the investigation progresses."
+    ]
+  },
+
+  cathycena: {
+    tag: "Community · People",
+    title: "\"You Don't Have to Change the Whole World\"",
+    meta: "By the newsroom · This week · 4 min read",
+    body: [
+      "Cathy Cena has been volunteering for 43 years. Fifteen of them have been in Port Moody, and when you ask her for the one moment that sticks with her most, she doesn't have one.",
+      "\"It's the people,\" she told Port Moody Pulse. \"Some of the most meaningful experiences have come from watching volunteers and complete strangers come together during difficult times — supporting families in need, helping organizations survive through COVID, or simply seeing someone realize they belong because they chose to volunteer. I've learned that you don't have to change the whole world; sometimes changing one person's day is enough.\"",
+      "That instinct shows up everywhere she's shown up since. Cathy is the Executive Director of Tri-Cities Community TV, co-founder of FACES — an initiative celebrating women's stories across the Tri-Cities — and has served with PoMoArts, the Coquitlam Optimist Club, and more community boards than most people could list from memory. Asked if there's a thread connecting all of it, her answer is simple: \"The common thread is connection. I guess I am a community connector.\"",
+      "FACES started, she says, with one idea: every woman has a story worth telling. What surprised her most wasn't the stories themselves, but the reaction to being asked. \"So many women said, 'No one has ever asked me to share my story before.' Many didn't realize the impact they'd had on others until someone took the time to listen.\"",
+      "Cathy also ran for Port Moody City Council once, an instinct she traces back to her father, who was involved in politics in Italy. \"Whether or not you're elected, putting your name forward is an act of service,\" she said.",
+      "Twelve years of interviewing elected officials, business leaders, and neighbours has taught her something specific about what actually makes a conversation work. \"It's not about asking the toughest question — it's about asking the right question and then genuinely listening. When someone feels comfortable enough to be authentic, that's when the conversation becomes meaningful.\"",
+      "Asked what's changed most about Port Moody since she arrived in 2011, she doesn't hesitate: growth. New neighbourhoods, new businesses, families choosing to call it home. But she's careful to separate growth from what she hopes never changes. \"What I hope never changes is our sense of community. People genuinely care here. They volunteer, support local businesses, step up when someone needs help. Growth is inevitable, but preserving the heart of Port Moody — its volunteer spirit, its sense of belonging — is what will ensure it remains such a special place to live.\""
     ]
   }
 
