@@ -300,6 +300,63 @@ window.PMP_ARTICLES = {
       "Twelve years of interviewing elected officials, business leaders, and neighbours has taught her something specific about what actually makes a conversation work. \"It's not about asking the toughest question — it's about asking the right question and then genuinely listening. When someone feels comfortable enough to be authentic, that's when the conversation becomes meaningful.\"",
       "Asked what's changed most about Port Moody since she arrived in 2011, she doesn't hesitate: growth. New neighbourhoods, new businesses, families choosing to call it home. But she's careful to separate growth from what she hopes never changes. \"What I hope never changes is our sense of community. People genuinely care here. They volunteer, support local businesses, step up when someone needs help. Growth is inevitable, but preserving the heart of Port Moody — its volunteer spirit, its sense of belonging — is what will ensure it remains such a special place to live.\""
     ]
+  },
+
+  iocoschool: {
+    tag: "City Hall · Childcare",
+    title: "Century-old Ioco School one step closer to becoming a childcare centre",
+    meta: "By the newsroom · This week · 3 min read",
+    body: [
+      "Port Moody's century-old Ioco School is a step closer to welcoming children through its doors again — just not as a school this time.",
+      "On July 28, council unanimously approved permits to transform the long-vacant heritage building into a 150-space child care centre, clearing the way for the Coquitlam School District to move toward the building permit stage.",
+      "The project is backed by $13.9 million from the province's ChildCareBC New Spaces Fund — a meaningful expansion for local families in a city where daycare space has been genuinely hard to come by. It also means one of Port Moody's oldest buildings gets a second life, rather than sitting vacant.",
+      "What to watch next: timelines for the building permit stage and construction, and when the first of the 150 new spaces might actually open. (Reporting draws on original coverage by Patrick Penner, Tri-Cities Dispatch.)"
+    ]
+  },
+
+  francisco: {
+    tag: "Arts · Art Out Side",
+    title: "The Piñata Maker Who Almost Didn't Make Art About Mexico",
+    meta: "By the newsroom · Art Out Side recap · 4 min read",
+    body: [
+      "For years, Francisco Berlanga avoided making art about Mexico at all.",
+      "\"There was a sense for me that I was not entitled to speak about it,\" he told Port Moody Pulse. That changed about a decade ago, as he watched the political conversation around identity and heritage shift. \"I felt an urgency to make works that spoke about my culture. If I did not engage with it, enrich it, pass on stories, then there was a chance that parts of it would become lost.\"",
+      "What he makes now is piñatas — traditional Mexican craft, techniques passed down from his mother and grandmother, filled in through years of self-teaching. \"I like to approach new techniques through a naive lens,\" he said, \"because I feel like I always learn more from what I fail at the first time around.\"",
+      "At a recent show at the Surrey Art Gallery, kids tore one of his pieces apart to get the candy inside during a family workshop day. Most artists would be devastated. Francisco says it was exactly right. \"Piñatas are meant to be broken, and candies are meant to be taken,\" he said. \"It truly felt like when I was a kid at my grandmother's house, and all the cousins would be in a frenzy trying to get some candy when the piñata dropped.\"",
+      "Francisco brought a Community Piñata Making (and Breaking) session to Art Out Side this year — make one, break one, eat some candy, sing some songs. He grew up in Port Coquitlam and has called Coquitlam home for the past decade, deeply rooted in the Tri-Cities art scene well before this festival.",
+      "On what it means to hold two cultures at once, he put it simply: \"It's about adding, not subtracting. It's better to just allow yourself to be a part of it, to be eager to engage, learn from, and contribute to your culture, regardless of any disconnect you might feel.\"",
+      "Follow Francisco's work at @franciscoberlanga97."
+    ]
+  },
+
+  joymullen: {
+    tag: "Arts · Art Out Side",
+    title: "She Can Tell If You Played Jazz or Punk Just By Looking at Your Drum Head",
+    meta: "By the newsroom · Art Out Side recap · 4 min read",
+    body: [
+      "Joy Mullen has recorded on 25+ albums and played the Juno Awards as a touring drummer. These days, she's just as likely to be found turning discarded drum heads into fibre art.",
+      "The idea started at a drum store, where she noticed how many worn-out drum heads were getting thrown away. \"I had seen a lot of people painting drum heads, but I didn't know how to paint, so I tried playing around with yarns instead,\" she told Port Moody Pulse. She made a hanging piece, posted it online, and someone messaged asking to buy it. That was enough encouragement to keep going.",
+      "Now drummer friends send her their waste in stacks — broken drums, worn sticks, discarded heads. \"I'm always curious about who the drummer was,\" she said. \"What kind of music did they play, what were their band dynamics. Sometimes there are set lists or lyrics handwritten on the drum head, tape from different sound treatments, or beer on the drum heads. You can tell if the person played jazz or punk when you look at a drum head.\"",
+      "It's a way, she says, for the music to keep going in a different form. \"I hope the energy from that player, band, or audience carries through.\"",
+      "At Art Out Side this year, Joy ran an Intro to Drumming workshop — real kit, real basics, open to everyone — alongside a display of her drum art and an improvised experimental solo performance at Grit Cafe.",
+      "Though she'd never spent time in Port Moody before this festival, she left with a strong impression. \"It is so beautiful in Port Moody,\" she said. \"Having free accessible art programming really adds quality of life to families and people living in the area. Festivals are such a fun way to let people check out art forms they would not have normally gone to.\"",
+      "Find her at @joyondrums, @artbyjoyondrums, or joyondrums.com."
+    ]
+  },
+
+  isaacgasangwa: {
+    tag: "Arts · Art Out Side",
+    title: "The Dance Company Bringing an African Home to the Tri-Cities",
+    meta: "By the newsroom · Art Out Side recap · 4 min read",
+    body: [
+      "Isaac Gasangwa didn't have any connection to Port Moody before this year's Art Out Side. He left with what he calls a strong feeling that it's \"just the beginning of something much bigger.\"",
+      "Isaac is the founder and artistic director of AfroBeats Van, and performs as Izo Dreamchaser. He started the company in 2017 after noticing something missing. \"There was a real lack of an 'African home' — a space that truly represented our culture and our people,\" he told Port Moody Pulse. \"I couldn't just sit back and wait for someone else to build it. I had to take the leap.\"",
+      "For Isaac, dance carries something other mediums can't. \"Words can only carry a story so far, but the body doesn't lie,\" he said. \"In styles like afrodance and street dance, especially when you tap into the energy of a cypher, there's an unspoken dialogue. You're sharing energy in real-time, stripping away the filters.\"",
+      "He's watched the culture shift firsthand. \"People used to come to an African dance class expecting we would just be dancing barefoot,\" he said. \"As we put our work out there, that changed. People started showing up with their actual dance shoes, ready to train, respecting the style, the craft, and the culture for what it truly is.\"",
+      "With his company ELITE SQUAD, Isaac brought a preview of Act 1 from his upcoming production Ndabaga Code to Art Out Side this year, ahead of its full premiere at the STAND Festival in November. \"It's a love letter to all women, with a deeply personal focus on Black women who migrated from Africa to Canada to chase a better life,\" he said. \"It's about honouring their resilience, their sacrifices, and the incredible weight and beauty of their journeys.\"",
+      "Asked what he wants people to walk away with, especially those experiencing African dance for the first time, his answer is direct: \"A profound sense of freedom.\" He also wants to shift how people see the continent itself. \"Switzerland is famous worldwide as this master producer of chocolate, yet 80 percent of the cocoa they use comes directly from Africa. We are the source of so much global wealth, culture, and innovation.\"",
+      "Follow AfroBeats Van and ELITE SQUAD at @afrobeats_van and @elite.squad23."
+    ]
   }
 
 };
