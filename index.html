@@ -138,6 +138,13 @@
     .evt .what { font-size: 14px; line-height: 1.35; }
     .evt .what span { color: var(--mist); font-size: 12.5px; }
 
+    .guide-banner { background: linear-gradient(155deg,#15706E,#0A3537); border-radius: 16px; padding: 26px; color: #EAF3F1; margin-top: 30px; }
+    .guide-banner .gb-eyebrow { font-size: 11.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--brass-bright); margin-bottom: 8px; }
+    .guide-banner h3 { font-family: var(--fd); font-weight: 600; font-size: 21px; color: #fff; margin-bottom: 8px; line-height: 1.25; }
+    .guide-banner p { font-size: 13.5px; color: #DCEAE6; line-height: 1.55; margin-bottom: 16px; }
+    .guide-banner .gb-btn { display: inline-block; font-family: var(--fb); font-weight: 800; font-size: 14px; color: #231a08; background: var(--brass-bright); border-radius: 999px; padding: 11px 20px; }
+    .guide-banner .gb-btn:hover { background: #EDB358; text-decoration: none; }
+
     .nl { background: linear-gradient(155deg,#15706E,#0A3537); color: #EAF3F1; margin-top: 50px; position: relative; overflow: hidden; }
     .nl .wrap { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; padding: 54px 28px; }
     .nl-emblem { display: flex; align-items: center; gap: 18px; margin-bottom: 14px; }
@@ -187,7 +194,6 @@
     }
   </style>
 
-<!-- Organization + NewsMediaOrganization schema for the homepage -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -460,6 +466,12 @@
                 <button type="button" data-subscribe="side">Subscribe free →</button>
                 <p class="mini-msg" data-msg="side" role="status" aria-live="polite"></p>
               </form>
+
+              <div class="guide-banner" style="margin-top:18px; padding:18px; background:rgba(255,255,255,0.08); border:1px solid rgba(224,162,60,0.35);">
+                <div class="gb-eyebrow">New subscriber bonus</div>
+                <h3 style="font-size:17px;">The Welcome to Port Moody Guide</h3>
+                <p style="margin-bottom:10px;">Built with weeks of help from this community — garbage day, hidden trails, childcare, pet resources, and more. Free, straight to your inbox when you subscribe.</p>
+              </div>
             </section>
 
             <section class="panel" id="whatson" aria-labelledby="wo-h">
@@ -467,23 +479,23 @@
               <p class="sub">Around Port Moody</p>
 
               <div class="evt">
-                <div class="when"><div class="d">7</div><div class="m">Aug</div></div>
-                <div class="what"><b>Art Out Side Festival opens</b><br /><span>Across Port Moody · through Aug 16</span></div>
+                <div class="when"><div class="d">23</div><div class="m">Aug</div></div>
+                <div class="what"><b>Summer Sundays: Barracuda</b><br /><span>Rocky Point Park · 2pm</span></div>
               </div>
 
               <div class="evt">
-                <div class="when"><div class="d">18</div><div class="m">Aug</div></div>
-                <div class="what"><b>Advance voter registration deadline</b><br /><span>Register with Elections BC</span></div>
+                <div class="when"><div class="d">1</div><div class="m">Sep</div></div>
+                <div class="what"><b>Election nominations open</b><br /><span>For Mayor, Council, School Trustee</span></div>
               </div>
 
               <div class="evt">
-                <div class="when"><div class="d">16</div><div class="m">Aug</div></div>
-                <div class="what"><b>Car-Free Day</b><br /><span>St. Johns St. · 12–5pm</span></div>
+                <div class="when"><div class="d">—</div><div class="m">Now</div></div>
+                <div class="what"><b>Rocky Point &amp; Westhill Pools open</b><br /><span>For the summer season</span></div>
               </div>
 
               <div class="evt">
-                <div class="when"><div class="d">✓</div><div class="m">Now</div></div>
-                <div class="what"><b>Buntzen Lake reopened</b><br /><span>After nearby wildfire held</span></div>
+                <div class="when"><div class="d">—</div><div class="m">Now</div></div>
+                <div class="what"><b>Stage 2 water restrictions</b><br /><span>Lawn watering still banned</span></div>
               </div>
             </section>
           </aside>
@@ -504,7 +516,7 @@
             </svg>
             <h2 id="nl-h">Get the pulse of Port Moody, every week.</h2>
           </div>
-          <p class="lead">One friendly email with everything worth knowing across the city — events, what council actually decided, and the good news you'd have missed. Free, and yours every week.</p>
+          <p class="lead">One friendly email with everything worth knowing across the city — events, what council actually decided, and the good news you'd have missed. Free, and yours every week. New subscribers also get our full Welcome to Port Moody guide.</p>
         </div>
 
         <div class="nl-card">
@@ -610,9 +622,6 @@
       button.addEventListener("click", function() { goTo(button.getAttribute("data-goto")); });
     });
 
-    // Only same-page "#anchor" links are intercepted for smooth-scroll.
-    // article.html links use a real href + target="_blank", so they are
-    // left completely alone and behave like normal links.
     document.querySelectorAll('a[href^="#"]').forEach(function(link) {
       link.addEventListener("click", function(event) {
         var id = link.getAttribute("href");
