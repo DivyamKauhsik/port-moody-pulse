@@ -1,7 +1,7 @@
 // articles-data.js
 // Story content for Port Moody Pulse, sourced from the City of Port Moody's
 // official website and local reporting (Tri-Cities Dispatch, Freshet News,
-// The Tyee, Daily Hive, Global News) as of August 2026. Facts have been
+// The Realist, Global News) as of late August 2026. Facts have been
 // verified against these sources, but always confirm event dates and times
 // with the organizer before attending — schedules can change after publication.
 
@@ -206,19 +206,6 @@ window.PMP_ARTICLES = {
     ]
   },
 
-  portwood: {
-    tag: "Housing · Development",
-    title: "A $122M lawsuit just hit one of Port Moody's biggest developments",
-    meta: "By the newsroom · Breaking · 4 min read",
-    body: [
-      "Creditors have filed a lawsuit in BC Supreme Court against the developers of Portwood Place, a 23-acre condo project in Port Moody, claiming the developers have defaulted on their financing and currently owe more than $122 million.",
-      "The project — which calls for 20 buildings ranging from four to 19 storeys, along with trails and a daycare — has its first phase nearly complete, with over 80 percent of units sold and move-in expected this fall.",
-      "The development manager told Global News that the lawsuit targets only the undeveloped portions of the project, meaning people who have already purchased condos and townhouses in the nearly completed first phase should not be affected.",
-      "It's the kind of development trouble the Lower Mainland hasn't seen in roughly 30 years, according to realtor Steve Saretsky, who pointed to rising interest rates as the key factor: \"As soon as interest rates started to go up, it changed the direction of the market, changed sentiment, changed borrowing costs and it just really killed the speculative fever in the market.\"",
-      "What to watch next: whether the undeveloped phases of the project find new financing or face further legal action, and what this means for buyers who were considering units beyond phase one. (Reporting draws on original coverage by Amy Judd and Paul Johnson, Global News.)"
-    ]
-  },
-
   fredsoofi: {
     tag: "Community · People",
     title: "The Man Who Saved a Piece of Port Moody's History",
@@ -246,7 +233,8 @@ window.PMP_ARTICLES = {
       "Port Moody heads to the polls Saturday, October 17, 2026 to elect a mayor, six councillors, and two school trustees for a four-year term running through 2030.",
       "If you want to save time on election day, you can register in advance with Elections BC — the deadline for advance registration is Tuesday, August 18. If you're already on the Provincial Voters List for Port Moody, you're already registered and don't need to do anything.",
       "To be eligible, you need to be 18 or older, a Canadian citizen, a BC resident for at least six months immediately before registering, and a resident of Port Moody. Non-resident property owners register separately, directly with the city, at elections@portmoody.ca.",
-      "Miss the August 18 deadline? You can still register in person at your voting location on election day itself — advance registration just saves you the extra step. Full details, voting locations, and advance voting opportunities at portmoody.ca/vote."
+      "Nominations for Mayor, Council, and School Trustee open September 1 and close September 11 — the official candidate list is published after that, with a final ballot confirmed after the September 18 withdrawal deadline. We'll hold off on covering individual candidates until that official list is out, so every declared candidate gets the same treatment.",
+      "Miss the August 18 advance registration deadline? You can still register in person at your voting location on election day itself. Full details, voting locations, and advance voting opportunities at portmoody.ca/vote."
     ]
   },
 
@@ -292,8 +280,8 @@ window.PMP_ARTICLES = {
     title: "\"You Don't Have to Change the Whole World\"",
     meta: "By the newsroom · This week · 4 min read",
     body: [
-      "Cathy Cena has been volunteering for 43 years. Fifteen of them have been in Port Moody, and when you ask her for the one moment that sticks with her most, she doesn't have one.",
-      "\"It's the people,\" she told Port Moody Pulse. \"Some of the most meaningful experiences have come from watching volunteers and complete strangers come together during difficult times — supporting families in need, helping organizations survive through COVID, or simply seeing someone realize they belong because they chose to volunteer. I've learned that you don't have to change the whole world; sometimes changing one person's day is enough.\"",
+      "Cathy Cena has been volunteering for 43 years. Fifteen of them have been in Port Moody, and when you ask her for the one moment that sticks with her most, she doesn't point to a moment at all. She points to the people.",
+      "\"Some of the most meaningful experiences have come from watching volunteers and complete strangers come together during difficult times,\" she told Port Moody Pulse — \"supporting families in need, helping organizations survive through COVID, or simply seeing someone realize they belong because they chose to volunteer. I've learned that you don't have to change the whole world; sometimes changing one person's day is enough.\"",
       "That instinct shows up everywhere she's shown up since. Cathy is the Executive Director of Tri-Cities Community TV, co-founder of FACES — an initiative celebrating women's stories across the Tri-Cities — and has served with PoMoArts, the Coquitlam Optimist Club, and more community boards than most people could list from memory. Asked if there's a thread connecting all of it, her answer is simple: \"The common thread is connection. I guess I am a community connector.\"",
       "FACES started, she says, with one idea: every woman has a story worth telling. What surprised her most wasn't the stories themselves, but the reaction to being asked. \"So many women said, 'No one has ever asked me to share my story before.' Many didn't realize the impact they'd had on others until someone took the time to listen.\"",
       "Cathy also ran for Port Moody City Council once, an instinct she traces back to her father, who was involved in politics in Italy. \"Whether or not you're elected, putting your name forward is an act of service,\" she said.",
@@ -356,6 +344,46 @@ window.PMP_ARTICLES = {
       "With his company ELITE SQUAD, Isaac brought a preview of Act 1 from his upcoming production Ndabaga Code to Art Out Side this year, ahead of its full premiere at the STAND Festival in November. \"It's a love letter to all women, with a deeply personal focus on Black women who migrated from Africa to Canada to chase a better life,\" he said. \"It's about honouring their resilience, their sacrifices, and the incredible weight and beauty of their journeys.\"",
       "Asked what he wants people to walk away with, especially those experiencing African dance for the first time, his answer is direct: \"A profound sense of freedom.\" He also wants to shift how people see the continent itself. \"Switzerland is famous worldwide as this master producer of chocolate, yet 80 percent of the cocoa they use comes directly from Africa. We are the source of so much global wealth, culture, and innovation.\"",
       "Follow AfroBeats Van and ELITE SQUAD at @afrobeats_van and @elite.squad23."
+    ]
+  },
+
+  portwood: {
+    tag: "Housing · Development",
+    title: "Portwood Update: Senior Lender Bids $127.1M for Remaining Phases",
+    meta: "By the newsroom · Updated · 5 min read",
+    body: [
+      "Woodbourne Capital, the senior lender now holding creditor protection over Portwood's unfinished phases, has placed a $127.1 million bid to acquire them outright — the clearest sign yet of how this insolvency is likely to resolve.",
+      "New court filings, reported by Howard Chai at The Realist, fill in the fuller picture of how Portwood got here. The project — 23.7 acres on Angela Drive and Cecile Drive, jointly developed by Vancouver's Edgar Development and Toronto's Woodbourne Capital since the land was acquired for $97.5 million in 2018 — was originally planned as a $1.1 billion, five-phase build: roughly 1,590 strata units, 132 market rental homes, and 325 non-market affordable rental homes.",
+      "Phase One (The Creek, 328 affordable rental homes) was donated to BC Housing and remains on track for 2027 completion. Phase Two (Umbra, 219 strata units and townhouses) is about 80% pre-sold. Neither is affected by any of this.",
+      "The real story is in how the process unfolded. WPH, the joint venture behind Portwood, had already defaulted on its loan — sitting at just over $122.2 million as of May 31 — before Woodbourne bought that debt from the original lender, QuadReal, earlier this year. Woodbourne initially filed for receivership on July 23, covering only the unfinished Phases Three, Four, and Five.",
+      "That changed two weeks later. According to a sworn affidavit from Woodbourne CEO Jake Herman, the company realized a receivership filing could trigger a provincial law (the Real Estate Development Marketing Act) letting presale buyers walk away from their purchase agreements. To avoid that, Woodbourne pivoted to CCAA protection instead — filed and granted on August 14, with the stay of proceedings now extended to October 26.",
+      "Woodbourne's $127.1 million bid effectively sets the floor for a court-supervised sale process, positioning the company to potentially take over the remaining phases itself unless a higher competing bid emerges.",
+      "What to watch next: whether a competing bidder emerges before the court-supervised sale concludes, and what that means for the timeline on Phases Three through Five. (Reporting draws on original coverage by Howard Chai, The Realist.)"
+    ]
+  },
+
+  jobssupport: {
+    tag: "Community",
+    title: "Know of a Job Opening? Let's Look Out for Each Other",
+    meta: "By the newsroom · Ongoing · 2 min read",
+    body: [
+      "With new US tariffs hitting Canadian goods this week — 50% on a wide range of categories, effective August 22 — some Port Moody families may be facing real uncertainty about work in the months ahead. Economists have flagged BC as one of the provinces likely to be hit hardest, alongside Ontario and Quebec.",
+      "We're compiling job leads from employers and residents across the community to share, free, in upcoming newsletter issues. If you're an employer, manager, or know of an opening you have direct influence over — whether it's your own business or somewhere you work — send it our way.",
+      "To make it easy for people to actually apply, please include: job title, company/employer, a brief description of the role, a link to apply if there is one, salary range if you're able to share it, and whether you're comfortable being contacted directly (if so, include a name and email — note that if you opt in, that contact information will be published in the newsletter).",
+      "Email portmoodypulse@gmail.com — happy to help however we can. This is meant to be an ongoing, evolving list, not a one-time post — check upcoming issues for updates."
+    ]
+  },
+
+  panthers: {
+    tag: "Sports",
+    title: "Port Moody Panthers Staying Put as Junior Hockey Realigns",
+    meta: "By the newsroom · This week · 3 min read",
+    body: [
+      "BC's junior hockey scene just reorganized — a new Junior A league (the BCHC) formed this year, and both the Port Coquitlam Trailblazers and Burnaby Steelers moved up to it. The Port Moody Panthers deliberately chose to stay in the newly reclassified Junior B league instead.",
+      "\"There were a lot more costs, a lot of checked boxes we needed for the facility,\" said Panthers general manager Brian Wiebe of the decision not to pursue Junior A status. \"It just didn't make sense.\" Instead, the Panthers are focusing on developing players for wherever fits them best next — Junior A, the CHL, NCAA, or U-Sports. \"Our goal is to move players to the place that's right for them,\" Wiebe said.",
+      "The realignment stems from a 2024 independent assessment by Vancouver-based Blackfin Sports Group, commissioned by BC Hockey to evaluate teams that had applied for Junior A designation against standards for organizational structure, business operations, and facilities. The Panthers opted not to apply.",
+      "There are real trade-offs either way: players who move to unsanctioned leagues beyond a September 30 cutoff become ineligible to return to a sanctioned league for the rest of the season, and BCHL players aren't eligible for Hockey Canada programs, including the national junior team. \"We recognize the confusion this can create for families evaluating their options,\" acknowledged BC Hockey CEO Cameron Hope.",
+      "Catch the Panthers' first home game of the season: Saturday, September 13, 5:15pm at the Port Moody Rec Complex, against the Surrey Knights. (Reporting draws on original coverage by Mario Bartel, Freshet News.)"
     ]
   }
 
