@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Which Port Moody Coffee Shop Matches Your Vibe? — Port Moody Pulse</title>
+  <meta name="description" content="Take the quiz — find out which Port Moody coffee shop actually matches your personality." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --inlet-900:#0A3537;
+      --inlet:#0E4F4E;
+      --tide:#15706E;
+      --brass:#C7903B;
+      --brass-bright:#E0A23C;
+      --brass-deep:#9C6E22;
+      --brass-text:#82591A;
+      --cta-bg:#8A5D17;
+      --cta-hover:#6E4A10;
+      --paper:#FBF7EE;
+      --paper-2:#F4EEDF;
+      --card:#FFFFFF;
+      --ink:#15302E;
+      --ink-2:#3B524F;
+      --mist:#54655F;
+      --line:#E7E0D0;
+      --field-border:#7C8E8A;
+      --fd:'Newsreader', Georgia, 'Times New Roman', serif;
+      --fb:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--fb);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+    a { color: inherit; }
+
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    header.mast {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      padding: 20px 0;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; justify-content: center; }
+    .brand svg { width: 36px; height: 36px; flex: none; }
+    .brand .word { font-family: var(--fd); font-weight: 600; font-size: 21px; color: var(--inlet); }
+    .brand .word b { color: var(--brass-deep); font-weight: 600; }
+
+    main { padding: 60px 0 90px; }
+
+    .intro { text-align: center; margin-bottom: 44px; }
+    .eyebrow {
+      display: inline-flex; align-items: center;
+      font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--brass-text); margin-bottom: 16px;
+    }
+    .eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brass-bright); margin-right: 12px; }
+    h1 {
+      font-family: var(--fd); font-weight: 600; font-size: clamp(30px, 5vw, 42px);
+      line-height: 1.15; color: var(--inlet); margin-bottom: 16px; letter-spacing: -.01em;
+    }
+    .intro p { color: var(--ink-2); font-size: 17px; max-width: 46ch; margin: 0 auto; }
+
+    .progress-track {
+      height: 6px; background: var(--line); border-radius: 999px; overflow: hidden; margin-bottom: 36px;
+    }
+    .progress-fill {
+      height: 100%; background: var(--brass-bright); border-radius: 999px;
+      width: 0%; transition: width .35s ease;
+    }
+
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+      padding: 40px 36px; box-shadow: 0 10px 30px rgba(10,40,42,.08);
+    }
+
+    .q-num { font-size: 12.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--tide); margin-bottom: 10px; }
+    .q-text { font-family: var(--fd); font-weight: 600; font-size: 25px; color: var(--ink); margin-bottom: 28px; line-height: 1.3; }
+
+    .options { display: flex; flex-direction: column; gap: 12px; }
+    .opt {
+      display: block; width: 100%; text-align: left;
+      font-family: var(--fb); font-size: 16px; color: var(--ink);
+      background: var(--paper); border: 1.5px solid var(--line); border-radius: 12px;
+      padding: 16px 20px; cursor: pointer; transition: all .15s ease;
+    }
+    .opt:hover { border-color: var(--tide); background: #fff; }
+    .opt:focus-visible { outline: 2.5px solid var(--inlet-900); outline-offset: 2px; }
+
+    .start-btn, .restart-btn {
+      display: inline-block; font-family: var(--fb); font-weight: 800; font-size: 16px;
+      color: #fff; background: var(--cta-bg); border: none; border-radius: 999px;
+      padding: 15px 34px; cursor: pointer; margin-top: 8px;
+    }
+    .start-btn:hover, .restart-btn:hover { background: var(--cta-hover); }
+
+    .result-card {
+      background: linear-gradient(155deg, var(--tide), var(--inlet-900));
+      color: #F6F3EC; border-radius: 20px; padding: 48px 40px; text-align: center;
+    }
+    .result-eyebrow {
+      font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--brass-bright); margin-bottom: 14px;
+    }
+    .result-name {
+      font-family: var(--fd); font-weight: 700; font-size: clamp(32px, 6vw, 44px);
+      color: #fff; margin-bottom: 16px; line-height: 1.15;
+    }
+    .result-desc {
+      font-family: var(--fb); font-size: 16.5px; color: rgba(246,243,236,0.92);
+      max-width: 46ch; margin: 0 auto 28px; line-height: 1.6;
+    }
+
+    .subscribe-box {
+      background: #fff; border-radius: 16px; padding: 28px; margin-top: 20px;
+      color: var(--ink); text-align: left;
+    }
+    .subscribe-box h3 { font-family: var(--fd); font-size: 19px; color: var(--inlet); margin-bottom: 6px; }
+    .subscribe-box p { font-size: 14px; color: var(--ink-2); margin-bottom: 16px; }
+    .sub-form { display: flex; gap: 10px; }
+    .sub-form input {
+      flex: 1; font-family: var(--fb); font-size: 15px; border: 1.5px solid var(--field-border);
+      border-radius: 10px; padding: 12px 14px; color: var(--ink);
+    }
+    .sub-form button {
+      font-family: var(--fb); font-weight: 800; font-size: 15px; color: #231a08;
+      background: var(--brass-bright); border: none; border-radius: 10px; padding: 12px 20px; cursor: pointer; white-space: nowrap;
+    }
+    .sub-form button:hover { background: #EDB358; }
+    .sub-msg { font-size: 13px; font-weight: 700; color: var(--inlet); margin-top: 8px; min-height: 18px; }
+    .sub-msg.err { color: #A1401F; }
+
+    @media(max-width: 520px) {
+      .card { padding: 30px 22px; }
+      .sub-form { flex-direction: column; }
+    }
+
+    .back-link { display: block; text-align: center; margin-top: 30px; font-size: 14px; color: var(--tide); font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <header class="mast">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <defs><linearGradient id="logoGradQ" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A6E6B"/><stop offset="1" stop-color="#0A3537"/></linearGradient></defs>
+          <circle cx="50" cy="50" r="50" fill="url(#logoGradQ)"/>
+          <circle cx="50" cy="36.6" r="3.2" fill="#E0A23C"/>
+          <path d="M28.2 54.5 L37.2 54.5 L39.8 54.5 L42 47 L44.4 61.2 L46.6 54.5 Q50.3 46.8 54 54.5 Q57.7 62.2 61.4 54.5 Q65.1 47 68.8 54.5 L71.8 54.5" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="word">Port Moody <b>Pulse</b></span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <div id="intro-screen">
+        <div class="intro">
+          <div class="eyebrow"><span class="dot"></span>Just for Fun</div>
+          <h1>Which Port Moody Coffee Shop Matches Your Vibe?</h1>
+          <p>Five quick questions. One real answer — no wrong ones.</p>
+        </div>
+        <div style="text-align:center;">
+          <button class="start-btn" id="start-btn">Start the Quiz →</button>
+        </div>
+      </div>
+
+      <div id="quiz-screen" style="display:none;">
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <div class="card">
+          <div class="q-num" id="q-num">Question 1 of 5</div>
+          <div class="q-text" id="q-text"></div>
+          <div class="options" id="q-options"></div>
+        </div>
+      </div>
+
+      <div id="result-screen" style="display:none;">
+        <div class="result-card">
+          <div class="result-eyebrow">Your Match</div>
+          <div class="result-name" id="result-name"></div>
+          <div class="result-desc" id="result-desc"></div>
+
+          <div class="subscribe-box">
+            <h3>Get more like this, every week.</h3>
+            <p>Free local stories, events, and a few surprises — straight to your inbox.</p>
+            <form class="sub-form" id="quiz-sub-form" novalidate>
+              <input id="quiz-email" type="email" placeholder="you@email.com" autocomplete="email" inputmode="email" />
+              <button type="button" id="quiz-sub-btn">Subscribe free</button>
+            </form>
+            <p class="sub-msg" id="quiz-sub-msg" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+        <button class="restart-btn" id="restart-btn" style="display:block; margin:24px auto 0;">Take It Again</button>
+        <a class="back-link" href="index.html">← Back to Port Moody Pulse</a>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    var results = {
+      jjbean: {
+        name: "JJ Bean — The Community Regular",
+        desc: "You're the one who says hi to strangers and means it. You don't need a fancy order or a quiet corner — you want a spot where people actually know your name. JJ Bean's been the neighbourhood's living room since 1996, and that's exactly your speed."
+      },
+      timbertrain: {
+        name: "Timbertrain at Outpost — The Trendsetter",
+        desc: "You want your coffee, your beer, and your board game night in one gorgeous space, please. Timbertrain's Outpost location — dog-friendly patio and all — was basically designed around people exactly like you."
+      },
+      divano: {
+        name: "Caffé Divano — The Social Butterfly",
+        desc: "You don't drink coffee alone if you can help it. You want a pleasant buzz, comfortable seating, and someone to talk to. Divano's known for exactly that atmosphere — a place built for lingering, not rushing."
+      },
+      blacksugar: {
+        name: "Black Sugar — The Neighbourhood Favourite",
+        desc: "You're not chasing trends — you just want consistently great coffee, a good snack, and a nice atmosphere. Black Sugar's the kind of place people quietly love for years without ever needing to make a big deal about it."
+      },
+      kaffi: {
+        name: "Kaffi Espresso Bar — The Hidden Gem Hunter",
+        desc: "You'd rather find the understated, slightly-off-the-radar spot than the one everyone already knows about. Kaffi's a genuinely great Ukrainian coffee shop and bakery — ask about the syrniki."
+      },
+      grit: {
+        name: "Grit Studio — The Creative Soul",
+        desc: "You're happiest somewhere that doubles as a gallery, a bookstore, and a coffee shop all at once. You'd rather talk about a half-finished novel than small talk about the weather. Grit Studio's book-talk gatherings were basically built for you."
+      },
+      hardbean: {
+        name: "Hard Bean Brunch Co. — The Brunch Enthusiast",
+        desc: "Coffee is really just the opening act for you — the real question is what's on the plate. You take your Saturday mornings seriously, and you're not leaving until you've had a proper meal. (Also, yes, you already know about the bathroom.)"
+      },
+      omega: {
+        name: "Omega Café — The Comfort Food Lover",
+        desc: "You don't need anything trendy — you need something warm, familiar, and generous. A good diner beats a minimalist café every time. The Garden Omelette has your name on it."
+      },
+      pleasant: {
+        name: "Pleasant Coffee — The Purist",
+        desc: "You have opinions about roast dates. You know the difference between a flat white and a cortado without needing to ask. Pleasant's minimalist, specialty-focused approach to sourcing is basically your love language."
+      },
+      sweettalk: {
+        name: "Sweet Talk — The Sweet Tooth",
+        desc: "Coffee's great, but you're really here for the donut. Bonus points that this same spot quietly turns into a cocktail bar after dark — you like a place that knows how to do more than one thing well."
+      }
+    };
+
+    var questions = [
+      {
+        text: "It's Saturday morning. What's the actual plan?",
+        options: [
+          { label: "Wander down and see who's around", result: "jjbean" },
+          { label: "Somewhere gorgeous with a patio and a vibe", result: "timbertrain" },
+          { label: "Somewhere buzzing, with people to talk to", result: "divano" },
+          { label: "My usual quiet, reliable spot", result: "blacksugar" },
+          { label: "Somewhere most people don't know about yet", result: "kaffi" },
+          { label: "Bring a book and disappear for two hours", result: "grit" },
+          { label: "Order enough food for the whole table", result: "hardbean" },
+          { label: "Something warm, no fuss, extra hash browns", result: "omega" },
+          { label: "Get the good beans before they sell out", result: "pleasant" },
+          { label: "Donuts. Just donuts.", result: "sweettalk" }
+        ]
+      },
+      {
+        text: "What's your actual coffee order?",
+        options: [
+          { label: "Whatever's the daily drip", result: "jjbean" },
+          { label: "Something photogenic, honestly", result: "timbertrain" },
+          { label: "Something classic, extra time to enjoy it", result: "divano" },
+          { label: "The same thing every time, and it's perfect", result: "blacksugar" },
+          { label: "Whatever the barista recommends, I trust them", result: "kaffi" },
+          { label: "Something a little unusual, ask the barista", result: "grit" },
+          { label: "Coffee's fine, but what pairs with waffles?", result: "hardbean" },
+          { label: "Regular coffee, bottomless if possible", result: "omega" },
+          { label: "Single-origin pour-over, please", result: "pleasant" },
+          { label: "Whatever's sweetest on the menu", result: "sweettalk" }
+        ]
+      },
+      {
+        text: "Pick a way to spend a rainy Port Moody afternoon.",
+        options: [
+          { label: "Catching up with a neighbour", result: "jjbean" },
+          { label: "Somewhere I could stay for hours without noticing", result: "timbertrain" },
+          { label: "People-watching with a full cup in hand", result: "divano" },
+          { label: "A cozy corner I already know and love", result: "blacksugar" },
+          { label: "Discovering a spot most people overlook", result: "kaffi" },
+          { label: "A gallery opening or a book club", result: "grit" },
+          { label: "A long, slow brunch", result: "hardbean" },
+          { label: "Comfort food and a window seat", result: "omega" },
+          { label: "Reading about coffee origins, unironically", result: "pleasant" },
+          { label: "Coffee now, cocktails later, same address", result: "sweettalk" }
+        ]
+      },
+      {
+        text: "Pick a Port Moody weekend activity.",
+        options: [
+          { label: "Walking Shoreline Trail and running into everyone you know", result: "jjbean" },
+          { label: "Brewers Row, taking it seriously", result: "timbertrain" },
+          { label: "Wherever has the best people-watching", result: "divano" },
+          { label: "Whatever's comfortable and familiar", result: "blacksugar" },
+          { label: "Finding the spot nobody's told you about yet", result: "kaffi" },
+          { label: "Checking out whatever's on at the Arts Centre", result: "grit" },
+          { label: "A long, unhurried brunch with friends", result: "hardbean" },
+          { label: "Staying in with something cozy", result: "omega" },
+          { label: "Something quiet and deliberate, no rush", result: "pleasant" },
+          { label: "Dessert first, always", result: "sweettalk" }
+        ]
+      },
+      {
+        text: "What actually matters most in a coffee shop?",
+        options: [
+          { label: "Feeling like a regular", result: "jjbean" },
+          { label: "The space itself — design, patio, vibe", result: "timbertrain" },
+          { label: "Atmosphere and good energy", result: "divano" },
+          { label: "Consistency, every single time", result: "blacksugar" },
+          { label: "Feeling like I found something special", result: "kaffi" },
+          { label: "Character and creativity", result: "grit" },
+          { label: "The food menu, honestly", result: "hardbean" },
+          { label: "Feeling comfortable and unhurried", result: "omega" },
+          { label: "The quality of the coffee itself", result: "pleasant" },
+          { label: "Something sweet on the menu", result: "sweettalk" }
+        ]
+      },
+      {
+        text: "Last one: what's your ideal night out in Port Moody?",
+        options: [
+          { label: "Somewhere everyone already knows me", result: "jjbean" },
+          { label: "Somewhere that looks as good as it tastes", result: "timbertrain" },
+          { label: "Good conversation, good energy, no rush", result: "divano" },
+          { label: "A low-key regular spot, nothing fancy needed", result: "blacksugar" },
+          { label: "A place my friends haven't discovered yet", result: "kaffi" },
+          { label: "Anywhere with art, books, or live music", result: "grit" },
+          { label: "A proper meal, not just drinks", result: "hardbean" },
+          { label: "Something warm and comforting to end the day", result: "omega" },
+          { label: "Something quiet, thoughtful, well made", result: "pleasant" },
+          { label: "Dessert, then it turns into a bar — say less", result: "sweettalk" }
+        ]
+      }
+    ];
+
+    var currentQ = 0;
+    var tally = {};
+
+    var introScreen = document.getElementById("intro-screen");
+    var quizScreen = document.getElementById("quiz-screen");
+    var resultScreen = document.getElementById("result-screen");
+    var progressFill = document.getElementById("progress-fill");
+
+    function startQuiz() {
+      currentQ = 0;
+      tally = {};
+      introScreen.style.display = "none";
+      resultScreen.style.display = "none";
+      quizScreen.style.display = "block";
+      renderQuestion();
+    }
+
+    function renderQuestion() {
+      var q = questions[currentQ];
+      document.getElementById("q-num").textContent = "Question " + (currentQ + 1) + " of " + questions.length;
+      document.getElementById("q-text").textContent = q.text;
+      progressFill.style.width = ((currentQ) / questions.length * 100) + "%";
+
+      var optsContainer = document.getElementById("q-options");
+      optsContainer.innerHTML = "";
+      q.options.forEach(function(opt) {
+        var btn = document.createElement("button");
+        btn.className = "opt";
+        btn.textContent = opt.label;
+        btn.addEventListener("click", function() { selectAnswer(opt.result); });
+        optsContainer.appendChild(btn);
+      });
+    }
+
+    function selectAnswer(resultKey) {
+      tally[resultKey] = (tally[resultKey] || 0) + 1;
+      currentQ++;
+      if (currentQ < questions.length) {
+        renderQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      progressFill.style.width = "100%";
+      var topKey = Object.keys(tally).reduce(function(a, b) { return tally[a] >= tally[b] ? a : b; });
+      var result = results[topKey];
+
+      document.getElementById("result-name").textContent = result.name;
+      document.getElementById("result-desc").textContent = result.desc;
+
+      quizScreen.style.display = "none";
+      resultScreen.style.display = "block";
+    }
+
+    document.getElementById("start-btn").addEventListener("click", startQuiz);
+    document.getElementById("restart-btn").addEventListener("click", startQuiz);
+
+    var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    async function quizSubscribe() {
+      var input = document.getElementById("quiz-email");
+      var button = document.getElementById("quiz-sub-btn");
+      var msg = document.getElementById("quiz-sub-msg");
+      var email = input.value.trim();
+
+      if (!EMAIL.test(email)) {
+        msg.textContent = "Please enter a valid email address.";
+        msg.classList.add("err");
+        input.focus();
+        return;
+      }
+      msg.classList.remove("err");
+      button.disabled = true;
+      button.textContent = "Subscribing...";
+      msg.textContent = "";
+
+      try {
+        var response = await fetch("/api/subscribe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: email })
+        });
+        var data = await response.json();
+        if (!response.ok || !data.ok) {
+          throw new Error(data.message || "Something went wrong. Please try again.");
+        }
+        msg.classList.remove("err");
+        msg.textContent = data.message || "You're on the list — welcome to Port Moody Pulse!";
+        input.value = "";
+      } catch (error) {
+        msg.classList.add("err");
+        msg.textContent = error.message || "Something went wrong. Please try again.";
+      } finally {
+        button.disabled = false;
+        button.textContent = "Subscribe free";
+      }
+    }
+
+    document.getElementById("quiz-sub-btn").addEventListener("click", function(e) {
+      e.preventDefault();
+      quizSubscribe();
+    });
+  </script>
+
+</body>
+</html>
