@@ -199,7 +199,7 @@
     {
       "@type": ["Organization", "NewsMediaOrganization"],
       "@id": "https://portmoodypulse.ca/#organization",
-      "name": "Port&nbsp;Moody Pulse",
+      "name": "Port\u00A0Moody Pulse",
       "url": "https://portmoodypulse.ca",
       "logo": {
         "@type": "ImageObject",
@@ -207,11 +207,11 @@
         "width": 512,
         "height": 512
       },
-      "description": "Port&nbsp;Moody Pulse is an independent community newsletter covering local news, events, and city council decisions in Port&nbsp;Moody, British Columbia, Canada.",
+      "description": "Port\u00A0Moody Pulse is an independent community newsletter covering local news, events, and city council decisions in Port\u00A0Moody, British Columbia, Canada.",
       "foundingDate": "2026",
       "areaServed": {
         "@type": "City",
-        "name": "Port&nbsp;Moody",
+        "name": "Port\u00A0Moody",
         "containedInPlace": {
           "@type": "AdministrativeArea",
           "name": "British Columbia, Canada"
@@ -227,14 +227,14 @@
         "email": "hello@portmoodypulse.ca"
       },
       "publishingPrinciples": "https://portmoodypulse.ca/#mission",
-      "diversityPolicy": "Port&nbsp;Moody Pulse is committed to serving all of Port&nbsp;Moody's diverse communities, publishing content in multiple languages including English, Chinese, Korean, and Farsi."
+      "diversityPolicy": "Port\u00A0Moody Pulse is committed to serving all of Port\u00A0Moody's diverse communities, publishing content in multiple languages including English, Chinese, Korean, and Farsi."
     },
     {
       "@type": "WebSite",
       "@id": "https://portmoodypulse.ca/#website",
       "url": "https://portmoodypulse.ca",
-      "name": "Port&nbsp;Moody Pulse",
-      "description": "Local news, events, and good news from Port&nbsp;Moody, B.C.",
+      "name": "Port\u00A0Moody Pulse",
+      "description": "Local news, events, and good news from Port\u00A0Moody, B.C.",
       "publisher": {
         "@id": "https://portmoodypulse.ca/#organization"
       },
@@ -609,7 +609,7 @@
       var d = new Date();
       var f = d.toLocaleDateString("en-CA", { weekday: "long", month: "long", day: "numeric", year: "numeric" });
       var el = document.getElementById("dateline");
-      if (el) el.textContent = f + "  ·  Port&nbsp;Moody, B.C.";
+      if (el) el.textContent = f + "  ·  Port\u00A0Moody, B.C.";
     })();
 
     function goTo(selector) {
@@ -662,7 +662,7 @@
         if (!response.ok || !data.ok) {
           throw new Error(data.message || "Something went wrong. Please try again.");
         }
-        if (msg) { msg.classList.remove("err"); msg.textContent = data.message || "You're on the list — welcome to Port&nbsp;Moody Pulse!"; }
+        if (msg) { msg.classList.remove("err"); msg.textContent = data.message || "You're on the list — welcome to Port\u00A0Moody Pulse!"; }
         if (input) input.value = "";
       } catch (error) {
         if (msg) { msg.classList.add("err"); msg.textContent = error.message || "Something went wrong. Please try again."; }
