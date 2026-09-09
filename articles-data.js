@@ -1,18 +1,19 @@
 // articles-data.js
-// Story content for Port Moody Pulse, sourced from the City of Port Moody's
+// Story content for Port Moody Pulse, sourced from the City of Port Moody's
 // official website and local reporting (Tri-Cities Dispatch, Freshet News,
-// The Realist, Global News) as of late August 2026. Facts have been
-// verified against these sources, but always confirm event dates and times
-// with the organizer before attending — schedules can change after publication.
+// The Realist, Global News, Elections BC) as of September 2026. Facts have
+// been verified against these sources, but always confirm event dates and
+// times with the organizer before attending — schedules can change after
+// publication.
 
 window.PMP_ARTICLES = {
 
   inlet: {
     tag: "Housing · Inlet District",
-    title: "Construction begins on Port Moody's biggest-ever development",
+    title: "Construction begins on Port Moody's biggest-ever development",
     meta: "By the newsroom · Construction update · 4 min read",
     body: [
-      "Construction is now visibly underway on Inlet District, Wesgroup Properties' 14.8-acre master-planned community at the corner of Ioco Road and Barnet Highway — the largest redevelopment project in Port Moody's history. The first tower, a 27-storey building called 1 Market Square, broke ground after roughly 50 aging single-family homes on the site were cleared, with several relocated to remote communities rather than demolished.",
+      "Construction is now visibly underway on Inlet District, Wesgroup Properties' 14.8-acre master-planned community at the corner of Ioco Road and Barnet Highway — the largest redevelopment project in Port Moody's history. The first tower, a 27-storey building called 1 Market Square, broke ground after roughly 50 aging single-family homes on the site were cleared, with several relocated to remote communities rather than demolished.",
       "When that first tower is complete around 2029, it will add 299 homes ranging from studios to three-bedroom units, along with a new grocery store and daycare. The full build-out, expected to take about 25 years, calls for six residential towers as tall as 31 storeys plus several low-rise buildings — roughly 2,500 new homes housing an eventual 5,500 residents.",
       "The development agreement between the city and Wesgroup includes more than $137 million in community contributions: a new park of roughly 2.5 acres, a pedestrian overpass connecting the site across Ioco Road to Inlet Centre SkyTrain station, and a rental building reserving at least 10 percent of its units for seniors. The neighbourhood is being designed with no surface roads — all vehicle access and parking will be underground.",
       "What to watch next: ongoing roadwork and detours around Guildford Drive and Ioco Road as construction continues through 2026, and how the first residents settle in once the tower opens in 2029."
@@ -21,12 +22,12 @@ window.PMP_ARTICLES = {
 
   towers: {
     tag: "Housing",
-    title: "Port Moody adopts its 2050 plan as towers rise at Moody Centre",
+    title: "Port Moody adopts its 2050 plan as towers rise at Moody Centre",
     meta: "By the newsroom · 6 days ago · 5 min read",
     body: [
-      "Council has formally adopted Port Moody 2050, the city's new Official Community Plan — the document that will guide decisions on housing, transportation and growth for the next 25 years. The adoption lands the same week the city's most ambitious towers yet are taking shape near the Moody Centre SkyTrain station.",
-      "Council recently approved the tallest buildings in Port Moody's history at Moody Centre: towers reaching 39 storeys with a combined 865 homes, only a small share of them below-market rentals. A resident survey commissioned to gauge reaction found a majority — 57 percent of respondents — disagreed with the vision for the neighbourhood, a sign of how divided opinion remains on the pace of change.",
-      "It's a tension playing out across the region: SkyTrain-adjacent land like this is exactly where planners want density to reduce car dependence, but for residents who chose Port Moody for its smaller-town feel, it also means a fast-changing skyline. With a municipal election ahead this fall, growth has become one of the city's most contested local issues.",
+      "Council has formally adopted Port Moody 2050, the city's new Official Community Plan — the document that will guide decisions on housing, transportation and growth for the next 25 years. The adoption lands the same week the city's most ambitious towers yet are taking shape near the Moody Centre SkyTrain station.",
+      "Council recently approved the tallest buildings in Port Moody's history at Moody Centre: towers reaching 39 storeys with a combined 865 homes, only a small share of them below-market rentals. A resident survey commissioned to gauge reaction found a majority — 57 percent of respondents — disagreed with the vision for the neighbourhood, a sign of how divided opinion remains on the pace of change.",
+      "It's a tension playing out across the region: SkyTrain-adjacent land like this is exactly where planners want density to reduce car dependence, but for residents who chose Port Moody for its smaller-town feel, it also means a fast-changing skyline. With a municipal election ahead this fall, growth has become one of the city's most contested local issues.",
       "What to watch next: how council weighs further Moody Centre applications against the newly adopted OCP, and whether the debate over height and pace shapes this year's election."
     ]
   },
@@ -36,7 +37,7 @@ window.PMP_ARTICLES = {
     title: "Council locks in a 3.95% tax increase for 2026",
     meta: "By the newsroom · This spring · 3 min read",
     body: [
-      "Port Moody council has unanimously approved the city's 2026 budget, setting a 3.95 percent property tax increase — the lowest council has approved this term. For the average household, assessed around $1.22 million, that works out to about $121 more a year, roughly $2.35 a week.",
+      "Port Moody council has unanimously approved the city's 2026 budget, setting a 3.95 percent property tax increase — the lowest council has approved this term. For the average household, assessed around $1.22 million, that works out to about $121 more a year, roughly $2.35 a week.",
       "Coun. Callan Morrison called it a \"tough balance,\" describing it as one of the hardest budget years council has faced while trying to keep the rate manageable for residents. The approved plan includes a $27 million capital budget for 2026 and more than $92 million in infrastructure projects over five years, with sewer, water and road work among the largest line items.",
       "Council also paused the planned one percent increase to the Climate Action Levy for 2026, though the levy itself stays part of the longer-term financial plan. Some councillors flagged the trade-off directly, warning that deferring climate and asset-renewal funding now could mean steeper costs later.",
       "What to watch next: whether the climate levy increase returns in next year's budget cycle, and how the $27 million capital program rolls out through the rest of 2026."
@@ -48,10 +49,10 @@ window.PMP_ARTICLES = {
     title: "Golden Spike Days wraps its 49th year at Rocky Point",
     meta: "By the newsroom · This weekend · 3 min read",
     body: [
-      "Port Moody's biggest summer tradition just wrapped its 49th year. Golden Spike Days filled Rocky Point Park for two days, June 27 and 28, drawing an estimated 40,000 visitors over the weekend — making it one of the most-attended events anywhere in the Tri-Cities.",
+      "Port Moody's biggest summer tradition just wrapped its 49th year. Golden Spike Days filled Rocky Point Park for two days, June 27 and 28, drawing an estimated 40,000 visitors over the weekend — making it one of the most-attended events anywhere in the Tri-Cities.",
       "JUNO winner Nick Gilder and the Sweeney Todd Group headlined Saturday night, alongside the festival's long-running Can-Can Dancers and a beer garden pouring from local breweries including Twin Sails, Parkside and Yellow Dog. Admission, as always, was by donation, with proceeds going straight back into funding next year's event.",
-      "The festival is entirely volunteer-run by the Port Moody Golden Spike Days Society, which starts planning every September for the following summer. Amid the music and food trucks, it's worth remembering the event commemorates the 1880s arrival of the Canadian Pacific Railway in Port Moody — once the line's western terminus — held on the traditional, ancestral and unceded territory of the kʷikʷəƛ̓əm (Kwikwetlem) First Nation.",
-      "What to watch next: Port Moody's Canada Day celebrations move to Rocky Point Park on Wednesday, July 1, picking up right where Golden Spike Days left off."
+      "The festival is entirely volunteer-run by the Port Moody Golden Spike Days Society, which starts planning every September for the following summer. Amid the music and food trucks, it's worth remembering the event commemorates the 1880s arrival of the Canadian Pacific Railway in Port Moody — once the line's western terminus — held on the traditional, ancestral and unceded territory of the kʷikʷəƛ̓əm (Kwikwetlem) First Nation.",
+      "What to watch next: Port Moody's Canada Day celebrations move to Rocky Point Park on Wednesday, July 1, picking up right where Golden Spike Days left off."
     ]
   },
 
@@ -69,22 +70,22 @@ window.PMP_ARTICLES = {
 
   mexicano: {
     tag: "Good News",
-    title: "Port Moody restaurant earns Mexico's top culinary honour",
+    title: "Port Moody restaurant earns Mexico's top culinary honour",
     meta: "By the newsroom · About a month ago · 3 min read",
     body: [
       "On the porch of a converted heritage house on Clarke Street, Original's Mexicano head chef Esteban Cuevas received one of the highest honours Mexico bestows outside its own borders: the Sello M, a seal of culinary authenticity, presented at a ceremony attended by Mexico's consul general in Vancouver.",
       "The award, issued by the Academia Mexicana de Gastronomía with backing from Mexico's foreign ministry, made Original's one of only six restaurants across B.C., Yukon and the Northwest Territories to receive it in the program's first international intake — out of 22 applicants and 11 finalists.",
       "Cuevas opened the restaurant in 2013 at just 21, originally planning a coffee shop before turning it into a full Mexican kitchen, teaching himself to cook largely through trial, error and long days at the stove. \"It's one of those things, where if you spend a lot of time and a lot of hours doing one thing, you become good,\" he said.",
-      "What to watch next: whether the recognition brings new visibility to the small restaurant beyond Port Moody, and whether more Tri-Cities businesses pursue the designation next intake."
+      "What to watch next: whether the recognition brings new visibility to the small restaurant beyond Port Moody, and whether more Tri-Cities businesses pursue the designation next intake."
     ]
   },
 
   trails: {
     tag: "Outdoors",
-    title: "Your guide to Port Moody's best trail — and where to go next",
+    title: "Your guide to Port Moody's best trail — and where to go next",
     meta: "By the newsroom · Trail guide · 4 min read",
     body: [
-      "If you only walk one trail in Port Moody, make it Shoreline Trail. The roughly 6-kilometre round trip connects Rocky Point Park to Old Orchard Park along the Burrard Inlet waterfront, drawing more than 230,000 visits a year — one of the city's most-used recreational spaces.",
+      "If you only walk one trail in Port Moody, make it Shoreline Trail. The roughly 6-kilometre round trip connects Rocky Point Park to Old Orchard Park along the Burrard Inlet waterfront, drawing more than 230,000 visits a year — one of the city's most-used recreational spaces.",
       "There's a paved, fully accessible multi-use path for walking, cycling and rolling, plus a parallel gravel path for a quieter walk, including a boardwalk section along Pigeon Cove suitable for strollers and wheeled mobility devices. Either way, plan for about two hours round trip with minimal elevation gain — an easy outing for nearly anyone.",
       "Looking to go further afield? Buntzen Lake, a short drive north, offers a roughly 10-kilometre loop with forest, water views and a dog beach. Sasamat Lake nearby has an easier 3.1-kilometre loop around the water, with the option to extend it into a longer trek via the Woodhaven Connector.",
       "What to watch next: parking fills up fast at Buntzen and Sasamat on summer weekends, so an early start — or sticking close to home on Shoreline Trail — is usually the easier plan."
@@ -96,21 +97,21 @@ window.PMP_ARTICLES = {
     title: "Summer Sundays and RibFest headline the concert season",
     meta: "By the newsroom · Coming up · 2 min read",
     body: [
-      "Port Moody's free Summer Sundays concert series kicks off at Rocky Point Park on Sunday, July 5, with live bands taking the waterfront stage at 2 p.m. most Sundays through the summer.",
-      "The series leads into Port Moody RibFest, running July 17 to 19, also at Rocky Point — a Rotary Club-hosted weekend of barbecue competitions, craft breweries and live music that's become one of the city's biggest summer draws.",
-      "Council has also moved to support live music indoors, recently approving $2,700 a year from the city's Arts Reserve to back the Inlet Theatre Music Series — a smaller but steady addition to Port Moody's arts calendar.",
+      "Port Moody's free Summer Sundays concert series kicks off at Rocky Point Park on Sunday, July 5, with live bands taking the waterfront stage at 2 p.m. most Sundays through the summer.",
+      "The series leads into Port Moody RibFest, running July 17 to 19, also at Rocky Point — a Rotary Club-hosted weekend of barbecue competitions, craft breweries and live music that's become one of the city's biggest summer draws.",
+      "Council has also moved to support live music indoors, recently approving $2,700 a year from the city's Arts Reserve to back the Inlet Theatre Music Series — a smaller but steady addition to Port Moody's arts calendar.",
       "What to watch next: the full Summer Sundays lineup, expected to run through late August, with confirmed acts posted as each Sunday approaches."
     ]
   },
 
   volunteers: {
     tag: "Good News",
-    title: "Port Moody honours two of its own along the Shoreline Trail",
+    title: "Port Moody honours two of its own along the Shoreline Trail",
     meta: "By the newsroom · Earlier this month · 3 min read",
     body: [
-      "This month, Port Moody dedicated two of its best-loved waterfront landmarks to the people who helped build them. The Shoreline Trail boardwalk now carries the name of Ann Hulbert, a city councillor for 21 years and a steady voice for environmental initiatives, who passed away in 2025 and was instrumental in planning the original boardwalk.",
-      "The Shoreline Trail itself was dedicated to David Driscoll, who served four terms as Port Moody's mayor and played a foundational role in creating the trail, helping establish it as one of the city's most important recreational and environmental corridors.",
-      "Both received the city's Freedom of the City honour, reserved for residents who have made an exceptional, lasting contribution to Port Moody. For a trail that sees roughly 230,000 visits a year, it's a quiet but fitting way to remember the people behind it.",
+      "This month, Port Moody dedicated two of its best-loved waterfront landmarks to the people who helped build them. The Shoreline Trail boardwalk now carries the name of Ann Hulbert, a city councillor for 21 years and a steady voice for environmental initiatives, who passed away in 2025 and was instrumental in planning the original boardwalk.",
+      "The Shoreline Trail itself was dedicated to David Driscoll, who served four terms as Port Moody's mayor and played a foundational role in creating the trail, helping establish it as one of the city's most important recreational and environmental corridors.",
+      "Both received the city's Freedom of the City honour, reserved for residents who have made an exceptional, lasting contribution to Port Moody. For a trail that sees roughly 230,000 visits a year, it's a quiet but fitting way to remember the people behind it.",
       "What to watch next: details on a planned recognition event, and the trail's continuing upgrades — recent work has included repaving, drainage improvements and a refreshed boardwalk."
     ]
   },
@@ -120,9 +121,9 @@ window.PMP_ARTICLES = {
     title: "The class that rewrote her story",
     meta: "By the newsroom · This week · 4 min read",
     body: [
-      "When Ming Louie Stein and her husband retired to Port Moody in late 2022, she didn't know a single person here. In January 2023, on a whim, she signed up for a creative writing class at the Port Moody Recreation Centre. She had always been creative, she says — but that part of her had been buried for most of her life.",
+      "When Ming Louie Stein and her husband retired to Port Moody in late 2022, she didn't know a single person here. In January 2023, on a whim, she signed up for a creative writing class at the Port Moody Recreation Centre. She had always been creative, she says — but that part of her had been buried for most of her life.",
       "Three and a half years later, she's published two adult books and a children's picture book — including Kintsugi: A Woman, the book she started writing in that very first class. She credits the Rec Centre's writing program, and the community of professional writers and fellow students she found there, for much of it.",
-      "Since then, she's become a fixture in the Tri-Cities creative scene: a member of the Tri-Cities Wordsmiths, co-host of an author reading at the Port Moody Arts Centre last February, and organizer of regular book-talk gatherings at Grit Studio. \"Port Moody did not simply become the place where I retired,\" she told us. \"It became the place where my creativity was rediscovered, my authentic identity reclaimed.\"",
+      "Since then, she's become a fixture in the Tri-Cities creative scene: a member of the Tri-Cities Wordsmiths, co-host of an author reading at the Port Moody Arts Centre last February, and organizer of regular book-talk gatherings at Grit Studio. \"Port Moody did not simply become the place where I retired,\" she told us. \"It became the place where my creativity was rediscovered, my authentic identity reclaimed.\"",
       "What to watch next: Ming's next Coffee Talk gathering at Grit Studio is July 25, open to writers, editors and readers alike."
     ]
   },
@@ -132,10 +133,10 @@ window.PMP_ARTICLES = {
     title: "The last cobbler on Murray Street",
     meta: "By the newsroom · Story of the week · 4 min read",
     body: [
-      "Steve's grandfather was a CPR train engineer. He liked this stretch of Port Moody enough that decades later, he bought Steve the building where his shop still stands today. Inside, it feels like it's been quietly resisting time for fifty years — a Civil War print on the wall, an antique till, a workbench worn smooth by use.",
+      "Steve's grandfather was a CPR train engineer. He liked this stretch of Port Moody enough that decades later, he bought Steve the building where his shop still stands today. Inside, it feels like it's been quietly resisting time for fifty years — a Civil War print on the wall, an antique till, a workbench worn smooth by use.",
       "Steve's own path to the trade wasn't a straight line. Before he ever picked up a boot, he worked the gold department at an optical lab, spent time as a cutter for well-known boot brands, and served as a Royal Canadian Army engineer. Somewhere in there, he found his way to leather — learning the trade the hard way, the kind of apprenticeship that barely exists anymore.",
       "\"People are tending to get stuff fixed because it fits,\" he told us, gesturing at a row of shoes waiting for repair — some worth a thousand dollars. In a culture built to replace rather than repair, that's almost a small act of rebellion. He's busier than he expected to be, running the shop essentially alone.",
-      "What to watch next: Port Moody has a lot of new buildings going up. It's easy to miss the ones that were already here, quietly holding the line."
+      "What to watch next: Port Moody has a lot of new buildings going up. It's easy to miss the ones that were already here, quietly holding the line."
     ]
   },
 
@@ -144,7 +145,7 @@ window.PMP_ARTICLES = {
     title: "One in four residents avoid some parks over dog concerns, survey finds",
     meta: "By the newsroom · This week · 3 min read",
     body: [
-      "A new City of Port Moody survey has found that 26 percent of respondents avoid certain parks because of dog-related concerns, with Bert Flinn Park and Rocky Point Park named most often. The findings were presented to council on July 14 as the first phase of engagement for the city's new People, Dogs, and Public Spaces Strategy.",
+      "A new City of Port Moody survey has found that 26 percent of respondents avoid certain parks because of dog-related concerns, with Bert Flinn Park and Rocky Point Park named most often. The findings were presented to council on July 14 as the first phase of engagement for the city's new People, Dogs, and Public Spaces Strategy.",
       "The 349 respondents split roughly 58 percent dog owners to 42 percent non-owners, and their experiences diverged sharply: 79 percent of dog owners reported positive experiences with dogs in parks, compared with far more mixed responses from non-owners. Both groups agreed on what drives the difference — leashed, controlled dogs made for good experiences; off-leash dogs in on-leash areas and uncollected waste soured them.",
       "One notable wrinkle: nearly 40 percent of dog owners admitted letting their dog off-leash in on-leash areas at least occasionally, most often because they trusted their dog's behaviour — even though designated off-leash areas remain popular, used by more than 83 percent of dog owners surveyed.",
       "What to watch next: a second phase of public engagement is planned for early 2027, when residents will be asked to weigh in on draft recommendations before a final strategy goes to council. (Reporting on this survey draws on original coverage by Patrick Penner, Tri-Cities Dispatch.)"
@@ -156,7 +157,7 @@ window.PMP_ARTICLES = {
     title: "Water restrictions: what's actually in effect right now",
     meta: "By the newsroom · Updated · 2 min read",
     body: [
-      "Correction: an earlier version of this piece reported Stage 3 water restrictions were in effect. On July 16, Metro Vancouver downgraded the region, including Port Moody, back to Stage 2 — we've updated this article to reflect that.",
+      "Correction: an earlier version of this piece reported Stage 3 water restrictions were in effect. On July 16, Metro Vancouver downgraded the region, including Port Moody, back to Stage 2 — we've updated this article to reflect that.",
       "Under Stage 2, lawn watering remains banned across the region. Trees, shrubs, and flower gardens can be watered by hand, drip irrigation, soaker hose, or sprinkler — sprinklers are permitted 5–9am. Vegetable gardens can be watered at any time.",
       "The restriction is tied to regional water supply conditions during the drier summer months, driven by low snowpack and a dry, hot forecast. Bylaw enforcement can issue tickets for non-compliance, so it's worth knowing exactly what stage is in effect before watering.",
       "What to watch next: whether restrictions ease further if the region sees meaningful rainfall, or escalate again if dry conditions persist through late summer."
@@ -180,13 +181,13 @@ window.PMP_ARTICLES = {
     title: "40+ artists, 10 days, and a city full of surprises",
     meta: "By the newsroom · Festival preview · 4 min read",
     body: [
-      "For ten days in August, it's going to be hard to walk through Port Moody without bumping into art.",
+      "For ten days in August, it's going to be hard to walk through Port Moody without bumping into art.",
       "Art Out Side, PoMoArts' multidisciplinary arts festival, returns August 7–16 with over 80 artists, 14 community partners, and programming scattered across the city — waterfront to commercial hubs, alleyways to park benches, and a few locations the organizers are deliberately keeping secret. Nearly half the artists are local to the Tri-Cities.",
-      "\"Almost every single event is meant to surprise people who don't even know the event is happening,\" says Festival Manager Cristiana Ripeanu. \"We hope it will attract people who go out in Port Moody without necessarily seeking out an artistic experience.\"",
+      "\"Almost every single event is meant to surprise people who don't even know the event is happening,\" says Festival Manager Cristiana Ripeanu. \"We hope it will attract people who go out in Port Moody without necessarily seeking out an artistic experience.\"",
       "This year's lineup spans nearly every artistic discipline: installations, dance, music, film, performance, painting — some to witness, others to interact with. One new addition Cristiana is particularly proud of: a one-evening film screening celebrating local filmmakers, hosted by Train Wreck Brewery and sponsored by Aftershock Roadshow — a partnership she hopes will become a festival staple in the years to come.",
       "Asked which single day she'd recommend for a first-timer, Cristiana laughed. \"It feels like being asked which one of my children is my favourite. I can only promise that regardless of the day, you are sure to find something exciting and unusual happening just around the corner.\"",
-      "Port Moody calls itself the City of the Arts. For at least ten days in August, Cristiana says, that claim will be hard to argue with: \"It will be difficult for anyone to claim that Port Moody is a boring place.\"",
-      "What to watch next: Port Moody Pulse is covering the festival as a media partner, including artist profiles and on-the-ground coverage through the festival run. Art Out Side is free for all ages. Full schedule, artist lineup, and map at pomoarts.ca/artoutside."
+      "Port Moody calls itself the City of the Arts. For at least ten days in August, Cristiana says, that claim will be hard to argue with: \"It will be difficult for anyone to claim that Port Moody is a boring place.\"",
+      "What to watch next: Port Moody Pulse is covering the festival as a media partner, including artist profiles and on-the-ground coverage through the festival run. Art Out Side is free for all ages. Full schedule, artist lineup, and map at pomoarts.ca/artoutside."
     ]
   },
 
@@ -197,53 +198,54 @@ window.PMP_ARTICLES = {
     body: [
       "When Corus performs at Art Out Side this August, the wind, the birds, and the water won't be background noise. They'll be part of the show.",
       "Corus is an Indigenous sound healer and multidisciplinary artist of Haisla and Kitasoo Xai'xais descent, based in British Columbia. Their work blends Native American flute, crystal singing bowls, and ambient soundscapes into immersive experiences designed to help people slow down and reconnect — with themselves, with nature, and with each other.",
-      "\"The Native flute immediately felt like an extension of my breath and spirit,\" Corus told Port Moody Pulse. \"As an Indigenous person, it became a way to express emotion without words and reconnect with nature. The crystal singing bowls came later — together they created something that felt complete. Earth and breath meeting resonance and stillness.\"",
+      "\"The Native flute immediately felt like an extension of my breath and spirit,\" Corus told Port Moody Pulse. \"As an Indigenous person, it became a way to express emotion without words and reconnect with nature. The crystal singing bowls came later — together they created something that felt complete. Earth and breath meeting resonance and stillness.\"",
       "Corus runs a community called Co-Creating Love, which they describe as less about teaching people what they need and more about giving them room to rediscover it themselves. \"It's about creating spaces where people feel safe to show up as they are,\" they said.",
       "For Art Out Side, Corus will present Ancestral Sound Currents — a live sound journey weaving flute, bowls, and ambient soundscapes in an outdoor setting where nature becomes a collaborator, not a backdrop. \"The wind, birds, trees, and water aren't distractions — they become collaborators,\" Corus said. \"It allows people who may never intentionally attend a sound journey to unexpectedly stumble upon a moment of peace.\"",
       "The reactions, Corus says, are rarely predictable. \"One of the most meaningful reactions is when people tell me they finally felt still for the first time in years. Others have shared that the music brought back memories, or that visions came up for them.\"",
-      "Asked what they hope someone walking through Port Moody during the festival takes away, even if they only pause for a minute: \"I hope they leave feeling just a little lighter than when they arrived.\"",
-      "What to watch next: Art Out Side runs August 7–16 across Port Moody. Free, all ages. Full schedule at pomoarts.ca/artoutside."
+      "Asked what they hope someone walking through Port Moody during the festival takes away, even if they only pause for a minute: \"I hope they leave feeling just a little lighter than when they arrived.\"",
+      "What to watch next: Art Out Side runs August 7–16 across Port Moody. Free, all ages. Full schedule at pomoarts.ca/artoutside."
     ]
   },
 
   fredsoofi: {
     tag: "Community · People",
-    title: "The Man Who Saved a Piece of Port Moody's History",
+    title: "The Man Who Saved a Piece of Port Moody's History",
     meta: "By the newsroom · Art Out Side preview · 4 min read",
     body: [
-      "If you've lived in Port Moody for more than a few years, you've probably crossed paths with Fred Soofi without necessarily knowing his whole story.",
+      "If you've lived in Port Moody for more than a few years, you've probably crossed paths with Fred Soofi without necessarily knowing his whole story.",
       "He opened Il Mercante on Queen Street in 2005, at a moment when there were no grocery stores, no wood-burning pizza ovens, and barely any coffee shops in the city. Residents kept telling him the same thing — this place needs something. So Fred built it: groceries, specialty coffee, Neapolitan wood-fired pizza, and gelato, all under one roof.",
-      "That instinct to fill a gap has defined two decades of his relationship with this city. Over the years, Fred has personally moved and restored six heritage houses in Port Moody — a scale of preservation work most residents have no idea one person is responsible for.",
-      "His most visible contribution might be one most people walk past without knowing the full story: the Apple Yard House, now on St Johns Street and part of the Port Moody Arts Centre.",
-      "\"When the Apple Yard House was going to be demolished, I was approached by someone who asked if I would buy and restore it,\" Fred told Port Moody Pulse. He bought it, moved it, and restored it — a few years later, it was turned into a pizza restaurant. Years after that, when SkyTrain planning threatened the site, the provincial government stepped in to save the heritage building — and handed it to the Port Moody Arts Centre. Fred was part of the consultation. \"Now it is a great addition to the Art Centre,\" he said.",
-      "Fred has stayed involved in nearly every corner of the community since — the Farmers Market, SHARE Food Bank, and now the PoMoArts Advisory Council. Asked what's kept him showing up for over 20 years: \"I found Port Moody a very unique community because the residents really care and are very involved. It is close to Vancouver, the water, nature, and is a city of arts — but most unique of all is that residents care and are involved in the city's affairs.\"",
+      "That instinct to fill a gap has defined two decades of his relationship with this city. Over the years, Fred has personally moved and restored six heritage houses in Port Moody — a scale of preservation work most residents have no idea one person is responsible for.",
+      "His most visible contribution might be one most people walk past without knowing the full story: the Apple Yard House, now on St Johns Street and part of the Port Moody Arts Centre.",
+      "\"When the Apple Yard House was going to be demolished, I was approached by someone who asked if I would buy and restore it,\" Fred told Port Moody Pulse. He bought it, moved it, and restored it — a few years later, it was turned into a pizza restaurant. Years after that, when SkyTrain planning threatened the site, the provincial government stepped in to save the heritage building — and handed it to the Port Moody Arts Centre. Fred was part of the consultation. \"Now it is a great addition to the Art Centre,\" he said.",
+      "Fred has stayed involved in nearly every corner of the community since — the Farmers Market, SHARE Food Bank, and now the PoMoArts Advisory Council. Asked what's kept him showing up for over 20 years: \"I found Port Moody a very unique community because the residents really care and are very involved. It is close to Vancouver, the water, nature, and is a city of arts — but most unique of all is that residents care and are involved in the city's affairs.\"",
       "For Art Out Side this year, Fred is bringing his own craft into the festival: a cooking demonstration using entirely local ingredients, built around what he calls the art of nutritious food. \"I wanted to bring the art of cooking nutritious food, which maybe some people don't recognise,\" he said.",
-      "Asked whether \"City of the Arts\" feels earned after watching Port Moody evolve for two decades, Fred didn't just say yes. \"PoMo Arts Centre is doing great work, but as the population is increasing, they don't have enough space to accommodate the growth of the city,\" he said. \"There is also not enough affordable residential accommodation for artists to live in the city and contribute art. There is also very little visible, public and noticeable art in the city.\" He's hopeful the city's planned Kyle Centre expansion could help close that gap.",
-      "His outsider's-eye observation about the city itself: there are no hotels. \"The city has tried to bring a hotel, but it isn't viable for big hotel companies. I think a boutique hotel of 40 rooms would do well here.\" He'd also like to see more seniors housing and assisted living options in Port Moody.",
+      "Asked whether \"City of the Arts\" feels earned after watching Port Moody evolve for two decades, Fred didn't just say yes. \"PoMo Arts Centre is doing great work, but as the population is increasing, they don't have enough space to accommodate the growth of the city,\" he said. \"There is also not enough affordable residential accommodation for artists to live in the city and contribute art. There is also very little visible, public and noticeable art in the city.\" He's hopeful the city's planned Kyle Centre expansion could help close that gap.",
+      "His outsider's-eye observation about the city itself: there are no hotels. \"The city has tried to bring a hotel, but it isn't viable for big hotel companies. I think a boutique hotel of 40 rooms would do well here.\" He'd also like to see more seniors housing and assisted living options in Port Moody.",
       "Twenty years in, six heritage houses restored, and Fred is still one of the people quietly shaping what this city becomes — one restaurant, one saved building, one advisory meeting at a time.",
-      "Art Out Side runs August 7–16 across Port Moody. Full schedule at pomoarts.ca/artoutside."
+      "Art Out Side runs August 7–16 across Port Moody. Full schedule at pomoarts.ca/artoutside."
     ]
   },
 
   election: {
     tag: "City Hall · Election 2026",
-    title: "Register to vote before August 18 — here's how",
-    meta: "By the newsroom · This week · 2 min read",
+    title: "Every Candidate Who Has Declared So Far",
+    meta: "By the newsroom · Updated · 3 min read",
     body: [
-      "Port Moody heads to the polls Saturday, October 17, 2026 to elect a mayor, six councillors, and two school trustees for a four-year term running through 2030.",
-      "If you want to save time on election day, you can register in advance with Elections BC — the deadline for advance registration is Tuesday, August 18. If you're already on the Provincial Voters List for Port Moody, you're already registered and don't need to do anything.",
-      "To be eligible, you need to be 18 or older, a Canadian citizen, a BC resident for at least six months immediately before registering, and a resident of Port Moody. Non-resident property owners register separately, directly with the city, at elections@portmoody.ca.",
-      "Nominations for Mayor, Council, and School Trustee open September 1 and close September 11 — the official candidate list is published after that, with a final ballot confirmed after the September 18 withdrawal deadline. We'll hold off on covering individual candidates until that official list is out, so every declared candidate gets the same treatment.",
-      "Miss the August 18 advance registration deadline? You can still register in person at your voting location on election day itself. Full details, voting locations, and advance voting opportunities at portmoody.ca/vote."
+      "Port Moody's General Local Election is Saturday, October 17, 2026. Nominations for Mayor, Council, and School Trustee opened September 1 and close September 11 — the official candidate list is published shortly after, with the final ballot confirmed after the September 18 withdrawal deadline.",
+      "Until the official list is out, here's everyone who has publicly declared, listed alphabetically within each role — not ranked, not ordered by announcement date. This is not the final ballot, just where things stand today.",
+      "Mayor: Meghan Lahti (incumbent), Paul Lambert, Haven Lurbiecki (Port Moody Voice).",
+      "Council (13 declared for 6 seats): Samantha Agtarap (incumbent), Alexandra Chan, Diana Dilworth (incumbent), Kyla Knowles (incumbent), Mark Kunzli, Jeanine Longley, Amy Lubik (incumbent), Reece Mack, Steve Milani, Sebastian Moon, Callan Morrison (incumbent), Tracey Schaeffer, Laura Soucy.",
+      "School Trustee: Tracy Green, Jessica Morrison, Carola Thompson.",
+      "We'll publish the official, final list once nominations close on September 11. (Compiled from City of Port Moody records, Elections BC, and reporting by Mario Bartel, Freshet News.)"
     ]
   },
 
   ambassador: {
     tag: "Arts · Art Out Side",
-    title: "Port Moody Pulse is now an official Art Out Side Media Ambassador",
+    title: "Port Moody Pulse is now an official Art Out Side Media Ambassador",
     meta: "By the newsroom · Announcement · 2 min read",
     body: [
-      "Art Out Side, PoMoArts' city-wide arts festival, officially opens today and runs through August 16 — and Port Moody Pulse is proud to be one of this year's Media Ambassadors.",
+      "Art Out Side, PoMoArts' city-wide arts festival, officially opens today and runs through August 16 — and Port Moody Pulse is proud to be one of this year's Media Ambassadors.",
       "That's part of why we've been able to bring you profiles on Corus and Fred Soofi ahead of the festival — we've had early access to the artists and festival team, and we'll be covering the festival on the ground throughout its run: photos, artist moments, and the small surprises the festival is built around.",
       "Over 80 artists, 14 community partners, and programming scattered across the entire city — waterfront to alleyways to a few locations organizers are deliberately keeping secret. Free, all ages.",
       "Full schedule at pomoarts.ca/artoutside — and follow along with us on Instagram and Facebook as we cover it live."
@@ -258,7 +260,7 @@ window.PMP_ARTICLES = {
       "The wildfire near Belcarra Regional Park is now considered held, and crews are confident it won't grow beyond its current 1.5-hectare perimeter. \"This fire will not be growing beyond its current perimeter,\" said Metro Vancouver's director of protective services, Brant Arnold-Smith, at a Thursday press conference in Anmore.",
       "Buntzen Lake recreation area reopened Thursday. Evacuation alerts for 35 Anmore properties have been rescinded, and the two households that were evacuated have been cleared to return.",
       "New details have emerged on how the response unfolded: a downed power line forced ground crews to briefly pull back Wednesday evening near Sugar Mountain Trail, while BC Wildfire Service helicopters bucketed the fire from the air for over six hours. \"Having those two helicopters made a huge difference, especially as we had to wait to get ground crews in due to the downed transmission line,\" Arnold-Smith said. The power line was de-energized shortly before 8pm.",
-      "The fire, assessed at 0.8 hectares Wednesday afternoon, nearly doubled in size and was briefly considered out-of-control by 7pm that evening. Crews from BC Wildfire Service, Sasamat Volunteer Fire Department, Port Moody Fire Rescue, and Metro Vancouver Emergency Management brought it under control by Thursday night, working through steep terrain where the fire had embedded as deep as four feet into the ground.",
+      "The fire, assessed at 0.8 hectares Wednesday afternoon, nearly doubled in size and was briefly considered out-of-control by 7pm that evening. Crews from BC Wildfire Service, Sasamat Volunteer Fire Department, Port Moody Fire Rescue, and Metro Vancouver Emergency Management brought it under control by Thursday night, working through steep terrain where the fire had embedded as deep as four feet into the ground.",
       "The cause remains under investigation, including what role the downed power line may have played. No firefighters were injured. Crews may spend another week finding and dousing hot spots, with no rain in the forecast. (Reporting draws on original coverage by Jeremy Shepherd, Tri-Cities Dispatch.)"
     ]
   },
@@ -268,10 +270,10 @@ window.PMP_ARTICLES = {
     title: "Police continue investigating targeted shooting near Union Street",
     meta: "By the newsroom · Update · 2 min read",
     body: [
-      "Port Moody Police are continuing to investigate a shooting that occurred August 1 near Union Street and Barnet Highway. A man was hospitalized with a gunshot wound and is in stable condition.",
+      "Port Moody Police are continuing to investigate a shooting that occurred August 1 near Union Street and Barnet Highway. A man was hospitalized with a gunshot wound and is in stable condition.",
       "Police say initial indications suggest the incident was targeted, and witnesses reported a silver sedan fleeing the scene. No suspect has been identified.",
-      "Anyone with information or dashcam footage from the area at the time is asked to contact Port Moody Police at 604-461-3456.",
-      "What to watch next: updates from Port Moody Police as the investigation progresses."
+      "Anyone with information or dashcam footage from the area at the time is asked to contact Port Moody Police at 604-461-3456.",
+      "What to watch next: updates from Port Moody Police as the investigation progresses."
     ]
   },
 
@@ -280,13 +282,13 @@ window.PMP_ARTICLES = {
     title: "\"You Don't Have to Change the Whole World\"",
     meta: "By the newsroom · This week · 4 min read",
     body: [
-      "Cathy Cena has been volunteering for 43 years. Fifteen of them have been in Port Moody, and when you ask her for the one moment that sticks with her most, she doesn't point to a moment at all. She points to the people.",
-      "\"Some of the most meaningful experiences have come from watching volunteers and complete strangers come together during difficult times,\" she told Port Moody Pulse — \"supporting families in need, helping organizations survive through COVID, or simply seeing someone realize they belong because they chose to volunteer. I've learned that you don't have to change the whole world; sometimes changing one person's day is enough.\"",
+      "Cathy Cena has been volunteering for 43 years. Fifteen of them have been in Port Moody, and when you ask her for the one moment that sticks with her most, she doesn't point to a moment at all. She points to the people.",
+      "\"Some of the most meaningful experiences have come from watching volunteers and complete strangers come together during difficult times,\" she told Port Moody Pulse — \"supporting families in need, helping organizations survive through COVID, or simply seeing someone realize they belong because they chose to volunteer. I've learned that you don't have to change the whole world; sometimes changing one person's day is enough.\"",
       "That instinct shows up everywhere she's shown up since. Cathy is the Executive Director of Tri-Cities Community TV, co-founder of FACES — an initiative celebrating women's stories across the Tri-Cities — and has served with PoMoArts, the Coquitlam Optimist Club, and more community boards than most people could list from memory. Asked if there's a thread connecting all of it, her answer is simple: \"The common thread is connection. I guess I am a community connector.\"",
       "FACES started, she says, with one idea: every woman has a story worth telling. What surprised her most wasn't the stories themselves, but the reaction to being asked. \"So many women said, 'No one has ever asked me to share my story before.' Many didn't realize the impact they'd had on others until someone took the time to listen.\"",
-      "Cathy also ran for Port Moody City Council once, an instinct she traces back to her father, who was involved in politics in Italy. \"Whether or not you're elected, putting your name forward is an act of service,\" she said.",
+      "Cathy also ran for Port Moody City Council once, an instinct she traces back to her father, who was involved in politics in Italy. \"Whether or not you're elected, putting your name forward is an act of service,\" she said.",
       "Twelve years of interviewing elected officials, business leaders, and neighbours has taught her something specific about what actually makes a conversation work. \"It's not about asking the toughest question — it's about asking the right question and then genuinely listening. When someone feels comfortable enough to be authentic, that's when the conversation becomes meaningful.\"",
-      "Asked what's changed most about Port Moody since she arrived in 2011, she doesn't hesitate: growth. New neighbourhoods, new businesses, families choosing to call it home. But she's careful to separate growth from what she hopes never changes. \"What I hope never changes is our sense of community. People genuinely care here. They volunteer, support local businesses, step up when someone needs help. Growth is inevitable, but preserving the heart of Port Moody — its volunteer spirit, its sense of belonging — is what will ensure it remains such a special place to live.\""
+      "Asked what's changed most about Port Moody since she arrived in 2011, she doesn't hesitate: growth. New neighbourhoods, new businesses, families choosing to call it home. But she's careful to separate growth from what she hopes never changes. \"What I hope never changes is our sense of community. People genuinely care here. They volunteer, support local businesses, step up when someone needs help. Growth is inevitable, but preserving the heart of Port Moody — its volunteer spirit, its sense of belonging — is what will ensure it remains such a special place to live.\""
     ]
   },
 
@@ -295,9 +297,9 @@ window.PMP_ARTICLES = {
     title: "Century-old Ioco School one step closer to becoming a childcare centre",
     meta: "By the newsroom · This week · 3 min read",
     body: [
-      "Port Moody's century-old Ioco School is a step closer to welcoming children through its doors again — just not as a school this time.",
+      "Port Moody's century-old Ioco School is a step closer to welcoming children through its doors again — just not as a school this time.",
       "On July 28, council unanimously approved permits to transform the long-vacant heritage building into a 150-space child care centre, clearing the way for the Coquitlam School District to move toward the building permit stage.",
-      "The project is backed by $13.9 million from the province's ChildCareBC New Spaces Fund — a meaningful expansion for local families in a city where daycare space has been genuinely hard to come by. It also means one of Port Moody's oldest buildings gets a second life, rather than sitting vacant.",
+      "The project is backed by $13.9 million from the province's ChildCareBC New Spaces Fund — a meaningful expansion for local families in a city where daycare space has been genuinely hard to come by. It also means one of Port Moody's oldest buildings gets a second life, rather than sitting vacant.",
       "What to watch next: timelines for the building permit stage and construction, and when the first of the 150 new spaces might actually open. (Reporting draws on original coverage by Patrick Penner, Tri-Cities Dispatch.)"
     ]
   },
@@ -308,7 +310,7 @@ window.PMP_ARTICLES = {
     meta: "By the newsroom · Art Out Side recap · 4 min read",
     body: [
       "For years, Francisco Berlanga avoided making art about Mexico at all.",
-      "\"There was a sense for me that I was not entitled to speak about it,\" he told Port Moody Pulse. That changed about a decade ago, as he watched the political conversation around identity and heritage shift. \"I felt an urgency to make works that spoke about my culture. If I did not engage with it, enrich it, pass on stories, then there was a chance that parts of it would become lost.\"",
+      "\"There was a sense for me that I was not entitled to speak about it,\" he told Port Moody Pulse. That changed about a decade ago, as he watched the political conversation around identity and heritage shift. \"I felt an urgency to make works that spoke about my culture. If I did not engage with it, enrich it, pass on stories, then there was a chance that parts of it would become lost.\"",
       "What he makes now is piñatas — traditional Mexican craft, techniques passed down from his mother and grandmother, filled in through years of self-teaching. \"I like to approach new techniques through a naive lens,\" he said, \"because I feel like I always learn more from what I fail at the first time around.\"",
       "At a recent show at the Surrey Art Gallery, kids tore one of his pieces apart to get the candy inside during a family workshop day. Most artists would be devastated. Francisco says it was exactly right. \"Piñatas are meant to be broken, and candies are meant to be taken,\" he said. \"It truly felt like when I was a kid at my grandmother's house, and all the cousins would be in a frenzy trying to get some candy when the piñata dropped.\"",
       "Francisco brought a Community Piñata Making (and Breaking) session to Art Out Side this year — make one, break one, eat some candy, sing some songs. He grew up in Port Coquitlam and has called Coquitlam home for the past decade, deeply rooted in the Tri-Cities art scene well before this festival.",
@@ -323,11 +325,11 @@ window.PMP_ARTICLES = {
     meta: "By the newsroom · Art Out Side recap · 4 min read",
     body: [
       "Joy Mullen has recorded on 25+ albums and played the Juno Awards as a touring drummer. These days, she's just as likely to be found turning discarded drum heads into fibre art.",
-      "The idea started at a drum store, where she noticed how many worn-out drum heads were getting thrown away. \"I had seen a lot of people painting drum heads, but I didn't know how to paint, so I tried playing around with yarns instead,\" she told Port Moody Pulse. She made a hanging piece, posted it online, and someone messaged asking to buy it. That was enough encouragement to keep going.",
+      "The idea started at a drum store, where she noticed how many worn-out drum heads were getting thrown away. \"I had seen a lot of people painting drum heads, but I didn't know how to paint, so I tried playing around with yarns instead,\" she told Port Moody Pulse. She made a hanging piece, posted it online, and someone messaged asking to buy it. That was enough encouragement to keep going.",
       "Now drummer friends send her their waste in stacks — broken drums, worn sticks, discarded heads. \"I'm always curious about who the drummer was,\" she said. \"What kind of music did they play, what were their band dynamics. Sometimes there are set lists or lyrics handwritten on the drum head, tape from different sound treatments, or beer on the drum heads. You can tell if the person played jazz or punk when you look at a drum head.\"",
       "It's a way, she says, for the music to keep going in a different form. \"I hope the energy from that player, band, or audience carries through.\"",
       "At Art Out Side this year, Joy ran an Intro to Drumming workshop — real kit, real basics, open to everyone — alongside a display of her drum art and an improvised experimental solo performance at Grit Cafe.",
-      "Though she'd never spent time in Port Moody before this festival, she left with a strong impression. \"It is so beautiful in Port Moody,\" she said. \"Having free accessible art programming really adds quality of life to families and people living in the area. Festivals are such a fun way to let people check out art forms they would not have normally gone to.\"",
+      "Though she'd never spent time in Port Moody before this festival, she left with a strong impression. \"It is so beautiful in Port Moody,\" she said. \"Having free accessible art programming really adds quality of life to families and people living in the area. Festivals are such a fun way to let people check out art forms they would not have normally gone to.\"",
       "Find her at @joyondrums, @artbyjoyondrums, or joyondrums.com."
     ]
   },
@@ -337,8 +339,8 @@ window.PMP_ARTICLES = {
     title: "The Dance Company Bringing an African Home to the Tri-Cities",
     meta: "By the newsroom · Art Out Side recap · 4 min read",
     body: [
-      "Isaac Gasangwa didn't have any connection to Port Moody before this year's Art Out Side. He left with what he calls a strong feeling that it's \"just the beginning of something much bigger.\"",
-      "Isaac is the founder and artistic director of AfroBeats Van, and performs as Izo Dreamchaser. He started the company in 2017 after noticing something missing. \"There was a real lack of an 'African home' — a space that truly represented our culture and our people,\" he told Port Moody Pulse. \"I couldn't just sit back and wait for someone else to build it. I had to take the leap.\"",
+      "Isaac Gasangwa didn't have any connection to Port Moody before this year's Art Out Side. He left with what he calls a strong feeling that it's \"just the beginning of something much bigger.\"",
+      "Isaac is the founder and artistic director of AfroBeats Van, and performs as Izo Dreamchaser. He started the company in 2017 after noticing something missing. \"There was a real lack of an 'African home' — a space that truly represented our culture and our people,\" he told Port Moody Pulse. \"I couldn't just sit back and wait for someone else to build it. I had to take the leap.\"",
       "For Isaac, dance carries something other mediums can't. \"Words can only carry a story so far, but the body doesn't lie,\" he said. \"In styles like afrodance and street dance, especially when you tap into the energy of a cypher, there's an unspoken dialogue. You're sharing energy in real-time, stripping away the filters.\"",
       "He's watched the culture shift firsthand. \"People used to come to an African dance class expecting we would just be dancing barefoot,\" he said. \"As we put our work out there, that changed. People started showing up with their actual dance shoes, ready to train, respecting the style, the craft, and the culture for what it truly is.\"",
       "With his company ELITE SQUAD, Isaac brought a preview of Act 1 from his upcoming production Ndabaga Code to Art Out Side this year, ahead of its full premiere at the STAND Festival in November. \"It's a love letter to all women, with a deeply personal focus on Black women who migrated from Africa to Canada to chase a better life,\" he said. \"It's about honouring their resilience, their sacrifices, and the incredible weight and beauty of their journeys.\"",
@@ -367,7 +369,7 @@ window.PMP_ARTICLES = {
     title: "Know of a Job Opening? Let's Look Out for Each Other",
     meta: "By the newsroom · Ongoing · 2 min read",
     body: [
-      "With new US tariffs hitting Canadian goods this week — 50% on a wide range of categories, effective August 22 — some Port Moody families may be facing real uncertainty about work in the months ahead. Economists have flagged BC as one of the provinces likely to be hit hardest, alongside Ontario and Quebec.",
+      "With new US tariffs hitting Canadian goods this week — 50% on a wide range of categories, effective August 22 — some Port Moody families may be facing real uncertainty about work in the months ahead. Economists have flagged BC as one of the provinces likely to be hit hardest, alongside Ontario and Quebec.",
       "We're compiling job leads from employers and residents across the community to share, free, in upcoming newsletter issues. If you're an employer, manager, or know of an opening you have direct influence over — whether it's your own business or somewhere you work — send it our way.",
       "To make it easy for people to actually apply, please include: job title, company/employer, a brief description of the role, a link to apply if there is one, salary range if you're able to share it, and whether you're comfortable being contacted directly (if so, include a name and email — note that if you opt in, that contact information will be published in the newsletter).",
       "Email portmoodypulse@gmail.com — happy to help however we can. This is meant to be an ongoing, evolving list, not a one-time post — check upcoming issues for updates."
@@ -376,14 +378,49 @@ window.PMP_ARTICLES = {
 
   panthers: {
     tag: "Sports",
-    title: "Port Moody Panthers Staying Put as Junior Hockey Realigns",
+    title: "Port Moody Panthers Staying Put as Junior Hockey Realigns",
     meta: "By the newsroom · This week · 3 min read",
     body: [
-      "BC's junior hockey scene just reorganized — a new Junior A league (the BCHC) formed this year, and both the Port Coquitlam Trailblazers and Burnaby Steelers moved up to it. The Port Moody Panthers deliberately chose to stay in the newly reclassified Junior B league instead.",
+      "BC's junior hockey scene just reorganized — a new Junior A league (the BCHC) formed this year, and both the Port Coquitlam Trailblazers and Burnaby Steelers moved up to it. The Port Moody Panthers deliberately chose to stay in the newly reclassified Junior B league instead.",
       "\"There were a lot more costs, a lot of checked boxes we needed for the facility,\" said Panthers general manager Brian Wiebe of the decision not to pursue Junior A status. \"It just didn't make sense.\" Instead, the Panthers are focusing on developing players for wherever fits them best next — Junior A, the CHL, NCAA, or U-Sports. \"Our goal is to move players to the place that's right for them,\" Wiebe said.",
       "The realignment stems from a 2024 independent assessment by Vancouver-based Blackfin Sports Group, commissioned by BC Hockey to evaluate teams that had applied for Junior A designation against standards for organizational structure, business operations, and facilities. The Panthers opted not to apply.",
       "There are real trade-offs either way: players who move to unsanctioned leagues beyond a September 30 cutoff become ineligible to return to a sanctioned league for the rest of the season, and BCHL players aren't eligible for Hockey Canada programs, including the national junior team. \"We recognize the confusion this can create for families evaluating their options,\" acknowledged BC Hockey CEO Cameron Hope.",
-      "Catch the Panthers' first home game of the season: Saturday, September 13, 5:15pm at the Port Moody Rec Complex, against the Surrey Knights. (Reporting draws on original coverage by Mario Bartel, Freshet News.)"
+      "Catch the Panthers' first home game of the season: Saturday, September 13, 5:15pm at the Port Moody Rec Complex, against the Surrey Knights. (Reporting draws on original coverage by Mario Bartel, Freshet News.)"
+    ]
+  },
+
+  bosafoods: {
+    tag: "Good News · Development",
+    title: "A Grocery Store Is Finally Coming to St. Johns Street",
+    meta: "By the newsroom · Construction underway · 4 min read",
+    body: [
+      "For years, residents and council alike have called this stretch of Moody Centre a food desert — just two grocery stores serving the whole city, Thrifty's in Suter Brook and the IGA by Newport Village. That's about to change.",
+      "Construction is now underway at St. Johns and Queens on a six-storey mixed-use building that will bring a roughly 9,500-square-foot Bosa Foods specialty grocery store to the ground floor, with rental apartments above. The project's been years in the making — first proposed in 2022, approved through council in 2024, with active site work now visible.",
+      "\"I live in this general area, and I will be visiting this grocery store regardless of what they sell there,\" Coun. Kyla Knowles said when the project was approved.",
+      "The store is planned with a covered outdoor patio along St. Johns Street, a rooftop greenhouse, and a deli counter — modeled on Bosa's existing Vancouver locations.",
+      "What to watch next: a firm opening date hasn't been announced, but with construction now active, it's the closest this project has been to reality in years."
+    ]
+  },
+
+  inletparkfieldhouse: {
+    tag: "City Hall · Parks",
+    title: "A New Community Fieldhouse Is Taking Shape at Inlet Park",
+    meta: "By the newsroom · Construction underway · 2 min read",
+    body: [
+      "Construction is underway on a new community fieldhouse at Inlet Park, expected to be complete by early Fall 2027.",
+      "If you use the parking lot there, a few things are worth knowing now: fencing around the project area blocks the mid-section stalls, and only 3 of the 9 EV chargers remain available during construction — those 3 stay open 24/7.",
+      "Full project details at portmoody.ca/inletpark."
+    ]
+  },
+
+  libraryfees: {
+    tag: "Good News",
+    title: "Library Drops Overdue Fines — With One New Catch",
+    meta: "By the newsroom · Starting Sept 14 · 2 min read",
+    body: [
+      "Starting September 14, Port Moody Public Library will no longer charge fines for overdue items — a genuinely welcome change for anyone who's ever forgotten a due date.",
+      "The catch: a new $0.25 charge now applies to holds that aren't picked up or cancelled before they expire.",
+      "What to watch next: how the library measures the change's impact on returns once the no-fine policy has been in effect for a few months."
     ]
   }
 
