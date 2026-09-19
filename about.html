@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About &#8212; Port&#160;Moody Pulse</title>
+  <meta name="description" content="The person behind Port&#160;Moody Pulse &#8212; a neighbour who pays attention." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231A6E6B'/%3E%3Cstop offset='1' stop-color='%230A3537'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='50' fill='url(%23g)'/%3E%3Ccircle cx='50' cy='36.6' r='3.2' fill='%23E0A23C'/%3E%3Cpath d='M28.2 54.5 L37.2 54.5 L39.8 54.5 L42 47 L44.4 61.2 L46.6 54.5 Q50.3 46.8 54 54.5 Q57.7 62.2 61.4 54.5 Q65.1 47 68.8 54.5 L71.8 54.5' fill='none' stroke='%23fff' stroke-width='5.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --inlet-900:#0A3537; --inlet:#0E4F4E; --tide:#15706E;
+      --brass:#C7903B; --brass-bright:#E0A23C; --brass-deep:#9C6E22; --brass-text:#82591A;
+      --cta-bg:#8A5D17; --cta-hover:#6E4A10;
+      --paper:#FBF7EE; --paper-2:#F4EEDF; --card:#FFFFFF;
+      --ink:#15302E; --ink-2:#3B524F; --mist:#54655F; --line:#E7E0D0;
+      --fd:'Newsreader',Georgia,'Times New Roman',serif;
+      --fb:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--paper);color:var(--ink);font-family:var(--fb);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+    .vh{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+    /* ── UTIL BAR ── */
+    .util{background:var(--inlet-900);color:#B6D0CC;font-size:12.5px}
+    .util .wrap{display:flex;align-items:center;justify-content:space-between;min-height:40px;gap:14px}
+    .soc{display:flex;gap:11px}
+    .soc a{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.22);border-radius:50%;color:#CBE0DC;font-size:11px;font-weight:800}
+    .soc a:hover{color:#fff;border-color:var(--brass-bright);text-decoration:none}
+
+    /* ── MASTHEAD ── */
+    .mast{background:var(--paper);border-bottom:1px solid var(--line)}
+    .mast .wrap{display:flex;align-items:center;gap:20px;min-height:78px}
+    .brand{display:flex;align-items:center;gap:13px;flex:none}
+    .brand svg{width:42px;height:42px;flex:none}
+    .brand .word{font-family:var(--fd);font-weight:600;font-size:25px;color:var(--inlet);letter-spacing:-.015em;line-height:1}
+    .brand .word b{color:var(--brass-deep);font-weight:600}
+    .back-link{margin-left:auto;font-size:14px;font-weight:600;color:var(--ink-2);display:flex;align-items:center;gap:6px}
+    .back-link:hover{color:var(--tide);text-decoration:none}
+
+    /* ── PULSE BAR ── */
+    .pulse-bar{background:var(--paper);border-bottom:1px solid var(--line);overflow:hidden}
+    .pulse-bar svg{width:100%;height:34px;display:block}
+    .pulse-base{fill:none;stroke:var(--tide);stroke-width:2;opacity:.32}
+    .pulse-hi{fill:none;stroke:var(--brass-bright);stroke-width:2.6;stroke-linecap:round;stroke-dasharray:46 2400;stroke-dashoffset:2446;animation:beat 5.5s linear infinite}
+    @keyframes beat{to{stroke-dashoffset:0}}
+    @media(prefers-reduced-motion:reduce){.pulse-hi{animation:none;opacity:0}}
+
+    /* ── ABOUT CONTENT ── */
+    .about-hero{background:var(--inlet-900);padding:64px 0 56px}
+    .about-hero .wrap{display:grid;grid-template-columns:1fr 280px;gap:60px;align-items:center}
+    .hero-eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-bright);margin-bottom:14px}
+    .hero-title{font-family:var(--fd);font-size:clamp(32px,4vw,48px);font-weight:600;color:#FBF7EE;line-height:1.1;margin-bottom:16px}
+    .hero-sub{font-size:17px;color:rgba(251,247,238,0.72);line-height:1.55}
+
+    .photo-wrap{border-radius:20px;overflow:hidden;aspect-ratio:3/4;background:var(--inlet);box-shadow:0 20px 50px rgba(0,0,0,0.35);position:relative}
+    .photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top}
+    .photo-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#15706E,#0A3537)}
+    .photo-placeholder svg{width:80px;height:80px;opacity:0.4}
+
+    /* ── BODY ── */
+    .about-body{padding:64px 0 80px}
+    .about-body .wrap{max-width:740px}
+
+    .about-body p{margin-bottom:24px;font-size:18px;line-height:1.75;color:var(--ink)}
+    .about-body p:last-child{margin-bottom:0}
+
+    .pull-quote{border-left:3px solid var(--brass-bright);padding:4px 0 4px 28px;margin:36px 0;font-family:var(--fd);font-size:22px;font-style:italic;color:var(--ink-2);line-height:1.45}
+
+    .sig{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+    .sig-name{font-family:var(--fd);font-size:22px;font-weight:600;color:var(--inlet);margin-bottom:4px}
+    .sig-title{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brass-deep)}
+
+    .contact-strip{background:var(--inlet-900);border-radius:16px;padding:32px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+    .contact-strip .ct{font-family:var(--fd);font-size:20px;color:#FBF7EE;font-weight:600}
+    .contact-strip .cs{font-size:14px;color:rgba(251,247,238,0.65);margin-top:4px}
+    .contact-btn{background:var(--brass-bright);color:#0A3537;font-family:var(--fb);font-weight:800;font-size:15px;padding:14px 28px;border-radius:100px;white-space:nowrap;flex-shrink:0}
+    .contact-btn:hover{background:#EDB358;text-decoration:none}
+
+    /* ── FOOTER ── */
+    footer.site{background:var(--inlet-900);color:#A8C0BD;padding:40px 0 24px}
+    .foot-bot{font-size:12.5px;color:#93ABA8;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:0}
+    .tagline{font-family:var(--fd);font-style:italic;color:#B6D0CC}
+
+    @media(max-width:720px){
+      .about-hero .wrap{grid-template-columns:1fr}
+      .photo-wrap{max-width:240px;aspect-ratio:1/1}
+      .contact-strip{flex-direction:column;align-items:flex-start}
+      .wrap{padding:0 18px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="util">
+    <div class="wrap">
+      <div>Port&#160;Moody, British Columbia</div>
+      <div class="soc">
+        <a href="https://www.instagram.com/portmoodypulse?igsh=Y2xleTNib2l0YzMz" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://www.facebook.com/share/1GLMNEjPJS/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="mast">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Port&#160;Moody Pulse home">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <defs><linearGradient id="lgH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A6E6B"/><stop offset="1" stop-color="#0A3537"/></linearGradient></defs>
+          <circle cx="50" cy="50" r="50" fill="url(#lgH)"/>
+          <circle cx="50" cy="36.6" r="3.2" fill="#E0A23C"/>
+          <path d="M28.2 54.5 L37.2 54.5 L39.8 54.5 L42 47 L44.4 61.2 L46.6 54.5 Q50.3 46.8 54 54.5 Q57.7 62.2 61.4 54.5 Q65.1 47 68.8 54.5 L71.8 54.5" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="word">Port&#160;Moody <b>Pulse</b></span>
+      </a>
+      <a class="back-link" href="index.html">&#8592; Back to newsletter</a>
+    </div>
+  </header>
+
+  <div class="pulse-bar" aria-hidden="true">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none">
+      <path class="pulse-base" d="M0 20 H278 L298 20 L310 8 L324 33 L336 20 L358 20 H600 L620 20 L632 9 L646 31 L658 20 L680 20 H980 L1000 20 L1012 8 L1026 33 L1038 20 L1060 20 H1200"/>
+      <path class="pulse-hi" d="M0 20 H278 L298 20 L310 8 L324 33 L336 20 L358 20 H600 L620 20 L632 9 L646 31 L658 20 L680 20 H980 L1000 20 L1012 8 L1026 33 L1038 20 L1060 20 H1200"/>
+    </svg>
+  </div>
+
+  <!-- HERO -->
+  <section class="about-hero">
+    <div class="wrap">
+      <div>
+        <div class="hero-eyebrow">About Port&#160;Moody Pulse</div>
+        <h1 class="hero-title">The person behind<br>Port&#160;Moody Pulse</h1>
+        <p class="hero-sub">A neighbour who pays attention, verifies what he publishes, and genuinely cares about this city.</p>
+      </div>
+      <div class="photo-wrap" id="photo-container">
+        <img src="images/Divyam.jpg" alt="Divyam Kaushik, founder of Port Moody Pulse"/>
+             <img src="Images/Divyam.jpg" alt="Divyam Kaushik, founder of Port Moody Pulse" />
+        -->
+        <div class="photo-placeholder">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <defs><linearGradient id="lgP" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A6E6B"/><stop offset="1" stop-color="#0A3537"/></linearGradient></defs>
+            <circle cx="50" cy="50" r="50" fill="url(#lgP)"/>
+            <circle cx="50" cy="36.6" r="3.2" fill="#E0A23C"/>
+            <path d="M28.2 54.5 L37.2 54.5 L39.8 54.5 L42 47 L44.4 61.2 L46.6 54.5 Q50.3 46.8 54 54.5 Q57.7 62.2 61.4 54.5 Q65.1 47 68.8 54.5 L71.8 54.5" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <main>
+    <section class="about-body">
+      <div class="wrap">
+
+        <p>Hi, I&#8217;m Divyam.</p>
+
+        <p>I&#8217;ve lived in Port&#160;Moody for six years, in Suter Brook. I moved here as an immigrant, didn&#8217;t know anyone, and slowly fell in love with this city the way a lot of people do: one walk along the Shoreline Trail, one Friday night on Murray Street, one conversation with a neighbour at a time.</p>
+
+        <div class="pull-quote">Port&#160;Moody Pulse started because I kept missing things.</div>
+
+        <p>A grocery store breaking ground down the street. A neighbourhood fundraiser. A 43-year volunteer doing something remarkable a few blocks away. The information existed &#8212; it just wasn&#8217;t in one place, and it wasn&#8217;t written for the people who actually live here.</p>
+
+        <p>So I started writing it myself.</p>
+
+        <p>I&#8217;m not a journalist by training. I&#8217;m a neighbour who pays attention, verifies what I publish, and genuinely cares about this city. I also happen to have spent 15 years working in digital strategy and change management &#8212; which mostly just means I know how to find things out and how to communicate clearly.</p>
+
+        <p>Outside the newsletter, I&#8217;m a portrait artist. I&#8217;ve been painting for twelve years &#8212; it&#8217;s the other way I try to pay attention to people. You can find that work at <a href="https://www.instagram.com/divyamkaushik_art" target="_blank" rel="noopener">@divyamkaushik_art</a> on Instagram.</p>
+
+        <p>Every week I read the council minutes, talk to local business owners, check the city&#8217;s construction updates, and pull together the things worth knowing into one Friday morning email. Free, no ads, no agenda.</p>
+
+        <p>Port&#160;Moody Pulse is independent. It&#8217;s not affiliated with the City of Port&#160;Moody, any political candidate, or any business. When a business or organization supports the newsletter, I say so &#8212; every time.</p>
+
+        <div class="sig">
+          <div class="sig-name">Divyam Kaushik</div>
+          <div class="sig-title">Founder, Port&#160;Moody Pulse</div>
+        </div>
+
+        <div class="contact-strip">
+          <div>
+            <div class="ct">Got a story? Say hello.</div>
+            <div class="cs">A tip, an event, or just a note &#8212; I read every email.</div>
+          </div>
+          <a class="contact-btn" href="mailto:portmoodypulse@gmail.com">portmoodypulse@gmail.com</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="foot-bot">
+        <div>&#169; 2026 Port&#160;Moody Pulse &#183; Independent community newsletter. Not affiliated with the City of Port&#160;Moody.</div>
+        <div class="tagline">The heartbeat of Port&#160;Moody.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

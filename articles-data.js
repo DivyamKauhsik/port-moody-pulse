@@ -219,7 +219,7 @@ window.PMP_ARTICLES = {
       "Port\u00A0Moody\u2019s General Local Election is Saturday, October 17, 2026. Nominations closed September 11. Candidates have until 4pm on September 18 to withdraw \u2014 the list below reflects nominations received as of that date, compiled from portmoody.ca.",
       "Mayor (1 seat): Meghan Lahti (incumbent), Haven Lurbiecki (Port\u00A0Moody Voice).",
       "Council (6 seats, 14 candidates): Samantha Agtarap (incumbent), Alexandra Chan (Port\u00A0Moody Voice), Diana Dilworth (incumbent), Kyla Knowles (incumbent), Mark Kunzli (Port\u00A0Moody Voice), Jeanine Longley, Amy Lubik (incumbent), Reece Mack (Port\u00A0Moody Voice), Steve Milani, Sebastian Moon, Callan Morrison (incumbent), Tracey Schaeffer, Laura Soucy (Port\u00A0Moody Voice), Peter Thomasen.",
-      "School Trustee (2 seats): Tracy Green, Jessica Morrison, Carola Thompson.",
+      "School Trustee (2 seats): Emily Cheadle, Tracy Green, Jessica Morrison, Carola Thompson.",
       "How to vote: advance voting is October 7 and 10 at the Wellness Room, Port\u00A0Moody Recreation Complex, 8am\u20138pm. General voting day is October 17, 8am\u20138pm, at four locations: Rec Complex Gymnasium (300 Ioco Rd), Kyle Centre (125 Kyle Street), Heritage Mountain Community Centre (200 Panorama Place), and Glenayre Community Centre (492 Glencoe Drive). Mail-in ballots are newly available this election \u2014 full details at portmoody.ca/vote."
     ]
   },
