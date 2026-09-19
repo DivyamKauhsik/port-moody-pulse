@@ -422,6 +422,19 @@ window.PMP_ARTICLES = {
       "That instinct \u2014 choosing better, deliberately, again and again \u2014 is where Better Not Bitter Society gets its name. The organization was born from more than the cancer. Mariat has also survived gender-based violence, serious financial hardship, and a divorce that led her to move across an ocean alone, choosing Canada for a fresh start. Better Not Bitter runs almost entirely free programming, has reached over 6,000 people, and maintains a newsletter list topping 7,000.",
       "In November 2025, the City of Vancouver proclaimed November 7th \u201CChoose Better Day.\u201D Mariat lives and works in Port\u00A0Moody, and Better Not Bitter keeps an office here alongside its Vancouver location. The organization\u2019s third annual Summit, BNB26, runs November 6th at the Sheraton Vancouver Wall Centre. Learn more at betternotbitter.ca."
     ]
+  },
+    ashney: {
+    tag: "Community \u00B7 People",
+    title: "The Art, Heart, and Heritage of Ashney Artisan",
+    meta: "By Divyam Kaushik \u00B7 5 min read",
+    body: [
+      "Ashney Rebello didn\u2019t set out to become one of Vancouver\u2019s most recognized Goan culinary voices. She trained as a fashion designer at NIFT Mumbai, assisting acclaimed designer Wendell Rodricks, before an unexpected detour reshaped her path. Living in Hong Kong with her husband and daughter, she found herself craving the food of home \u2014 and with no video calls available yet, she learned her family\u2019s Goan recipes over Skype, guided by her mother and mother-in-law through dish after dish.",
+      "A cake decorating course deepened the pull, connecting her to friends who encouraged her to start a food column \u2014 she went on to win an award for taking home cooking \u201Cto a different level\u201D during her two years in Hong Kong. By the time she and her family settled in Port\u00A0Moody\u2019s Aspenwood neighbourhood five years ago, food had become more than a hobby. \u201CAshney\u2019s Artisan gave me an identity,\u201D she says of the business, now known for its charcuterie boards, corporate gifting, and grazing tables \u2014 started almost by accident, when a close friend simply registered it for her on the spot.",
+      "Today, Ashney is a certified chocolatier trained under Barry Callebaut and Luis Amado, writes a regular food column for Freshet News, and has earned a nickname that\u2019s stuck around Vancouver: the \u201CSorpotel Queen of Vancouver,\u201D after the rich Goan pork dish that\u2019s a staple of her table.",
+      "Her heritage runs through everything she does. As Social & Cultural Director for the Goa Overseas Association of Vancouver \u2014 a community of roughly 2,500 to 3,000 Goans across the region \u2014 she helps organize the group\u2019s annual New Year\u2019s dance and a picnic that drew 400 people this year, with the association\u2019s 50th anniversary celebration coming this October. Away from the spotlight, she and her daughter regularly cook for hundreds at local churches and prepare meals for those experiencing homelessness over Thanksgiving.",
+      "This September, her work was recognized on an international stage: Ashney was felicitated for her contributions to culinary arts and Goan culture at the first-ever Miss Goa International pageant, held in London. Her cookbook, Ashney\u2019s Kitchen Stories: The Ultimate Cookbook of Goan Recipes \u2014 its cover featuring her in a traditional Goan Kunbi saree \u2014 is still in the works, with a Portuguese-inspired cookware line planned to follow.",
+      "What to watch next: Ashney is preparing an exclusive fall grazing board recipe for Port\u00A0Moody Pulse readers, coming in a future issue."
+    ]
   }
 
 };
