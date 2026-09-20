@@ -50,6 +50,6 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Sitemaps — list all three so crawlers choose what suits them
-Sitemap: https://portmoodypulse.ca/sitemap.xml
-Sitemap: https://portmoodypulse.ca/llms.txt
+# Sitemap - canonical www host, matching the URLs inside sitemap.xml
+Sitemap: https://www.portmoodypulse.ca/sitemap.xml
+# llms.txt is a plain-text file for AI assistants, not a sitemap
