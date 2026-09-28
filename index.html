@@ -107,7 +107,7 @@
     button,input{font:inherit}
     button{cursor:pointer}
     .wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
-    .topline{border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 92%,transparent)}
+    .topline{background:color-mix(in srgb,var(--bg) 92%,transparent)}
     .dateline{border-bottom:1px solid var(--line)}
     .dateline-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:8px 0;font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
     .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
@@ -234,7 +234,7 @@
     }
     @media (max-width:640px){
       .wrap{width:min(100% - 28px,1180px)}
-      .nav{min-height:68px}.edition{display:none}.nav-links{gap:14px;font-size:12px}.nav-links a:nth-child(2){display:none}
+      .nav{min-height:68px}.edition{display:none}.nav-links{gap:14px;font-size:12px}.nav-links a:nth-child(4){display:none}
       .hero{padding:42px 0 40px}
       h1{font-size:43px}
       .lede{font-size:17px}
@@ -271,15 +271,11 @@
       <div class="edition">A free Friday newsletter for Port Moody</div>
       <nav class="nav-links" aria-label="Page sections">
         <a href="#stories">Stories</a>
+        <a href="/events.html">Events</a>
         <a href="/archive.html">Archive</a>
+        <a href="/about.html">About</a>
         <a href="#advertise">Advertise</a>
       </nav>
-    </div>
-  </div>
-  <div class="dateline">
-    <div class="wrap dateline-inner">
-      <span>Port Moody, BC</span>
-      <span id="live-datetime"></span>
     </div>
   </div>
   <div class="pulse-bar" aria-hidden="true">
@@ -287,6 +283,12 @@
       <path class="pulse-base" d="M0 20 H278 L298 20 L310 8 L324 33 L336 20 L358 20 H600 L620 20 L632 9 L646 31 L658 20 L680 20 H980 L1000 20 L1012 8 L1026 33 L1038 20 L1060 20 H1200"/>
       <path class="pulse-hi" d="M0 20 H278 L298 20 L310 8 L324 33 L336 20 L358 20 H600 L620 20 L632 9 L646 31 L658 20 L680 20 H980 L1000 20 L1012 8 L1026 33 L1038 20 L1060 20 H1200"/>
     </svg>
+  </div>
+  <div class="dateline">
+    <div class="wrap dateline-inner">
+      <span>Port Moody, BC</span>
+      <span id="live-datetime"></span>
+    </div>
   </div>
 
   <main id="top">
