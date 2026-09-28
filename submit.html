@@ -253,7 +253,8 @@
 
   <script>
     (function(){
-      var TO="portmoodypulse@gmail.com"; /* fallback only: used if direct send fails */
+      var TO="portmoodypulse@gmail.com";
+      var FS="https://formsubmit.co/ajax/"+TO; /* free form-to-email relay; mailto below is the fallback */
       function val(id){var el=document.getElementById(id);return el?el.value.trim():"";}
       function setStatus(id,msg,ok){
         var s=document.getElementById(id);
@@ -264,46 +265,48 @@
         var body=lines.filter(function(l){return l;}).join("\n\n");
         window.location.href="mailto:"+TO+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
       }
-      function send(kind,fields,subject,lines,statusId,form,hpId,okMsg){
+      function send(fields,subject,message,replyTo,statusId,form,hpId,okMsg,fallbackLines){
         var btn=form.querySelector('button[type="submit"]');
         btn.disabled=true;
         setStatus(statusId,"Sending\u2026",false);
-        fetch("/api/submit",{
+        var payload={_subject:subject,message:message,_template:"table",_honey:val(hpId)};
+        if(replyTo) payload._replyto=replyTo;
+        fetch(FS,{
           method:"POST",
-          headers:{"Content-Type":"application/json"},
-          body:JSON.stringify({kind:kind,fields:fields,hp:val(hpId)})
-        }).then(function(r){
-          return r.json().catch(function(){return {};}).then(function(d){return r.ok&&d.ok;});
-        }).then(function(sent){
+          headers:{"Content-Type":"application/json","Accept":"application/json"},
+          body:JSON.stringify(payload)
+        }).then(function(r){return r.json().catch(function(){return {};});})
+        .then(function(d){
           btn.disabled=false;
-          if(sent){
+          if(d&&d.success==="true"){
             setStatus(statusId,okMsg,true);
             form.reset();
           }else{
             setStatus(statusId,"Couldn't send automatically \u2014 opening your email app instead\u2026",false);
-            mailto(subject,lines);
+            mailto(subject,fallbackLines);
           }
         }).catch(function(){
           btn.disabled=false;
           setStatus(statusId,"Couldn't send automatically \u2014 opening your email app instead\u2026",false);
-          mailto(subject,lines);
+          mailto(subject,fallbackLines);
         });
       }
       document.getElementById("tip-form").addEventListener("submit",function(e){
         e.preventDefault();
         var what=val("tip-what");
         if(!what){document.getElementById("tip-what").focus();return;}
-        send("tip",{
-          what:what,where:val("tip-where"),when:val("tip-when"),
-          name:val("tip-name"),contact:val("tip-contact")
-        },"News tip for the Pulse",[
+        var where=val("tip-where"),when=val("tip-when"),name=val("tip-name"),contact=val("tip-contact");
+        var lines=[
           "What\u2019s happening:\n"+what,
-          val("tip-where")&&("Where: "+val("tip-where")),
-          val("tip-when")&&("When: "+val("tip-when")),
-          val("tip-name")&&("From: "+val("tip-name")),
-          val("tip-contact")&&("Contact: "+val("tip-contact"))
-        ],"tip-status",e.target,"tip-hp",
-        "Thanks \u2014 your tip is on its way to the Pulse team.");
+          where&&("Where: "+where),
+          when&&("When: "+when),
+          name&&("From: "+name),
+          contact&&("Contact: "+contact)
+        ];
+        var replyTo=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact)?contact:"";
+        send(null,"News tip for the Pulse",lines.filter(function(l){return l;}).join("\n\n"),
+          replyTo,"tip-status",e.target,"tip-hp",
+          "Thanks \u2014 your tip is on its way to the Pulse team.",lines);
       });
       document.getElementById("event-form").addEventListener("submit",function(e){
         e.preventDefault();
@@ -313,20 +316,20 @@
         if(!loc){document.getElementById("ev-loc").focus();return;}
         if(!desc){document.getElementById("ev-desc").focus();return;}
         if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){document.getElementById("ev-email").focus();return;}
-        send("event",{
-          name:name,date:date,time:val("ev-time"),loc:loc,desc:desc,
-          org:val("ev-org"),link:val("ev-link"),email:email
-        },"Event submission: "+name,[
+        var time=val("ev-time"),org=val("ev-org"),link=val("ev-link");
+        var lines=[
           "Event: "+name,
           "Date: "+date,
-          val("ev-time")&&("Time: "+val("ev-time")),
+          time&&("Time: "+time),
           "Location: "+loc,
           "Details:\n"+desc,
-          val("ev-org")&&("Organizer: "+val("ev-org")),
-          val("ev-link")&&("Link: "+val("ev-link")),
+          org&&("Organizer: "+org),
+          link&&("Link: "+link),
           "Submitted by: "+email
-        ],"ev-status",e.target,"ev-hp",
-        "Thanks \u2014 your event is on its way. We'll be in touch if we feature it.");
+        ];
+        send(null,"Event submission: "+name,lines.filter(function(l){return l;}).join("\n\n"),
+          email,"ev-status",e.target,"ev-hp",
+          "Thanks \u2014 your event is on its way. We'll be in touch if we feature it.",lines);
       });
     })();
   </script>
