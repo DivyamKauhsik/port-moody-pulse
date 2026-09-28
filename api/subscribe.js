@@ -6,29 +6,40 @@ export default async function handler(req, res) {
     });
   }
   try {
-    const { email } = req.body;
-    if (!email) {
+    const { email } = req.body || {};
+    if (!email || typeof email !== "string" || !email.includes("@")) {
       return res.status(400).json({
         ok: false,
-        message: "Email is required"
+        message: "Please enter a valid email address."
       });
     }
-    const response = await fetch(
-      `https://api.beehiiv.com/v2/publications/${process.env.BEEHIIV_PUBLICATION_ID}/subscriptions`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${process.env.BEEHIIV_API_KEY}`
-        },
-        body: JSON.stringify({
-          email: email,
-          reactivate_existing: true,
-          send_welcome_email: true
-        })
-      }
-    );
-    const data = await response.json();
+    // Keep this fast: the welcome email (with the guide) goes out through the
+    // Beehiiv welcome automation, so we don't send it inline here. Sending it
+    // inline made subscriptions take 10+ seconds.
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 12000);
+    let response;
+    try {
+      response = await fetch(
+        `https://api.beehiiv.com/v2/publications/${process.env.BEEHIIV_PUBLICATION_ID}/subscriptions`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${process.env.BEEHIIV_API_KEY}`
+          },
+          body: JSON.stringify({
+            email: email.trim(),
+            reactivate_existing: true,
+            send_welcome_email: false
+          }),
+          signal: controller.signal
+        }
+      );
+    } finally {
+      clearTimeout(timeout);
+    }
+    const data = await response.json().catch(() => ({}));
     if (!response.ok) {
       console.error(data);
       return res.status(400).json({
@@ -42,9 +53,12 @@ export default async function handler(req, res) {
     });
   } catch (error) {
     console.error(error);
-    return res.status(500).json({
+    const timedOut = error && error.name === "AbortError";
+    return res.status(timedOut ? 504 : 500).json({
       ok: false,
-      message: "Server error"
+      message: timedOut
+        ? "That took too long — please try again."
+        : "Server error"
     });
   }
 }
