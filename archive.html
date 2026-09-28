@@ -119,23 +119,40 @@
       .signup{flex-direction:column}.signup button{width:100%}
       .footer-inner{flex-direction:column;align-items:flex-start}.footer-links{flex-wrap:wrap}
     }
+  
+    /* ── PULSE BAR (standard header) ── */
+    .pulse-bar{background:var(--bg);border-bottom:1px solid var(--line);overflow:hidden}
+    .pulse-bar svg{width:100%;height:34px;display:block}
+    .pulse-base{fill:none;stroke:var(--teal);stroke-width:2;opacity:.32}
+    .pulse-hi{fill:none;stroke:var(--gold);stroke-width:2.6;stroke-linecap:round;stroke-dasharray:46 2400;stroke-dashoffset:2446;animation:beat 5.5s linear infinite}
+    @keyframes beat{to{stroke-dashoffset:0}}
+    @media(prefers-reduced-motion:reduce){.pulse-hi{animation:none;opacity:0}}
+    @media(max-width:640px){.nav{min-height:68px}.edition{display:none}.nav-links{gap:14px;font-size:12px}.nav-links a:nth-child(4){display:none}}
   </style>
 </head>
 <body>
   <div class="topline">
-    <div class="wrap nav">
-      <a class="brand-lockup" href="/" aria-label="Port Moody Pulse home">
-        <img src="/favicon.svg" alt="" width="42" height="42">
-        <span class="word">Port&#160;Moody <b>Pulse</b></span>
-      </a>
-      <div class="edition">A free Friday newsletter for Port Moody</div>
-      <nav class="nav-links" aria-label="Page sections">
-        <a href="/#stories">Stories</a>
-        <a href="/archive.html" aria-current="page">Archive</a>
-        <a href="/#advertise">Advertise</a>
-      </nav>
-    </div>
+  <div class="wrap nav">
+    <a class="brand-lockup" href="/" aria-label="Port Moody Pulse home">
+      <img src="/favicon.svg" alt="" width="42" height="42">
+      <span class="word">Port&#160;Moody <b>Pulse</b></span>
+    </a>
+    <div class="edition">A free Friday newsletter for Port Moody</div>
+    <nav class="nav-links" aria-label="Page sections">
+      <a href="/#stories">Stories</a>
+      <a href="/events.html">Events</a>
+      <a href="/archive.html">Archive</a>
+      <a href="/about.html">About</a>
+      <a href="/#advertise">Advertise</a>
+    </nav>
   </div>
+</div>
+<div class="pulse-bar" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none">
+    <path class="pulse-base" d="M0 20 H278 L298 20 L310 8 L324 33 L336 20 L358 20 H600 L620 20 L632 9 L646 31 L658 20 L680 20 H980 L1000 20 L1012 8 L1026 33 L1038 20 L1060 20 H1200"/>
+    <path class="pulse-hi" d="M0 20 H278 L298 20 L310 8 L324 33 L336 20 L358 20 H600 L620 20 L632 9 L646 31 L658 20 L680 20 H980 L1000 20 L1012 8 L1026 33 L1038 20 L1060 20 H1200"/>
+  </svg>
+</div>
 
   <main>
     <div class="wrap page-hero">

@@ -104,41 +104,45 @@
       .contact-strip{flex-direction:column;align-items:flex-start}
       .wrap{padding:0 18px}
     }
+  
+    /* ── STANDARD HEADER ── */
+    .topline{background:var(--paper)}
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand-lockup{display:flex;align-items:center;gap:13px;min-width:0;text-decoration:none}
+    .brand-lockup img{width:42px;height:42px;flex:none}
+    .brand-lockup .word{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:25px;color:var(--inlet,#0E4F4E);letter-spacing:-.015em;line-height:1;white-space:nowrap}
+    .brand-lockup .word b{color:#9C6E22;font-weight:600}
+    .edition{font-size:12px;font-weight:700;letter-spacing:.02em;color:var(--mist,#54655F);padding-left:18px;border-left:1px solid var(--line)}
+    .nav-links{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:700}
+    .nav-links a{text-decoration:none;color:var(--ink)}
+    .nav-links a:hover,.nav-links a:focus-visible{color:var(--tide,#15706E);text-decoration:underline;text-underline-offset:5px}
+    @media(max-width:640px){.nav{min-height:68px}.edition{display:none}.nav-links{gap:14px;font-size:12px}.nav-links a:nth-child(4){display:none}}
   </style>
 </head>
 <body>
 
-  <div class="util">
-    <div class="wrap">
-      <div>Port&#160;Moody, British Columbia</div>
-      <div class="soc">
-        <a href="https://www.instagram.com/portmoodypulse?igsh=Y2xleTNib2l0YzMz" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-        <a href="https://www.facebook.com/share/1GLMNEjPJS/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
-      </div>
-    </div>
+  <div class="topline">
+  <div class="wrap nav">
+    <a class="brand-lockup" href="/" aria-label="Port Moody Pulse home">
+      <img src="/favicon.svg" alt="" width="42" height="42">
+      <span class="word">Port&#160;Moody <b>Pulse</b></span>
+    </a>
+    <div class="edition">A free Friday newsletter for Port Moody</div>
+    <nav class="nav-links" aria-label="Page sections">
+      <a href="/#stories">Stories</a>
+      <a href="/events.html">Events</a>
+      <a href="/archive.html">Archive</a>
+      <a href="/about.html">About</a>
+      <a href="/#advertise">Advertise</a>
+    </nav>
   </div>
-
-  <header class="mast">
-    <div class="wrap">
-      <a class="brand" href="/" aria-label="Port&#160;Moody Pulse home">
-        <svg viewBox="0 0 100 100" aria-hidden="true">
-          <defs><linearGradient id="lgH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A6E6B"/><stop offset="1" stop-color="#0A3537"/></linearGradient></defs>
-          <circle cx="50" cy="50" r="50" fill="url(#lgH)"/>
-          <circle cx="50" cy="36.6" r="3.2" fill="#E0A23C"/>
-          <path d="M28.2 54.5 L37.2 54.5 L39.8 54.5 L42 47 L44.4 61.2 L46.6 54.5 Q50.3 46.8 54 54.5 Q57.7 62.2 61.4 54.5 Q65.1 47 68.8 54.5 L71.8 54.5" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span class="word">Port&#160;Moody <b>Pulse</b></span>
-      </a>
-      <a class="back-link" href="/">&#8592; Back to newsletter</a>
-    </div>
-  </header>
-
-  <div class="pulse-bar" aria-hidden="true">
-    <svg viewBox="0 0 1200 40" preserveAspectRatio="none">
-      <path class="pulse-base" d="M0 20 H278 L298 20 L310 8 L324 33 L336 20 L358 20 H600 L620 20 L632 9 L646 31 L658 20 L680 20 H980 L1000 20 L1012 8 L1026 33 L1038 20 L1060 20 H1200"/>
-      <path class="pulse-hi" d="M0 20 H278 L298 20 L310 8 L324 33 L336 20 L358 20 H600 L620 20 L632 9 L646 31 L658 20 L680 20 H980 L1000 20 L1012 8 L1026 33 L1038 20 L1060 20 H1200"/>
-    </svg>
-  </div>
+</div>
+<div class="pulse-bar" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none">
+    <path class="pulse-base" d="M0 20 H278 L298 20 L310 8 L324 33 L336 20 L358 20 H600 L620 20 L632 9 L646 31 L658 20 L680 20 H980 L1000 20 L1012 8 L1026 33 L1038 20 L1060 20 H1200"/>
+    <path class="pulse-hi" d="M0 20 H278 L298 20 L310 8 L324 33 L336 20 L358 20 H600 L620 20 L632 9 L646 31 L658 20 L680 20 H980 L1000 20 L1012 8 L1026 33 L1038 20 L1060 20 H1200"/>
+  </svg>
+</div>
 
   <!-- HERO -->
   <section class="ad-hero">
