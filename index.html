@@ -108,6 +108,8 @@
     button{cursor:pointer}
     .wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
     .topline{border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 92%,transparent)}
+    .dateline{border-bottom:1px solid var(--line)}
+    .dateline-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:8px 0;font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
     .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
     .brand-lockup{display:flex;align-items:center;gap:13px;min-width:0;text-decoration:none}
     .brand-lockup img{width:42px;height:42px;flex:none}
@@ -266,6 +268,12 @@
         <a href="/archive.html">Archive</a>
         <a href="#advertise">Advertise</a>
       </nav>
+    </div>
+  </div>
+  <div class="dateline">
+    <div class="wrap dateline-inner">
+      <span>Port Moody, BC</span>
+      <span id="live-datetime"></span>
     </div>
   </div>
 
@@ -455,6 +463,19 @@
   </div>
 
   <script>
+    (function(){
+      var dt=document.getElementById('live-datetime');
+      function tick(){
+        if(!dt)return;
+        try{
+          var now=new Date();
+          var d=now.toLocaleDateString('en-CA',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+          var t=now.toLocaleTimeString('en-CA',{hour:'numeric',minute:'2-digit',timeZoneName:'short'});
+          dt.textContent=d+' \u00B7 '+t;
+        }catch(e){/* leave blank */}
+      }
+      tick();setInterval(tick,30000);
+    })();
     (function(){
       var hero=document.getElementById('subscribe');
       var sticky=document.getElementById('sticky-signup');
