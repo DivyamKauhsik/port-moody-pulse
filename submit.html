@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Send a Tip or Submit an Event &#8212; Port&#160;Moody Pulse</title>
+  <meta name="description" content="Know something the neighbourhood should know? Send a news tip or submit a community event to Port Moody Pulse &#8212; it lands straight in our inbox." />
+  <link rel="canonical" href="https://www.portmoodypulse.ca/submit.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Send a Tip or Submit an Event &#8212; Port Moody Pulse" />
+  <meta property="og:description" content="Know something the neighbourhood should know? Send a news tip or submit a community event &#8212; it lands straight in our inbox." />
+  <meta property="og:url" content="https://www.portmoodypulse.ca/submit.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#0A3537">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --inlet-900:#0A3537; --inlet:#0E4F4E; --tide:#15706E;
+      --brass:#C7903B; --brass-bright:#E0A23C; --brass-deep:#9C6E22; --brass-text:#82591A;
+      --cta-bg:#8A5D17; --cta-hover:#6E4A10;
+      --paper:#FBF7EE; --paper-2:#F4EEDF; --card:#FFFFFF;
+      --ink:#15302E; --ink-2:#3B524F; --mist:#54655F; --line:#E7E0D0;
+      --fd:'Newsreader',Georgia,'Times New Roman',serif;
+      --fb:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--paper);color:var(--ink);font-family:var(--fb);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+    /* ── UTIL BAR ── */
+    .util{background:var(--inlet-900);color:#B6D0CC;font-size:12.5px}
+    .util .wrap{display:flex;align-items:center;justify-content:space-between;min-height:40px;gap:14px}
+    .soc{display:flex;gap:11px}
+    .soc a{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.22);border-radius:50%;color:#CBE0DC;font-size:11px;font-weight:800}
+    .soc a:hover{color:#fff;border-color:var(--brass-bright);text-decoration:none}
+
+    /* ── MASTHEAD ── */
+    .mast{background:var(--paper);border-bottom:1px solid var(--line)}
+    .mast .wrap{display:flex;align-items:center;gap:20px;min-height:78px}
+    .brand{display:flex;align-items:center;gap:13px;flex:none}
+    .brand svg{width:42px;height:42px;flex:none}
+    .brand .word{font-family:var(--fd);font-weight:600;font-size:25px;color:var(--inlet);letter-spacing:-.015em;line-height:1}
+    .brand .word b{color:var(--brass-deep);font-weight:600}
+    .back-link{margin-left:auto;font-size:14px;font-weight:600;color:var(--ink-2);display:flex;align-items:center;gap:6px}
+    .back-link:hover{color:var(--tide);text-decoration:none}
+
+    /* ── PULSE BAR ── */
+    .pulse-bar{background:var(--paper);border-bottom:1px solid var(--line);overflow:hidden}
+    .pulse-bar svg{width:100%;height:34px;display:block}
+    .pulse-base{fill:none;stroke:var(--tide);stroke-width:2;opacity:.32}
+    .pulse-hi{fill:none;stroke:var(--brass-bright);stroke-width:2.6;stroke-linecap:round;stroke-dasharray:46 2400;stroke-dashoffset:2446;animation:beat 5.5s linear infinite}
+    @keyframes beat{to{stroke-dashoffset:0}}
+    @media(prefers-reduced-motion:reduce){.pulse-hi{animation:none;opacity:0}}
+
+    /* ── HERO ── */
+    .page-hero{background:var(--inlet-900);padding:64px 0 56px}
+    .page-hero .wrap{max-width:760px}
+    .hero-eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-bright);margin-bottom:14px}
+    .hero-title{font-family:var(--fd);font-size:clamp(32px,4vw,48px);font-weight:600;color:#FBF7EE;line-height:1.1;margin-bottom:16px}
+    .hero-sub{font-size:17px;color:rgba(251,247,238,0.72);line-height:1.55}
+
+    /* ── BODY ── */
+    .page-body{padding:56px 0 80px}
+    .page-body .wrap{max-width:760px}
+    .form-cards{display:grid;gap:28px}
+    .form-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:32px}
+    .form-card h2{font-family:var(--fd);font-size:24px;font-weight:600;color:var(--inlet);margin-bottom:6px}
+    .form-card .lede{font-size:15px;color:var(--ink-2);margin-bottom:22px}
+    .field{margin-bottom:16px}
+    .field label{display:block;font-size:13px;font-weight:800;letter-spacing:.04em;margin-bottom:6px;color:var(--ink)}
+    .field label .opt{font-weight:500;color:var(--mist);letter-spacing:0}
+    .field input,.field textarea{width:100%;padding:12px 16px;border:1px solid var(--line);border-radius:12px;font-family:var(--fb);font-size:15px;color:var(--ink);background:var(--paper)}
+    .field input:focus,.field textarea:focus{outline:2px solid var(--tide);outline-offset:1px;border-color:var(--tide)}
+    .field textarea{min-height:110px;resize:vertical}
+    .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .submit-btn{background:var(--tide);color:#fff;font-family:var(--fb);font-weight:800;font-size:15px;padding:14px 30px;border-radius:100px;border:0;cursor:pointer}
+    .submit-btn:hover{background:var(--inlet)}
+    .hint{font-size:13px;color:var(--mist);margin-top:12px}
+    .editor-note{background:var(--paper-2);border-left:4px solid var(--brass-bright);border-radius:0 12px 12px 0;padding:14px 18px;font-size:14px;color:var(--ink-2);margin-bottom:22px}
+    .fallback{margin-top:40px;text-align:center;font-size:15px;color:var(--ink-2)}
+    .fallback a{color:var(--tide);font-weight:700}
+
+    /* ── FOOTER ── */
+    footer.site{background:var(--inlet-900);color:#A8C0BD;padding:40px 0 24px}
+    .foot-bot{font-size:12.5px;color:#93ABA8;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    .tagline{font-family:var(--fd);font-style:italic;color:#B6D0CC}
+
+    @media(max-width:720px){
+      .wrap{padding:0 18px}
+      .form-card{padding:24px 20px}
+      .field-row{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="util">
+    <div class="wrap">
+      <div>Port&#160;Moody, British Columbia</div>
+      <div class="soc">
+        <a href="https://www.instagram.com/portmoodypulse?igsh=Y2xleTNib2l0YzMz" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://www.facebook.com/share/1GLMNEjPJS/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="mast">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Port&#160;Moody Pulse home">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <defs><linearGradient id="lgH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A6E6B"/><stop offset="1" stop-color="#0A3537"/></linearGradient></defs>
+          <circle cx="50" cy="50" r="50" fill="url(#lgH)"/>
+          <circle cx="50" cy="36.6" r="3.2" fill="#E0A23C"/>
+          <path d="M28.2 54.5 L37.2 54.5 L39.8 54.5 L42 47 L44.4 61.2 L46.6 54.5 Q50.3 46.8 54 54.5 Q57.7 62.2 61.4 54.5 Q65.1 47 68.8 54.5 L71.8 54.5" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="word">Port&#160;Moody <b>Pulse</b></span>
+      </a>
+      <a class="back-link" href="/">&#8592; Back to newsletter</a>
+    </div>
+  </header>
+
+  <div class="pulse-bar" aria-hidden="true">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none">
+      <path class="pulse-base" d="M0 20 H278 L298 20 L310 8 L324 33 L336 20 L358 20 H600 L620 20 L632 9 L646 31 L658 20 L680 20 H980 L1000 20 L1012 8 L1026 33 L1038 20 L1060 20 H1200"/>
+      <path class="pulse-hi" d="M0 20 H278 L298 20 L310 8 L324 33 L336 20 L358 20 H600 L620 20 L632 9 L646 31 L658 20 L680 20 H980 L1000 20 L1012 8 L1026 33 L1038 20 L1060 20 H1200"/>
+    </svg>
+  </div>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="hero-eyebrow">Help the Pulse</div>
+      <h1 class="hero-title">Know something we should?</h1>
+      <p class="hero-sub">The best Pulse stories start with a neighbour&#8217;s email. Send a news tip or submit a community event &#8212; it lands straight in our inbox.</p>
+    </div>
+  </section>
+
+  <main class="page-body">
+    <div class="wrap">
+      <div class="form-cards">
+
+        <section class="form-card" aria-labelledby="tip-h">
+          <h2 id="tip-h">Send a news tip</h2>
+          <p class="lede">Something happening on your street? A new shop opening, a council decision that matters, a neighbour doing something remarkable? Tell us.</p>
+          <form id="tip-form" novalidate>
+            <div class="field">
+              <label for="tip-what">What&#8217;s happening?</label>
+              <textarea id="tip-what" required placeholder="Tell us what&#8217;s going on, in your own words"></textarea>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="tip-where">Where in Port&#160;Moody? <span class="opt">(optional)</span></label>
+                <input id="tip-where" type="text" placeholder="e.g. Newport Village">
+              </div>
+              <div class="field">
+                <label for="tip-when">When? <span class="opt">(optional)</span></label>
+                <input id="tip-when" type="text" placeholder="e.g. this Saturday">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="tip-name">Your name <span class="opt">(optional)</span></label>
+                <input id="tip-name" type="text" autocomplete="name" placeholder="So we know who to thank">
+              </div>
+              <div class="field">
+                <label for="tip-contact">How can we reach you? <span class="opt">(optional)</span></label>
+                <input id="tip-contact" type="text" placeholder="Email or phone">
+              </div>
+            </div>
+            <button class="submit-btn" type="submit">Send tip &#8594;</button>
+            <p class="hint">This opens your email app with everything filled in &#8212; just hit send. Anonymous tips are welcome; just leave the name fields blank.</p>
+          </form>
+        </section>
+
+        <section class="form-card" aria-labelledby="event-h">
+          <h2 id="event-h">Submit an event</h2>
+          <p class="lede">Running something neighbours should know about? Send the details and we&#8217;ll consider it for the Pulse calendar.</p>
+          <div class="editor-note">We list community events connected to the City of Port&#160;Moody &#8212; city calendar listings, city venues and city-partnered community events. Send it in and we&#8217;ll take a look.</div>
+          <form id="event-form" novalidate>
+            <div class="field">
+              <label for="ev-name">Event name</label>
+              <input id="ev-name" type="text" required placeholder="e.g. Shoreline Cleanup Morning">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="ev-date">Date</label>
+                <input id="ev-date" type="text" required placeholder="e.g. Saturday, October 4">
+              </div>
+              <div class="field">
+                <label for="ev-time">Time <span class="opt">(optional)</span></label>
+                <input id="ev-time" type="text" placeholder="e.g. 9:00 AM &#8211; 12:00 PM">
+              </div>
+            </div>
+            <div class="field">
+              <label for="ev-loc">Location</label>
+              <input id="ev-loc" type="text" required placeholder="e.g. Rocky Point Park, near the pier">
+            </div>
+            <div class="field">
+              <label for="ev-desc">What should neighbours know?</label>
+              <textarea id="ev-desc" required placeholder="A few sentences: what it is, who it&#8217;s for, anything to bring"></textarea>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="ev-org">Organizer / host <span class="opt">(optional)</span></label>
+                <input id="ev-org" type="text" placeholder="e.g. Rotary Club of Port Moody">
+              </div>
+              <div class="field">
+                <label for="ev-link">Event link <span class="opt">(optional)</span></label>
+                <input id="ev-link" type="url" inputmode="url" placeholder="https://&#8230;">
+              </div>
+            </div>
+            <div class="field">
+              <label for="ev-email">Your email</label>
+              <input id="ev-email" type="email" autocomplete="email" required placeholder="So we can follow up if needed">
+            </div>
+            <button class="submit-btn" type="submit">Submit event &#8594;</button>
+            <p class="hint">This opens your email app with everything filled in &#8212; just hit send.</p>
+          </form>
+        </section>
+
+      </div>
+
+      <p class="fallback">Prefer your own email app? Write to <a href="mailto:portmoodypulse@gmail.com">portmoodypulse@gmail.com</a> directly.</p>
+    </div>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="foot-bot">
+        <div>&#169; 2026 Port&#160;Moody Pulse &#183; Independent community newsletter. Not affiliated with the City of Port&#160;Moody.</div>
+        <div class="tagline">The heartbeat of Port&#160;Moody.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var TO="portmoodypulse@gmail.com";
+      function val(id){var el=document.getElementById(id);return el?el.value.trim():"";}
+      function mailto(subject,lines){
+        var body=lines.filter(function(l){return l;}).join("\n\n");
+        window.location.href="mailto:"+TO+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+      }
+      document.getElementById("tip-form").addEventListener("submit",function(e){
+        e.preventDefault();
+        var what=val("tip-what");
+        if(!what){document.getElementById("tip-what").focus();return;}
+        mailto("News tip for the Pulse",[
+          "What\u2019s happening:\n"+what,
+          val("tip-where")&&("Where: "+val("tip-where")),
+          val("tip-when")&&("When: "+val("tip-when")),
+          val("tip-name")&&("From: "+val("tip-name")),
+          val("tip-contact")&&("Contact: "+val("tip-contact"))
+        ]);
+      });
+      document.getElementById("event-form").addEventListener("submit",function(e){
+        e.preventDefault();
+        var name=val("ev-name"),date=val("ev-date"),loc=val("ev-loc"),desc=val("ev-desc"),email=val("ev-email");
+        if(!name){document.getElementById("ev-name").focus();return;}
+        if(!date){document.getElementById("ev-date").focus();return;}
+        if(!loc){document.getElementById("ev-loc").focus();return;}
+        if(!desc){document.getElementById("ev-desc").focus();return;}
+        if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){document.getElementById("ev-email").focus();return;}
+        mailto("Event submission: "+name,[
+          "Event: "+name,
+          "Date: "+date,
+          val("ev-time")&&("Time: "+val("ev-time")),
+          "Location: "+loc,
+          "Details:\n"+desc,
+          val("ev-org")&&("Organizer: "+val("ev-org")),
+          val("ev-link")&&("Link: "+val("ev-link")),
+          "Submitted by: "+email
+        ]);
+      });
+    })();
+  </script>
+</body>
+</html>
