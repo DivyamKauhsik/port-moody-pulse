@@ -109,6 +109,11 @@
     .nav-links a{text-decoration:none;color:var(--ink)}
     .nav-links a:hover,.nav-links a:focus-visible{color:var(--tide,#15706E);text-decoration:underline;text-underline-offset:5px}
     @media(max-width:640px){.nav{min-height:68px}.edition{display:none}.nav-links{gap:14px;font-size:12px}.nav-links a:nth-child(4){display:none}}
+  
+    .hp{position:absolute!important;left:-9999px;top:auto;width:1px;height:1px;opacity:0;pointer-events:none}
+    .status{margin:10px 0 0;font-size:14px;font-weight:600;color:var(--mist,#54655F);min-height:1.4em}
+    .status.ok{color:var(--tide,#15706E)}
+    .submit-btn:disabled{opacity:.6;cursor:wait}
   </style>
 </head>
 <body>
@@ -176,8 +181,10 @@
                 <input id="tip-contact" type="text" placeholder="Email or phone">
               </div>
             </div>
+            <input class="hp" type="text" id="tip-hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
             <button class="submit-btn" type="submit">Send tip &#8594;</button>
-            <p class="hint">This opens your email app with everything filled in &#8212; just hit send. Anonymous tips are welcome; just leave the name fields blank.</p>
+            <p class="status" id="tip-status" role="status" aria-live="polite"></p>
+            <p class="hint">Sends straight to the Pulse team &#8212; no email app needed. Anonymous tips are welcome; just leave the name fields blank.</p>
           </form>
         </section>
 
@@ -222,8 +229,10 @@
               <label for="ev-email">Your email</label>
               <input id="ev-email" type="email" autocomplete="email" required placeholder="So we can follow up if needed">
             </div>
+            <input class="hp" type="text" id="ev-hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
             <button class="submit-btn" type="submit">Submit event &#8594;</button>
-            <p class="hint">This opens your email app with everything filled in &#8212; just hit send.</p>
+            <p class="status" id="ev-status" role="status" aria-live="polite"></p>
+            <p class="hint">Sends straight to the Pulse team &#8212; no email app needed.</p>
           </form>
         </section>
 
@@ -244,23 +253,57 @@
 
   <script>
     (function(){
-      var TO="portmoodypulse@gmail.com";
+      var TO="portmoodypulse@gmail.com"; /* fallback only: used if direct send fails */
       function val(id){var el=document.getElementById(id);return el?el.value.trim():"";}
+      function setStatus(id,msg,ok){
+        var s=document.getElementById(id);
+        s.textContent=msg;
+        s.className="status"+(ok?" ok":"");
+      }
       function mailto(subject,lines){
         var body=lines.filter(function(l){return l;}).join("\n\n");
         window.location.href="mailto:"+TO+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+      }
+      function send(kind,fields,subject,lines,statusId,form,hpId,okMsg){
+        var btn=form.querySelector('button[type="submit"]');
+        btn.disabled=true;
+        setStatus(statusId,"Sending\u2026",false);
+        fetch("/api/submit",{
+          method:"POST",
+          headers:{"Content-Type":"application/json"},
+          body:JSON.stringify({kind:kind,fields:fields,hp:val(hpId)})
+        }).then(function(r){
+          return r.json().catch(function(){return {};}).then(function(d){return r.ok&&d.ok;});
+        }).then(function(sent){
+          btn.disabled=false;
+          if(sent){
+            setStatus(statusId,okMsg,true);
+            form.reset();
+          }else{
+            setStatus(statusId,"Couldn't send automatically \u2014 opening your email app instead\u2026",false);
+            mailto(subject,lines);
+          }
+        }).catch(function(){
+          btn.disabled=false;
+          setStatus(statusId,"Couldn't send automatically \u2014 opening your email app instead\u2026",false);
+          mailto(subject,lines);
+        });
       }
       document.getElementById("tip-form").addEventListener("submit",function(e){
         e.preventDefault();
         var what=val("tip-what");
         if(!what){document.getElementById("tip-what").focus();return;}
-        mailto("News tip for the Pulse",[
+        send("tip",{
+          what:what,where:val("tip-where"),when:val("tip-when"),
+          name:val("tip-name"),contact:val("tip-contact")
+        },"News tip for the Pulse",[
           "What\u2019s happening:\n"+what,
           val("tip-where")&&("Where: "+val("tip-where")),
           val("tip-when")&&("When: "+val("tip-when")),
           val("tip-name")&&("From: "+val("tip-name")),
           val("tip-contact")&&("Contact: "+val("tip-contact"))
-        ]);
+        ],"tip-status",e.target,"tip-hp",
+        "Thanks \u2014 your tip is on its way to the Pulse team.");
       });
       document.getElementById("event-form").addEventListener("submit",function(e){
         e.preventDefault();
@@ -270,7 +313,10 @@
         if(!loc){document.getElementById("ev-loc").focus();return;}
         if(!desc){document.getElementById("ev-desc").focus();return;}
         if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){document.getElementById("ev-email").focus();return;}
-        mailto("Event submission: "+name,[
+        send("event",{
+          name:name,date:date,time:val("ev-time"),loc:loc,desc:desc,
+          org:val("ev-org"),link:val("ev-link"),email:email
+        },"Event submission: "+name,[
           "Event: "+name,
           "Date: "+date,
           val("ev-time")&&("Time: "+val("ev-time")),
@@ -279,7 +325,8 @@
           val("ev-org")&&("Organizer: "+val("ev-org")),
           val("ev-link")&&("Link: "+val("ev-link")),
           "Submitted by: "+email
-        ]);
+        ],"ev-status",e.target,"ev-hp",
+        "Thanks \u2014 your event is on its way. We'll be in touch if we feature it.");
       });
     })();
   </script>
