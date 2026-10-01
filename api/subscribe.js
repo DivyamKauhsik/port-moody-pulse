@@ -13,11 +13,13 @@ export default async function handler(req, res) {
         message: "Please enter a valid email address."
       });
     }
-    // Keep this fast: the welcome email (with the guide) goes out through the
-    // Beehiiv welcome automation, so we don't send it inline here. Sending it
-    // inline made subscriptions take 10+ seconds.
+    // Beehiiv's built-in welcome email (with the guide) must be sent inline
+    // here: the fallback welcome automation is an empty draft and automations
+    // require a paid plan, so with this set to false website subscribers got
+    // no welcome email at all. Sending inline makes subscriptions slower
+    // (Beehiiv takes ~10-20s), so the timeout below allows for that.
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 12000);
+    const timeout = setTimeout(() => controller.abort(), 25000);
     let response;
     try {
       response = await fetch(
@@ -31,7 +33,7 @@ export default async function handler(req, res) {
           body: JSON.stringify({
             email: email.trim(),
             reactivate_existing: true,
-            send_welcome_email: false
+            send_welcome_email: true
           }),
           signal: controller.signal
         }
