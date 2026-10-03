@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Port Moody Voter Guide 2026 — Port Moody Pulse</title>
-<meta name="description" content="Meet the candidates for Port Moody mayor, city council and school trustee. Same questions, same format — plus a way to ask them your own." />
+<meta name="description" content="Meet the candidates for Port Moody mayor, city council and school trustee. Same questions, same format." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -125,43 +125,18 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
 .footer-links a{text-decoration:none;font-weight:700}
 @media(max-width:760px){.how-grid{grid-template-columns:1fr}.how-cell + .how-cell{border-left:none;border-top:1px solid var(--line);padding-left:0}.edition{display:none}}
 
-.ask-strip{background:var(--teal-2);color:var(--inverse);border-radius:18px;padding:34px 36px;margin:34px 0 8px;display:flex;gap:26px;align-items:center;justify-content:space-between;flex-wrap:wrap;box-shadow:var(--shadow)}
-.ask-strip h3{font-family:var(--serif);font-size:26px;margin:0 0 8px;font-weight:600}
-.ask-strip p{margin:0;font-size:15.5px;color:#cfe0dd;max-width:640px}
-.ask-strip .ask-open{flex:none;background:var(--gold);color:#3a2c12;border:none;font-weight:800;font-size:15px;padding:14px 26px;border-radius:999px;cursor:pointer}
-.ask-strip .ask-open:hover{filter:brightness(1.06)}
-.ask-btn{margin-top:14px;background:transparent;border:1.5px solid var(--teal);color:var(--teal-2);font-weight:700;font-size:13.5px;padding:9px 18px;border-radius:999px;cursor:pointer}
-.ask-btn:hover{background:#e7f2f1}
-.modal-backdrop{position:fixed;inset:0;background:rgba(16,47,47,.55);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
-.modal-backdrop.open{display:flex}
-.modal{background:#fff;border-radius:18px;max-width:560px;width:100%;padding:34px 34px 30px;box-shadow:var(--shadow);max-height:92vh;overflow:auto}
-.modal h3{font-family:var(--serif);font-size:26px;margin:0 0 6px}
-.modal .sub{font-size:14.5px;color:var(--ink-soft);margin:0 0 20px}
-.modal label{display:block;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:16px 0 6px}
-.modal select,.modal textarea,.modal input{width:100%;font:inherit;font-size:15.5px;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
-.modal textarea{min-height:130px;resize:vertical}
-.modal .row{display:flex;gap:12px;margin-top:24px}
-.modal .send{flex:1;background:var(--teal);color:#fff;border:none;font-weight:800;font-size:15.5px;padding:14px;border-radius:999px;cursor:pointer}
-.modal .send:hover{background:var(--teal-2)}
-.modal .cancel{background:transparent;border:1.5px solid var(--line);color:var(--ink-soft);font-weight:700;font-size:15px;padding:14px 22px;border-radius:999px;cursor:pointer}
-.modal .fine{font-size:13px;color:var(--muted);margin-top:14px}
-/* verification pill at top of card + source citation block */
-.vstatus-head{margin-top:14px}
-.vstatus-head .vpill{font-size:13.5px}
-.src-block{margin:6px 56px 0;padding:14px 18px;background:var(--surface-soft);border-left:3px solid var(--teal);border-radius:0 10px 10px 0;font-size:15.5px;line-height:1.6;color:var(--ink-soft)}
-.src-block strong{color:var(--teal-2)}
-.src-block a{color:var(--teal-2);font-weight:700}
-@media(max-width:760px){.src-block{margin:6px 20px 0}}
-/* tile directory */
-.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px;margin:6px 0 34px}
-.tile{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .12s ease,box-shadow .12s ease}
-.tile:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
-.tile img{width:100%;height:118px;object-fit:cover;display:block;background:var(--ink)}
-.tile .tbody{padding:12px 14px 14px}
-.tile .tname{font-weight:800;font-size:15.5px;color:var(--ink);line-height:1.25}
-.tile .toffice{font-size:12.5px;color:var(--muted);margin-top:2px}
-.tile .vpill{font-size:10.5px;padding:4px 10px;margin-top:8px}
-.card{scroll-margin-top:64px}
+/* end-of-guide newsletter signup */
+.guide-signup{background:var(--teal-2);color:var(--inverse);border-radius:18px;padding:40px 38px;margin:44px 0 8px;box-shadow:var(--shadow)}
+.guide-signup h3{font-family:var(--serif);font-size:30px;margin:0 0 10px;font-weight:600}
+.guide-signup p{margin:0 0 22px;font-size:16px;color:#cfe0dd;max-width:660px;line-height:1.6}
+.guide-signup .signup{display:flex;gap:12px;flex-wrap:wrap;max-width:580px}
+.guide-signup input[type=email]{flex:1;min-width:220px;font:inherit;font-size:16px;padding:14px 18px;border:2px solid transparent;border-radius:999px;background:#fff;color:var(--ink)}
+.guide-signup input[aria-invalid=true]{border-color:#e88}
+.guide-signup button{background:var(--gold);color:#3a2c12;border:none;font-weight:800;font-size:15.5px;padding:14px 28px;border-radius:999px;cursor:pointer}
+.guide-signup button:hover{filter:brightness(1.06)}
+.guide-signup button:disabled{opacity:.7;cursor:wait}
+.guide-signup .form-msg{margin:14px 0 0;font-size:15px;font-weight:600;color:#ffe9a8;min-height:22px}
+@media(max-width:760px){.guide-signup{padding:32px 24px}.guide-signup .signup{flex-direction:column}.guide-signup button{width:100%}}
 
 /* slim signup strip under the hero (first scroll) */
 .guide-signup-top{background:var(--teal-2);color:var(--inverse);border-radius:14px;padding:18px 22px;margin:0 0 8px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;box-shadow:var(--shadow)}
@@ -178,7 +153,7 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
 @media(max-width:760px){.guide-signup-top .signup{width:100%}.guide-signup-top input[type=email]{flex:1;width:auto}}
 </style>
 </head>
-<body data-form-endpoint="">
+<body>
 <div class="topline"><div class="wrap nav">
   <a class="brand-lockup" href="/index.html"><span class="word">Port&nbsp;Moody <b>Pulse</b></span></a>
   <div class="edition">A free Friday newsletter for Port Moody</div>
@@ -216,15 +191,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="how-cell"><span class="n">ii.</span><h3>Checked by the candidates</h3><p>Every candidate received their card for a factual review. Cards marked ✓ Verified were confirmed by the candidate; cards marked Pending verification are published as drafted from the candidate’s public interview and updated when confirmed.</p></div>
   <div class="how-cell"><span class="n">iii.</span><h3>No endorsements, no rankings</h3><p>Candidates appear alphabetically within each race. Nothing here is a recommendation — just a clear, equal look at who’s running.</p></div>
 </div></div>
-<div class="wrap">
-  <div class="ask-strip">
-    <div>
-      <h3>Have a question for a candidate?</h3>
-      <p>Pick a candidate, write your question, and we’ll pass it along. We’ll publish the answers we receive — same opportunity for everyone on the ballot.</p>
-    </div>
-    <button class="ask-open" data-ask="">Ask a question</button>
-  </div>
-</div>
 <nav class="race-nav"><div class="wrap">
   <a href="#mayor">Mayor</a><a href="#council">City Council</a><a href="#trustee">School Trustee</a>
 </div></nav>
@@ -264,7 +230,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published June 23, 2026. <a href="https://www.youtube.com/watch?v=ouQbl5BNVCg">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Tri-Cities Community TV interview thumbnail &mdash; <a href="https://i.ytimg.com/vi/ouQbl5BNVCg/hqdefault.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Haven Lurbiecki">Ask Haven a question</button>
   </div>
 </article>
 <article class="card" id="meghan-lahti">
@@ -281,7 +246,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published June 5, 2026. <a href="https://www.youtube.com/watch?v=cb3MRxEQ1iI">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://lahti2026.com/meghan-headshot-58.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Meghan Lahti">Ask Meghan a question</button>
   </div>
 </article></div>
       </div>
@@ -433,7 +397,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published August 21, 2026. <a href="https://www.youtube.com/watch?v=4m_unURLKCM">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Tri-Cities Community TV interview thumbnail &mdash; <a href="https://i.ytimg.com/vi/4m_unURLKCM/hqdefault.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Alexandra Chan">Ask Alexandra a question</button>
   </div>
 </article>
 <article class="card" id="amy-lubik">
@@ -450,7 +413,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published June 21, 2026. <a href="https://www.youtube.com/watch?v=9liMYHKg_lA">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://amylubik.ca/wp-content/uploads/2026/07/amy-profile1-1024x1024.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Amy Lubik">Ask Amy a question</button>
   </div>
 </article>
 <article class="card" id="callan-morrison">
@@ -467,7 +429,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published September 9, 2026. <a href="https://www.youtube.com/watch?v=Ry9ysPGL1-s">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://callanmorrison.com/_astro/callan-hero.DfvPgEvg_ZpjHGX.webp">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Callan Morrison">Ask Callan a question</button>
   </div>
 </article>
 <article class="card" id="diana-dilworth">
@@ -484,7 +445,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published September 22, 2026. <a href="https://www.youtube.com/watch?v=pxmT_gVXaQ8">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://dianadilworth.ca/wp-content/uploads/2026/02/diana-1024x1024.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Diana Dilworth">Ask Diana a question</button>
   </div>
 </article>
 <article class="card" id="jeanine-longley">
@@ -501,7 +461,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published July 30, 2026. <a href="https://www.youtube.com/watch?v=PLVwmezwzgQ">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://jeanineforpomo.ca/_astro/JL_library_crop.B8exF7Ki_wb7HV.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Jeanine Longley">Ask Jeanine a question</button>
   </div>
 </article>
 <article class="card" id="john-grasty">
@@ -518,7 +477,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> No public campaign materials found.</div>
   <div class="foot">
     <div class="credit">Photo: no public photo available.</div>
-    <button class="ask-btn" data-ask="John Grasty">Ask John a question</button>
   </div>
 </article>
 <article class="card" id="kyla-knowles">
@@ -535,7 +493,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published June 5, 2026. <a href="https://www.youtube.com/watch?v=j4jSChRFEWk">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://static.wixstatic.com/media/f2f065_7846bad4a8d54b97b32ba6a8ddf1a1d4~mv2.jpeg">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Kyla Knowles">Ask Kyla a question</button>
   </div>
 </article>
 <article class="card" id="laura-soucy">
@@ -552,7 +509,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published July 10, 2026. <a href="https://www.youtube.com/watch?v=8JvoLr1UW14">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Tri-Cities Community TV interview thumbnail &mdash; <a href="https://i.ytimg.com/vi/8JvoLr1UW14/hqdefault.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Laura Soucy">Ask Laura a question</button>
   </div>
 </article>
 <article class="card" id="mark-kunzli">
@@ -569,7 +525,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published July 10, 2026. <a href="https://www.youtube.com/watch?v=brKKRIHXHOU">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Tri-Cities Community TV interview thumbnail &mdash; <a href="https://i.ytimg.com/vi/brKKRIHXHOU/hqdefault.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Mark Kunzli">Ask Mark a question</button>
   </div>
 </article>
 <article class="card" id="paul-lambert">
@@ -586,7 +541,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Responses provided by the candidate in writing, October 2, 2026. More at <a href="https://www.paullambert.ca">paullambert.ca</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://www.paullambert.ca">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Paul Lambert">Ask Paul a question</button>
   </div>
 </article>
 <article class="card" id="peter-thomasen">
@@ -603,7 +557,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published September 22, 2026. <a href="https://www.youtube.com/watch?v=GLLT9A23fD0">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Campaign website photo &mdash; <a href="https://i0.wp.com/peterthomasen.ca/wp-content/uploads/2026/09/0A564719-E34E-41F7-A292-DD2257755CA6.png?fit=520%2C800&amp;amp;amp;ssl=1">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Peter Thomasen">Ask Peter a question</button>
   </div>
 </article>
 <article class="card" id="reece-mack">
@@ -620,7 +573,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published September 12, 2026. <a href="https://www.youtube.com/watch?v=qCNlcA3VfPw">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Tri-Cities Community TV interview thumbnail &mdash; <a href="https://i.ytimg.com/vi/qCNlcA3VfPw/hqdefault.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Reece Mack">Ask Reece a question</button>
   </div>
 </article>
 <article class="card" id="samantha-agtarap">
@@ -637,7 +589,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published June 21, 2026. <a href="https://www.youtube.com/watch?v=DoXc_iwa11g">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://samantha-agtarap.ca/wp-content/uploads/2026/06/hero-nobg-1.png">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Samantha Agtarap">Ask Samantha a question</button>
   </div>
 </article>
 <article class="card" id="sebastian-moon">
@@ -654,7 +605,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published August 20, 2026. <a href="https://www.youtube.com/watch?v=VkFYZEds-7U">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://sebmoon.com/sebastian-headshot.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Sebastian Moon">Ask Sebastian a question</button>
   </div>
 </article>
 <article class="card" id="steve-milani">
@@ -671,7 +621,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> campaign website/Facebook (no Tri-Cities TV interview found)</div>
   <div class="foot">
     <div class="credit">Photo: Campaign website photo &mdash; <a href="https://img1.wsimg.com/isteam/ip/0f98ce3b-f7d0-4dbb-a74c-df0775f80d14/steve%20and%20peppy%20on%20gravel%20trail%202026_4-3_crop.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:800,cg:true">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Steve Milani">Ask Steve a question</button>
   </div>
 </article>
 <article class="card" id="tracey-schaeffer">
@@ -688,7 +637,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published June 5, 2026. <a href="https://www.youtube.com/watch?v=xReDV4i5svA">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Tri-Cities Community TV interview thumbnail &mdash; <a href="https://i.ytimg.com/vi/xReDV4i5svA/hqdefault.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Tracey Schaeffer">Ask Tracey a question</button>
   </div>
 </article></div>
       </div>
@@ -744,7 +692,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published September 21, 2026. <a href="https://www.youtube.com/watch?v=BOi18TyHU3Q">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Tri-Cities Community TV interview thumbnail &mdash; <a href="https://i.ytimg.com/vi/BOi18TyHU3Q/hqdefault.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Carola Thompson">Ask Carola a question</button>
   </div>
 </article>
 <article class="card" id="emily-cheadle">
@@ -761,7 +708,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> campaign website/Facebook (no Tri-Cities TV interview found)</div>
   <div class="foot">
     <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://emilycheadle.com/emily-cheadle-portrait.png">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Emily Cheadle">Ask Emily a question</button>
   </div>
 </article>
 <article class="card" id="jessica-morrison">
@@ -778,7 +724,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published September 30, 2026. <a href="https://www.youtube.com/watch?v=mCsFECWw2tc">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://jessicaforsd43.com/_astro/jessica-hero.C0JMjryQ_2boFPs.webp">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Jessica Morrison">Ask Jessica a question</button>
   </div>
 </article>
 <article class="card" id="tracy-green">
@@ -795,7 +740,6 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published September 11, 2026. <a href="https://www.youtube.com/watch?v=SDSqrZvjU7Y">Watch the full interview</a>.</div>
   <div class="foot">
     <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://tracygreen.ca/wp-content/uploads/2026/09/Tracy-Green.png">source</a> (courtesy credit; reuse permission pending review).</div>
-    <button class="ask-btn" data-ask="Tracy Green">Ask Tracy a question</button>
   </div>
 </article></div>
       </div>
@@ -818,76 +762,7 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <span>Port Moody Pulse · Independent · community-funded · for all of Port Moody</span>
   <div class="footer-links"><a href="/index.html#stories">Stories</a><a href="/archive.html">Archive</a><a href="/events.html">Events</a><a href="/about.html">About</a></div>
 </div></footer>
-<div class="modal-backdrop" id="ask-modal" role="dialog" aria-modal="true" aria-labelledby="ask-title">
-  <div class="modal">
-    <h3 id="ask-title">Ask a candidate</h3>
-    <p class="sub">We’ll pass your question to the candidate and publish the answers we receive.</p>
-    <form id="ask-form">
-      <label for="ask-candidate">Candidate</label>
-      <select id="ask-candidate"><option value="Haven Lurbiecki">Haven Lurbiecki — Mayor of Port Moody</option>
-<option value="Meghan Lahti">Meghan Lahti — Mayor of Port Moody</option>
-<option value="Alexandra Chan">Alexandra Chan — Port Moody City Council</option>
-<option value="Amy Lubik">Amy Lubik — Port Moody City Council</option>
-<option value="Callan Morrison">Callan Morrison — Port Moody City Council</option>
-<option value="Diana Dilworth">Diana Dilworth — Port Moody City Council</option>
-<option value="Jeanine Longley">Jeanine Longley — Port Moody City Council</option>
-<option value="John Grasty">John Grasty — Port Moody City Council</option>
-<option value="Kyla Knowles">Kyla Knowles — Port Moody City Council</option>
-<option value="Laura Soucy">Laura Soucy — Port Moody City Council</option>
-<option value="Mark Kunzli">Mark Kunzli — Port Moody City Council</option>
-<option value="Paul Lambert">Paul Lambert — Port Moody City Council</option>
-<option value="Peter Thomasen">Peter Thomasen — Port Moody City Council</option>
-<option value="Reece Mack">Reece Mack — Port Moody City Council</option>
-<option value="Samantha Agtarap">Samantha Agtarap — Port Moody City Council</option>
-<option value="Sebastian Moon">Sebastian Moon — Port Moody City Council</option>
-<option value="Steve Milani">Steve Milani — Port Moody City Council</option>
-<option value="Tracey Schaeffer">Tracey Schaeffer — Port Moody City Council</option>
-<option value="Carola Thompson">Carola Thompson — SD43 School Trustee</option>
-<option value="Emily Cheadle">Emily Cheadle — SD43 School Trustee</option>
-<option value="Jessica Morrison">Jessica Morrison — SD43 School Trustee</option>
-<option value="Tracy Green">Tracy Green — SD43 School Trustee</option></select>
-      <label for="ask-question">Your question</label>
-      <textarea id="ask-question" placeholder="What would you like to ask them?" required></textarea>
-      <label for="ask-name">Your name (optional)</label>
-      <input id="ask-name" type="text" autocomplete="name" />
-      <label for="ask-email">Your email (optional, in case of follow-up)</label>
-      <input id="ask-email" type="email" autocomplete="email" />
-      <div class="row">
-        <button type="submit" class="send">Send question</button>
-        <button type="button" class="cancel" id="ask-cancel">Cancel</button>
-      </div>
-      <p class="fine">Your email app will open with the question addressed to us — just hit send. We read every question.</p>
-    </form>
-  </div>
-</div>
-<script>
-(function(){
-var modal=document.getElementById('ask-modal'),form=document.getElementById('ask-form'),
-    sel=document.getElementById('ask-candidate');
-function openModal(name){
-  if(name){for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===name){sel.selectedIndex=i;break;}}}
-  modal.classList.add('open');document.getElementById('ask-question').focus();
-}
-function closeModal(){modal.classList.remove('open');}
-document.querySelectorAll('[data-ask]').forEach(function(b){b.addEventListener('click',function(){openModal(b.getAttribute('data-ask'));});});
-document.getElementById('ask-cancel').addEventListener('click',closeModal);
-modal.addEventListener('click',function(e){if(e.target===modal)closeModal();});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
-form.addEventListener('submit',function(e){
-  e.preventDefault();
-  var name=sel.options[sel.selectedIndex].text,
-      q=document.getElementById('ask-question').value.trim(),
-      who=document.getElementById('ask-name').value.trim(),
-      em=document.getElementById('ask-email').value.trim();
-  if(!q){document.getElementById('ask-question').focus();return;}
-  var endpoint=document.body.getAttribute('data-form-endpoint');
-  if(endpoint){form.action=endpoint;form.submit();return;}
-  var body='Question for '+name+':\n\n'+q+'\n\n---\nFrom: '+(who||'(no name given)')+(em?' <'+em+'>':'')+'\nvia the Port Moody Pulse voter guide';
-  window.location.href='mailto:portmoodypulse@gmail.com?subject='+encodeURIComponent('Voter question for '+name)+'&body='+encodeURIComponent(body);
-  closeModal();
-});
-})();
-</script>
+
 <script>
 (function(){
 var EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
