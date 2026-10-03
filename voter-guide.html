@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Port Moody Voter Guide 2026 — Port Moody Pulse</title>
+<meta name="description" content="Meet the candidates for Port Moody mayor, city council and school trustee. Same questions, same format — plus a way to ask them your own." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7faf8; --surface:#ffffff; --surface-soft:#eaf1ed;
+  --ink:#102f2f; --ink-soft:#425b57; --muted:#60746f; --line:#cddbd5;
+  --teal:#15706E; --teal-2:#0E4F4E; --gold:#E0A23C; --gold-soft:#f4dfb5;
+  --inverse:#f8fbfa; --shadow:0 18px 50px rgba(16,47,47,.12);
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+.topline{background:var(--bg)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand-lockup{display:flex;align-items:center;gap:13px;text-decoration:none}
+.brand-lockup .word{font-family:var(--serif);font-weight:600;font-size:25px;color:var(--teal-2);letter-spacing:-.015em;line-height:1;white-space:nowrap}
+.brand-lockup .word b{color:var(--gold);font-weight:600}
+.edition{font-size:12px;font-weight:700;color:var(--muted);padding-left:18px;border-left:1px solid var(--line)}
+.nav-links{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:700}
+.nav-links a{text-decoration:none}
+.pulse-bar{background:var(--bg);border-bottom:1px solid var(--line);overflow:hidden}
+.pulse-bar svg{width:100%;height:34px;display:block}
+.pulse-base{fill:none;stroke:var(--teal);stroke-width:2;opacity:.32}
+.pulse-hi{fill:none;stroke:var(--gold);stroke-width:2.6;stroke-linecap:round;stroke-dasharray:46 2400;stroke-dashoffset:2446;animation:beat 5.5s linear infinite}
+@keyframes beat{to{stroke-dashoffset:0}}
+.dateline{border-bottom:1px solid var(--line)}
+.dateline-inner{display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.mock-banner{background:#3a2c12;color:#f7e8c8;font-size:13px;font-weight:700;text-align:center;padding:10px 16px;letter-spacing:.02em}
+/* page hero */
+.hero{padding:64px 0 40px}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--teal-2);font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.eyebrow::before{content:"";width:34px;height:3px;background:var(--gold)}
+h1{font-family:var(--serif);font-size:clamp(42px,5.3vw,64px);line-height:1.04;letter-spacing:-.035em;margin:18px 0 20px;max-width:760px;font-weight:600}
+.lede{font-size:19px;line-height:1.62;color:var(--ink-soft);max-width:660px;margin:0 0 26px}
+.keydates{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.kdate{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 16px;font-size:14px}
+.kdate strong{color:var(--teal-2)}
+.how{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.how-cell{padding:30px 28px 34px 0}
+.how-cell + .how-cell{border-left:1px solid var(--line);padding-left:28px}
+.how-cell .n{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:24px;display:block;margin-bottom:10px}
+.how-cell h3{font-family:var(--serif);font-size:21px;margin:0 0 8px}
+.how-cell p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+.race-nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.race-nav .wrap{display:flex;gap:26px;padding:14px 0;font-size:14px;font-weight:700}
+.race-nav a{text-decoration:none;color:var(--ink-soft)}
+.race-nav a:hover{color:var(--teal)}
+.race{padding:56px 0 8px;scroll-margin-top:70px}
+.race-head h2{font-family:var(--serif);font-size:clamp(30px,3.6vw,44px);letter-spacing:-.02em;margin:0 0 6px}
+.race-head .count{font-family:var(--sans);font-size:15px;font-weight:600;color:var(--muted);letter-spacing:0}
+.cards{display:flex;flex-direction:column;gap:44px;margin-top:26px}
+/* ---- candidate card (from build_deck) ---- */
+
+:root{
+  --ink:#102f2f; --ink-soft:#425b57; --muted:#60746f;
+  --gold:#E0A23C; --bg:#f7faf8; --card:#ffffff; --line:#dfe8e3;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:1080px 6000px;margin:0}
+html,body{width:1080px}
+html,body{width:auto}
+body{display:block !important;padding:0 !important;background:var(--bg) !important}
+body{background:#e9efec;font-family:var(--sans);color:var(--ink);
+  display:flex;flex-direction:column;align-items:center;gap:48px;padding:48px 16px}
+.deck-label{font-family:var(--sans);color:var(--ink-soft);font-size:15px;
+  letter-spacing:.14em;text-transform:uppercase}
+.card{width:1048px;background:var(--card);border-radius:18px;overflow:hidden;
+  box-shadow:0 18px 50px rgba(16,47,47,.14);border:1px solid var(--line)}
+.photo{width:1048px;height:400px;object-fit:cover;object-position:center 22%;display:block;background:#102f2f}
+.photo-fallback{width:1048px;height:180px;background:var(--ink);display:flex;align-items:center;justify-content:center;
+  color:#f4dfb5;font-family:var(--serif);font-size:30px;font-style:italic}
+.head{padding:36px 56px 8px}
+.eyebrow{font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+h1.name{font-family:var(--serif);font-size:56px;font-weight:600;line-height:1.05;margin-bottom:10px}
+.position{font-size:24px;color:var(--ink-soft);margin-bottom:14px}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.badge{font-size:15px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  padding:7px 14px;border-radius:999px;border:1.5px solid var(--ink);color:var(--ink)}
+.badge.slate{border-color:var(--gold);color:#7a5a1c;background:#fdf6e7}
+.qa{padding:26px 56px 12px}
+.qa-item{padding:18px 0;border-top:1px solid var(--line)}
+.qa-item:first-child{border-top:none}
+.q{font-size:21px;font-weight:700;line-height:1.35;margin-bottom:8px}
+.a{font-size:20px;line-height:1.55;color:#223b39}
+.a .not-covered{color:var(--muted);font-style:italic}
+.editor-note{margin:8px 56px 0;padding:14px 18px;background:#fdf6e7;border:1px solid var(--gold);
+  border-radius:10px;font-size:17px;line-height:1.5;color:#5a4517}
+.bio{padding:26px 56px 12px;font-size:20px;line-height:1.6;color:#223b39}
+.bio .bio-label{font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.foot{padding:26px 56px 38px;border-top:1px solid var(--line);margin-top:14px}
+.foot .src{font-size:16px;color:var(--muted);line-height:1.6}
+.foot .src a{color:var(--ink-soft)}
+.foot .credit{font-size:15px;color:var(--muted);line-height:1.6;margin-top:8px}
+.foot .credit a{color:var(--ink-soft)}
+.foot .draft{margin-top:12px;font-size:14px;letter-spacing:.1em;text-transform:uppercase;
+  color:#9a6b1a;font-weight:700}
+
+.card{width:100%;max-width:1048px;margin-inline:auto}
+.photo{width:100%}
+.vstatus{margin-top:12px}
+.vpill{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:7px 14px;border-radius:999px;border:1.5px solid}
+.vpill.verified{border-color:var(--teal);color:var(--teal-2);background:#e7f2f1}
+.vpill.pending{border-color:var(--gold);color:#7a5a1c;background:#fdf6e7}
+.vpill.unverified{border-color:var(--line);color:var(--muted);background:transparent}
+.vpill.excluded{border-color:var(--line);color:var(--muted);background:transparent}
+footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{text-decoration:none;font-weight:700}
+@media(max-width:760px){.how-grid{grid-template-columns:1fr}.how-cell + .how-cell{border-left:none;border-top:1px solid var(--line);padding-left:0}.edition{display:none}}
+
+.ask-strip{background:var(--teal-2);color:var(--inverse);border-radius:18px;padding:34px 36px;margin:34px 0 8px;display:flex;gap:26px;align-items:center;justify-content:space-between;flex-wrap:wrap;box-shadow:var(--shadow)}
+.ask-strip h3{font-family:var(--serif);font-size:26px;margin:0 0 8px;font-weight:600}
+.ask-strip p{margin:0;font-size:15.5px;color:#cfe0dd;max-width:640px}
+.ask-strip .ask-open{flex:none;background:var(--gold);color:#3a2c12;border:none;font-weight:800;font-size:15px;padding:14px 26px;border-radius:999px;cursor:pointer}
+.ask-strip .ask-open:hover{filter:brightness(1.06)}
+.ask-btn{margin-top:14px;background:transparent;border:1.5px solid var(--teal);color:var(--teal-2);font-weight:700;font-size:13.5px;padding:9px 18px;border-radius:999px;cursor:pointer}
+.ask-btn:hover{background:#e7f2f1}
+.modal-backdrop{position:fixed;inset:0;background:rgba(16,47,47,.55);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
+.modal-backdrop.open{display:flex}
+.modal{background:#fff;border-radius:18px;max-width:560px;width:100%;padding:34px 34px 30px;box-shadow:var(--shadow);max-height:92vh;overflow:auto}
+.modal h3{font-family:var(--serif);font-size:26px;margin:0 0 6px}
+.modal .sub{font-size:14.5px;color:var(--ink-soft);margin:0 0 20px}
+.modal label{display:block;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:16px 0 6px}
+.modal select,.modal textarea,.modal input{width:100%;font:inherit;font-size:15.5px;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+.modal textarea{min-height:130px;resize:vertical}
+.modal .row{display:flex;gap:12px;margin-top:24px}
+.modal .send{flex:1;background:var(--teal);color:#fff;border:none;font-weight:800;font-size:15.5px;padding:14px;border-radius:999px;cursor:pointer}
+.modal .send:hover{background:var(--teal-2)}
+.modal .cancel{background:transparent;border:1.5px solid var(--line);color:var(--ink-soft);font-weight:700;font-size:15px;padding:14px 22px;border-radius:999px;cursor:pointer}
+.modal .fine{font-size:13px;color:var(--muted);margin-top:14px}
+/* verification pill at top of card + source citation block */
+.vstatus-head{margin-top:14px}
+.vstatus-head .vpill{font-size:13.5px}
+.src-block{margin:6px 56px 0;padding:14px 18px;background:var(--surface-soft);border-left:3px solid var(--teal);border-radius:0 10px 10px 0;font-size:15.5px;line-height:1.6;color:var(--ink-soft)}
+.src-block strong{color:var(--teal-2)}
+.src-block a{color:var(--teal-2);font-weight:700}
+@media(max-width:760px){.src-block{margin:6px 20px 0}}
+/* tile directory */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px;margin:6px 0 34px}
+.tile{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .12s ease,box-shadow .12s ease}
+.tile:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.tile img{width:100%;height:118px;object-fit:cover;display:block;background:var(--ink)}
+.tile .tbody{padding:12px 14px 14px}
+.tile .tname{font-weight:800;font-size:15.5px;color:var(--ink);line-height:1.25}
+.tile .toffice{font-size:12.5px;color:var(--muted);margin-top:2px}
+.tile .vpill{font-size:10.5px;padding:4px 10px;margin-top:8px}
+.card{scroll-margin-top:64px}
+</style>
+</head>
+<body data-form-endpoint="">
+<div class="topline"><div class="wrap nav">
+  <a class="brand-lockup" href="/index.html"><span class="word">Port&nbsp;Moody <b>Pulse</b></span></a>
+  <div class="edition">A free Friday newsletter for Port Moody</div>
+  <nav class="nav-links"><a href="/index.html#stories">Stories</a><a href="/events.html">Events</a><a href="/archive.html">Archive</a><a href="/about.html">About</a></nav>
+</div></div>
+<div class="pulse-bar" aria-hidden="true"><svg viewBox="0 0 1200 40" preserveAspectRatio="none">
+<path class="pulse-base" d="M0 20 H278 L298 20 L310 8 L324 33 L336 20 L358 20 H600 L620 20 L632 9 L646 31 L658 20 L680 20 H980 L1000 20 L1012 8 L1026 33 L1038 20 L1060 20 H1200"/>
+<path class="pulse-hi" d="M0 20 H278 L298 20 L310 8 L324 33 L336 20 L358 20 H600 L620 20 L632 9 L646 31 L658 20 L680 20 H980 L1000 20 L1012 8 L1026 33 L1038 20 L1060 20 H1200"/>
+</svg></div>
+<div class="dateline"><div class="wrap dateline-inner"><span>Port Moody, BC</span><span style="white-space:nowrap">Voter guide · October 2026</span></div></div>
+<main>
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">Port Moody Election 2026</div>
+  <h1>Meet your candidates.</h1>
+  <p class="lede">One card per candidate. Same questions, same format, same space — in the candidates’ own words. Every card was sent to the candidate for a factual check before publication. Port Moody Pulse doesn’t endorse candidates; this guide is a voter service from your neighbours.</p>
+  <div class="keydates">
+    <div class="kdate"><strong>Oct 8</strong> — Mayoral debate</div>
+    <div class="kdate"><strong>Oct 17</strong> — Election day</div>
+  </div>
+</div></header>
+<div class="how"><div class="wrap how-grid">
+  <div class="how-cell"><span class="n">i.</span><h3>Same questions, same format</h3><p>Each card carries the candidate’s photo, the office they seek, and Q&amp;A drawn from their own published words — condensed but never rewritten.</p></div>
+  <div class="how-cell"><span class="n">ii.</span><h3>Checked by the candidates</h3><p>Every candidate received their card for a factual review. Cards marked ✓ Verified were confirmed by the candidate; cards marked Pending verification are published as drafted from the candidate’s public interview and updated when confirmed.</p></div>
+  <div class="how-cell"><span class="n">iii.</span><h3>No endorsements, no rankings</h3><p>Candidates appear alphabetically within each race. Nothing here is a recommendation — just a clear, equal look at who’s running.</p></div>
+</div></div>
+<div class="wrap">
+  <div class="ask-strip">
+    <div>
+      <h3>Have a question for a candidate?</h3>
+      <p>Pick a candidate, write your question, and we’ll pass it along. We’ll publish the answers we receive — same opportunity for everyone on the ballot.</p>
+    </div>
+    <button class="ask-open" data-ask="">Ask a question</button>
+  </div>
+</div>
+<nav class="race-nav"><div class="wrap">
+  <a href="#mayor">Mayor</a><a href="#council">City Council</a><a href="#trustee">School Trustee</a>
+</div></nav>
+
+    <section class="race" id="mayor">
+      <div class="wrap">
+        <div class="race-head"><h2>Mayor</h2></div>
+        <div class="tiles">
+<a class="tile" href="#haven-lurbiecki">
+  <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/haven-lurbiecki.jpg" alt="Haven Lurbiecki">
+  <div class="tbody">
+    <div class="tname">Haven Lurbiecki</div>
+    <div class="toffice">Mayor</div>
+    <span class="vpill pending">Pending verification</span>
+  </div>
+</a>
+<a class="tile" href="#meghan-lahti">
+  <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/meghan-lahti.jpg" alt="Meghan Lahti">
+  <div class="tbody">
+    <div class="tname">Meghan Lahti</div>
+    <div class="toffice">Mayor</div>
+    <span class="vpill verified">✓ Verified by the candidate</span>
+  </div>
+</a></div>
+        <div class="cards">
+<article class="card" id="haven-lurbiecki">
+  <img class="photo" style="object-position:center 22%" loading="lazy" src="images/candidates/haven-lurbiecki.jpg" alt="Haven Lurbiecki">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Haven Lurbiecki</h1>
+    <div class="position">Running for Mayor of Port Moody</div>
+    <div class="badges"><span class="badge">Challenger</span><span class="badge slate">Port Moody Voice team</span></div>
+    <div class="vstatus-head"><span class="vpill pending">Pending verification</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Why are you running for mayor?</div><div class="a">Lurbiecki is motivated by residents who are concerned about the direction of the city — residents tell him &quot;this isn&#x27;t what I thought I was voting for.&quot; Lurbiecki wants to bring change to the council table with the Port Moody Voice team, committed to accountability and a vision that comes from the community.</div></div><div class="qa-item"><div class="q">What&#x27;s one issue that you believe matters most to residents in Port Moody?</div><div class="a">Development — the plan for 14 towers up to 40 stories in Moody Centre, and its impacts on traffic and on parks not keeping up, are top of mind for residents.</div></div><div class="qa-item"><div class="q">If elected, what are your top three priorities for Port Moody?</div><div class="a">First, trust and accountability at city hall: limit in-camera meetings and make the platform the strategic plan with public reporting. Second, redo the community plan so it represents what the community actually needs — family housing, seniors housing, affordable housing. Third, manage the impacts of growth and pay for them: infrastructure must keep pace; Lurbiecki was the only council vote against delaying higher infrastructure levies.</div></div><div class="qa-item"><div class="q">How do we balance growth and protecting Port Moody&#x27;s character?</div><div class="a">Fourteen towers up to 40 stories in four square blocks around the SkyTrain station can&#x27;t avoid changing Port Moody; no one Lurbiecki speaks to opposes growth, but it must be balanced. The city needs its plans, bylaws, and affordable-housing policies in place so council can reject proposals that don&#x27;t meet community needs. Lurbiecki rejects the &quot;NIMBY&quot; label, noting Lurbiecki has supported developments that met the community&#x27;s needs.</div></div><div class="qa-item"><div class="q">Density, development and infrastructure</div><div class="a"><span class="not-covered">Not asked in interview</span></div></div><div class="qa-item"><div class="q">Why residents should vote for them</div><div class="a"><span class="not-covered">Not asked in interview</span></div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published June 23, 2026. <a href="https://www.youtube.com/watch?v=ouQbl5BNVCg">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Tri-Cities Community TV interview thumbnail &mdash; <a href="https://i.ytimg.com/vi/ouQbl5BNVCg/hqdefault.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Haven Lurbiecki">Ask Haven a question</button>
+  </div>
+</article>
+<article class="card" id="meghan-lahti">
+  <img class="photo" style="object-position:center 22%" loading="lazy" src="images/candidates/meghan-lahti.jpg" alt="Meghan Lahti">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Meghan Lahti</h1>
+    <div class="position">Running for Mayor of Port Moody</div>
+    <div class="badges"><span class="badge">Incumbent</span></div>
+    <div class="vstatus-head"><span class="vpill verified">✓ Verified by the candidate</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">What motivated you to run for a second term as mayor? Tell us why you&#x27;re running again.</div><div class="a">Lahti has been mayor for one term after many years on council (first elected in 1996), and says there&#x27;s still a lot Lahti wants to accomplish — the job isn&#x27;t finished for Lahti yet.</div></div><div class="qa-item"><div class="q">What&#x27;s one issue that you would like to see addressed?</div><div class="a">The economy and responsible spending — everyone is feeling it at the pump and the grocery store, and residents want the city to be responsible with property-tax dollars.</div></div><div class="qa-item"><div class="q">What would you say that the top three priorities would be for Port Moody?</div><div class="a">First, diversify and expand the tax base — bring in business and industry to add stable tax dollars. Second, plan amenities for a growing city, starting with the Kyle Centre, plus a new park integrated with the arts centre. Third, get a handle on congestion on St. Johns Street.</div></div><div class="qa-item"><div class="q">Housing seems to be a major concern. How do you balance protecting Port Moody&#x27;s character?</div><div class="a">Lahti has long been committed to maintaining Port Moody&#x27;s heritage character and charm. Every decision Lahti makes is people-based and centered on what the community as a whole will benefit from — Lahti&#x27;s not interested in growth for growth&#x27;s sake. Lahti notes Newport Village and Suter Brook were contentious too, and are now where most residents live.</div></div><div class="qa-item"><div class="q">What are some of your thoughts on density and infrastructure keeping pace with growth?</div><div class="a">Infrastructure like hospitals and schools is provincial responsibility, and Lahti finds it frustrating that the province mandates growth — allowing up to four units on single-family lots and eight-storey entitlements in parts of Moody Centre — while withdrawing funds for affordable housing, hospital infrastructure, and at-capacity schools. The city is doing what it can under pressure from both sides.</div></div><div class="qa-item"><div class="q">In one minute or less, why should residents vote for you?</div><div class="a">Lahti brings experience, context, passion, and a love for the community evident in everything Lahti does; Lahti has worked hard and will continue to work hard, believing every person should feel heard — from morning Lahti thinks about how to make Port Moody a better place to live and how to serve the community better.</div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published June 5, 2026. <a href="https://www.youtube.com/watch?v=cb3MRxEQ1iI">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://lahti2026.com/meghan-headshot-58.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Meghan Lahti">Ask Meghan a question</button>
+  </div>
+</article></div>
+      </div>
+    </section>
+    <section class="race" id="council">
+      <div class="wrap">
+        <div class="race-head"><h2>City Council</h2></div>
+        <div class="tiles">
+<a class="tile" href="#alexandra-chan">
+  <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/alexandra-chan.jpg" alt="Alexandra Chan">
+  <div class="tbody">
+    <div class="tname">Alexandra Chan</div>
+    <div class="toffice">City Council</div>
+    <span class="vpill pending">Pending verification</span>
+  </div>
+</a>
+<a class="tile" href="#amy-lubik">
+  <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/amy-lubik.jpg" alt="Amy Lubik">
+  <div class="tbody">
+    <div class="tname">Amy Lubik</div>
+    <div class="toffice">City Council</div>
+    <span class="vpill pending">Pending verification</span>
+  </div>
+</a>
+<a class="tile" href="#callan-morrison">
+  <img class="" style="object-position:center 42%" loading="lazy" src="images/candidates/callan-morrison.webp" alt="Callan Morrison">
+  <div class="tbody">
+    <div class="tname">Callan Morrison</div>
+    <div class="toffice">City Council</div>
+    <span class="vpill pending">Pending verification</span>
+  </div>
+</a>
+<a class="tile" href="#diana-dilworth">
+  <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/diana-dilworth.jpg" alt="Diana Dilworth">
+  <div class="tbody">
+    <div class="tname">Diana Dilworth</div>
+    <div class="toffice">City Council</div>
+    <span class="vpill pending">Pending verification</span>
+  </div>
+</a>
+<a class="tile" href="#jeanine-longley">
+  <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/jeanine-longley.jpg" alt="Jeanine Longley">
+  <div class="tbody">
+    <div class="tname">Jeanine Longley</div>
+    <div class="toffice">City Council</div>
+    <span class="vpill pending">Pending verification</span>
+  </div>
+</a>
+<a class="tile" href="#john-grasty">
+  <img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+  <div class="tbody">
+    <div class="tname">John Grasty</div>
+    <div class="toffice">City Council</div>
+    <span class="vpill excluded">Did not take part in the card review</span>
+  </div>
+</a>
+<a class="tile" href="#kyla-knowles">
+  <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/kyla-knowles.jpg" alt="Kyla Knowles">
+  <div class="tbody">
+    <div class="tname">Kyla Knowles</div>
+    <div class="toffice">City Council</div>
+    <span class="vpill pending">Pending verification</span>
+  </div>
+</a>
+<a class="tile" href="#laura-soucy">
+  <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/laura-soucy.jpg" alt="Laura Soucy">
+  <div class="tbody">
+    <div class="tname">Laura Soucy</div>
+    <div class="toffice">City Council</div>
+    <span class="vpill pending">Pending verification</span>
+  </div>
+</a>
+<a class="tile" href="#mark-kunzli">
+  <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/mark-kunzli.jpg" alt="Mark Kunzli">
+  <div class="tbody">
+    <div class="tname">Mark Kunzli</div>
+    <div class="toffice">City Council</div>
+    <span class="vpill pending">Pending verification</span>
+  </div>
+</a>
+<a class="tile" href="#paul-lambert">
+  <img class="" style="object-position:center 10%" loading="lazy" src="images/candidates/paul-lambert-headshot-2026.jpg" alt="Paul Lambert">
+  <div class="tbody">
+    <div class="tname">Paul Lambert</div>
+    <div class="toffice">City Council</div>
+    <span class="vpill pending">Pending verification</span>
+  </div>
+</a>
+<a class="tile" href="#peter-thomasen">
+  <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/peter-thomasen.png" alt="Peter Thomasen">
+  <div class="tbody">
+    <div class="tname">Peter Thomasen</div>
+    <div class="toffice">City Council</div>
+    <span class="vpill pending">Pending verification</span>
+  </div>
+</a>
+<a class="tile" href="#reece-mack">
+  <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/reece-mack.jpg" alt="Reece Mack">
+  <div class="tbody">
+    <div class="tname">Reece Mack</div>
+    <div class="toffice">City Council</div>
+    <span class="vpill pending">Pending verification</span>
+  </div>
+</a>
+<a class="tile" href="#samantha-agtarap">
+  <img class="" style="object-position:center 7%" loading="lazy" src="images/candidates/samantha-agtarap.png" alt="Samantha Agtarap">
+  <div class="tbody">
+    <div class="tname">Samantha Agtarap</div>
+    <div class="toffice">City Council</div>
+    <span class="vpill verified">✓ Verified by the candidate</span>
+  </div>
+</a>
+<a class="tile" href="#sebastian-moon">
+  <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/sebastian-moon.jpg" alt="Sebastian Moon">
+  <div class="tbody">
+    <div class="tname">Sebastian Moon</div>
+    <div class="toffice">City Council</div>
+    <span class="vpill verified">✓ Verified by the candidate</span>
+  </div>
+</a>
+<a class="tile" href="#steve-milani">
+  <img class="" style="object-position:center 42%" loading="lazy" src="images/candidates/steve-milani.jpg" alt="Steve Milani">
+  <div class="tbody">
+    <div class="tname">Steve Milani</div>
+    <div class="toffice">City Council</div>
+    <span class="vpill verified">✓ Verified by the candidate</span>
+  </div>
+</a>
+<a class="tile" href="#tracey-schaeffer">
+  <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/tracey-schaeffer.jpg" alt="Tracey Schaeffer">
+  <div class="tbody">
+    <div class="tname">Tracey Schaeffer</div>
+    <div class="toffice">City Council</div>
+    <span class="vpill pending">Pending verification</span>
+  </div>
+</a></div>
+        <div class="cards">
+<article class="card" id="alexandra-chan">
+  <img class="photo" style="object-position:center 22%" loading="lazy" src="images/candidates/alexandra-chan.jpg" alt="Alexandra Chan">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Alexandra Chan</h1>
+    <div class="position">Running for Port Moody City Council</div>
+    <div class="badges"><span class="badge">Challenger</span><span class="badge slate">Port Moody Voice slate</span></div>
+    <div class="vstatus-head"><span class="vpill pending">Pending verification</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Alexandra, why are you running for Port Moody Council?</div><div class="a">A year or so ago Chan started hearing about the OCP, went to council and a public hearing, and felt nothing residents said was being taken into account — the decision felt pre-made. Chan met Haven, shared values about communication, got involved as Port Moody Voice started, and agreed to run.</div></div><div class="qa-item"><div class="q">What&#x27;s one issue you believe matters most to Port Moody residents right now?</div><div class="a">Broadly, the future: climate, two-metre ocean-level rise, food security, affordability of where people and their children will live, whether seniors can stay — and whether the community can stay healthy, since without health a good quality of life is hard.</div></div><div class="qa-item"><div class="q">If elected, what are your top three priorities for Port Moody?</div><div class="a">First, with the Port Moody Voice team, a culture of open communication and transparency — involve the public as much as possible in a trusting, close relationship with no hidden cards. Second, health: as a nurse Chan believes the best healthcare is prevention — cities can engineer walkability, less traffic, better sleep, decreasing chronic-illness risk factors. Third, reduce burdens on people: traffic, keeping the small-town feeling as the city grows, and investing in businesses and the commercial district so people can work here with real careers, honouring the industrial heritage.</div></div><div class="qa-item"><div class="q">Housing is a major concern. How do we balance growth, affordability, and protecting Port Moody&#x27;s character?</div><div class="a">Look outside the market: saturating the market with market-rate housing doesn&#x27;t meaningfully change affordability — the city needs non-market and below-market housing, e.g. subsidized housing for frontline workers like nurses, firefighters, and police, as other countries do. And don&#x27;t only build housing: property taxes rose 28% in four years partly because Port Moody is becoming a bedroom community — business support keeps the cost of living steady.</div></div><div class="qa-item"><div class="q">Density, development and infrastructure</div><div class="a"><span class="not-covered">Not asked in interview</span></div></div><div class="qa-item"><div class="q">In under one minute, why should residents vote for you?</div><div class="a">Chan&#x27;s an authentic person — life&#x27;s too short to portray something Chan&#x27;s not. As a nurse and neighbour Chan wants to invest in the future, alleviate worries, and work together toward a stronger and brighter future.</div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published August 21, 2026. <a href="https://www.youtube.com/watch?v=4m_unURLKCM">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Tri-Cities Community TV interview thumbnail &mdash; <a href="https://i.ytimg.com/vi/4m_unURLKCM/hqdefault.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Alexandra Chan">Ask Alexandra a question</button>
+  </div>
+</article>
+<article class="card" id="amy-lubik">
+  <img class="photo" style="object-position:center 22%" loading="lazy" src="images/candidates/amy-lubik.jpg" alt="Amy Lubik">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Amy Lubik</h1>
+    <div class="position">Running for Port Moody City Council</div>
+    <div class="badges"><span class="badge">Incumbent</span></div>
+    <div class="vstatus-head"><span class="vpill pending">Pending verification</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Why are you running again for the city of Port Moody?</div><div class="a">The city has accomplished a lot — growing tree canopy, affordable housing in the pipeline — but there&#x27;s more to do: affordability, expanding parks and green spaces, and infrastructure like family practices.</div></div><div class="qa-item"><div class="q">What&#x27;s one issue that you believe matters most to Port Moody residents right now?</div><div class="a">Affordability — over 600 units of affordable housing are in the pipeline, purpose-built rentals are bringing rents down, and there are opportunities to connect people with the rent bank and the rental protection fund.</div></div><div class="qa-item"><div class="q">If reelected, what are your top three priorities for Port Moody?</div><div class="a">Healthy community — Lubik&#x27;s background, from BCCDC work on climate resilience and social connection; the city now has well-being guidelines for new developments covering connection spaces, natural light, courtyards, and aging-in-place infrastructure — plus affordable housing and protecting the environment.</div></div><div class="qa-item"><div class="q">How are we going to balance growth and affordability, all at the same time as protecting Port Moody&#x27;s little quaint character?</div><div class="a">Keep the connective character of Newport and Suter Brook in new neighbourhoods: third spaces like coffee shops, park spaces, tree canopy, and design guidelines; the Moody Centre framework is designed to capture what the city wants while bringing economic development and enlivening the public realm; community programming that brings people together is part of keeping the feel.</div></div><div class="qa-item"><div class="q">What are your thoughts on density, development, and infrastructure keeping pace with the growth of the city?</div><div class="a">Density can be done well or poorly — negotiate multifunctional communities with affordable housing, commercial space, and parks. On social infrastructure: Lubik and Mayor Lahti gave notice on a motion to find more doctor spaces, they&#x27;re talking with Fraser Health about health anchor tenants, petitioning the school district on schools, and including daycare in new developments (about 1,600 new spaces in 8 years, 500+ in the works). On parks: more parcels for Kyle Centre and Rocky Point expansion in the OCP. Green infrastructure prolongs pipe life. On traffic: St. Johns redesigns for active transportation and transit, which is harder since roads can&#x27;t expand much more.</div></div><div class="qa-item"><div class="q">In 1 minute or less, why should voters vote for you again?</div><div class="a">Lubik keeps residents&#x27; health at the forefront of decision-making: as a healthcare professional who moved from cancer research into public health, Lubik believes housing, green space, and community connectedness are what keep people healthy and thriving — not just the absence of disease.</div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published June 21, 2026. <a href="https://www.youtube.com/watch?v=9liMYHKg_lA">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://amylubik.ca/wp-content/uploads/2026/07/amy-profile1-1024x1024.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Amy Lubik">Ask Amy a question</button>
+  </div>
+</article>
+<article class="card" id="callan-morrison">
+  <img class="photo" style="object-position:center 42%" loading="lazy" src="images/candidates/callan-morrison.webp" alt="Callan Morrison">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Callan Morrison</h1>
+    <div class="position">Running for Port Moody City Council</div>
+    <div class="badges"><span class="badge">Incumbent</span></div>
+    <div class="vstatus-head"><span class="vpill pending">Pending verification</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Why are you running for Port Moody Council again?</div><div class="a">Morrison became a father during this term and says this is literally the best job Morrison&#x27;s ever had — community involvement, events, communicating with residents about the future, and making positive change. Morrison has lived here so long and is so invested that Morrison wants to continue the good work.</div></div><div class="qa-item"><div class="q">What&#x27;s one issue you believe matters most to Port Moody residents right now?</div><div class="a">People wanting their quality of life to improve as the community evolves. Growth puts strain — construction, traffic — but done right and planned sequentially, controversial projects become beloved communities, as Newport Village and Suter Brook did.</div></div><div class="qa-item"><div class="q">If you&#x27;re reelected, what are your top three priorities for Port Moody?</div><div class="a">First, traffic mitigation: Morrison brought the motion to widen the CPKC overpass (completing next year), increasing Moody–Suter Brook flow by about 40% at low cost without sacrificing active transportation. Second, accessibility of recreation programs — from transit to the rec centre site, which is hard even with a stroller. Third, long-term planning: a sequential plan for the pool, Kyle Centre, and library, since priorities compete and money isn&#x27;t unlimited.</div></div><div class="qa-item"><div class="q">How do we balance growth, affordability, and protecting Port Moody&#x27;s character?</div><div class="a">The distinct neighbourhoods make a major character change unlikely — people make the character. The province&#x27;s housing bills mid-OCP forced 8/12/20-storey minimums near SkyTrain, and the resulting land lift made family housing harder; the city responded with minimum unit sizes based on BC Housing, restricted studios, and required minimum two-, three-, and three-plus-bedroom units — for a well-planned community welcoming all income levels and housing types.</div></div><div class="qa-item"><div class="q">What are your thoughts on density, development, and infrastructure and keeping pace with growth?</div><div class="a">Housing bills designated higher density where the city had planned extra parkland, making park acquisition costlier through land lift, and infrastructure wasn&#x27;t built for high density. Manage it with calculated planning and strong advocacy for a citywide planning process with resident input — &quot;you can&#x27;t just slap down one rule and make it applicable to every municipality.&quot;</div></div><div class="qa-item"><div class="q">In one minute, why should residents vote for you?</div><div class="a">Morrison&#x27;s delivered on deliverable promises: meaningful steps including early resident access to recreation before other cities, traffic mitigation, and supporting colleagues&#x27; initiatives. Morrison would continue fiscally responsibly, benefiting the most people, with collaboration at the table.</div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published September 9, 2026. <a href="https://www.youtube.com/watch?v=Ry9ysPGL1-s">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://callanmorrison.com/_astro/callan-hero.DfvPgEvg_ZpjHGX.webp">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Callan Morrison">Ask Callan a question</button>
+  </div>
+</article>
+<article class="card" id="diana-dilworth">
+  <img class="photo" style="object-position:center 22%" loading="lazy" src="images/candidates/diana-dilworth.jpg" alt="Diana Dilworth">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Diana Dilworth</h1>
+    <div class="position">Running for Port Moody City Council</div>
+    <div class="badges"><span class="badge">Incumbent</span></div>
+    <div class="vstatus-head"><span class="vpill pending">Pending verification</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Tell us why you&#x27;re running for Port Moody Council again.</div><div class="a">Dilworth loves Port Moody and its community; Dilworth moved there in 1991, raised Dilworth&#x27;s family, and says Dilworth has proven Dilworth&#x27;s leadership in making good decisions and wants to continue. Dilworth has seen positive change since the days when Klahani was a steel company, Suter Brook was a forest, and Newport Village had just one tower.</div></div><div class="qa-item"><div class="q">What&#x27;s one issue that you believe matters most to Port Moody residents right now?</div><div class="a">Growth, density, traffic, and transportation — the same concerns as 20–30 years ago; it&#x27;s about evolving to that change.</div></div><div class="qa-item"><div class="q">If reelected, what are your top three priorities for Port Moody?</div><div class="a">First, parks: keep expanding park space, playgrounds, and trails in neighbourhoods across the community — Westhill Park and pop-up parks — not just Rocky Point. Second, housing: solid plans for the full spectrum — seniors, students, singles, couples, families — maximizing existing land through laneway and infill housing. Third, seniors: more opportunities and activities, including a standalone senior centre and gathering spaces like a new library.</div></div><div class="qa-item"><div class="q">How do we balance growth, affordability, and protecting Port Moody&#x27;s character?</div><div class="a">Look to Newport, Klahani, and Suter Brook — 25–30 years of planning created thriving, vibrant communities — and make sure new neighbourhoods like Inlet Centre and Moody Centre have that same charm and balance.</div></div><div class="qa-item"><div class="q">What are your thoughts on density, development, and infrastructure keeping pace with growth?</div><div class="a">Dilworth&#x27;s first campaign brochure promised to build infrastructure before accepting more growth; &quot;growth pays for growth&quot; through development and amenity cost charges — developers pay millions to tens of millions toward roads, sewers, and parks — and new facilities are impossible without growth because the city relies on homebuilders.</div></div><div class="qa-item"><div class="q">Tell me why residents should vote for you again.</div><div class="a">Dilworth&#x27;s life has been dedicated to public service — school boards, kids&#x27; activities, community, and dozens of volunteer boards — and Dilworth believes Dilworth&#x27;s track record shows good, common-sense decisions that benefit the residential and business community.</div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published September 22, 2026. <a href="https://www.youtube.com/watch?v=pxmT_gVXaQ8">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://dianadilworth.ca/wp-content/uploads/2026/02/diana-1024x1024.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Diana Dilworth">Ask Diana a question</button>
+  </div>
+</article>
+<article class="card" id="jeanine-longley">
+  <img class="photo" style="object-position:center 22%" loading="lazy" src="images/candidates/jeanine-longley.jpg" alt="Jeanine Longley">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Jeanine Longley</h1>
+    <div class="position">Running for Port Moody City Council</div>
+    <div class="badges"><span class="badge">Challenger</span></div>
+    <div class="vstatus-head"><span class="vpill pending">Pending verification</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Tell us why you&#x27;re running.</div><div class="a">Longley felt a sense of urgency after watching news about climate change and feeling the affordability crisis at the grocery store - she realized she had to act. Municipal politics felt like an opportunity to make a day-to-day difference for her neighbours, with a ripple effect outward on bigger problems.</div></div><div class="qa-item"><div class="q">What&#x27;s the one issue that you believe matters most to Port Moody residents?</div><div class="a">The gap between our growth and what we need in the city: people worry the city won&#x27;t close the gap and make sure everyone has the amenities, services, and infrastructure they need.</div></div><div class="qa-item"><div class="q">If elected, what are your top three priorities for Port Moody?</div><div class="a">Climate is what inspired Longley - and Port Moody is already a leader in this area. Secondly - protecting the charm and character of Port Moody, rooted in small businesses and local business owners. Third, turning down the heat on polarized discourse and finding a middle path of reasonable conversation.</div></div><div class="qa-item"><div class="q">How do we balance growth, affordability, and also protect Port Moody&#x27;s character?</div><div class="a">Affordability is really important, and often there is an explicit trade where higher density can bring the affordable or family friendly housing we desperately need - in these cases it is worth it. Character is connection and unique places - built through both the commercial and natural landscape, and how the community acts together.</div></div><div class="qa-item"><div class="q">What are your thoughts on density, development, and infrastructure keeping pace with growth?</div><div class="a">It&#x27;s a prioritization challenge. As a director of product management, Longley&#x27;s career has included taking stakeholders with very different priorities and building one agreed upon plan - she wants to similarly align the community on what to prioritize, what to spend, and how much to grow.</div></div><div class="qa-item"><div class="q">Why should residents vote for you?</div><div class="a">Longley brings career skills — negotiating many different priorities into one clearly communicated plan, which Longley says is what Port Moody needs right now — and hopes to earn everyone&#x27;s vote on October 17.</div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published July 30, 2026. <a href="https://www.youtube.com/watch?v=PLVwmezwzgQ">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://jeanineforpomo.ca/_astro/JL_library_crop.B8exF7Ki_wb7HV.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Jeanine Longley">Ask Jeanine a question</button>
+  </div>
+</article>
+<article class="card" id="john-grasty">
+  <div class="photo-fallback">No public photo available</div>
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">John Grasty</h1>
+    <div class="position">Running for Port Moody City Council</div>
+    <div class="badges"><span class="badge">Challenger</span></div>
+    <div class="vstatus-head"><span class="vpill excluded">Did not take part in the card review</span></div>
+  </div>
+  <div class="qa"></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview.</div>
+  <div class="foot">
+    <div class="credit">Photo: no public photo available.</div>
+    <button class="ask-btn" data-ask="John Grasty">Ask John a question</button>
+  </div>
+</article>
+<article class="card" id="kyla-knowles">
+  <img class="photo" style="object-position:center 22%" loading="lazy" src="images/candidates/kyla-knowles.jpg" alt="Kyla Knowles">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Kyla Knowles</h1>
+    <div class="position">Running for Port Moody City Council</div>
+    <div class="badges"><span class="badge">Incumbent</span></div>
+    <div class="vstatus-head"><span class="vpill pending">Pending verification</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Why do you want to run for reelection?</div><div class="a">Knowles says this council has achieved a lot in four years — a safer and healthier community, doubled the number of affordable housing units in Port Moody in only four years, traffic work underway, a greenlit Kyle Centre, Moody Centre parkland and tree canopy, and hundreds of new daycare spaces — and Knowles wants to continue that work rather than go backwards.</div></div><div class="qa-item"><div class="q">What&#x27;s one issue that you believe matters most to Port Moody residents?</div><div class="a">Traffic, which has been a perennial issue, and property rights — residents are concerned about losing control over what they can do on their property, dating back to the ESA issue and renewed by provincial uncertainty around title; Knowles says the municipality must be proactive in assuring residents their properties are theirs.</div></div><div class="qa-item"><div class="q">If reelected, what would your top three priorities be?</div><div class="a">First, get the Kyle Centre built. Second, a new library — Knowles now supports it after hearing the library board&#x27;s research — possibly on the old firehall lands, perhaps mixed with below-market seniors housing. Third, continue diversifying city revenues to take the burden off taxpayers.</div></div><div class="qa-item"><div class="q">How do we balance growth and affordability and also protect Port Moody&#x27;s character?</div><div class="a">Negotiate with community builders and stakeholders in good faith — delays add costs that fall on residents — and push back on the province&#x27;s Bill 44, which lets 99% of single-family lots build three to six units and Knowles calls potentially devastating for Port Moody&#x27;s character; also advocate to the federal government for funding. Knowles looks forward to Moody Centre becoming a vibrant, walkable neighbourhood with its amenities.</div></div><div class="qa-item"><div class="q">Density, development and infrastructure</div><div class="a"><span class="not-covered">Not asked in interview</span></div></div><div class="qa-item"><div class="q">Why should residents vote for you?</div><div class="a">Knowles hasn&#x27;t missed a single council meeting in four years — the only councillor who can say that — and voted against the 2023 council pay increase. Knowles points to individual and collaborative motions: a non-jurisdictional policy keeping council in its lane, new, permanent pickleball courts, an arts and business task force, tree canopy protection, affordable housing, and hundreds of daycare spots, plus repaired regional relationships.</div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published June 5, 2026. <a href="https://www.youtube.com/watch?v=j4jSChRFEWk">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://static.wixstatic.com/media/f2f065_7846bad4a8d54b97b32ba6a8ddf1a1d4~mv2.jpeg">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Kyla Knowles">Ask Kyla a question</button>
+  </div>
+</article>
+<article class="card" id="laura-soucy">
+  <img class="photo" style="object-position:center 22%" loading="lazy" src="images/candidates/laura-soucy.jpg" alt="Laura Soucy">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Laura Soucy</h1>
+    <div class="position">Running for Port Moody City Council</div>
+    <div class="badges"><span class="badge">Challenger</span><span class="badge slate">Port Moody Voice slate</span></div>
+    <div class="vstatus-head"><span class="vpill pending">Pending verification</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Why are you running for city council?</div><div class="a">Soucy has lived in Port Moody most of Soucy&#x27;s life and, over the last decade of watching decisions, feels there aren&#x27;t enough people on council representing residents like Soucy. Soucy wants to voice that and contribute to more positive interactions on council.</div></div><div class="qa-item"><div class="q">What is one issue you believe matters most to Port Moody residents right now?</div><div class="a">Development — linked to traffic, resources, daycare space, and rec-centre space. Soucy rejects the &quot;anti-development&quot; label: Soucy wants &quot;smart growth&quot; — carefully planned growth with housing diversity, accessibility for all, and employment within the city that pays enough to live in Port Moody.</div></div><div class="qa-item"><div class="q">If elected, what are your top three priorities for Port Moody?</div><div class="a">Re-evaluate development decisions, especially where member surveys didn&#x27;t support them. Traffic: prioritize local traffic, since crossing Port Moody can take longer than driving from Vancouver. Better representation of all residents and areas — Soucy&#x27;s westside neighbourhood feels less engaged and resourced. Plus Rocky Point Park expansion as the population grows.</div></div><div class="qa-item"><div class="q">How do we balance growth, affordability, and protecting Port Moody&#x27;s character?</div><div class="a">Redevelopment should replace like-for-like so affordable apartment complexes aren&#x27;t replaced by higher-density towers at unaffordable rents. Soucy saw Soucy&#x27;s son&#x27;s friend&#x27;s family displaced three times near Burquitlam and eventually forced out to Maple Ridge.</div></div><div class="qa-item"><div class="q">What are your thoughts on density, development, and infrastructure keeping pace with growth?</div><div class="a">Prioritize density around SkyTrain stations for commuting; add economic development and employment in the city so people don&#x27;t all commute; provide housing forms that work for all individuals.</div></div><div class="qa-item"><div class="q">Why residents should vote for them</div><div class="a"><span class="not-covered">Not asked in interview</span></div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published July 10, 2026. <a href="https://www.youtube.com/watch?v=8JvoLr1UW14">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Tri-Cities Community TV interview thumbnail &mdash; <a href="https://i.ytimg.com/vi/8JvoLr1UW14/hqdefault.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Laura Soucy">Ask Laura a question</button>
+  </div>
+</article>
+<article class="card" id="mark-kunzli">
+  <img class="photo" style="object-position:center 22%" loading="lazy" src="images/candidates/mark-kunzli.jpg" alt="Mark Kunzli">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Mark Kunzli</h1>
+    <div class="position">Running for Port Moody City Council</div>
+    <div class="badges"><span class="badge">Challenger</span><span class="badge slate">Port Moody Voice slate</span></div>
+    <div class="vstatus-head"><span class="vpill pending">Pending verification</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Tell our viewers why you&#x27;re running for Port Moody Council.</div><div class="a">Kunzli believes Kunzli can do a good job and bring a lot to the table; Kunzli&#x27;s raising two daughters in Port Moody and wants better discussions and better community outcomes. Kunzli came to a council meeting a year and a half ago with no intention of running, and people asked Kunzli to run.</div></div><div class="qa-item"><div class="q">What&#x27;s one issue you believe matters most to Port Moody residents right now?</div><div class="a">The development and density discussion and the associated infrastructure — finding the middle ground so the city grows together, the right way, in a way everyone can see their future in Port Moody.</div></div><div class="qa-item"><div class="q">What would the top three be in Port Moody for yourself if you were to be elected?</div><div class="a">First, get the 14-tower Moody Centre framework out of the OCP — it wasn&#x27;t engaged upon — and plan infrastructure first; build &quot;homes not units&quot; (family-size, work-from-home-capable). Second, a plan to accommodate growth: kids&#x27; activities, parking. Third, good governance: residents engaged enough to respect the process even when they disagree with the outcome.</div></div><div class="qa-item"><div class="q">How do we balance growth, affordability, and also protect Port Moody&#x27;s character?</div><div class="a">Don&#x27;t be afraid to ask for what the community needs: Kunzli cites a development sent back by council that then got 100% of larger units to meet minimum size requirements. Developers should be grateful to build in Port Moody — they&#x27;re partners, but the city shouldn&#x27;t shortchange itself to meet targets.</div></div><div class="qa-item"><div class="q">What are your thoughts on density, development, and infrastructure and being able to keep up with the pace?</div><div class="a">The livability aspect isn&#x27;t talked about enough — unit sizes, two strollers. Use every tool in the municipal toolbox to encourage the right housing; focusing on what the city can&#x27;t do loses sight of what it can.</div></div><div class="qa-item"><div class="q">Why should residents vote for you?</div><div class="a">&quot;You get what you see&quot; — Kunzli will say what Kunzli thinks, do Kunzli&#x27;s homework, do what Kunzli believes is best and explain why, and will always admit it if Kunzli&#x27;s wrong and do Kunzli&#x27;s best to make it right.</div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published July 10, 2026. <a href="https://www.youtube.com/watch?v=brKKRIHXHOU">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Tri-Cities Community TV interview thumbnail &mdash; <a href="https://i.ytimg.com/vi/brKKRIHXHOU/hqdefault.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Mark Kunzli">Ask Mark a question</button>
+  </div>
+</article>
+<article class="card" id="paul-lambert">
+  <img class="photo" style="object-position:center 10%" loading="lazy" src="images/candidates/paul-lambert-headshot-2026.jpg" alt="Paul Lambert">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Paul Lambert</h1>
+    <div class="position">Running for Port Moody City Council</div>
+    <div class="badges"><span class="badge">Challenger</span></div>
+    <div class="vstatus-head"><span class="vpill pending">Pending verification</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Why are you running for Port Moody Council?</div><div class="a">I started this campaign running to be the next Mayor of Port Moody, and the response from the community through May, June and July was very positive. Then in August, my father had a heart attack and tragically passed away. After a lot of thought, I decided to run for City Council instead — campaigning for Mayor is very intense, and I need to put my family first and be there for my mother and my three young kids. Running for Council lets me keep my commitment to bring positive change to Port Moody, and I am very excited about the opportunity to serve our community on Council.</div></div><div class="qa-item"><div class="q">What is one issue you believe matters most to Port Moody residents?</div><div class="a">Finding the right level of development and population growth. I&#x27;m running to offer a middle ground — we need to grow enough to address our housing needs and grow our local economy, but not so much that our infrastructure is overwhelmed and we risk losing what makes Port Moody so special. To stay unbiased on this issue, I have chosen to not take donations from real estate developers.</div></div><div class="qa-item"><div class="q">If you are elected, what are your top three priorities for Port Moody?</div><div class="a">1) Find the middle ground on development and population growth. 2) Significantly upgrade our road infrastructure to finally improve traffic in Port Moody. 3) Put an end to the large property tax and utility fee increases residents have seen the past four years.</div></div><div class="qa-item"><div class="q">Housing is a major concern. How do we balance growth, affordability, and protect Port Moody&#x27;s character?</div><div class="a">Since 2015, housing has been the #1 issue in Port Moody and the Lower Mainland. The good news is that housing prices and rents are decreasing for the first time in 10 years, which has eased the pressure to add density — I believe this gives voters a choice to change course to a more reasonable level of growth. My plan: build fewer small condos and more larger units and townhouses for families, young people starting families, and seniors looking to downsize.</div></div><div class="qa-item"><div class="q">What are your thoughts on density, development, infrastructure, and keeping up with the pace?</div><div class="a">The majority of residents I talk to feel Port Moody is out of balance — we have grown too much the past 10 years and our infrastructure has not kept up: our road network, public pools, and the emergency room at Eagle Ridge Hospital. My solution: 1) slow development and growth to a reasonable level — I&#x27;m not anti-development, but we have to strike the right balance; 2) upgrade our infrastructure — roads, current pools, new pickleball courts, planning for our first indoor pool, and advocating for the Province to expand Eagle Ridge Hospital.</div></div><div class="qa-item"><div class="q">Why should people vote for you?</div><div class="a">Residents have been clear they are looking for change, and I believe my platform represents that change. I am not anti-development, but we should slow the pace of growth and focus on larger units and townhouses for families and for seniors to downsize to. I do not take donations from real estate developers, so I remain unbiased. We need infrastructure upgrades, especially roads, and I will oppose large property tax increases. It would be an honour to earn your vote on October 17th.</div></div></div>
+  <div class="editor-note"><strong>Editor&rsquo;s note:</strong> Mr. Lambert was running for Mayor when his June 2026 Tri-Cities Community TV interview was recorded; that interview has since been taken down. He is now running for Port Moody City Council, and the Q&amp;A above was provided by him in writing on October 2, 2026.</div>
+  <div class="src-block"><strong>Source:</strong> Responses provided by the candidate in writing, October 2, 2026. More at <a href="https://www.paullambert.ca">paullambert.ca</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: no public photo available.</div>
+    <button class="ask-btn" data-ask="Paul Lambert">Ask Paul a question</button>
+  </div>
+</article>
+<article class="card" id="peter-thomasen">
+  <img class="photo" style="object-position:center 22%" loading="lazy" src="images/candidates/peter-thomasen.png" alt="Peter Thomasen">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Peter Thomasen</h1>
+    <div class="position">Running for Port Moody City Council</div>
+    <div class="badges"><span class="badge">Challenger</span></div>
+    <div class="vstatus-head"><span class="vpill pending">Pending verification</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Tell our viewers why you&#x27;re running in Port Moody.</div><div class="a">Early 40s and a lifelong Port Moody resident; Thomasen&#x27;s parents were Port Moody&#x27;s deputy police chief and an RCMP officer, instilling a sense of service. Thomasen has coached lacrosse since age 15 (27 consecutive years), mentored at-risk youth, volunteered at the food bank, as a firefighter, and with the SPCA, and brings 20 years of business experience — now Thomasen wants to give back and be the best councillor Thomasen can be.</div></div><div class="qa-item"><div class="q">What is one issue you believe matters most to Port Moody residents right now?</div><div class="a">Uncertainty about coming change: a slate election (a first for Thomasen), density and development, population growth, even property-rights concerns — council needs to work with the community to bring clarity.</div></div><div class="qa-item"><div class="q">If elected what are your top three priorities for Port Moody?</div><div class="a">Growth — in the right sequence, not before infrastructure. Traffic — it has been terrible for so long and people don&#x27;t feel enough has been done. Property taxes — keep them as low as possible and treat every dollar as if it were Thomasen&#x27;s own.</div></div><div class="qa-item"><div class="q">How do we balance growth, affordability, and protecting Port Moody&#x27;s character?</div><div class="a">Growth can be done right: Newport Village and Suter Brook are thriving communities. Development should match Port Moody&#x27;s character — room for daycares, greenery, communities that blend into nature rather than concrete jungles.</div></div><div class="qa-item"><div class="q">What are your thoughts on density, development, and infrastructure and keeping up with the pace of growth?</div><div class="a">Thomasen&#x27;s neither anti- nor pro-development: talk to developers, listen, understand what&#x27;s slowing progress, but hold them accountable — developers are seeking profit; council must stand up for what Port Moody wants: &quot;the tail doesn&#x27;t wag the dog.&quot;</div></div><div class="qa-item"><div class="q">Why should residents vote for you?</div><div class="a">Thomasen grew up here, cares, and puts pressure on Thomasen to do a good job and make people proud. Thomasen will listen, be open, and do the work; Thomasen&#x27;s not trying to be a politician — the seat belongs to the people, not Thomasen.</div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published September 22, 2026. <a href="https://www.youtube.com/watch?v=GLLT9A23fD0">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Campaign website photo &mdash; <a href="https://i0.wp.com/peterthomasen.ca/wp-content/uploads/2026/09/0A564719-E34E-41F7-A292-DD2257755CA6.png?fit=520%2C800&amp;amp;amp;ssl=1">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Peter Thomasen">Ask Peter a question</button>
+  </div>
+</article>
+<article class="card" id="reece-mack">
+  <img class="photo" style="object-position:center 22%" loading="lazy" src="images/candidates/reece-mack.jpg" alt="Reece Mack">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Reece Mack</h1>
+    <div class="position">Running for Port Moody City Council</div>
+    <div class="badges"><span class="badge">Challenger</span><span class="badge slate">Port Moody Voice</span></div>
+    <div class="vstatus-head"><span class="vpill pending">Pending verification</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Tell us why you&#x27;re running for Port Moody City Council.</div><div class="a">Mack is concerned about the tone of civic discourse and says residents don&#x27;t feel heard by the current council; Mack wants &quot;the residents put back in the center of the conversation of every decision that&#x27;s made in city hall.&quot;</div></div><div class="qa-item"><div class="q">What is one issue you believe matters most to Port Moody residents right now?</div><div class="a">Mack sees the election as &quot;a referendum on the future of the city,&quot; citing the Moody Centre 14-tower plan — which Mack says 70% of residents rejected in engagement yet is moving ahead — as a clear example of people not being heard.</div></div><div class="qa-item"><div class="q">What are your top three priorities if elected?</div><div class="a">First, repeal the 14-tower plan and instead develop a business district, to bring businesses back and ease the property-tax burden on homeowners. Second, improve traffic flow and infrastructure planning — including exploring tools like Google&#x27;s Project Greenlight — so infrastructure keeps pace with the OCP growth number. Third, fund PFAS-free bunker gear for firefighters, noting firefighter occupational cancer is the leading cause of death among firefighters.</div></div><div class="qa-item"><div class="q">How do we balance growth, affordability, and protecting Port Moody&#x27;s character?</div><div class="a">Growth should meet community needs rather than investor demand — Mack favours 3- to 5-bedroom townhouses and rowhouses over studio-to-one-bedroom units, plus co-ops and below-market options; Mack wants new builds to honour Port Moody&#x27;s policy of 10–15% below-market rental, which Mack says is &quot;seldom used these days.&quot;</div></div><div class="qa-item"><div class="q">What are your thoughts on density, development, and infrastructure keeping pace with growth?</div><div class="a">Growth is good but &quot;it&#x27;s how we grow&quot; that matters; expensive capital projects like sewer and water must be in the plan from the start and keep pace with whatever growth number the OCP sets.</div></div><div class="qa-item"><div class="q">Why should residents vote for you?</div><div class="a">Mack cares about the city and its people, sees elected officials as public servants holding &quot;guardianship with care,&quot; and Mack&#x27;s most important message is that everyone should go vote on October 17.</div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published September 12, 2026. <a href="https://www.youtube.com/watch?v=qCNlcA3VfPw">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Tri-Cities Community TV interview thumbnail &mdash; <a href="https://i.ytimg.com/vi/qCNlcA3VfPw/hqdefault.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Reece Mack">Ask Reece a question</button>
+  </div>
+</article>
+<article class="card" id="samantha-agtarap">
+  <img class="photo" style="object-position:center 7%" loading="lazy" src="images/candidates/samantha-agtarap.png" alt="Samantha Agtarap">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Samantha Agtarap</h1>
+    <div class="position">Running for Port Moody City Council</div>
+    <div class="badges"><span class="badge">Incumbent</span></div>
+    <div class="vstatus-head"><span class="vpill verified">✓ Verified by the candidate</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">You&#x27;re running for re-election. Tell us why.</div><div class="a">Port Moody deserves leaders who are problem-solvers, collaborators and creative thinkers; leaders who ask &quot;How can we make this better?&quot; and &quot;How can we work together?&quot; Agtarap&#x27;s goal is always to find solutions that make Port Moody better.</div></div><div class="qa-item"><div class="q">What&#x27;s one issue that you believe matters most to Port Moody residents?</div><div class="a">Traffic is probably top of mind. Council is working on it — the Barnet Highway overpass by the SkyTrain station and more work down St. Johns — with the goal of easing the afternoon rush hour.</div></div><div class="qa-item"><div class="q">If you&#x27;re reelected, what would your top three priorities be for Port Moody?</div><div class="a">Agtarap&#x27;s focus is the overall vision of a livable community: investing in parks and recreation, completing the Kyle Centre in the next term, working on traffic and micro-mobility, and access to everyday needs within a 10–15 minute walk without a car.</div></div><div class="qa-item"><div class="q">Housing&#x27;s a major concern. How do we balance growth and affordability and also protect Port Moody&#x27;s character?</div><div class="a">The province threw curveballs; the city is adapting. Smart, sustainable growth should centre on existing SkyTrain stations and already-developed properties without many trees. Affordable housing needs federal and provincial partnership — including revived co-op housing programs — and Agtarap sees a market slowdown as an opportunity for the province to buy stalled developer projects for affordable housing.</div></div><div class="qa-item"><div class="q">What are your thoughts on density, development, and infrastructure keeping pace with growth?</div><div class="a">The city must keep investing in its own infrastructure — not just recreation but unseen things like sewer pipes and water — while advocating to senior governments for hospitals and schools, which are not municipal responsibilities. Council must manage that balance within the system it has.</div></div><div class="qa-item"><div class="q">In 1 minute, why should residents vote for you?</div><div class="a">Agtarap is committed to making the best decision based on information available, using Agtarap&#x27;s experience as an engineer, and data and community feedback, to guide these decisions. Agtarap thinks compromises generally make for better decisions, and is open to having Agtarap&#x27;s mind changed.</div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published June 21, 2026. <a href="https://www.youtube.com/watch?v=DoXc_iwa11g">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://samantha-agtarap.ca/wp-content/uploads/2026/06/hero-nobg-1.png">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Samantha Agtarap">Ask Samantha a question</button>
+  </div>
+</article>
+<article class="card" id="sebastian-moon">
+  <img class="photo" style="object-position:center 22%" loading="lazy" src="images/candidates/sebastian-moon.jpg" alt="Sebastian Moon">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Sebastian Moon</h1>
+    <div class="position">Running for Port Moody City Council</div>
+    <div class="badges"><span class="badge">Challenger</span></div>
+    <div class="vstatus-head"><span class="vpill verified">✓ Verified by the candidate</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Tell us why you&#x27;re running for Port Moody City Council in this election. Why now?</div><div class="a">A lifelong Port Moody resident of 27 years, Moon says Moon felt Moon&#x27;s voice wasn&#x27;t heard, and is motivated by affordability, traffic, population growth, and wildlife concerns. Moon built Moon&#x27;s community, family, and business in Port Moody and wants to give back.</div></div><div class="qa-item"><div class="q">What is one issue you believe matters most to Port Moody residents right now?</div><div class="a">Property taxes — residents fund a large share of city costs through property taxes, which keep rising. Moon says the OCP&#x27;s 74,000-people-by-2050 projection theoretically lowers costs but ignores the root problem: sustainable growth plus businesses and tech contributing to a stable economy.</div></div><div class="qa-item"><div class="q">If elected, what are your top three priorities for Port Moody?</div><div class="a">Revise the Official Community Plan — Moon proposes planning for about 55,000 people instead of 74,300, matching what infrastructure, green space, traffic, roads, recreation, schools, primary care, and hospitals can handle, with a balance of mid- and low-rise development plus a few high-rises rather than all towers.</div></div><div class="qa-item"><div class="q">Housing is a major concern. How do we balance growth, affordability, and protecting Port Moody&#x27;s character?</div><div class="a">Bring in businesses that generate revenue and pay taxes so the burden doesn&#x27;t fall on residents — and possibly lower development cost charges to make family housing more affordable. Rising property taxes must not push elders and longtime residents out.</div></div><div class="qa-item"><div class="q">What are your thoughts on density, development, and infrastructure keeping pace with growth?</div><div class="a">Don&#x27;t grow so fast the city can&#x27;t handle it — be prepared. Green space and wildlife must be protected: Moon notes more than 100 bird species migrate from the inlet and 14 towers on St. Johns would block that; growth must be sustainable.</div></div><div class="qa-item"><div class="q">Why should people vote for you on October 17th?</div><div class="a">For people who want their voices heard, especially the younger generation — on growth moving too fast, financial and ecological planning, and lowering property taxes so the community can thrive.</div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published August 20, 2026. <a href="https://www.youtube.com/watch?v=VkFYZEds-7U">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://sebmoon.com/sebastian-headshot.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Sebastian Moon">Ask Sebastian a question</button>
+  </div>
+</article>
+<article class="card" id="steve-milani">
+  <img class="photo" style="object-position:center 42%" loading="lazy" src="images/candidates/steve-milani.jpg" alt="Steve Milani">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Steve Milani</h1>
+    <div class="position">Running for Port Moody City Council</div>
+    <div class="badges"><span class="badge">Challenger</span></div>
+    <div class="vstatus-head"><span class="vpill verified">✓ Verified by the candidate</span></div>
+  </div>
+  <div class="qa"></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview.</div>
+  <div class="foot">
+    <div class="credit">Photo: Campaign website photo &mdash; <a href="https://img1.wsimg.com/isteam/ip/0f98ce3b-f7d0-4dbb-a74c-df0775f80d14/steve%20and%20peppy%20on%20gravel%20trail%202026_4-3_crop.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:800,cg:true">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Steve Milani">Ask Steve a question</button>
+  </div>
+</article>
+<article class="card" id="tracey-schaeffer">
+  <img class="photo" style="object-position:center 22%" loading="lazy" src="images/candidates/tracey-schaeffer.jpg" alt="Tracey Schaeffer">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Tracey Schaeffer</h1>
+    <div class="position">Running for Port Moody City Council</div>
+    <div class="badges"><span class="badge">Challenger</span></div>
+    <div class="vstatus-head"><span class="vpill pending">Pending verification</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Why are you running as a city counselor for Port Moody?</div><div class="a">Schaeffer believes Schaeffer can add a level of calm and problem-solving ability from Schaeffer&#x27;s work in television and as a language teacher in Japan and Vancouver, bringing strong communication to council. Schaeffer wants to push ideas like the 15-minute city: everyday services within a 15-minute commute without a car, so the businesses around new developments serve people&#x27;s daily needs.</div></div><div class="qa-item"><div class="q">What do you think the one issue that you believe matters most to Port Moody residents?</div><div class="a">Schaeffer named divisiveness as the key issue, but argues community building is vital and should centre on problem solving, not anger — e.g., small-group town halls where residents work through mundane issues with people they&#x27;ve never met, building trust, ownership, and buy-in.</div></div><div class="qa-item"><div class="q">If elected, what are your top three priorities for Port Moody?</div><div class="a">They&#x27;re the same — the priorities from Schaeffer&#x27;s answer above. Schaeffer wants to be honest with everyone, take the time to speak to residents and explain why Schaeffer made a decision, and advocate for them. Schaeffer stands alone because Schaeffer doesn&#x27;t believe the party system works at this level and wants to be directly accountable to the people who elected Schaeffer.</div></div><div class="qa-item"><div class="q">How do you think that we can balance growth and affordability by protecting Port Moody&#x27;s character?</div><div class="a">Make sure historical spaces remain open and viable — Schaeffer cites the Queen Elizabeth Plaza area. Schaeffer loves the Winnipeg Forks example: a decades-long project bringing together business, the city, and the region around a theme of togetherness with a park and market — Schaeffer would like a similar tourist-anchoring project for Port Moody.</div></div><div class="qa-item"><div class="q">What are your thoughts on density development and the infrastructure and being able to keep up with the pace?</div><div class="a">Development should pay its fair share, and the city faces provincial home-building targets on tight timelines or loses control of where homes go. The city should make specific plans for what businesses go into new areas so ground-floor spaces serve residents&#x27; daily needs; towers can prevent urban sprawl if the spaces between them hold useful businesses.</div></div><div class="qa-item"><div class="q">Why should residents vote for you?</div><div class="a">Because Schaeffer&#x27;s &quot;a terrible liar&quot; — if Schaeffer says something, Schaeffer means Schaeffer will do it. People can approach and talk to Schaeffer, and Schaeffer will do what Schaeffer can.</div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published June 5, 2026. <a href="https://www.youtube.com/watch?v=xReDV4i5svA">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Tri-Cities Community TV interview thumbnail &mdash; <a href="https://i.ytimg.com/vi/xReDV4i5svA/hqdefault.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Tracey Schaeffer">Ask Tracey a question</button>
+  </div>
+</article></div>
+      </div>
+    </section>
+    <section class="race" id="trustee">
+      <div class="wrap">
+        <div class="race-head"><h2>School Trustee</h2></div>
+        <div class="tiles">
+<a class="tile" href="#carola-thompson">
+  <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/carola-thompson.jpg" alt="Carola Thompson">
+  <div class="tbody">
+    <div class="tname">Carola Thompson</div>
+    <div class="toffice">SD43 School Trustee</div>
+    <span class="vpill verified">✓ Verified by the candidate</span>
+  </div>
+</a>
+<a class="tile" href="#emily-cheadle">
+  <img class="" style="object-position:center 10%" loading="lazy" src="images/candidates/emily-cheadle.png" alt="Emily Cheadle">
+  <div class="tbody">
+    <div class="tname">Emily Cheadle</div>
+    <div class="toffice">SD43 School Trustee</div>
+    <span class="vpill verified">✓ Verified by the candidate</span>
+  </div>
+</a>
+<a class="tile" href="#jessica-morrison">
+  <img class="" style="object-position:center 26%" loading="lazy" src="images/candidates/jessica-morrison.webp" alt="Jessica Morrison">
+  <div class="tbody">
+    <div class="tname">Jessica Morrison</div>
+    <div class="toffice">SD43 School Trustee</div>
+    <span class="vpill pending">Pending verification</span>
+  </div>
+</a>
+<a class="tile" href="#tracy-green">
+  <img class="" style="object-position:center 32%" loading="lazy" src="images/candidates/tracy-green.png" alt="Tracy Green">
+  <div class="tbody">
+    <div class="tname">Tracy Green</div>
+    <div class="toffice">SD43 School Trustee</div>
+    <span class="vpill pending">Pending verification</span>
+  </div>
+</a></div>
+        <div class="cards">
+<article class="card" id="carola-thompson">
+  <img class="photo" style="object-position:center 22%" loading="lazy" src="images/candidates/carola-thompson.jpg" alt="Carola Thompson">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Carola Thompson</h1>
+    <div class="position">Running for SD43 School Trustee</div>
+    <div class="badges"><span class="badge">Challenger</span></div>
+    <div class="vstatus-head"><span class="vpill verified">✓ Verified by the candidate</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Please introduce yourself and tell us why you&#x27;re running for SD43.</div><div class="a">Thompson is an urban planner, small business owner, community advocate, and longtime volunteer who has called Port Moody home for more than 20 years. Thompson is also a mom of two young children, ages 2 and 7, with one currently attending an SD43 school. Thompson is running because Thompson wants every student to feel cared for, included, and supported in every way possible.</div></div><div class="qa-item"><div class="q">What do you see as the biggest challenge facing students in SD43 today?</div><div class="a">The growing gap between the complexity of students&#x27; needs and the supports available to them, including mental health challenges, navigating AI and rapidly changing technology, peer relationships, and academics.</div></div><div class="qa-item"><div class="q">What would be your top three priorities during your first term as a trustee?</div><div class="a">First, student safety and well-being, including timely access to counselling and directly consulting students about their needs. Second, preparing students for a changing world by strengthening critical thinking and digital and AI literacy, with appropriate guardrails. Third, thoughtful long-term planning and transparent, evidence-based governance that keeps students at the heart of every decision.</div></div><div class="qa-item"><div class="q">How would you approach budget decisions when resources are limited?</div><div class="a">Thompson would ask one question of every decision: “How is this going to affect our students?” Thompson would prioritize essential student supports, frontline staff, and programs with clear, measurable outcomes. Thompson also emphasized the importance of advocating for adequate provincial funding and would bring Thompson&#x27;s experience working with different levels of government to that work.</div></div><div class="qa-item"><div class="q">What role should the school district play in supporting student well-being?</div><div class="a">A vital one. Schools should create environments where students feel safe, connected, supported, and ready to learn. Thompson supports continued focus on early intervention and prevention, recognizing that challenges are often first identified in the classroom.</div></div><div class="qa-item"><div class="q">Why should residents vote for you for SD43?</div><div class="a">Thompson brings the perspective of an urban planner, small business owner, longtime Port Moody resident, community volunteer, and mom of an SD43 student. Thompson is passionate about Thompson&#x27;s community and committed to listening, working collaboratively, and keeping students at the centre of decision-making.</div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published September 21, 2026. <a href="https://www.youtube.com/watch?v=BOi18TyHU3Q">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Tri-Cities Community TV interview thumbnail &mdash; <a href="https://i.ytimg.com/vi/BOi18TyHU3Q/hqdefault.jpg">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Carola Thompson">Ask Carola a question</button>
+  </div>
+</article>
+<article class="card" id="emily-cheadle">
+  <img class="photo" style="object-position:center 10%" loading="lazy" src="images/candidates/emily-cheadle.png" alt="Emily Cheadle">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Emily Cheadle</h1>
+    <div class="position">Running for SD43 School Trustee</div>
+    <div class="badges"><span class="badge">Challenger</span></div>
+    <div class="vstatus-head"><span class="vpill verified">✓ Verified by the candidate</span></div>
+  </div>
+  <div class="qa"></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview.</div>
+  <div class="foot">
+    <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://emilycheadle.com/emily-cheadle-portrait.png">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Emily Cheadle">Ask Emily a question</button>
+  </div>
+</article>
+<article class="card" id="jessica-morrison">
+  <img class="photo" style="object-position:center 26%" loading="lazy" src="images/candidates/jessica-morrison.webp" alt="Jessica Morrison">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Jessica Morrison</h1>
+    <div class="position">Running for SD43 School Trustee</div>
+    <div class="badges"><span class="badge">Challenger</span></div>
+    <div class="vstatus-head"><span class="vpill pending">Pending verification</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Tell us why you&#x27;re running for school trustee.</div><div class="a">Morrison went through SD43 from elementary to high school and is a Port Moody resident whose two young children — in kindergarten and Grade 2 — will spend their whole schooling in the district. Morrison believes schools in Port Moody and across the district should be places where children feel safe, supported, and able to thrive, with strong, present, and consistent local representation at the board table.</div></div><div class="qa-item"><div class="q">What do you see as the biggest challenge facing students in SD43 today?</div><div class="a">Student safety and support — a concern Morrison is hearing from parents and students alike. Morrison calls the current youth mental-health situation the biggest crisis Morrison has ever seen and says it sits at the base of student safety; more support is needed, and the district hiring 50 new EAs is a step. Having been through a lockdown in high school, Morrison calls lockdowns terrifying and says they are not always fully communicated.</div></div><div class="qa-item"><div class="q">If you are elected, what would be your top three priorities during your first term as a trustee?</div><div class="a">Safe and supported schools: students cannot learn properly in overcrowded, underfunded schools where teachers cannot fully do their jobs. Planning for growth: Port Moody&#x27;s student population is estimated to rise 25%, urban schools are already at capacity, and facilities must be built and ready before the growth arrives. And full, dedicated representation — Morrison commits to being at everything and listening to the community.</div></div><div class="qa-item"><div class="q">School districts face competing financial pressures. How would you approach a budget decision when faced with difficult choices?</div><div class="a">Advocacy first. SD43 is the third-largest district in B.C. but sits in the bottom 10 for per-student funding — almost $1,000 per student in funding the district does not receive — so trustees must be the &#x27;squeaky wheel&#x27; to the province and exhaust every avenue before cutting programs, supports, EAs, or teachers. Budget decisions also require collaboration among the nine trustees, and Morrison would ensure Port Moody gets its fair share.</div></div><div class="qa-item"><div class="q">What role should schools play in supporting mental health and well-being?</div><div class="a">Notice early and follow through. Morrison was bullied badly through elementary and middle school — badly enough to switch schools in Grade 8 — and says it is harder now, when bullying follows students home online around the clock. Not having the supports needed as a student is a driving force for Morrison&#x27;s advocacy for those support systems in the district.</div></div><div class="qa-item"><div class="q">Why should voters choose to vote for you for school trustee in Port Moody?</div><div class="a">Morrison will be the strongest advocate for fair funding and future planning, and is committed to residents, their kids, and the community. Morrison has openly committed to serving three terms — this is not a stepping stone to a different office — out of genuine care for Port Moody&#x27;s school system, community, and kids.</div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published September 30, 2026. <a href="https://www.youtube.com/watch?v=mCsFECWw2tc">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://jessicaforsd43.com/_astro/jessica-hero.C0JMjryQ_2boFPs.webp">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Jessica Morrison">Ask Jessica a question</button>
+  </div>
+</article>
+<article class="card" id="tracy-green">
+  <img class="photo" style="object-position:center 32%" loading="lazy" src="images/candidates/tracy-green.png" alt="Tracy Green">
+  <div class="head">
+    <div class="eyebrow">Port Moody Election 2026 &middot; Candidate Card</div>
+    <h1 class="name">Tracy Green</h1>
+    <div class="position">Running for SD43 School Trustee</div>
+    <div class="badges"><span class="badge">Challenger</span></div>
+    <div class="vstatus-head"><span class="vpill pending">Pending verification</span></div>
+  </div>
+  <div class="qa"><div class="qa-item"><div class="q">Please introduce yourself and tell us why you&#x27;re running for school district 43.</div><div class="a">A 23-year Tri-Cities resident, 10 years in Port Moody, involved in community building and non-profit work. Schools and kids are the heart of the community — Green wants them supported with good options and set up for the future.</div></div><div class="qa-item"><div class="q">What do you see as the biggest challenge facing students in the district today?</div><div class="a">Mental health and well-being: kids face many challenges, schools are at capacity for addressing them and need to support children more, including those with more complex needs.</div></div><div class="qa-item"><div class="q">If you are elected, what are your top three priorities during your first term as a trustee?</div><div class="a">Student supports in the classroom: diverse needs met, well funded, programs of choice matching students&#x27; skills and abilities. Prepare kids for the future amid economic, AI, and technology changes, with more opportunities within their school careers. Financial stability for the district, since ministry funding hasn&#x27;t kept up with inflation.</div></div><div class="qa-item"><div class="q">School districts face competing financial pressures. How would you approach budget decisions when resources are limited?</div><div class="a">A balanced budget is required, but not everything gets funded — Green&#x27;s philosophy is students and classroom first: money for education, teacher support, counselling. SD43 is the third-largest district but fifth-lowest funded (about $7,600 per student vs. an $8,500 provincial average), so trustees must advocate for more ministry funding.</div></div><div class="qa-item"><div class="q">What role should the school district play in supporting students&#x27; well-being?</div><div class="a">Kids spend most of their time in school — it&#x27;s one of the most important things the district must support: more counselors, broad social-emotional learning, consistent counselling supports across schools. The district has done well in certain schools but is challenged rolling it out district-wide.</div></div><div class="qa-item"><div class="q">What is one thing you want SD43 voters to remember about you when they cast their ballot on October 17th?</div><div class="a">Green&#x27;s been active in the community for a couple of decades, cares how kids are doing, wants them to have the best public education experience — and Green&#x27;s here to listen, collaborate, and support kids and families.</div></div></div>
+  
+  <div class="src-block"><strong>Source:</strong> Q&amp;A condensed from the candidate’s Tri-Cities Community Television interview, published September 11, 2026. <a href="https://www.youtube.com/watch?v=SDSqrZvjU7Y">Watch the full interview</a>.</div>
+  <div class="foot">
+    <div class="credit">Photo: Campaign website headshot &mdash; <a href="https://tracygreen.ca/wp-content/uploads/2026/09/Tracy-Green.png">source</a> (courtesy credit; reuse permission pending review).</div>
+    <button class="ask-btn" data-ask="Tracy Green">Ask Tracy a question</button>
+  </div>
+</article></div>
+      </div>
+    </section>
+</main>
+<footer><div class="wrap footer-inner">
+  <span>Port Moody Pulse · Independent · community-funded · for all of Port Moody</span>
+  <div class="footer-links"><a href="/index.html#stories">Stories</a><a href="/archive.html">Archive</a><a href="/events.html">Events</a><a href="/about.html">About</a></div>
+</div></footer>
+<div class="modal-backdrop" id="ask-modal" role="dialog" aria-modal="true" aria-labelledby="ask-title">
+  <div class="modal">
+    <h3 id="ask-title">Ask a candidate</h3>
+    <p class="sub">We’ll pass your question to the candidate and publish the answers we receive.</p>
+    <form id="ask-form">
+      <label for="ask-candidate">Candidate</label>
+      <select id="ask-candidate"><option value="Haven Lurbiecki">Haven Lurbiecki — Mayor of Port Moody</option>
+<option value="Meghan Lahti">Meghan Lahti — Mayor of Port Moody</option>
+<option value="Alexandra Chan">Alexandra Chan — Port Moody City Council</option>
+<option value="Amy Lubik">Amy Lubik — Port Moody City Council</option>
+<option value="Callan Morrison">Callan Morrison — Port Moody City Council</option>
+<option value="Diana Dilworth">Diana Dilworth — Port Moody City Council</option>
+<option value="Jeanine Longley">Jeanine Longley — Port Moody City Council</option>
+<option value="John Grasty">John Grasty — Port Moody City Council</option>
+<option value="Kyla Knowles">Kyla Knowles — Port Moody City Council</option>
+<option value="Laura Soucy">Laura Soucy — Port Moody City Council</option>
+<option value="Mark Kunzli">Mark Kunzli — Port Moody City Council</option>
+<option value="Paul Lambert">Paul Lambert — Port Moody City Council</option>
+<option value="Peter Thomasen">Peter Thomasen — Port Moody City Council</option>
+<option value="Reece Mack">Reece Mack — Port Moody City Council</option>
+<option value="Samantha Agtarap">Samantha Agtarap — Port Moody City Council</option>
+<option value="Sebastian Moon">Sebastian Moon — Port Moody City Council</option>
+<option value="Steve Milani">Steve Milani — Port Moody City Council</option>
+<option value="Tracey Schaeffer">Tracey Schaeffer — Port Moody City Council</option>
+<option value="Carola Thompson">Carola Thompson — SD43 School Trustee</option>
+<option value="Emily Cheadle">Emily Cheadle — SD43 School Trustee</option>
+<option value="Jessica Morrison">Jessica Morrison — SD43 School Trustee</option>
+<option value="Tracy Green">Tracy Green — SD43 School Trustee</option></select>
+      <label for="ask-question">Your question</label>
+      <textarea id="ask-question" placeholder="What would you like to ask them?" required></textarea>
+      <label for="ask-name">Your name (optional)</label>
+      <input id="ask-name" type="text" autocomplete="name" />
+      <label for="ask-email">Your email (optional, in case of follow-up)</label>
+      <input id="ask-email" type="email" autocomplete="email" />
+      <div class="row">
+        <button type="submit" class="send">Send question</button>
+        <button type="button" class="cancel" id="ask-cancel">Cancel</button>
+      </div>
+      <p class="fine">Your email app will open with the question addressed to us — just hit send. We read every question.</p>
+    </form>
+  </div>
+</div>
+<script>
+(function(){
+var modal=document.getElementById('ask-modal'),form=document.getElementById('ask-form'),
+    sel=document.getElementById('ask-candidate');
+function openModal(name){
+  if(name){for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===name){sel.selectedIndex=i;break;}}}
+  modal.classList.add('open');document.getElementById('ask-question').focus();
+}
+function closeModal(){modal.classList.remove('open');}
+document.querySelectorAll('[data-ask]').forEach(function(b){b.addEventListener('click',function(){openModal(b.getAttribute('data-ask'));});});
+document.getElementById('ask-cancel').addEventListener('click',closeModal);
+modal.addEventListener('click',function(e){if(e.target===modal)closeModal();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  var name=sel.options[sel.selectedIndex].text,
+      q=document.getElementById('ask-question').value.trim(),
+      who=document.getElementById('ask-name').value.trim(),
+      em=document.getElementById('ask-email').value.trim();
+  if(!q){document.getElementById('ask-question').focus();return;}
+  var endpoint=document.body.getAttribute('data-form-endpoint');
+  if(endpoint){form.action=endpoint;form.submit();return;}
+  var body='Question for '+name+':\n\n'+q+'\n\n---\nFrom: '+(who||'(no name given)')+(em?' <'+em+'>':'')+'\nvia the Port Moody Pulse voter guide';
+  window.location.href='mailto:portmoodypulse@gmail.com?subject='+encodeURIComponent('Voter question for '+name)+'&body='+encodeURIComponent(body);
+  closeModal();
+});
+})();
+</script>
+</body>
+</html>
