@@ -162,6 +162,19 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
 .tile .toffice{font-size:12.5px;color:var(--muted);margin-top:2px}
 .tile .vpill{font-size:10.5px;padding:4px 10px;margin-top:8px}
 .card{scroll-margin-top:64px}
+
+/* end-of-guide newsletter signup */
+.guide-signup{background:var(--teal-2);color:var(--inverse);border-radius:18px;padding:40px 38px;margin:44px 0 8px;box-shadow:var(--shadow)}
+.guide-signup h3{font-family:var(--serif);font-size:30px;margin:0 0 10px;font-weight:600}
+.guide-signup p{margin:0 0 22px;font-size:16px;color:#cfe0dd;max-width:660px;line-height:1.6}
+.guide-signup .signup{display:flex;gap:12px;flex-wrap:wrap;max-width:580px}
+.guide-signup input[type=email]{flex:1;min-width:220px;font:inherit;font-size:16px;padding:14px 18px;border:2px solid transparent;border-radius:999px;background:#fff;color:var(--ink)}
+.guide-signup input[aria-invalid=true]{border-color:#e88}
+.guide-signup button{background:var(--gold);color:#3a2c12;border:none;font-weight:800;font-size:15.5px;padding:14px 28px;border-radius:999px;cursor:pointer}
+.guide-signup button:hover{filter:brightness(1.06)}
+.guide-signup button:disabled{opacity:.7;cursor:wait}
+.guide-signup .form-msg{margin:14px 0 0;font-size:15px;font-weight:600;color:#ffe9a8;min-height:22px}
+@media(max-width:760px){.guide-signup{padding:32px 24px}.guide-signup .signup{flex-direction:column}.guide-signup button{width:100%}}
 </style>
 </head>
 <body data-form-endpoint="">
@@ -775,6 +788,19 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
       </div>
     </section>
 </main>
+
+<div class="wrap">
+  <section class="guide-signup" aria-label="Subscribe to Port Moody Pulse">
+    <h3>Don’t miss the rest of election season.</h3>
+    <p>The mayoral debate is Oct 8, advance voting runs Oct 7 &amp; 10, and election day is Oct 17. We’ll cover all of it — plus everything else happening around Port Moody — in the free Friday newsletter.</p>
+    <form class="signup" data-form="guide" novalidate>
+      <input type="email" name="email" autocomplete="email" inputmode="email" aria-label="Email address" placeholder="Your email address" required>
+      <button type="submit" data-subscribe="guide">Join the Pulse <span aria-hidden="true">&#8594;</span></button>
+    </form>
+    <p class="form-msg" role="status" aria-live="polite"></p>
+  </section>
+</div>
+
 <footer><div class="wrap footer-inner">
   <span>Port Moody Pulse · Independent · community-funded · for all of Port Moody</span>
   <div class="footer-links"><a href="/index.html#stories">Stories</a><a href="/archive.html">Archive</a><a href="/events.html">Events</a><a href="/about.html">About</a></div>
@@ -846,6 +872,45 @@ form.addEventListener('submit',function(e){
   var body='Question for '+name+':\n\n'+q+'\n\n---\nFrom: '+(who||'(no name given)')+(em?' <'+em+'>':'')+'\nvia the Port Moody Pulse voter guide';
   window.location.href='mailto:portmoodypulse@gmail.com?subject='+encodeURIComponent('Voter question for '+name)+'&body='+encodeURIComponent(body);
   closeModal();
+});
+})();
+</script>
+<script>
+(function(){
+var EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+async function guideSubscribe(which){
+  var form=document.querySelector('[data-form="'+which+'"]');
+  if(!form)return;
+  var input=form.querySelector('input[type="email"]');
+  var button=form.querySelector('[data-subscribe]');
+  var email=input?input.value.trim():"";
+  var msg=form.parentElement?form.parentElement.querySelector('.form-msg'):null;
+  var original=button?button.innerHTML:"";
+  if(!EMAIL.test(email)){
+    if(msg){msg.textContent="Please enter a valid email address.";}
+    if(input){input.setAttribute("aria-invalid","true");input.focus();}
+    return;
+  }
+  if(input)input.removeAttribute("aria-invalid");
+  if(button){button.disabled=true;button.textContent="Subscribing…";}
+  if(msg){msg.textContent="";}
+  try{
+    var response=await fetch("/api/subscribe",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:email})});
+    var data=await response.json();
+    if(!response.ok||!data.ok)throw new Error(data.message||"Something went wrong. Please try again.");
+    if(msg){msg.textContent=data.message||"You’re on the list — welcome to Port Moody Pulse!";}
+    if(input)input.value="";
+  }catch(error){
+    if(msg){msg.textContent=error.message||"Something went wrong. Please try again.";}
+  }finally{
+    if(button){button.disabled=false;button.innerHTML=original;}
+  }
+}
+document.querySelectorAll("[data-subscribe]").forEach(function(b){
+  b.addEventListener("click",function(e){e.preventDefault();guideSubscribe(b.getAttribute("data-subscribe"));});
+});
+document.querySelectorAll("[data-form]").forEach(function(f){
+  f.addEventListener("submit",function(e){e.preventDefault();guideSubscribe(f.getAttribute("data-form"));});
 });
 })();
 </script>
