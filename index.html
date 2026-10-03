@@ -149,6 +149,13 @@
     .photo-credit{display:block;width:max-content;max-width:100%;margin-top:8px;color:inherit;font-family:var(--sans);font-size:11px;font-weight:600;line-height:1.35;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;opacity:.8}
     a.photo-credit:hover,.photo-credit:focus-visible{opacity:1}
     .issue-strip{background:var(--teal);color:var(--inverse)}
+    .vote-banner{background:var(--gold);color:#142f2c}
+    .vote-inner{display:flex;gap:24px;align-items:center;justify-content:space-between;padding:20px 0;flex-wrap:wrap}
+    .vote-text strong{font-family:var(--serif);font-size:clamp(21px,2.6vw,27px);display:block;letter-spacing:-.01em}
+    .vote-text span{font-size:14.5px;opacity:.85}
+    .vote-inner .button{background:#142f2c;color:#fff;flex:none}
+    .nav-links a.nav-hot{background:var(--gold);color:#142f2c;padding:8px 16px;border-radius:999px}
+    .nav-links a.nav-hot:hover{color:#142f2c;text-decoration:none;filter:brightness(1.06)}
     .issue-inner{display:grid;grid-template-columns:150px 1fr auto;gap:30px;align-items:center;padding:26px 0}
     .issue-label{font-size:12px;text-transform:uppercase;letter-spacing:.11em;font-weight:800;color:color-mix(in srgb,var(--inverse) 72%,transparent)}
     .issue-line{font-family:var(--serif);font-size:23px;line-height:1.35;margin:0}
@@ -274,6 +281,7 @@
         <a href="/events.html">Events</a>
         <a href="/archive.html">Archive</a>
         <a href="/about.html">About</a>
+        <a href="/voter-guide.html" class="nav-hot">Voter Guide</a>
       </nav>
     </div>
   </div>
@@ -314,6 +322,16 @@
         </figure>
       </div>
     </section>
+
+    <aside class="vote-banner" aria-label="Voter guide">
+      <div class="wrap vote-inner">
+        <div class="vote-text">
+          <strong>Port Moody votes October 17.</strong>
+          <span>Meet all 22 candidates — same questions, same format, plus a way to ask them your own.</span>
+        </div>
+        <a class="button" href="/voter-guide.html">Open the voter guide <span aria-hidden="true">&#8594;</span></a>
+      </div>
+    </aside>
 
     <aside class="issue-strip" aria-label="Newsletter promise">
       <div class="wrap issue-inner">
@@ -373,10 +391,10 @@
         </div>
         <div class="events-grid">
           <article class="event-card">
-            <div class="event-date" aria-hidden="true"><span>Oct</span><strong>3</strong></div>
+            <div class="event-date" aria-hidden="true"><span>Oct</span><strong>23</strong></div>
             <div>
-              <h3>Arrival and Dreams: ABBA &amp; Fleetwood Mac tributes</h3>
-              <p>Sat, 7:30&#160;PM &#183; Inlet Theatre</p>
+              <h3>John Paul Byrne&#8217;s Gordon Lightfoot tribute show</h3>
+              <p>Fri, 7:30&#160;PM &#183; Inlet Theatre</p>
             </div>
           </article>
           <article class="event-card">
