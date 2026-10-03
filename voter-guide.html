@@ -163,18 +163,19 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
 .tile .vpill{font-size:10.5px;padding:4px 10px;margin-top:8px}
 .card{scroll-margin-top:64px}
 
-/* end-of-guide newsletter signup */
-.guide-signup{background:var(--teal-2);color:var(--inverse);border-radius:18px;padding:40px 38px;margin:44px 0 8px;box-shadow:var(--shadow)}
-.guide-signup h3{font-family:var(--serif);font-size:30px;margin:0 0 10px;font-weight:600}
-.guide-signup p{margin:0 0 22px;font-size:16px;color:#cfe0dd;max-width:660px;line-height:1.6}
-.guide-signup .signup{display:flex;gap:12px;flex-wrap:wrap;max-width:580px}
-.guide-signup input[type=email]{flex:1;min-width:220px;font:inherit;font-size:16px;padding:14px 18px;border:2px solid transparent;border-radius:999px;background:#fff;color:var(--ink)}
-.guide-signup input[aria-invalid=true]{border-color:#e88}
-.guide-signup button{background:var(--gold);color:#3a2c12;border:none;font-weight:800;font-size:15.5px;padding:14px 28px;border-radius:999px;cursor:pointer}
-.guide-signup button:hover{filter:brightness(1.06)}
-.guide-signup button:disabled{opacity:.7;cursor:wait}
-.guide-signup .form-msg{margin:14px 0 0;font-size:15px;font-weight:600;color:#ffe9a8;min-height:22px}
-@media(max-width:760px){.guide-signup{padding:32px 24px}.guide-signup .signup{flex-direction:column}.guide-signup button{width:100%}}
+/* slim signup strip under the hero (first scroll) */
+.guide-signup-top{background:var(--teal-2);color:var(--inverse);border-radius:14px;padding:18px 22px;margin:0 0 8px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;box-shadow:var(--shadow)}
+.guide-signup-top .gst-text{flex:1;min-width:240px;font-size:15px;color:#cfe0dd;line-height:1.5}
+.guide-signup-top .gst-text strong{color:#fff}
+.guide-signup-top .signup{display:flex;gap:10px;flex:none}
+.guide-signup-top input[type=email]{font:inherit;font-size:14.5px;padding:11px 16px;border:2px solid transparent;border-radius:999px;background:#fff;color:var(--ink);width:230px}
+.guide-signup-top input[aria-invalid=true]{border-color:#e88}
+.guide-signup-top button{background:var(--gold);color:#3a2c12;border:none;font-weight:800;font-size:14px;padding:11px 22px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.guide-signup-top button:hover{filter:brightness(1.06)}
+.guide-signup-top button:disabled{opacity:.7;cursor:wait}
+.guide-signup-top .form-msg{flex-basis:100%;margin:0;font-size:14px;font-weight:600;color:#ffe9a8}
+.guide-signup-top .form-msg:empty{display:none}
+@media(max-width:760px){.guide-signup-top .signup{width:100%}.guide-signup-top input[type=email]{flex:1;width:auto}}
 </style>
 </head>
 <body data-form-endpoint="">
@@ -198,6 +199,18 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
     <div class="kdate"><strong>Oct 17</strong> — Election day</div>
   </div>
 </div></header>
+
+<div class="wrap">
+  <section class="guide-signup-top" aria-label="Subscribe to Port Moody Pulse">
+    <div class="gst-text"><strong>Don’t miss the rest of election season.</strong> Debate Oct 8 · advance voting Oct 7 &amp; 10 · election day Oct 17 — get it all in the free Friday newsletter.</div>
+    <form class="signup" data-form="guide-top" novalidate>
+      <input type="email" name="email" autocomplete="email" inputmode="email" aria-label="Email address" placeholder="Your email address" required>
+      <button type="submit" data-subscribe="guide-top">Join the Pulse</button>
+    </form>
+    <p class="form-msg" role="status" aria-live="polite"></p>
+  </section>
+</div>
+
 <div class="how"><div class="wrap how-grid">
   <div class="how-cell"><span class="n">i.</span><h3>Same questions, same format</h3><p>Each card carries the candidate’s photo, the office they seek, and Q&amp;A drawn from their own published words — condensed but never rewritten.</p></div>
   <div class="how-cell"><span class="n">ii.</span><h3>Checked by the candidates</h3><p>Every candidate received their card for a factual review. Cards marked ✓ Verified were confirmed by the candidate; cards marked Pending verification are published as drafted from the candidate’s public interview and updated when confirmed.</p></div>
