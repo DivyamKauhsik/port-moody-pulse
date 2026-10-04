@@ -12,8 +12,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About &#8212; Port&#160;Moody Pulse</title>
-  <meta name="description" content="The person behind Port&#160;Moody Pulse &#8212; a neighbour who pays attention." />
+  <title>Advertise &#8212; Port&#160;Moody Pulse</title>
+  <meta name="description" content="Put your business in front of Port Moody's most engaged readers. Sponsorships, spotlights, classifieds and event features in Port Moody Pulse." />
+  <link rel="canonical" href="https://www.portmoodypulse.ca/advertise.html" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#0A3537">
@@ -36,7 +37,6 @@
     a{color:inherit;text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
-    .vh{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
     /* ── UTIL BAR ── */
     .util{background:var(--inlet-900);color:#B6D0CC;font-size:12.5px}
@@ -63,30 +63,38 @@
     @keyframes beat{to{stroke-dashoffset:0}}
     @media(prefers-reduced-motion:reduce){.pulse-hi{animation:none;opacity:0}}
 
-    /* ── ABOUT CONTENT ── */
-    .about-hero{background:var(--inlet-900);padding:64px 0 56px}
-    .about-hero .wrap{display:grid;grid-template-columns:1fr 280px;gap:60px;align-items:center}
+    /* ── HERO ── */
+    .ad-hero{background:var(--inlet-900);padding:64px 0 56px}
+    .ad-hero .wrap{max-width:820px}
     .hero-eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-bright);margin-bottom:14px}
-    .hero-title{font-family:var(--fd);font-size:clamp(32px,4vw,48px);font-weight:600;color:#FBF7EE;line-height:1.1;margin-bottom:16px}
+    .hero-title{font-family:var(--fd);font-size:clamp(32px,4vw,48px);font-weight:600;color:#FBF7EE;line-height:1.12;margin-bottom:16px}
     .hero-sub{font-size:17px;color:rgba(251,247,238,0.72);line-height:1.55}
 
-    .photo-wrap{border-radius:20px;overflow:hidden;aspect-ratio:3/4;background:var(--inlet);box-shadow:0 20px 50px rgba(0,0,0,0.35);position:relative}
-    .photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top}
-    .photo-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#15706E,#0A3537)}
-    .photo-placeholder svg{width:80px;height:80px;opacity:0.4}
+    /* ── STATS ── */
+    .stats{padding:56px 0 8px}
+    .stats .wrap{max-width:1000px}
+    .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 18px;text-align:center}
+    .stat .n{font-family:var(--fd);font-size:38px;font-weight:600;color:var(--brass-deep);line-height:1}
+    .stat .l{font-size:13px;font-weight:600;color:var(--mist);margin-top:8px;letter-spacing:.02em}
 
-    /* ── BODY ── */
-    .about-body{padding:64px 0 80px}
-    .about-body .wrap{max-width:740px}
-
-    .about-body p{margin-bottom:24px;font-size:18px;line-height:1.75;color:var(--ink)}
-    .about-body p:last-child{margin-bottom:0}
-
-    .pull-quote{border-left:3px solid var(--brass-bright);padding:4px 0 4px 28px;margin:36px 0;font-family:var(--fd);font-size:22px;font-style:italic;color:var(--ink-2);line-height:1.45}
-
-    .sig{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
-    .sig-name{font-family:var(--fd);font-size:22px;font-weight:600;color:var(--inlet);margin-bottom:4px}
-    .sig-title{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brass-deep)}
+    /* ── RATES ── */
+    .rates{padding:56px 0 72px}
+    .rates .wrap{max-width:1000px}
+    .sec-h{font-family:var(--fd);font-size:30px;font-weight:600;color:var(--inlet);margin-bottom:8px}
+    .sec-sub{color:var(--ink-2);margin-bottom:32px;max-width:640px}
+    .rate-featured{background:var(--inlet-900);border-radius:18px;padding:36px;color:#FBF7EE;margin-bottom:24px;position:relative;overflow:hidden}
+    .rate-featured .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-bright);border:1px solid rgba(224,162,60,.5);border-radius:100px;padding:6px 14px;margin-bottom:16px}
+    .rate-featured h3{font-family:var(--fd);font-size:28px;font-weight:600;margin-bottom:6px}
+    .rate-featured .price{font-family:var(--fd);font-size:24px;color:var(--brass-bright);font-weight:600;margin-bottom:12px}
+    .rate-featured p{color:rgba(251,247,238,.78);max-width:640px}
+    .rate-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .rate-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px}
+    .rate-card h3{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin-bottom:8px}
+    .rate-card .price{font-family:var(--fd);font-size:30px;font-weight:600;color:var(--brass-deep);margin-bottom:10px}
+    .rate-card p{font-size:15.5px;color:var(--ink-2);line-height:1.65}
+    .fineprint{margin-top:36px;padding-top:24px;border-top:1px solid var(--line);font-size:14.5px;color:var(--mist)}
+    .fineprint strong{color:var(--ink-2)}
 
     .contact-strip{background:var(--inlet-900);border-radius:16px;padding:32px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
     .contact-strip .ct{font-family:var(--fd);font-size:20px;color:#FBF7EE;font-weight:600}
@@ -100,8 +108,8 @@
     .tagline{font-family:var(--fd);font-style:italic;color:#B6D0CC}
 
     @media(max-width:720px){
-      .about-hero .wrap{grid-template-columns:1fr}
-      .photo-wrap{max-width:240px;aspect-ratio:1/1}
+      .stat-grid{grid-template-columns:1fr 1fr}
+      .rate-grid{grid-template-columns:1fr}
       .contact-strip{flex-direction:column;align-items:flex-start}
       .wrap{padding:0 18px}
     }
@@ -142,61 +150,74 @@
   </div>
 
   <!-- HERO -->
-  <section class="about-hero">
+  <section class="ad-hero">
     <div class="wrap">
-      <div>
-        <div class="hero-eyebrow">About Port&#160;Moody Pulse</div>
-        <h1 class="hero-title">The person behind<br>Port&#160;Moody Pulse</h1>
-        <p class="hero-sub">A neighbour who pays attention, verifies what he publishes, and genuinely cares about this city.</p>
-      </div>
-      <div class="photo-wrap" id="photo-container">
-        <img src="Images/Divyam.jpg" alt="Divyam Kaushik, founder of Port Moody Pulse"/>
-        <div class="photo-placeholder">
-          <svg viewBox="0 0 100 100" aria-hidden="true">
-            <defs><linearGradient id="lgP" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A6E6B"/><stop offset="1" stop-color="#0A3537"/></linearGradient></defs>
-            <circle cx="50" cy="50" r="50" fill="url(#lgP)"/>
-            <circle cx="50" cy="36.6" r="3.2" fill="#E0A23C"/>
-            <path d="M28.2 54.5 L37.2 54.5 L39.8 54.5 L42 47 L44.4 61.2 L46.6 54.5 Q50.3 46.8 54 54.5 Q57.7 62.2 61.4 54.5 Q65.1 47 68.8 54.5 L71.8 54.5" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-      </div>
+      <div class="hero-eyebrow">Founding advertiser rates</div>
+      <h1 class="hero-title">Put your business in front of Port&#160;Moody&#8217;s most engaged readers.</h1>
+      <p class="hero-sub">Port&#160;Moody Pulse is a weekly email read by neighbours who pay attention &#8212; the people who show up to events, shop local, and tell their friends. No algorithms, no noise: your message lands directly in their inbox every Friday morning. We&#8217;re still in our first year, so these are introductory rates &#8212; lock them in now; prices will rise as our readership grows.</p>
     </div>
   </section>
 
-  <!-- BODY -->
+  <!-- STATS -->
+  <section class="stats">
+    <div class="wrap">
+      <div class="stat-grid">
+        <div class="stat"><div class="n">326</div><div class="l">cumulative reach</div></div>
+        <div class="stat"><div class="n">73%</div><div class="l">average open rate</div></div>
+        <div class="stat"><div class="n">+55</div><div class="l">new readers last month</div></div>
+        <div class="stat"><div class="n">100%</div><div class="l">Port&#160;Moody &#38; Tri-Cities</div></div>
+      </div>
+      <p style="text-align:center;font-size:12px;color:var(--mist);margin-top:14px">Cumulative reach = newsletter subscribers + Instagram followers.</p>
+    </div>
+  </section>
+
+  <!-- RATES -->
   <main>
-    <section class="about-body">
+    <section class="rates">
       <div class="wrap">
+        <h2 class="sec-h">Ways to work together</h2>
+        <p class="sec-sub">Simple, honest founding rates for local businesses. Early advertisers lock in today&#8217;s prices while we grow. Every placement is clearly labeled &#8212; readers trust the Pulse because the line between editorial and advertising never blurs.</p>
 
-        <p>Hi, I&#8217;m Divyam.</p>
+        <div class="rate-featured">
+          <div class="tag">Most visible</div>
+          <h3>Issue Sponsor</h3>
+          <div class="price">$75 / issue &#183; $250 / month</div>
+          <p>&#8220;This issue brought to you by&#8221; placement at the top of the newsletter, with your logo and a 40-word message. The most visible spot we sell &#8212; seen by every reader, every Friday.</p>
+        </div>
 
-        <p>I&#8217;ve lived in Port&#160;Moody for six years, in Suter Brook. I moved here as an immigrant, didn&#8217;t know anyone, and slowly fell in love with this city the way a lot of people do: one walk along the Shoreline Trail, one Friday night on Murray Street, one conversation with a neighbour at a time.</p>
+        <div class="rate-grid">
+          <div class="rate-card">
+            <h3>Business Spotlight</h3>
+            <div class="price">$150</div>
+            <p>A sponsored feature story about your business, written in the Pulse voice and clearly labeled. Includes Instagram + Facebook posts.</p>
+          </div>
+          <div class="rate-card">
+            <h3>Classified Ad</h3>
+            <div class="price">$30 / issue</div>
+            <p>Three lines of text for hiring, services, real estate, or announcements &#8212; seen by every reader, every Friday.</p>
+          </div>
+          <div class="rate-card">
+            <h3>Event Feature</h3>
+            <div class="price">$25</div>
+            <p>Promoted placement in the weekend events lineup &#8212; the section readers tell us they open first.</p>
+          </div>
+          <div class="rate-card">
+            <h3>Social Add-on</h3>
+            <div class="price">+$40</div>
+            <p>Add a dedicated Instagram and Facebook post to any package above, in front of 500+ combined local followers.</p>
+          </div>
+        </div>
 
-        <div class="pull-quote">Port&#160;Moody Pulse started because I kept missing things.</div>
-
-        <p>A grocery store breaking ground down the street. A neighbourhood fundraiser. A 43-year volunteer doing something remarkable a few blocks away. The information existed &#8212; it just wasn&#8217;t in one place, and it wasn&#8217;t written for the people who actually live here.</p>
-
-        <p>So I started writing it myself.</p>
-
-        <p>I&#8217;m not a journalist by training. I&#8217;m a neighbour who pays attention, verifies what I publish, and genuinely cares about this city. I also happen to have spent 15 years working in digital strategy and change management &#8212; which mostly just means I know how to find things out and how to communicate clearly.</p>
-
-        <p>Outside the newsletter, I&#8217;m a portrait artist. I&#8217;ve been painting for twelve years &#8212; it&#8217;s the other way I try to pay attention to people. You can find that work at <a href="https://www.instagram.com/divyamkaushik_art" target="_blank" rel="noopener">@divyamkaushik_art</a> on Instagram.</p>
-
-        <p>Every week I read the council minutes, talk to local business owners, check the city&#8217;s construction updates, and pull together the things worth knowing into one Friday morning email. Free, no ads, no agenda.</p>
-
-        <p>Port&#160;Moody Pulse is independent. It&#8217;s not affiliated with the City of Port&#160;Moody, any political candidate, or any business. When a business or organization supports the newsletter, I say so &#8212; every time.</p>
-
-        <div class="sig">
-          <div class="sig-name">Divyam Kaushik</div>
-          <div class="sig-title">Founder, Port&#160;Moody Pulse</div>
+        <div class="fineprint">
+          <strong>Limited to two sponsors per issue.</strong> All placements are clearly labeled as sponsored. Community and nonprofit events are always listed free &#8212; that&#8217;s editorial, not advertising. The Pulse stays independent &#8212; sponsors never influence editorial coverage.
         </div>
 
         <div class="contact-strip">
           <div>
-            <div class="ct">Got a story? Say hello.</div>
-            <div class="cs">A tip, an event, or just a note &#8212; I read every email.</div>
+            <div class="ct">Ready to reach Port&#160;Moody?</div>
+            <div class="cs">Tell us about your business &#8212; we reply within a day.</div>
           </div>
-          <a class="contact-btn" href="mailto:portmoodypulse@gmail.com">portmoodypulse@gmail.com</a>
+          <a class="contact-btn" href="mailto:portmoodypulse@gmail.com?subject=Advertising%20in%20Port%20Moody%20Pulse">portmoodypulse@gmail.com</a>
         </div>
 
       </div>
