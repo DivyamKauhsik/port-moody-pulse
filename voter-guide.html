@@ -172,9 +172,26 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
 .verify-note{font-size:14.5px;color:#43514f;margin:16px 0 0;max-width:720px;line-height:2.1}
 .verify-note .vpill{font-size:11.5px;padding:5px 11px}
 .tap-hint{text-align:center;font-size:13.5px;color:var(--muted);margin:18px 0 4px}
+
+/* compact preview tiles */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:12px;margin:6px 0 4px}
+.tile{display:block;background:#fff;border:1px solid #e2e8e6;border-radius:14px;overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);transition:transform .15s ease}
+.tile:hover{transform:translateY(-2px)}
+.tile img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#eef2f1}
+.tile .tbody{padding:10px 12px 12px}
+.tile .tname{font-weight:700;font-size:15px;line-height:1.3;margin-bottom:8px}
+.tile .vpill{font-size:10.5px;padding:4px 10px}
+.tile.active{outline:3px solid var(--gold);outline-offset:2px}
+@media(max-width:520px){.tiles{grid-template-columns:repeat(2,1fr);gap:10px}}
+/* full cards open only when tapped */
+.card{scroll-margin-top:84px}
+.js .race .cards .card{display:none}
+.js .race .cards .card.open{display:block;animation:cardIn .28s ease}
+@keyframes cardIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
+<script>document.documentElement.className+=" js";</script>
 <div class="topline"><div class="wrap nav">
   <a class="brand-lockup" href="/index.html"><span class="word">Port&nbsp;Moody <b>Pulse</b></span></a>
   <div class="edition">A free Friday newsletter for Port Moody</div>
@@ -222,19 +239,17 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
       <div class="wrap">
         <div class="race-head"><h2>Mayor</h2></div>
         <div class="tiles">
-<a class="tile" href="#haven-lurbiecki">
+<a class="tile" href="#haven-lurbiecki" aria-expanded="false">
   <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/haven-lurbiecki.jpg" alt="Haven Lurbiecki">
   <div class="tbody">
     <div class="tname">Haven Lurbiecki</div>
-    <div class="toffice">Mayor</div>
     <span class="vpill pending">Pending verification</span>
   </div>
 </a>
-<a class="tile" href="#meghan-lahti">
+<a class="tile" href="#meghan-lahti" aria-expanded="false">
   <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/meghan-lahti.jpg" alt="Meghan Lahti">
   <div class="tbody">
     <div class="tname">Meghan Lahti</div>
-    <div class="toffice">Mayor</div>
     <span class="vpill verified">✓ Verified by the candidate</span>
   </div>
 </a></div>
@@ -277,131 +292,115 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
       <div class="wrap">
         <div class="race-head"><h2>City Council</h2></div>
         <div class="tiles">
-<a class="tile" href="#alexandra-chan">
+<a class="tile" href="#alexandra-chan" aria-expanded="false">
   <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/alexandra-chan.jpg" alt="Alexandra Chan">
   <div class="tbody">
     <div class="tname">Alexandra Chan</div>
-    <div class="toffice">City Council</div>
     <span class="vpill verified">✓ Verified by the candidate</span>
   </div>
 </a>
-<a class="tile" href="#amy-lubik">
+<a class="tile" href="#amy-lubik" aria-expanded="false">
   <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/amy-lubik.jpg" alt="Amy Lubik">
   <div class="tbody">
     <div class="tname">Amy Lubik</div>
-    <div class="toffice">City Council</div>
     <span class="vpill pending">Pending verification</span>
   </div>
 </a>
-<a class="tile" href="#callan-morrison">
+<a class="tile" href="#callan-morrison" aria-expanded="false">
   <img class="" style="object-position:center 42%" loading="lazy" src="images/candidates/callan-morrison.webp" alt="Callan Morrison">
   <div class="tbody">
     <div class="tname">Callan Morrison</div>
-    <div class="toffice">City Council</div>
     <span class="vpill pending">Pending verification</span>
   </div>
 </a>
-<a class="tile" href="#diana-dilworth">
+<a class="tile" href="#diana-dilworth" aria-expanded="false">
   <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/diana-dilworth.jpg" alt="Diana Dilworth">
   <div class="tbody">
     <div class="tname">Diana Dilworth</div>
-    <div class="toffice">City Council</div>
     <span class="vpill verified">✓ Verified by the candidate</span>
   </div>
 </a>
-<a class="tile" href="#jeanine-longley">
+<a class="tile" href="#jeanine-longley" aria-expanded="false">
   <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/jeanine-longley.jpg" alt="Jeanine Longley">
   <div class="tbody">
     <div class="tname">Jeanine Longley</div>
-    <div class="toffice">City Council</div>
     <span class="vpill verified">✓ Verified by the candidate</span>
   </div>
 </a>
-<a class="tile" href="#john-grasty">
+<a class="tile" href="#john-grasty" aria-expanded="false">
   <img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
   <div class="tbody">
     <div class="tname">John Grasty</div>
-    <div class="toffice">City Council</div>
     <span class="vpill excluded">Did not take part in the card review</span>
   </div>
 </a>
-<a class="tile" href="#kyla-knowles">
+<a class="tile" href="#kyla-knowles" aria-expanded="false">
   <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/kyla-knowles.jpg" alt="Kyla Knowles">
   <div class="tbody">
     <div class="tname">Kyla Knowles</div>
-    <div class="toffice">City Council</div>
     <span class="vpill verified">✓ Verified by the candidate</span>
   </div>
 </a>
-<a class="tile" href="#laura-soucy">
+<a class="tile" href="#laura-soucy" aria-expanded="false">
   <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/laura-soucy.jpg" alt="Laura Soucy">
   <div class="tbody">
     <div class="tname">Laura Soucy</div>
-    <div class="toffice">City Council</div>
     <span class="vpill pending">Pending verification</span>
   </div>
 </a>
-<a class="tile" href="#mark-kunzli">
+<a class="tile" href="#mark-kunzli" aria-expanded="false">
   <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/mark-kunzli.jpg" alt="Mark Kunzli">
   <div class="tbody">
     <div class="tname">Mark Kunzli</div>
-    <div class="toffice">City Council</div>
     <span class="vpill pending">Pending verification</span>
   </div>
 </a>
-<a class="tile" href="#paul-lambert">
+<a class="tile" href="#paul-lambert" aria-expanded="false">
   <img class="" style="object-position:center 10%" loading="lazy" src="images/candidates/paul-lambert-headshot-2026.jpg" alt="Paul Lambert">
   <div class="tbody">
     <div class="tname">Paul Lambert</div>
-    <div class="toffice">City Council</div>
     <span class="vpill pending">Pending verification</span>
   </div>
 </a>
-<a class="tile" href="#peter-thomasen">
+<a class="tile" href="#peter-thomasen" aria-expanded="false">
   <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/peter-thomasen.png" alt="Peter Thomasen">
   <div class="tbody">
     <div class="tname">Peter Thomasen</div>
-    <div class="toffice">City Council</div>
     <span class="vpill pending">Pending verification</span>
   </div>
 </a>
-<a class="tile" href="#reece-mack">
+<a class="tile" href="#reece-mack" aria-expanded="false">
   <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/reece-mack.jpg" alt="Reece Mack">
   <div class="tbody">
     <div class="tname">Reece Mack</div>
-    <div class="toffice">City Council</div>
     <span class="vpill verified">✓ Verified by the candidate</span>
   </div>
 </a>
-<a class="tile" href="#samantha-agtarap">
+<a class="tile" href="#samantha-agtarap" aria-expanded="false">
   <img class="" style="object-position:center 7%" loading="lazy" src="images/candidates/samantha-agtarap.png" alt="Samantha Agtarap">
   <div class="tbody">
     <div class="tname">Samantha Agtarap</div>
-    <div class="toffice">City Council</div>
     <span class="vpill verified">✓ Verified by the candidate</span>
   </div>
 </a>
-<a class="tile" href="#sebastian-moon">
+<a class="tile" href="#sebastian-moon" aria-expanded="false">
   <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/sebastian-moon.jpg" alt="Sebastian Moon">
   <div class="tbody">
     <div class="tname">Sebastian Moon</div>
-    <div class="toffice">City Council</div>
     <span class="vpill verified">✓ Verified by the candidate</span>
   </div>
 </a>
-<a class="tile" href="#steve-milani">
+<a class="tile" href="#steve-milani" aria-expanded="false">
   <img class="" style="object-position:center 42%" loading="lazy" src="images/candidates/steve-milani.jpg" alt="Steve Milani">
   <div class="tbody">
     <div class="tname">Steve Milani</div>
-    <div class="toffice">City Council</div>
     <span class="vpill verified">✓ Verified by the candidate</span>
   </div>
 </a>
-<a class="tile" href="#tracey-schaeffer">
+<a class="tile" href="#tracey-schaeffer" aria-expanded="false">
   <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/tracey-schaeffer.jpg" alt="Tracey Schaeffer">
   <div class="tbody">
     <div class="tname">Tracey Schaeffer</div>
-    <div class="toffice">City Council</div>
     <span class="vpill verified">✓ Verified by the candidate</span>
   </div>
 </a></div>
@@ -668,35 +667,31 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
       <div class="wrap">
         <div class="race-head"><h2>School Trustee</h2></div>
         <div class="tiles">
-<a class="tile" href="#carola-thompson">
+<a class="tile" href="#carola-thompson" aria-expanded="false">
   <img class="" style="object-position:center 22%" loading="lazy" src="images/candidates/carola-thompson.jpg" alt="Carola Thompson">
   <div class="tbody">
     <div class="tname">Carola Thompson</div>
-    <div class="toffice">SD43 School Trustee</div>
     <span class="vpill verified">✓ Verified by the candidate</span>
   </div>
 </a>
-<a class="tile" href="#emily-cheadle">
+<a class="tile" href="#emily-cheadle" aria-expanded="false">
   <img class="" style="object-position:center 10%" loading="lazy" src="images/candidates/emily-cheadle.png" alt="Emily Cheadle">
   <div class="tbody">
     <div class="tname">Emily Cheadle</div>
-    <div class="toffice">SD43 School Trustee</div>
     <span class="vpill verified">✓ Verified by the candidate</span>
   </div>
 </a>
-<a class="tile" href="#jessica-morrison">
+<a class="tile" href="#jessica-morrison" aria-expanded="false">
   <img class="" style="object-position:center 26%" loading="lazy" src="images/candidates/jessica-morrison.webp" alt="Jessica Morrison">
   <div class="tbody">
     <div class="tname">Jessica Morrison</div>
-    <div class="toffice">SD43 School Trustee</div>
     <span class="vpill pending">Pending verification</span>
   </div>
 </a>
-<a class="tile" href="#tracy-green">
+<a class="tile" href="#tracy-green" aria-expanded="false">
   <img class="" style="object-position:center 32%" loading="lazy" src="images/candidates/tracy-green.png" alt="Tracy Green">
   <div class="tbody">
     <div class="tname">Tracy Green</div>
-    <div class="toffice">SD43 School Trustee</div>
     <span class="vpill pending">Pending verification</span>
   </div>
 </a></div>
@@ -823,6 +818,40 @@ document.querySelectorAll("[data-subscribe]").forEach(function(b){
 document.querySelectorAll("[data-form]").forEach(function(f){
   f.addEventListener("submit",function(e){e.preventDefault();guideSubscribe(f.getAttribute("data-form"));});
 });
+})();
+
+
+(function(){
+function openCard(id, scroll){
+  var card=document.getElementById(id);
+  if(!card||!card.classList.contains('card'))return;
+  var wasOpen=card.classList.contains('open');
+  document.querySelectorAll('.card.open').forEach(function(c){c.classList.remove('open');});
+  document.querySelectorAll('.tile.active').forEach(function(t){t.classList.remove('active');t.setAttribute('aria-expanded','false');});
+  if(!wasOpen){
+    card.classList.add('open');
+    var tile=document.querySelector('.tile[href="#'+id+'"]');
+    if(tile){tile.classList.add('active');tile.setAttribute('aria-expanded','true');}
+    if(scroll!==false){card.scrollIntoView({behavior:'smooth',block:'start'});}
+  }
+}
+document.querySelectorAll('.tile').forEach(function(t){
+  t.addEventListener('click',function(e){
+    e.preventDefault();
+    openCard(t.getAttribute('href').slice(1));
+  });
+});
+function openHash(){
+  var id=location.hash.replace('#','');
+  if(!id)return;
+  var card=document.getElementById(id);
+  if(card&&card.classList.contains('card')){
+    openCard(id,false);
+    setTimeout(function(){card.scrollIntoView({block:'start'});},80);
+  }
+}
+openHash();
+window.addEventListener('hashchange',openHash);
 })();
 </script>
 </body>
