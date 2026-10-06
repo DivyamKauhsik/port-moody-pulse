@@ -213,15 +213,11 @@
     .quiz-media figcaption{color:var(--muted)}
     .quiz h3{font-family:var(--serif);font-size:29px;line-height:1.16;margin-bottom:12px}
     .quiz p{color:var(--ink-soft);margin-bottom:24px}
-    .people-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:34px 0 26px}
-    .person-tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow)}
-    .p-photo{position:relative;height:200px;overflow:hidden;background:var(--surface-soft)}
-    .p-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
-    .p-credit{position:absolute;left:0;right:0;bottom:0;padding:6px 12px;font-family:var(--sans);font-size:10.5px;font-weight:600;color:#fff;background:color-mix(in srgb,#000 55%,transparent)}
-    .p-credit a{color:#fff;text-decoration:underline;text-underline-offset:3px}
-    .p-body{padding:24px 24px 26px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;flex:1}
-    .p-body h3{font-family:var(--serif);font-size:25px;line-height:1.15;margin:0}
-    .p-body p{font-size:14px;color:var(--ink-soft);margin:0 0 10px;flex:1}
+    .archive-band{background:var(--teal);color:var(--inverse);border-radius:14px;padding:44px 48px;display:flex;align-items:center;justify-content:space-between;gap:40px;box-shadow:var(--shadow);margin-bottom:26px}
+    .archive-band h2{font-family:var(--serif);font-size:clamp(30px,3.6vw,44px);line-height:1.08;margin:12px 0 10px}
+    .archive-band p{color:color-mix(in srgb,var(--inverse) 78%,transparent);margin:0;max-width:560px}
+    .archive-band .button{background:var(--gold);color:#142f2c;flex:none}
+    .archive-band .button:hover{background:#d99a37}
     .quiz-slim{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 26px;display:flex;align-items:center;gap:26px;box-shadow:var(--shadow)}
     .quiz-slim-art{flex:none;width:120px;height:84px;border-radius:10px;overflow:hidden;background:var(--surface-soft)}
     .quiz-slim-art img{width:100%;height:100%;object-fit:cover}
@@ -253,7 +249,7 @@
     .sticky button{border:0;background:var(--teal);color:var(--inverse);padding:11px 17px;border-radius:7px;font-weight:800}
     @media (max-width:880px){
       .hero-grid,.feature,.archive-grid,.final-inner{grid-template-columns:1fr}
-      .people-grid{grid-template-columns:1fr}
+      .archive-band{flex-direction:column;align-items:flex-start;padding:34px 30px}
       .quiz-slim{flex-direction:column;align-items:flex-start;gap:16px}
       .quiz-slim .text-link{margin-left:0}
       .hero{padding-top:54px}
@@ -457,50 +453,13 @@
     </section>
     <section id="archive">
       <div class="wrap">
-        <div class="section-head">
+        <div class="archive-band">
           <div>
-            <div class="tag">The archive</div>
-            <h2>Port Moody, one neighbour at a time.</h2>
+            <div class="tag" style="color:var(--gold-soft)">The archive</div>
+            <h2>Missed a Friday? Catch up.</h2>
+            <p>Every past issue &#8212; including all our neighbour features, from the Sorpotel Queen to the man behind the Boathouse.</p>
           </div>
-          <p>Our people features &#8212; the residents behind the stories. <a class="text-link" href="/archive.html">Browse every issue &#8594;</a></p>
-        </div>
-        <div class="people-grid">
-          <article class="person-tile">
-            <div class="p-photo">
-              <img src="/images/ahyoung-baek.jpg" alt="Ahyoung Baek, chef and owner of Pasta Polo" loading="lazy">
-              <span class="p-credit">Photo: courtesy of Ahyoung Baek.</span>
-            </div>
-            <div class="p-body">
-              <div class="tag">Issue #14 &#183; Oct 2, 2026</div>
-              <h3>Ahyoung Baek</h3>
-              <p>From the restaurant floor to owning Pasta Polo &#8212; a chef&#8217;s bet on herself paid off.</p>
-              <a class="text-link" href="https://portmoodypulse.beehiiv.com/p/ruth-foster-who-co-founded-the-mossom-creek-hatchery-with-fellow-teacher-rod-macvicar-in-1976-died-o" target="_blank" rel="noopener noreferrer">Read the issue &#8594;</a>
-            </div>
-          </article>
-          <article class="person-tile">
-            <div class="p-photo">
-              <img src="/images/gordon-clay.jpg" alt="Gordon Clay of the Old Mill Boathouse Society" loading="lazy">
-              <span class="p-credit">Photo: courtesy of the Old Mill Boathouse Society.</span>
-            </div>
-            <div class="p-body">
-              <div class="tag">Issue #13 &#183; Sep 25, 2026</div>
-              <h3>Gordon Clay</h3>
-              <p>The man behind the Boathouse &#8212; a founding member of the Old Mill Boathouse Society.</p>
-              <a class="text-link" href="https://portmoodypulse.beehiiv.com/p/the-man-behind-the-boathouse" target="_blank" rel="noopener noreferrer">Read the issue &#8594;</a>
-            </div>
-          </article>
-          <article class="person-tile">
-            <div class="p-photo">
-              <img src="/images/ashney-rebello.jpg" alt="Ashney Rebello of Ashney's Artisans" loading="lazy">
-              <span class="p-credit">Photo: courtesy of <a href="https://www.instagram.com/ashneys_artisan/" target="_blank" rel="noopener noreferrer">Ashney Rebello</a>.</span>
-            </div>
-            <div class="p-body">
-              <div class="tag">Issue #12 &#183; Sep 18, 2026</div>
-              <h3>Ashney Rebello</h3>
-              <p>Port Moody meets its Sorpotel Queen &#8212; Goan culinary artistry, plated in Port Moody.</p>
-              <a class="text-link" href="https://portmoodypulse.beehiiv.com/p/port-moody-meets-its-sorpotel-queen" target="_blank" rel="noopener noreferrer">Read the issue &#8594;</a>
-            </div>
-          </article>
+          <a class="button" href="/archive.html">Browse the archive &#8594;</a>
         </div>
         <article class="quiz-slim">
           <div class="quiz-slim-art"><img src="/images/coffee-quiz.webp" alt="Latte art in a glass cup" loading="lazy"></div>
