@@ -213,7 +213,8 @@ window.PMP_ARTICLES = {
 
   election: {
     tag: "City Hall \u00B7 Election 2026",
-    title: "The Official Candidate List \u2014 and How to Vote",
+    title: "Port Moody Election 2026: Candidates and How to Vote",
+    desc: "Port Moody votes October 17, 2026. Full candidate list for mayor, council and school trustee, plus advance voting dates, locations and mail ballots.",
     meta: "By the newsroom \u00B7 Updated \u00B7 4 min read",
     body: [
       "Port\u00A0Moody\u2019s General Local Election is Saturday, October 17, 2026. Nominations closed September 11. Candidates have until 4pm on September 18 to withdraw \u2014 the list below reflects nominations received as of that date, compiled from portmoody.ca.",
@@ -358,7 +359,8 @@ window.PMP_ARTICLES = {
 
   bosafoods: {
     tag: "Good News \u00B7 Development",
-    title: "A Grocery Store Is Finally Coming to St. Johns Street",
+    title: "Bosa Foods Is Coming to St. Johns Street in Port Moody",
+    desc: "Bosa Foods is bringing a 9,500 sq ft specialty grocery store to St. Johns & Queens in Port Moody. Construction status, timeline and what to expect.",
     meta: "By the newsroom \u00B7 Construction underway \u00B7 4 min read",
     body: [
       "For years, residents and council alike have called this stretch of Moody Centre a food desert \u2014 just two grocery stores serving the whole city. That\u2019s about to change.",
@@ -392,7 +394,8 @@ window.PMP_ARTICLES = {
 
   matsuzushi: {
     tag: "Good News \u00B7 Food",
-    title: "Matsuzushi Is Back \u2014 Under New Ownership, Same Soul",
+    title: "Matsuzushi Is Back in Port Moody: New Owner, Same Sushi",
+    desc: "Matsuzushi reopened September 4 under new owner Kodai Hattori at 3130 St. Johns Street. Menu, prices, hours and what regulars should know.",
     meta: "By the newsroom \u00B7 4 min read",
     body: [
       "Matsuzushi, the family sushi counter at 3130 St. Johns Street that closed at the end of 2025 after more than two decades, reopened on September 4 under new ownership. The man behind the counter is Kodai Hattori, a close friend and former colleague of the original chef.",
@@ -434,6 +437,24 @@ window.PMP_ARTICLES = {
       "Her heritage runs through everything she does. As Social & Cultural Director for the Goa Overseas Association of Vancouver \u2014 a community of roughly 2,500 to 3,000 Goans across the region \u2014 she helps organize the group\u2019s annual New Year\u2019s dance and a picnic that drew 400 people this year, with the association\u2019s 50th anniversary celebration coming this October. Away from the spotlight, she and her daughter regularly cook for hundreds at local churches and prepare meals for those experiencing homelessness over Thanksgiving.",
       "This September, her work was recognized on an international stage: Ashney was felicitated for her contributions to culinary arts and Goan culture at the first-ever Miss Goa International pageant, held in London. Her cookbook, Ashney\u2019s Kitchen Stories: The Ultimate Cookbook of Goan Recipes \u2014 its cover featuring her in a traditional Goan Kunbi saree \u2014 is still in the works, with a Portuguese-inspired cookware line planned to follow.",
       "What to watch next: Ashney is preparing an exclusive fall grazing board recipe for Port\u00A0Moody Pulse readers, coming in a future issue."
+    ]
+  },
+
+  ahyoung: {
+    tag: "Community \u00b7 People",
+    title: "Ahyoung Baek is cooking up a legacy in the Tri-Cities",
+    meta: "By Divyam Kaushik \u00b7 3 min read",
+    body: [
+      "Eighteen years ago, Ahyoung Baek arrived in Canada with her husband Jeremy, in their own words, \"an open heart and big dreams for our family.\" Having trained in Italian cuisine in Melbourne, Australia, before making the move, her first job in Canada was at a steakhouse in Edmonton, where the owner did more than hire her \u2014 he believed in her, and sponsored her permanent residency. That act of generosity, she says, showed her the power of community early on. Today, as chef and owner-operator of Pasta Polo, she brings that same spirit of mentorship and giving back to the Tri-Cities every day.",
+      "Baek\u2019s story with Pasta Polo began more than 13 years ago. She fell in love with the restaurant\u2019s soul, became a partner, and in 2023 took full ownership with her husband Jeremy, keeping founder Fred\u2019s original vision alive. Over the years, Pasta Polo has evolved from a neighbourhood spot for fresh pasta and brick-oven pizza into what Baek calls \"a true community living room\" \u2014 featuring local artwork from the Port Moody Arts Centre and serving as a welcoming gathering space.",
+      "For the past decade, Pasta Polo has served chili at the Holiday Train \u2014 a tradition that started as a simple way to keep neighbours warm during the festivities, while raising food and funds for the SHARE Food Bank. For the last three years, Baek\u2019s kids have joined in to help serve \u2014 a natural way, she says, for them to learn the value of giving back. \"Seeing hundreds of families bundle up, enjoy hot chili, and celebrate together is pure magic.\"",
+      "Involving her kids directly in community work is the family tradition Baek says she\u2019s most proud of. Whether they\u2019re volunteering or cooking together, she wants them to understand why a strong community matters \u2014 and how everyone can contribute.",
+      "Born and raised in Korea, Baek calls her heritage her foundation. \"My Korean roots are my foundation \u2014 they gave me my work ethic, resilience, and a deep-seated belief that food is the ultimate love language.\" At home, she makes sure her kids speak Korean so they stay connected to their roots. At Pasta Polo, that warmth lets her share a piece of her heritage while building bridges across our multicultural community.",
+      "Baek\u2019s work extends well past the kitchen. As Second Vice President of the BC Chefs Association, she hopes to champion mentorship, food security, and BC\u2019s local food ecosystem \u2014 opening doors for emerging culinary talent and advocating for sustainable local sourcing. And after moving to Port Moody, she joined the board of the Port Moody Heritage Society. \"To truly love a community, you have to honor its roots,\" she says, describing it as a way to help bridge the city\u2019s rich past with its diverse, growing future.",
+      "The recognition has followed. Baek was named Tri-Cities Chamber Member of the Year and recognized by local leaders Paul Choi and Bonita Zarrillo. Building a business as an immigrant comes with plenty of hustle, she says, and the honours felt like \"a massive warm hug\" \u2014 proof that the late nights and community heart poured into Pasta Polo truly resonate with people.",
+      "Baek\u2019s goal is to ensure Pasta Polo remains a true community staple for years to come \u2014 continuing to innovate with seasonal dishes, support local artists, and host collaborative events that bring neighbours together around the table.",
+      "And at home? Her favourite cooking is a comforting Korean soup \u2014 though honestly, she says, her favourite meals are the ones her kids cook. Jason makes an incredible steak, and Alyssa makes a fantastic burrata salad. \"They are both very good cooks!\"",
+      "Watching how former owner Fred Soofi gives back to his community, Baek is still paying that generosity forward \u2014 one bowl of chili, one neighbour at a time.",
     ]
   }
 
