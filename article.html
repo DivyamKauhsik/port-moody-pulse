@@ -175,8 +175,7 @@ var PMP_REDIRECTS = {
  "northpoint": "/stories/north-point-brewing-just-opened-on-brewers-row.html",
  "mariat": "/stories/why-not-me.html",
  "ashney": "/stories/the-art-heart-and-heritage-of-ashney-artisan.html",
- "ahyoung": "/stories/ahyoung-baek-is-cooking-up-a-legacy-in.html",
- "juraj": "/stories/saint-st-grill-port-moody-chef-juraj-dado.html"
+ "ahyoung": "/stories/ahyoung-baek-is-cooking-up-a-legacy-in.html"
 };
 (function(){var s=new URLSearchParams(window.location.search).get('slug');if(s&&PMP_REDIRECTS[s]){window.location.replace(PMP_REDIRECTS[s]);}})();
 </script>
@@ -226,6 +225,18 @@ var PMP_REDIRECTS = {
       <p>This story may have moved, or the link is out of date.</p>
       <a class="btn" href="/">← Back to Port Moody Pulse</a>
     </div>
+
+    <div id="art-embargo" class="notfound" hidden>
+      <h1 id="art-embargo-title">This story is for subscribers first</h1>
+      <p>It publishes on the website <strong id="art-embargo-date">soon</strong>. Newsletter subscribers already have it in their inbox.</p>
+      <form data-form="embargo" novalidate style="max-width:420px;margin:22px auto;">
+        <label class="vh" for="email-embargo">Email address</label>
+        <input id="email-embargo" type="email" placeholder="you@email.com" autocomplete="email" inputmode="email" style="width:100%;font-size:16px;border:1.5px solid var(--field-border);border-radius:11px;padding:13px 14px;margin-bottom:10px;">
+        <button type="button" data-subscribe="embargo" class="btn" style="border:none;cursor:pointer;">Subscribe free →</button>
+      </form>
+      <p class="msg" data-msg="embargo" role="status" aria-live="polite"></p>
+      <p style="margin-top:18px;"><a href="/">← Back to Port Moody Pulse</a></p>
+    </div>
   </div>
 </main>
 
@@ -254,6 +265,19 @@ var PMP_REDIRECTS = {
 
     if(!data){
       missing.hidden = false;
+      return;
+    }
+    // Embargo: the story lives in the newsletter first and reaches the
+    // website a week later. Show a subscribe gate, not the story.
+    var today = new Date().toISOString().slice(0, 10);
+    if(data.liveDate && data.liveDate > today){
+      var emb = document.getElementById('art-embargo');
+      emb.hidden = false;
+      document.title = data.title + ' — Port Moody Pulse';
+      document.getElementById('art-embargo-title').textContent = data.title;
+      var d = new Date(data.liveDate + 'T12:00:00');
+      document.getElementById('art-embargo-date').textContent =
+        d.toLocaleDateString('en-CA', {month: 'long', day: 'numeric'});
       return;
     }
     found.hidden = false;
