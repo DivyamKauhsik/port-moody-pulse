@@ -45,7 +45,7 @@
         "description": "Port\u00A0Moody Pulse is an independent community newsletter covering local news, events, and city council decisions in Port\u00A0Moody, British Columbia, Canada.",
         "foundingDate": "2026",
         "areaServed": {"@type":"City","name":"Port\u00A0Moody","containedInPlace":{"@type":"AdministrativeArea","name":"British Columbia, Canada"}},
-        "sameAs": ["https://www.instagram.com/portmoodypulse","https://www.facebook.com/portmoodypulse"],
+        "sameAs": ["https://www.instagram.com/portmoodypulse","https://www.facebook.com/people/Portmoodypulse/61591458271712/"],
         "contactPoint": {"@type":"ContactPoint","contactType":"editorial","email":"portmoodypulse@gmail.com"}
       },
       {
@@ -218,6 +218,16 @@
     .archive-band h2{font-family:var(--serif);font-size:clamp(30px,3.6vw,44px);line-height:1.08;margin:12px 0 10px}
     .archive-band p{color:color-mix(in srgb,var(--inverse) 78%,transparent);margin:0;max-width:560px}
     .archive-band .button{background:var(--gold);color:#142f2c;flex:none}
+    .social-band{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:46px 0}
+    .social-inner{display:flex;justify-content:space-between;align-items:center;gap:28px}
+    .social-inner h2{font-family:var(--serif);font-size:clamp(24px,3vw,32px);margin:8px 0 6px;letter-spacing:-.02em}
+    .social-inner p{color:var(--ink-soft);margin:0}
+    .social-btns{display:flex;gap:12px;flex:none;flex-wrap:wrap}
+    .social-btn svg{width:18px;height:18px;flex:none}
+    .footer-social{display:flex;gap:14px;align-items:center}
+    .footer-social a{display:inline-flex;color:var(--ink-soft)}
+    .footer-social a:hover{color:var(--teal)}
+    .footer-social svg{width:20px;height:20px}
     .archive-band .button:hover{background:#d99a37}
     .quiz-slim{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 26px;display:flex;align-items:center;gap:26px;box-shadow:var(--shadow)}
     .quiz-slim-art{flex:none;width:120px;height:84px;border-radius:10px;overflow:hidden;background:var(--surface-soft)}
@@ -286,6 +296,7 @@
       .sponsor-card{padding:32px 26px;gap:28px}.sponsor-note{border-left:0;border-top:1px solid var(--line);padding:24px 0 0}
       .final{padding:62px 0 92px}.final-inner{gap:32px}
       .footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}
+      .social-inner{flex-direction:column;align-items:flex-start}
       .sticky-copy span{display:none}
     }
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sticky{transition:none}}
@@ -473,6 +484,20 @@
       </div>
     </section>
 
+    <section class="social-band" aria-label="Follow Port Moody Pulse">
+      <div class="wrap social-inner">
+        <div>
+          <div class="tag">Follow the Pulse</div>
+          <h2>Port Moody, in your feed too.</h2>
+          <p>Story teasers, behind-the-scenes, and the city as we see it.</p>
+        </div>
+        <div class="social-btns">
+          <a class="button social-btn" href="https://www.instagram.com/portmoodypulse" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram</a>
+          <a class="button social-btn" href="https://www.facebook.com/people/Portmoodypulse/61591458271712/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a>
+        </div>
+      </div>
+    </section>
+
     <section class="final">
       <div class="wrap final-inner">
         <div>
@@ -500,6 +525,10 @@
         <a href="/events.html">Events</a>
         <a href="/about.html">About</a>
         <a href="/submit.html">Submit a tip</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/portmoodypulse" target="_blank" rel="noopener noreferrer" aria-label="Port Moody Pulse on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://www.facebook.com/people/Portmoodypulse/61591458271712/" target="_blank" rel="noopener noreferrer" aria-label="Port Moody Pulse on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       </div>
     </div>
   </footer>
