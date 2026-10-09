@@ -468,7 +468,7 @@ window.PMP_ARTICLES = {
 
   juraj: {
     page: "saint-st-grill-port-moody-chef-juraj-dado",
-    liveDate: "2026-10-09",
+    liveDate: "2026-10-16",
     related: ["ahyoung"],
     keywords: ["Saint St Grill", "Port Moody restaurants"],
     tag: "Community \u00b7 People",
