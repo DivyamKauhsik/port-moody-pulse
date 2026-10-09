@@ -329,6 +329,10 @@ var PMP_REDIRECTS = {
     }
     found.hidden = false;
     document.title = data.title + ' — Port Moody Pulse';
+    if(data.desc){
+      var md = document.querySelector('meta[name="description"]');
+      if(md) md.setAttribute('content', data.desc);
+    }
     document.getElementById('art-tag').textContent = data.tag;
     document.getElementById('art-title').textContent = data.title;
     document.getElementById('art-meta').textContent = data.meta;
