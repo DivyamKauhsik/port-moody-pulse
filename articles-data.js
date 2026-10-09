@@ -212,6 +212,7 @@ window.PMP_ARTICLES = {
   },
 
   election: {
+    page: "the-official-candidate-list-and-how-to-vote",
     tag: "City Hall \u00B7 Election 2026",
     title: "Port Moody Election 2026: Candidates and How to Vote",
     desc: "Port Moody votes October 17, 2026. Full candidate list for mayor, council and school trustee, plus advance voting dates, locations and mail ballots.",
@@ -358,6 +359,7 @@ window.PMP_ARTICLES = {
   },
 
   bosafoods: {
+    page: "a-grocery-store-is-finally-coming-to-st",
     tag: "Good News \u00B7 Development",
     title: "Bosa Foods Is Coming to St. Johns Street in Port Moody",
     desc: "Bosa Foods is bringing a 9,500 sq ft specialty grocery store to St. Johns & Queens in Port Moody. Construction status, timeline and what to expect.",
@@ -393,6 +395,7 @@ window.PMP_ARTICLES = {
   },
 
   matsuzushi: {
+    page: "matsuzushi-is-back-under-new-ownership-same-soul",
     tag: "Good News \u00B7 Food",
     title: "Matsuzushi Is Back in Port Moody: New Owner, Same Sushi",
     desc: "Matsuzushi reopened September 4 under new owner Kodai Hattori at 3130 St. Johns Street. Menu, prices, hours and what regulars should know.",
@@ -441,6 +444,10 @@ window.PMP_ARTICLES = {
   },
 
   ahyoung: {
+    page: "ahyoung-baek-is-cooking-up-a-legacy-in",
+    liveDate: "2026-10-02",
+    related: ["juraj"],
+    keywords: ["Pasta Polo", "Coquitlam restaurants"],
     tag: "Community \u00b7 People",
     title: "Pasta Polo Coquitlam: Chef Ahyoung Baek's Story",
     desc: "Pasta Polo in Coquitlam is known for fresh pasta and brick-oven pizza. Meet chef-owner Ahyoung Baek, who turned it into the Tri-Cities' community living room.",
@@ -460,6 +467,10 @@ window.PMP_ARTICLES = {
   },
 
   juraj: {
+    page: "saint-st-grill-port-moody-chef-juraj-dado",
+    liveDate: "2026-10-09",
+    related: ["ahyoung"],
+    keywords: ["Saint St Grill", "Port Moody restaurants"],
     tag: "Community \u00b7 People",
     title: "Saint St Grill Port Moody: Chef Juraj Dado's Story",
     desc: "Saint St Grill has anchored Port Moody since 1998. Meet chef-owner Juraj Dado, who bought the restaurant to keep it exactly what it is.",
