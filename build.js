@@ -321,7 +321,7 @@ for (const p of pages) {
   const mapJs = 'var PMP_REDIRECTS = ' + JSON.stringify(liveMap, null, 1) + ';';
   const redirectJs = `<script>\n${mapJs}\n(function(){var s=new URLSearchParams(window.location.search).get('slug');if(s&&PMP_REDIRECTS[s]){window.location.replace(PMP_REDIRECTS[s]);}})();\n</script>`;
   // Remove any previously injected redirect blocks (idempotent: one block, always fresh)
-  h = h.replace(/<script>\nvar PMP_REDIRECTS = \{[\s\S]*?\n<\/script>/g, '');
+  h = h.replace(/\n<script>\nvar PMP_REDIRECTS = \{[\s\S]*?\n<\/script>/g, '');
   h = h.replace('</head>', redirectJs + '\n</head>');
   // point the injected schema at the new canonical URL
   h = h.replace(/"url": "https:\/\/portmoodypulse\.ca\/article\.html\?slug=" \+ slug,/,
