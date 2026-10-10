@@ -475,25 +475,7 @@ window.PMP_ARTICLES = {
     title: "Saint St Grill Port Moody: Chef Juraj Dado's Story",
     desc: "Saint St Grill has anchored Port Moody since 1998. Meet chef-owner Juraj Dado, who bought the restaurant to keep it exactly what it is.",
     meta: "By Divyam Kaushik \u00b7 5 min read",
-    body: [
-      "Juraj Dado was celebrating his birthday at Cultus Lake when the phone rang. Saint St Grill, the Port Moody dining room he had just applied to as sous chef, wanted him in for an interview. He went. He applied for sous chef and walked out as head chef.",
-      "That was a few years ago. In 2023, when the owner decided to retire and buyers started circling, Dado heard that one of them wanted to turn the place into something completely different. He went to Jay and asked a simple question: how much?",
-      "“I couldn't let that happen,” he says. “Saint St Grill is one of a kind.”",
-      "Dado was born in Slovakia, and food was the family trade in the ways that matter. His mother cooked every meal at home, every day. His grandfather was a baker. He started working in kitchens at 16, travelled, and at 23 moved to London, where he cooked alongside some of the best chefs in the world. One of the kitchens was Murano, then part of Gordon Ramsay's group and later taken over by Angela Hartnett.",
-      "“Pubs, catering, private dining rooms, fine dining restaurants,” he says. “I collected knowledge and experience everywhere I went. Then I added a bit of myself, and that's my style of cooking.”",
-      "Life, he says honestly, is what brought him to Port Moody. He was head chef at Bishops in Vancouver, going through difficult times, and the commute from Port Coquitlam was long. He took a job at a new restaurant opening in Coquitlam. The owners were excited about his ideas. Then one morning he showed up and the doors were closed for good.",
-      "A couple of weeks later, COVID hit.",
-      "When restaurants started opening again after the lockdowns, he saw the Saint St Grill posting. Jay, the owner and the face of the place for years, called him in. The rest is the birthday phone call.",
-      "Saint St Grill has been part of Port Moody since 1998. When Dado took ownership, he changed almost nothing, and that was the point.",
-      "“People come here for what it is, and they love that it's unique,” he says. He added more light over the tables so guests can actually see their food. The cooking had already been his since day one, because Jay always gave him free rein with his hands and his ideas.",
-      "One of his first ideas as owner was a Chef's Table. It didn't catch on the way he'd hoped, so he let it go and built something else instead: a tasting menu available every night. It started at five courses, got popular, and is now seven, with an optional wine pairing. The menu turns with the seasons, three or four times a year; for vegetables and fresh herbs, Barnston Island Farm is one of his favourite local suppliers.",
-      "Guests mention Lyn by name, and there's a reason. She's Dado's wife, his biggest supporter, and, as he puts it, she's in this with him. She builds the wine list, creates the cocktails, never hesitates when there's cleaning to be done, and she's lovely with the guests. She'd never worked in a restaurant before.",
-      "“She's learned so much and she's still learning,” he says. “She always gives guests her very best, even when that isn't easy, and I really admire her for that. I hide in the kitchen so I don't have to do what she does!”",
-      "The restaurant is closed Mondays, which is Dado's one night off. Mostly he eats at home: good homemade food and quality time with his kids. When the family does go out, they like Originals Cafe Mexicano, just down the street. They've tried Nova a couple of times. And they visit Pasta Polo in Coquitlam, because the chef-owner is a good friend. That's Ahyoung Baek, who suggested this story.",
-      "Asked about the hardest part of running a neighbourhood restaurant, he doesn't romanticize it. Long days, long weeks, some days you love it and some days you hate it. “It's a lifestyle, and it's been a priceless experience. The most important thing is that you have to love what you do. When you do, it gives you that extra motivation on the rough days.”",
-      "And Port Moody's food scene, with restaurants always coming and going? He thinks that's a good thing. More options, and people get to decide who deserves their business.",
-      "He'd know. When Saint St Grill could have become something else, he made sure it stayed itself.",
-    ]
+    body: [],
   }
 
 };
