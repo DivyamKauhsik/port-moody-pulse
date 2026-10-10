@@ -19,6 +19,16 @@ global.window = {};
 eval(fs.readFileSync(path.join(SITE, 'articles-data.js'), 'utf8'));
 const ARTICLES = window.PMP_ARTICLES;
 
+// Embargoed bodies live in a LOCAL-ONLY file (never deployed) so the
+// public articles-data.js can't leak newsletter-first stories.
+try {
+  eval(fs.readFileSync(path.join(SITE, 'articles-embargoed.js'), 'utf8'));
+  for (const k of Object.keys(window.PMP_EMBARGOED || {})) {
+    if (ARTICLES[k]) ARTICLES[k].body = window.PMP_EMBARGOED[k];
+  }
+  console.log('embargoed bodies merged:', Object.keys(window.PMP_EMBARGOED || {}).join(', ') || 'none');
+} catch (e) { console.log('no embargoed file'); }
+
 // ---------- 2. Descriptive slugs ----------
 function slugify(title) {
   return title.normalize('NFD').replace(/[̀-ͯ]/g, '')
@@ -264,6 +274,137 @@ ${more}
 `;
 }
 
+// Subscribe-gate page for embargoed (newsletter-first) stories.
+// Same URL as the future story; swaps to the full article automatically
+// once liveDate passes. No body text here, and noindex so search engines
+// never see the gate.
+function gatePage(old) {
+  const a = ARTICLES[old];
+  const dslug = slugMap[old];
+  const url = `${ORIGIN}/stories/${dslug}.html`;
+  const desc = a.desc ? String(a.desc).replace(/\s+/g, ' ').trim() : a.title;
+  const title = `${a.title} — Port Moody Pulse`;
+  const d = new Date((a.liveDate || '') + 'T12:00:00');
+  const liveStr = isNaN(d) ? 'soon' : d.toLocaleDateString('en-CA', { month: 'long', day: 'numeric' });
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G0YECLVEMJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-G0YECLVEMJ');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>${escAttr(title)}</title>
+<meta name="description" content="${escAttr(desc)}">
+<link rel="canonical" href="${url}">
+${FAVICON_LINKS}
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Port Moody Pulse">
+<meta property="og:title" content="${escAttr(a.title)}">
+<meta property="og:description" content="${escAttr(desc)}">
+<meta property="og:url" content="${url}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>${css}
+  .gate{max-width:640px;margin:0 auto;text-align:center;padding:40px 0;}
+  .gate h1{font-family:var(--fd);font-size:clamp(28px,4vw,40px);margin:14px 0 12px;letter-spacing:-.02em;}
+  .gate .lede{color:var(--ink-soft);font-size:17px;margin-bottom:8px;}
+  .gate .livein{display:inline-block;background:var(--gold-soft,#fdf3e0);border:1px solid var(--gold);border-radius:999px;padding:8px 18px;font-weight:700;margin:14px 0 6px;}
+  .gate form{display:flex;gap:10px;max-width:440px;margin:22px auto 0;}
+  .gate input{flex:1;font-size:16px;border:1.5px solid var(--field-border);border-radius:11px;padding:13px 14px;}
+  .gate button{border:0;background:var(--teal);color:#fff;font-weight:800;border-radius:11px;padding:13px 20px;cursor:pointer;}
+  .gate .msg{min-height:24px;margin-top:10px;}
+  .gate .alt{margin-top:26px;font-size:15px;color:var(--mist);}
+  .gate .alt a{color:var(--inlet);font-weight:600;}
+  @media(max-width:560px){.gate form{flex-direction:column;}}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="hwrap">
+    <a class="brand" href="/" aria-label="Port Moody Pulse home">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="#15706E"/><path d="M28.2 54.5 L37.2 54.5 L39.8 54.5 L42 47 L44.4 61.2 L46.6 54.5 Q50.3 46.8 54 54.5 Q57.7 62.2 61.4 54.5 Q65.1 47 68.8 54.5 L71.8 54.5" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="word">Port Moody <b>Pulse</b></span>
+    </a>
+    <a class="back" href="/">← Back to Port Moody Pulse</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> · <a href="/#latest">Latest stories</a></nav>
+    <div class="gate">
+      <span class="tag">${esc(a.tag)}</span>
+      <h1>${esc(a.title)}</h1>
+      <p class="lede">${esc(desc)}</p>
+      <p class="lede"><strong>Subscribers read this one first.</strong> It publishes on the website ${esc(liveStr)} — newsletter readers already have it in their inbox.</p>
+      <span class="livein">Free on the website ${esc(liveStr)}</span>
+      <form data-form="gate" novalidate>
+        <label class="vh" for="email-gate">Email address</label>
+        <input id="email-gate" type="email" placeholder="you@email.com" autocomplete="email" inputmode="email">
+        <button type="button" data-subscribe="gate">Subscribe free →</button>
+      </form>
+      <p class="msg" data-msg="gate" role="status" aria-live="polite"></p>
+      <p class="alt">Can't wait? <a href="https://portmoodypulse.beehiiv.com/" target="_blank" rel="noopener">Read it in the newsletter archive →</a></p>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="fwrap">
+    <div>© 2026 Port Moody Pulse · An independent community newsletter.</div>
+    <div class="tagline">The heartbeat of Port Moody.</div>
+  </div>
+</footer>
+
+<script>
+  var EMAIL = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+  async function subscribe(which){
+    var form = document.querySelector('[data-form="'+which+'"]');
+    var input = form.querySelector('input[type="email"]');
+    var button = form.querySelector('[data-subscribe]');
+    var email = input ? input.value.trim() : '';
+    var msg = document.querySelector('[data-msg="'+which+'"]');
+    if(!EMAIL.test(email)){
+      if(msg){ msg.textContent = 'Please enter a valid email address.'; }
+      if(input) input.focus();
+      return;
+    }
+    if(button){ button.disabled = true; button.textContent = 'Subscribing...'; }
+    if(msg){ msg.textContent = ''; }
+    try{
+      var response = await fetch('/api/subscribe', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ email: email })
+      });
+      var data = await response.json();
+      if(!response.ok || !data.ok) throw new Error(data.message || 'Something went wrong. Please try again.');
+      if(msg) msg.textContent = data.message || "You're on the list!";
+      if(input) input.value = '';
+    }catch(err){
+      if(msg){ msg.textContent = err.message || 'Something went wrong. Please try again.'; }
+    }finally{
+      if(button){ button.disabled = false; button.textContent = 'Subscribe free →'; }
+    }
+  }
+  document.querySelectorAll('[data-subscribe]').forEach(function(b){
+    b.addEventListener('click', function(e){ e.preventDefault(); subscribe(b.getAttribute('data-subscribe')); });
+  });
+</script>
+</body>
+</html>
+`;
+}
+
 fs.mkdirSync(path.join(SITE, 'stories'), { recursive: true });
 // Only rewrite a page when its content actually changed (ignoring dateModified),
 // so untouched stories keep their original modified date instead of churning weekly.
@@ -275,15 +416,23 @@ function writeIfChanged(fp, content) {
   fs.writeFileSync(fp, content);
   return true;
 }
-let written = 0, skipped = [], unchanged = 0;
+let written = 0, skipped = [], unchanged = 0, gated = 0;
 for (const old of Object.keys(ARTICLES)) {
-  if (!isLive(old)) { skipped.push(old); continue; }
   const dslug = slugMap[old];
+  if (!isLive(old)) {
+    // Embargoed: publish a subscribe-gate at the canonical URL (noindex),
+    // so the link works now and becomes the full story automatically later.
+    if (writeIfChanged(path.join(SITE, 'stories', `${dslug}.html`), gatePage(old))) written++;
+    else unchanged++;
+    gated++;
+    skipped.push(old);
+    continue;
+  }
   if (writeIfChanged(path.join(SITE, 'stories', `${dslug}.html`), storyPage(old))) written++;
   else unchanged++;
 }
 console.log(`story pages: ${written} written, ${unchanged} unchanged` +
-  (skipped.length ? `, embargoed: ${skipped.join(', ')}` : ''));
+  (skipped.length ? `, embargoed (gated): ${skipped.join(', ')}` : ''));
 
 // ---------- 6. Update favicon links + home links in existing pages ----------
 const pages = ['index.html', 'about.html', 'article.html', 'coffee-quiz.html'];
