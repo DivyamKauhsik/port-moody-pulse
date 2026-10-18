@@ -174,6 +174,17 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
 .js .race .cards .card{display:none}
 .js .race .cards .card.open{display:block;animation:cardIn .28s ease}
 @keyframes cardIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+/* what's at stake */
+.stakes{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:44px 0 50px}
+.stakes h2{font-family:var(--serif);font-size:clamp(26px,3vw,36px);letter-spacing:-.02em;margin:0 0 10px}
+.stakes-lede{font-size:16.5px;color:var(--ink-soft);max-width:720px;margin:0 0 26px;line-height:1.6}
+.stakes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stake{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:20px 20px 22px}
+.stake h3{font-family:var(--serif);font-size:20px;margin:0 0 8px;color:var(--teal-2)}
+.stake h3::before{content:"";display:block;width:26px;height:3px;background:var(--gold);margin-bottom:10px}
+.stake p{margin:0;font-size:14.5px;color:var(--ink-soft);line-height:1.6}
+@media(max-width:900px){.stakes-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.stakes-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -198,6 +209,7 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
     <div class="kdate"><strong>Oct 16&ndash;21</strong> — Advance voting (8am&ndash;8pm)</div>
     <div class="kdate"><strong>Oct 18</strong> — Mail ballot request deadline (today)</div>
     <div class="kdate"><strong>Oct 24</strong> — Final voting day (8am&ndash;8pm)</div>
+    <div class="kdate" id="countdown" style="border-color:var(--gold);background:#fdf6e7"><strong>—</strong></div>
   </div>
 </div></header>
 
@@ -222,6 +234,16 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 60px}
   <div class="how-cell"><span class="n">ii.</span><h3>What ID to bring</h3><p>Bring <strong>one</strong> piece of photo ID (BC driver&rsquo;s licence, BCID, or photo BC Services Card), <strong>or</strong> two documents with your name (at least one showing your current address), <strong>or</strong> have another voter vouch for you. Full list at elections.bc.ca.</p></div>
   <div class="how-cell"><span class="n">iii.</span><h3>No endorsements</h3><p>Candidates appear alphabetically by surname: Chou, Glumac, McEwen, Rawji. Facts come from official sources, and nothing here is a recommendation. Port Moody Pulse does not endorse candidates.</p></div>
 </div></div>
+<section class="stakes"><div class="wrap">
+  <h2>What&rsquo;s at stake for Port Moody</h2>
+  <p class="stakes-lede">The municipal election decided who runs City Hall. This one decides who fights for Port Moody in Victoria &mdash; and the province controls the files that shape daily life here:</p>
+  <div class="stakes-grid">
+    <div class="stake"><h3>Schools</h3><p>The province funds and builds schools. Several Port Moody schools are over capacity, and the MLA lobbies for capital dollars and new classrooms.</p></div>
+    <div class="stake"><h3>Housing rules</h3><p>Victoria sets the housing targets and the rules &mdash; multiplexes on single-family lots, density near SkyTrain &mdash; that determine what Port Moody must allow.</p></div>
+    <div class="stake"><h3>Health care</h3><p>Hospitals and emergency rooms are provincially run. Eagle Ridge Hospital serves the Tri-Cities, and its funding is a provincial decision.</p></div>
+    <div class="stake"><h3>Getting around</h3><p>TransLink funding, SkyTrain service levels, and major road investments all run through the provincial budget.</p></div>
+  </div>
+</div></section>
 <nav class="race-nav"><div class="wrap">
   <a href="#port-moody-burquitlam">Port Moody-Burquitlam</a>
 </div></nav>
@@ -438,6 +460,24 @@ function openHash(){
 }
 openHash();
 window.addEventListener('hashchange',openHash);
+})();
+
+/* election-day countdown: polls close Sat Oct 24, 2026 8:00 PM PT */
+(function(){
+var el=document.getElementById('countdown');
+if(!el)return;
+var target=new Date('2026-10-24T20:00:00-07:00').getTime();
+function tick(){
+  var ms=target-Date.now();
+  if(ms<=0){el.innerHTML='<strong>Polls are closed</strong> — results soon';return;}
+  var d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4);
+  var parts=[];
+  if(d>0)parts.push(d+(d===1?' day':' days'));
+  parts.push(h+(h===1?' hr':' hrs'));
+  if(d===0)parts.push(m+(m===1?' min':' mins'));
+  el.innerHTML='<strong>'+parts.join(' ')+'</strong> until polls close';
+}
+tick();setInterval(tick,60000);
 })();
 </script>
 </body>
