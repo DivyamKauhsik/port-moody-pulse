@@ -229,6 +229,7 @@ ${more}
 
 <footer class="site">
   <div class="fwrap">
+    <nav aria-label="Explore Port Moody Pulse" style="margin-bottom:14px;font-size:14.5px;line-height:2"><a href="/events.html" style="color:inherit;text-decoration:underline">Events</a> · <a href="/archive.html" style="color:inherit;text-decoration:underline">All stories</a> · <a href="/about.html" style="color:inherit;text-decoration:underline">About</a> · <a href="/advertise.html" style="color:inherit;text-decoration:underline">Advertise</a></nav>
     <div>© 2026 Port Moody Pulse · An independent community newsletter.</div>
     <div class="tagline">The heartbeat of Port Moody.</div>
   </div>
@@ -360,6 +361,7 @@ ${FAVICON_LINKS}
 
 <footer class="site">
   <div class="fwrap">
+    <nav aria-label="Explore Port Moody Pulse" style="margin-bottom:14px;font-size:14.5px;line-height:2"><a href="/events.html" style="color:inherit;text-decoration:underline">Events</a> · <a href="/archive.html" style="color:inherit;text-decoration:underline">All stories</a> · <a href="/about.html" style="color:inherit;text-decoration:underline">About</a> · <a href="/advertise.html" style="color:inherit;text-decoration:underline">Advertise</a></nav>
     <div>© 2026 Port Moody Pulse · An independent community newsletter.</div>
     <div class="tagline">The heartbeat of Port Moody.</div>
   </div>
@@ -495,7 +497,12 @@ for (const old of Object.keys(ARTICLES)) {
 }
 sm += urlEntry(`${ORIGIN}/about.html`, '2026-09-19', 'monthly', '0.8');
 sm += urlEntry(`${ORIGIN}/coffee-quiz.html`, '2026-09-19', 'monthly', '0.6');
+sm += urlEntry(`${ORIGIN}/events.html`, TODAY, 'weekly', '0.9');
+sm += urlEntry(`${ORIGIN}/voter-guide-provincial.html`, '2026-10-18', 'weekly', '0.9');
+sm += urlEntry(`${ORIGIN}/voter-guide.html`, '2026-10-18', 'monthly', '0.8');
+sm += urlEntry(`${ORIGIN}/archive.html`, TODAY, 'weekly', '0.7');
+sm += urlEntry(`${ORIGIN}/advertise.html`, '2026-09-19', 'monthly', '0.5');
 sm += `\n\n</urlset>\n`;
 fs.writeFileSync(path.join(SITE, 'sitemap.xml'), sm);
-console.log('sitemap.xml rewritten with', smCount + 4, 'urls');
+console.log('sitemap.xml rewritten with', smCount + 9, 'urls');
 console.log('DONE');
