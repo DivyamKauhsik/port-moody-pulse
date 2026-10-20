@@ -516,3 +516,5 @@ sm += `\n\n</urlset>\n`;
 fs.writeFileSync(path.join(SITE, 'sitemap.xml'), sm);
 console.log('sitemap.xml rewritten with', smCount + 10, 'urls');
 console.log('DONE');
+
+// deploy nudge 2026-10-20: pick up index.html footer link (moving-to-port-moody)
