@@ -125,6 +125,7 @@ function storyPage(old) {
     },
     url, mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     ...(known ? { datePublished: known } : {}),
+    ...(a.img ? { image: [`${ORIGIN}${a.img.src}`] } : {}),
     dateModified: TODAY,
     inLanguage: 'en-CA',
     isAccessibleForFree: true,
@@ -155,8 +156,8 @@ ${FAVICON_LINKS}
 <meta property="og:site_name" content="Port Moody Pulse">
 <meta property="og:title" content="${escAttr(a.title)}">
 <meta property="og:description" content="${escAttr(desc)}">
-<meta property="og:url" content="${url}">
-<meta name="twitter:card" content="summary">
+<meta property="og:url" content="${url}">${a.img ? `\n<meta property="og:image" content="${ORIGIN}${a.img.src}">\n<meta name="twitter:image" content="${ORIGIN}${a.img.src}">` : ''}
+<meta name="twitter:card" content="${a.img ? 'summary_large_image' : 'summary'}">
 <meta name="twitter:title" content="${escAttr(a.title)}">
 <meta name="twitter:description" content="${escAttr(desc)}">
 <script type="application/ld+json">
@@ -168,6 +169,10 @@ ${JSON.stringify(ld, null, 2)}
 <style>${css}
   .crumbs{font-size:12.5px;color:var(--mist);margin-bottom:18px;}
   .crumbs a{color:var(--mist);text-decoration:underline;}
+  .hero{margin:24px 0 10px;}
+  .hero img{width:100%;height:auto;display:block;border-radius:12px;}
+  .hero figcaption{font-size:12.5px;color:var(--mist);margin-top:8px;}
+  .hero figcaption a{color:var(--mist);text-decoration:underline;}
   .more{margin-top:52px;border-top:1px solid var(--line);padding-top:26px;}
   .more h2{font-family:var(--fd);font-size:21px;font-weight:600;margin-bottom:12px;}
   .more ul{list-style:none;}
@@ -201,7 +206,11 @@ ${JSON.stringify(ld, null, 2)}
     <article>
       <span class="tag">${esc(a.tag)}</span>
       <h1>${esc(a.title)}</h1>
-      <p class="meta">${esc(a.meta)}</p>
+      <p class="meta">${esc(a.meta)}</p>${a.img ? `
+      <figure class="hero">
+        <img src="${a.img.src}" alt="${escAttr(a.img.alt || a.title)}">${a.img.credit ? `
+        <figcaption>Photo: ${a.img.creditUrl ? `<a href="${a.img.creditUrl}" target="_blank" rel="noopener">${esc(a.img.credit)}</a>` : esc(a.img.credit)}</figcaption>` : ''}
+      </figure>` : ''}
       <div class="art-body">
 ${paras}
       </div>
@@ -502,7 +511,8 @@ sm += urlEntry(`${ORIGIN}/voter-guide-provincial.html`, '2026-10-18', 'weekly', 
 sm += urlEntry(`${ORIGIN}/voter-guide.html`, '2026-10-18', 'monthly', '0.8');
 sm += urlEntry(`${ORIGIN}/archive.html`, TODAY, 'weekly', '0.7');
 sm += urlEntry(`${ORIGIN}/advertise.html`, '2026-09-19', 'monthly', '0.5');
+sm += urlEntry(`${ORIGIN}/moving-to-port-moody.html`, '2026-09-28', 'monthly', '0.8');
 sm += `\n\n</urlset>\n`;
 fs.writeFileSync(path.join(SITE, 'sitemap.xml'), sm);
-console.log('sitemap.xml rewritten with', smCount + 9, 'urls');
+console.log('sitemap.xml rewritten with', smCount + 10, 'urls');
 console.log('DONE');
