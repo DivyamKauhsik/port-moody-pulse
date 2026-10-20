@@ -494,3 +494,187 @@ window.PMP_ARTICLES = {
   },
 
 };
+
+// Hero images wired 2026-10-20 (subject-provided photos + site library).
+const PMP_IMG = {
+  ming:      { src: "/images/ming-louie-stein.png", alt: "Portrait of Ming Louie-Stein", credit: "Courtesy of Ming Louie-Stein" },
+  cobbler:   { src: "/images/steve-cobbler.png", alt: "Steve, the last cobbler on Murray Street in Port Moody", credit: "Courtesy of the subject" },
+  fredsoofi: { src: "/images/fred-soofi.png", alt: "Fred Soofi, who saved a piece of Port Moody's history", credit: "Courtesy of Fred Soofi" },
+  cathycena: { src: "/images/cathy-cena.png", alt: "Cathy Cena in Port Moody", credit: "Courtesy of Cathy Cena" },
+  mariat:    { src: "/images/mariat-jibril.jpg", alt: "Mariat Jibril in Port Moody", credit: "Courtesy of Mariat Jibril" },
+  ashney:    { src: "/images/ashney-rebello.jpg", alt: "Ashney Rebello of Ashney Artisan in Port Moody", credit: "Courtesy of Ashney Rebello" },
+  ahyoung:   { src: "/images/ahyoung-baek.jpg", alt: "Chef Ahyoung Baek of Pasta Polo in Coquitlam", credit: "Courtesy of Ahyoung Baek" },
+  juraj:     { src: "/images/juraj-dado.jpg", alt: "Chef Juraj Dado of Saint St Grill in Port Moody", credit: "Courtesy of Juraj Dado" },
+  trails:    { src: "/images/burrard-inlet-sailboats.jpg", alt: "Sailboats on Burrard Inlet at Port Moody", credit: "Wikimedia Commons", creditUrl: "https://commons.wikimedia.org/wiki/File:Burrard_Inlet,_Port_Moody,_British_Columbia.jpg" },
+  portwood:  { src: "/images/stories/portwood-centre.jpg", alt: "The Portwood presentation centre on St. Johns Street in Port Moody", credit: "Port Moody Pulse" },
+  electionresults: { src: "/images/voter-guide-og.png", alt: "Port Moody Pulse voter guide", credit: "Port Moody Pulse" },
+  election:  { src: "/images/voter-guide-og.png", alt: "Port Moody Pulse voter guide", credit: "Port Moody Pulse" }
+};
+for (const k of Object.keys(PMP_IMG)) { if (window.PMP_ARTICLES[k]) window.PMP_ARTICLES[k].img = PMP_IMG[k]; }
+
+// Hero images batch 2 (2026-10-20): copyright-free stock, credited per image.
+const PMP_IMG2 = {
+  "inlet": {
+    "src": "/images/stories/inlet.jpg",
+    "alt": "A large construction site with several tower cranes and a concrete residential building frame rising under a blue sky.",
+    "credit": "Engin Akyurt / Pexels",
+    "creditUrl": "https://www.pexels.com/photo/tower-cranes-under-the-blue-sky-4170185/"
+  },
+  "towers": {
+    "src": "/images/stories/towers.jpg",
+    "alt": "A cluster of modern residential high-rise towers under a pale sky.",
+    "credit": "Ambient Walking / Pexels",
+    "creditUrl": "https://www.pexels.com/photo/residential-skyscrapers-in-city-17113690/"
+  },
+  "tax": {
+    "src": "/images/stories/tax.jpg",
+    "alt": "Port Moody City Hall on Newport Drive",
+    "credit": "Matthew Samuel Spurrell / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Port_Moody_City_Hall.png"
+  },
+  "spike": {
+    "src": "/images/stories/spike.jpg",
+    "alt": "Festival-goers relax on the grass of a park fairground, with tents and a grandstand in the background.",
+    "credit": "Lisa Fotios / Pexels",
+    "creditUrl": "https://www.pexels.com/photo/people-on-an-event-13230550/"
+  },
+  "overpass": {
+    "src": "/images/stories/overpass.jpg",
+    "alt": "Aerial view of a highway bridge construction site, with cranes and rebar work underway between two busy roadways.",
+    "credit": "Cầu Đường Việt Nam / Pexels",
+    "creditUrl": "https://www.pexels.com/photo/aerial-view-of-highway-bridge-construction-site-32598872/"
+  },
+  "mexicano": {
+    "src": "/images/stories/mexicano.jpg",
+    "alt": "Three tacos al pastor topped with diced onion and cilantro, served with salsa and lime wedges on a rustic wooden table.",
+    "credit": "Amy Farías / Pexels",
+    "creditUrl": "https://www.pexels.com/photo/cooked-food-on-brown-wooden-tray-7388095/"
+  },
+  "concerts": {
+    "src": "/images/stories/concerts.jpg",
+    "alt": "A band performs on a small outdoor stage in a park as low evening sun shines through the trees.",
+    "credit": "Nicolas Arroyo / Pexels",
+    "creditUrl": "https://www.pexels.com/photo/a-band-playing-music-in-a-park-in-summer-16803238/"
+  },
+  "volunteers": {
+    "src": "/images/stories/volunteers.jpg",
+    "alt": "Volunteers collect plastic litter into bags along a sandy shoreline during a cleanup.",
+    "credit": "Ron Lach / Pexels",
+    "creditUrl": "https://www.pexels.com/photo/people-on-beach-holding-white-sack-9035238/"
+  },
+  "dogparks": {
+    "src": "/images/stories/dogparks.jpg",
+    "alt": "Three dogs play together inside a fenced off-leash dog park.",
+    "credit": "gabesdotphotos photographer / Pexels",
+    "creditUrl": "https://www.pexels.com/photo/three-dogs-playing-together-11512316/"
+  },
+  "water": {
+    "src": "/images/stories/water.jpg",
+    "alt": "A lawn sprinkler sprays arcs of water over green grass, with trees behind.",
+    "credit": "Sóc Năng Động / Pexels",
+    "creditUrl": "https://www.pexels.com/photo/garden-sprinkler-watering-lush-green-lawn-37720375/"
+  },
+  "provincial": {
+    "src": "/images/stories/provincial.jpg",
+    "alt": "A newly built mid-rise apartment building with yellow balcony rails stands beside a tower crane, framed by trees.",
+    "credit": "Jakub Pabis / Pexels",
+    "creditUrl": "https://www.pexels.com/photo/crane-next-to-apartment-buildings-18082446/"
+  },
+  "artoutside": {
+    "src": "/images/stories/artoutside.jpg",
+    "alt": "Visitors gather around a large circular metal sculpture on a grassy waterfront park under a clear blue sky.",
+    "credit": "lange x / Pexels",
+    "creditUrl": "https://www.pexels.com/photo/tourists-at-large-metal-sculpture-on-sunny-day-32471570/"
+  },
+  "corus": {
+    "src": "/images/stories/corus.jpg",
+    "alt": "Two monumental figures of a moving metal kinetic sculpture, built from stacked steel rings, stand against a clear sky.",
+    "credit": "Artūras Kokorevas / Pexels",
+    "creditUrl": "https://www.pexels.com/photo/ali-and-nino-kinetic-sculpture-in-batumi-12030574/"
+  },
+  "ambassador": {
+    "src": "/images/stories/ambassador.jpg",
+    "alt": "A crowd gathers at an outdoor arts festival at night, with food stalls, flags and a lit stage in the background.",
+    "credit": "Shreveport-Bossier Convention and Tourist Bureau / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File%3AThe_Red_River_Revel_Arts_Festival%2C_Shreveport%2C_LA.jpg"
+  },
+  "belcarrafire": {
+    "src": "/images/stories/belcarrafire.jpg",
+    "alt": "Calm water below forested, snow-dusted mountains at Buntzen Lake, on Port Moody's doorstep.",
+    "credit": "Hubert Figuière / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File%3ABuntzen_Lake_Port_Moody.jpg"
+  },
+  "publicsafety": {
+    "src": "/images/stories/publicsafety.jpg",
+    "alt": "A marked RCMP Ford Crown Victoria police cruiser parked on a wet city street.",
+    "credit": "shankar s. / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File%3ARCMP_Ford_CVPI_near_Canadian_Parliament.jpg"
+  },
+  "iocoschool": {
+    "src": "/images/stories/iocoschool.jpg",
+    "alt": "A grey clapboard one-room heritage schoolhouse with a small bell tower, standing on a green lawn.",
+    "credit": "Greg Gjerdingen / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File%3ASchoolhouse-Dakota_City_Heritage_Village-01.jpg"
+  },
+  "francisco": {
+    "src": "/images/stories/francisco.jpg",
+    "alt": "Dozens of colourful piñatas hang from the balconies of a museum atrium during a piñata exhibition.",
+    "credit": "AlejandroLinaresGarcia / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File%3APi%C3%B1ataContestMAP2017_001.jpg"
+  },
+  "joymullen": {
+    "src": "/images/stories/joymullen.jpg",
+    "alt": "Inside a working artist's studio, walls covered floor to ceiling with paintings, portraits and framed artwork.",
+    "credit": "PattayaPatrol / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File%3ADZ6_0532_A_cozy_cluttered_art_studio_filled_with_paintings_framed_photos_easels_and_colorful_works_hung_from_walls_and_ceiling_inviting_creativity_around_every_corner.jpg"
+  },
+  "isaacgasangwa": {
+    "src": "/images/stories/isaacgasangwa.jpg",
+    "alt": "Dancers in vibrant traditional dress perform on stage alongside drummers during a Yoruba cultural performance.",
+    "credit": "4TO SPAIN / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File%3AYoruba_Cultural_Expression.jpg"
+  },
+  "jobssupport": {
+    "src": "/images/stories/jobssupport.jpg",
+    "alt": "Volunteers pack cardboard boxes with food on a conveyor line inside a food bank warehouse.",
+    "credit": "USDAgov / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File%3A20220919-DA-TEW-00501.jpg"
+  },
+  "panthers": {
+    "src": "/images/stories/panthers.jpg",
+    "alt": "Players chase the puck during a college ice hockey game in a packed arena.",
+    "credit": "Michael Barera / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File%3AWestern_Michigan_vs._Michigan_ice_hockey_2024_24_%28in-game_action%29.jpg"
+  },
+  "bosafoods": {
+    "src": "/images/stories/bosafoods.jpg",
+    "alt": "A bright grocery store produce aisle stacked with fresh vegetables and fruit.",
+    "credit": "Alabama Extension / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File%3AFruit_section_of_a_grocery_store.jpg"
+  },
+  "inletparkfieldhouse": {
+    "src": "/images/stories/inletparkfieldhouse.jpg",
+    "alt": "A new soccer stadium rises behind construction fencing and piles of excavated earth, with a crane overhead.",
+    "credit": "Joe Haupt from USA / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File%3AAllianz_Field_construction_c2018.jpg"
+  },
+  "libraryfees": {
+    "src": "/images/stories/libraryfees.jpg",
+    "alt": "Rows of wooden bookshelves filled with books in a public library reading area.",
+    "credit": "Asturio Cantabrio / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File%3AAzumino_Public_Central_Library_bookshelves_ac_%286%29.jpg"
+  },
+  "matsuzushi": {
+    "src": "/images/stories/matsuzushi.jpg",
+    "alt": "A slate platter of nigiri sushi and salmon sashimi with wasabi and pickled ginger on a restaurant table.",
+    "credit": "Mojmir Churavy / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File%3ASushi_Plate_in_Organic_Sushi_Prague_4.jpg"
+  },
+  "northpoint": {
+    "src": "/images/stories/northpoint.jpg",
+    "alt": "Stainless-steel fermenters stand behind the counter inside a craft brewery taproom.",
+    "credit": "Andy Li / Wikimedia Commons",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File%3AAt_the_counter_of_Beak_Brewery_Taproom_2026-05-29.jpg"
+  }
+};
+for (const k of Object.keys(PMP_IMG2)) { if (window.PMP_ARTICLES[k]) window.PMP_ARTICLES[k].img = PMP_IMG2[k]; }
