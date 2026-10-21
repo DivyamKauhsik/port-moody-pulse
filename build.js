@@ -512,9 +512,10 @@ sm += urlEntry(`${ORIGIN}/voter-guide.html`, '2026-10-18', 'monthly', '0.8');
 sm += urlEntry(`${ORIGIN}/archive.html`, TODAY, 'weekly', '0.7');
 sm += urlEntry(`${ORIGIN}/advertise.html`, '2026-09-19', 'monthly', '0.5');
 sm += urlEntry(`${ORIGIN}/moving-to-port-moody.html`, '2026-09-28', 'monthly', '0.8');
+sm += urlEntry(`${ORIGIN}/trick-or-treat-map.html`, '2026-10-21', 'weekly', '0.7');
 sm += `\n\n</urlset>\n`;
 fs.writeFileSync(path.join(SITE, 'sitemap.xml'), sm);
-console.log('sitemap.xml rewritten with', smCount + 10, 'urls');
+console.log('sitemap.xml rewritten with', smCount + 11, 'urls');
 console.log('DONE');
 
 // deploy nudge 2026-10-20: pick up index.html footer link (moving-to-port-moody)
