@@ -507,7 +507,7 @@ for (const old of Object.keys(ARTICLES)) {
 sm += urlEntry(`${ORIGIN}/about.html`, '2026-09-19', 'monthly', '0.8');
 sm += urlEntry(`${ORIGIN}/coffee-quiz.html`, '2026-09-19', 'monthly', '0.6');
 sm += urlEntry(`${ORIGIN}/events.html`, TODAY, 'weekly', '0.9');
-sm += urlEntry(`${ORIGIN}/voter-guide-provincial.html`, '2026-10-18', 'weekly', '0.9');
+sm += urlEntry(`${ORIGIN}/voter-guide-provincial.html`, '2026-10-21', 'weekly', '0.9');
 sm += urlEntry(`${ORIGIN}/voter-guide.html`, '2026-10-18', 'monthly', '0.8');
 sm += urlEntry(`${ORIGIN}/archive.html`, TODAY, 'weekly', '0.7');
 sm += urlEntry(`${ORIGIN}/advertise.html`, '2026-09-19', 'monthly', '0.5');
