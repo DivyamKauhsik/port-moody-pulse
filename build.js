@@ -519,3 +519,5 @@ console.log('sitemap.xml rewritten with', smCount + 11, 'urls');
 console.log('DONE');
 
 // deploy nudge 2026-10-20: pick up index.html footer link (moving-to-port-moody)
+
+// deploy nudge 2026-10-21 (Rawji guide update)
