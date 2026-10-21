@@ -13,7 +13,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Port Moody Trick-or-Treat Map &#8212; Halloween 2026 | Port&#160;Moody Pulse</title>
-  <meta name="description" content="Port Moody's spookiest houses, plotted for Halloween night. Spot a decked-out house? Tag @portmoodypulse and we'll add it to the map. Block-level pins only, no exact addresses." />
+  <meta name="description" content="Port Moody's spookiest houses and Halloween events, plotted for Halloween night. Spot a decked-out house? Tag @portmoodypulse and we'll add it to the map. Block-level pins only, no exact home addresses." />
   <link rel="canonical" href="https://www.portmoodypulse.ca/trick-or-treat-map.html" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -90,6 +90,14 @@
     .leaflet-popup-content-wrapper{border-radius:12px}
     .leaflet-popup-content{font-family:var(--fb);font-size:14px;line-height:1.5;margin:12px 16px}
     .leaflet-popup-content b{color:var(--inlet)}
+    .ghost-pin{background:var(--inlet-900);border:2px solid var(--brass-bright);border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:17px;box-shadow:0 3px 10px rgba(10,53,55,.3)}
+    .pop-venue{font-size:15px}
+    .pop-ev{margin-top:9px}
+    .pop-date{font-weight:700;color:var(--brass-text)}
+    .pop-link{display:inline-block;margin-top:4px;font-weight:600;color:var(--tide)}
+    .event-list{margin-top:34px}
+    .event-list h2{font-family:var(--fd);font-size:26px;font-weight:600;color:var(--inlet);margin-bottom:6px}
+    .event-list .ev-sub{font-size:14.5px;color:var(--mist);margin-bottom:16px}
     .empty-note{margin-top:22px;background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:22px 26px;font-size:15.5px;color:var(--ink-2)}
     .empty-note b{color:var(--inlet)}
     .spot-list{margin-top:34px}
@@ -143,7 +151,7 @@
       <div class="wrap">
         <div class="hero-eyebrow">Halloween 2026</div>
         <h1 class="hero-title">The Trick-or-Treat Map</h1>
-        <p class="hero-sub">Every Halloween, Port&#160;Moody goes all out. This year we&#8217;re mapping it &#8212; the spookiest decorated houses in town, plotted for Halloween night. Built from neighbour sightings, one tag at a time.</p>
+        <p class="hero-sub">Every Halloween, Port&#160;Moody goes all out. This year we&#8217;re mapping it &#8212; the spookiest decorated houses in town, plus the Halloween events happening around town, plotted for Halloween night. Tap any pin for the details. Built from neighbour sightings, one tag at a time.</p>
         <div class="how">
           <div class="step"><div class="n">1. Spot</div><div class="t">See a decked-out house on your walk? Snap it.</div></div>
           <div class="step"><div class="n">2. Tag</div><div class="t">Tag <b>@portmoodypulse</b> in your Story or post.</div></div>
@@ -158,8 +166,13 @@
         <div class="empty-note" id="empty-note" hidden>
           <b>The first pins drop soon.</b> We&#8217;re collecting sightings now &#8212; spot a spooky house? Tag <b>@portmoodypulse</b> on Instagram and it lands here.
         </div>
+        <div class="event-list" id="event-list" hidden>
+          <h2>Halloween events around town</h2>
+          <p class="ev-sub">Tap a ghost pin on the map, or browse the list. Details checked against the organizers' own listings on Oct 21, 2026.</p>
+          <div id="event-items"></div>
+        </div>
         <div class="spot-list" id="spot-list" hidden>
-          <h2>On the map</h2>
+          <h2>Spooky sightings</h2>
           <div id="spot-items"></div>
         </div>
         <p class="privacy">Pins are block-level only &#8212; we never publish exact home addresses. Spotted a house we missed? Tag @portmoodypulse on Instagram.</p>
@@ -178,11 +191,55 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    // ── Add sightings here: { lat, lng, block, note } ──
+    // ── Spooky sightings (decorated houses/areas): { lat, lng, block, note } ──
     // Pins are block-level on purpose. Get coords by searching the block in any map app.
     const SPOOKY_SPOTS = [
-      { lat: 49.2792, lng: -122.8508, block: "Port Moody Station Museum, Murray St", note: "Halloween on the Train: explore the ghoulish station train and pick up trick-or-treat candy on your way. A community event, and a good place to start your route." },
       { lat: 49.3073, lng: -122.8295, block: "Cliffwood Dr / Fernway Dr area", note: "Named on Daily Hive's list of Metro Vancouver's best trick-or-treating neighbourhoods." }
+    ];
+
+    // ── Halloween events: one entry per event. Venues sharing a pin are grouped automatically. ──
+    // Every event below was checked against the organizer's own listing on Oct 21, 2026.
+    const HALLOWEEN_EVENTS = [
+      { lat: 49.2792, lng: -122.8508, venue: "POMO Museum (Port Moody Station Museum), 2734 Murray St",
+        title: "Movie Night on the Train: House of Dracula (1945)",
+        date: "Sat, Oct 24 · 5 PM",
+        note: "A Halloween classic screened on the train. Tickets $10 per person, concession available.",
+        link: "https://www.pomo.museum", linkLabel: "Details at pomo.museum" },
+      { lat: 49.2775, lng: -122.8557, venue: "2529 Clarke St",
+        title: "Charles Best Parent Halloween Dinner Dance",
+        date: "Sat, Oct 24 · 6 PM to 10:45 PM",
+        note: "Dinner and dancing for grown-ups, in costume. $67.50 a ticket, or $540 for a table of 8. A fundraiser for Dr. Charles Best Secondary's AfterGrad 2027.",
+        link: "https://www.zeffy.com/en-CA/ticketing/parentguardian-halloween-dinner-dance", linkLabel: "Tickets on Zeffy" },
+      { lat: 49.2817, lng: -122.8296, venue: "Port Moody Public Library, 100 Newport Dr",
+        title: "Paint a Trick or Treat Bag",
+        date: "Wed, Oct 28 · 4 PM to 5 PM",
+        note: "Kids paint their own glow-in-the-dark canvas treat bag in the ParkLane Room. Caregiver attends too. Registration required, waitlist open.",
+        link: "https://portmoodylibrary.ca/programs", linkLabel: "Details at portmoodylibrary.ca" },
+      { lat: 49.2817, lng: -122.8296, venue: "Port Moody Public Library, 100 Newport Dr",
+        title: "Baby Halloween Party",
+        date: "Fri, Oct 30 · 11 AM to 11:45 AM",
+        note: "A gentle first Halloween for babies. Drop-in, no registration needed.",
+        link: "https://portmoodylibrary.ca/programs", linkLabel: "Details at portmoodylibrary.ca" },
+      { lat: 49.2790, lng: -122.8437, venue: "Site B Community Centre, 3012 Murray St",
+        title: "Tricks and Treats: A Slightly Spooky Halloween Event",
+        date: "Fri, Oct 30 · entry blocks 6 PM, 7:15 PM and 8:30 PM",
+        note: "Theatrix Youtheatre Society's family fundraiser (a registered charity): a magician, live music, costume contests, a bouncy castle, a scavenger hunt, raffles and prizes, with food and drinks available. Spooky, not scary, for younger kids. $16 kids, $22 adults, $60 family pack. Proceeds support Theatrix youth theatre programs. Madame Mysteria's Caravan fortune-telling experience is a separate add-on, limited spots.",
+        link: "https://theatrixyoutheatre.com", linkLabel: "Tickets at theatrixyoutheatre.com" },
+      { lat: 49.2772, lng: -122.8564, venue: "Little Beans Play Cafe, 70 Kyle St",
+        title: "Halloween Party at Little Beans Play Cafe",
+        date: "Fri, Oct 30",
+        note: "$20 per child, and parents and guardians attend at no cost. Check Little Beans for party times.",
+        link: "https://www.littlebeansplaycafe.ca", linkLabel: "Details at littlebeansplaycafe.ca" },
+      { lat: 49.2792, lng: -122.8508, venue: "POMO Museum (Port Moody Station Museum), 2734 Murray St",
+        title: "Halloween on the Train: Trick-or-Treating",
+        date: "Sat, Oct 31 · from 4 PM",
+        note: "Explore the ghoulish station train, decked out kid-friendly haunted, and pick up trick-or-treat candy on your way. A good place to start your Halloween night route.",
+        link: "https://www.pomo.museum", linkLabel: "Details at pomo.museum" },
+      { lat: 49.2790, lng: -122.8437, venue: "Site B Community Centre, 3012 Murray St",
+        title: "TOTALLY WICKED Halloween Dance Party",
+        date: "Sat, Oct 31 · 8 PM to midnight",
+        note: "Grown-ups' night at Site B: DJ Wren plays hits and music videos from the 70s to today, with prizes for the best costumes. Tickets $33.83 on Eventbrite.",
+        link: "https://www.eventbrite.com/e/totally-wicked-halloween-dance-party-tickets-1998446876404", linkLabel: "Tickets on Eventbrite" }
     ];
 
     const map = L.map('map', { scrollWheelZoom: false }).setView([49.2775, -122.8574], 13);
@@ -194,22 +251,62 @@
     map.on('blur', () => map.scrollWheelZoom.disable());
 
     const pin = L.divIcon({ className: '', html: '<div class="pumpkin-pin">🎃</div>', iconSize: [34, 34], iconAnchor: [17, 17] });
+    const ghostPin = L.divIcon({ className: '', html: '<div class="ghost-pin">👻</div>', iconSize: [34, 34], iconAnchor: [17, 17] });
+    const allPoints = [];
 
+    // Event pins, grouped by venue so one pin can hold several events
+    const venues = {};
+    HALLOWEEN_EVENTS.forEach(e => {
+      const key = e.lat + ',' + e.lng;
+      if (!venues[key]) venues[key] = { lat: e.lat, lng: e.lng, venue: e.venue, events: [] };
+      venues[key].events.push(e);
+    });
+    Object.values(venues).forEach(v => {
+      let html = '<div class="pop-venue"><b>' + v.venue + '</b></div>';
+      v.events.forEach(e => {
+        html += '<div class="pop-ev"><b>' + e.title + '</b><br><span class="pop-date">' + e.date + '</span><br>' + e.note;
+        if (e.link) html += '<br><a class="pop-link" href="' + e.link + '" target="_blank" rel="noopener">' + e.linkLabel + ' &#8599;</a>';
+        html += '</div>';
+      });
+      L.marker([v.lat, v.lng], { icon: ghostPin }).addTo(map).bindPopup(html, { maxWidth: 320 });
+      allPoints.push([v.lat, v.lng]);
+    });
+
+    // Event list cards, in date order
+    if (HALLOWEEN_EVENTS.length > 0) {
+      document.getElementById('event-list').hidden = false;
+      const evList = document.getElementById('event-items');
+      HALLOWEEN_EVENTS.forEach(e => {
+        const el = document.createElement('div');
+        el.className = 'spot';
+        let inner = '<div class="dot">👻</div><div><div class="sb">' + e.title + '</div>' +
+          '<div class="sn"><b>' + e.date + '</b> · ' + e.venue + '<br>' + e.note;
+        if (e.link) inner += ' <a href="' + e.link + '" target="_blank" rel="noopener" style="font-weight:600;color:var(--tide)">' + e.linkLabel + ' &#8599;</a>';
+        inner += '</div></div>';
+        el.innerHTML = inner;
+        evList.appendChild(el);
+      });
+    }
+
+    // Spooky sighting pins + list
     const list = document.getElementById('spot-items');
-    if (SPOOKY_SPOTS.length === 0) {
+    if (SPOOKY_SPOTS.length === 0 && HALLOWEEN_EVENTS.length === 0) {
       document.getElementById('empty-note').hidden = false;
     } else {
-      document.getElementById('spot-list').hidden = false;
+      if (SPOOKY_SPOTS.length > 0) document.getElementById('spot-list').hidden = false;
       SPOOKY_SPOTS.forEach(s => {
         L.marker([s.lat, s.lng], { icon: pin }).addTo(map)
           .bindPopup('<b>' + s.block + '</b><br>' + s.note);
+        allPoints.push([s.lat, s.lng]);
         const el = document.createElement('div');
         el.className = 'spot';
         el.innerHTML = '<div class="dot">🎃</div><div><div class="sb">' + s.block + '</div><div class="sn">' + s.note + '</div></div>';
         list.appendChild(el);
       });
-      const bounds = L.latLngBounds(SPOOKY_SPOTS.map(s => [s.lat, s.lng]));
-      map.fitBounds(bounds.pad(0.25));
+      if (allPoints.length > 0) {
+        const bounds = L.latLngBounds(allPoints);
+        map.fitBounds(bounds.pad(0.25));
+      }
     }
   </script>
 </body>
