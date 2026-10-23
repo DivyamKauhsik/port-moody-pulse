@@ -483,13 +483,13 @@ window.PMP_ARTICLES = {
     keywords: ["election results", "Port Moody election 2026"],
     tag: "Election 2026",
     title: "Port\u00A0Moody elects Haven Lurbiecki as mayor",
-    desc: "Haven Lurbiecki defeated Meghan Lahti 5,280 to 4,734 in Port Moody's 2026 municipal election. Full council and trustee results, with turnout near 39 percent.",
+    desc: "Haven Lurbiecki defeated Meghan Lahti 5,400 to 4,854 in Port Moody's 2026 municipal election. Full council and trustee results, with turnout near 39 percent.",
     meta: "By the newsroom \u00B7 Election results \u00B7 3 min read",
     body: [
-      "Port\u00A0Moody has a new mayor. Haven Lurbiecki defeated incumbent Meghan Lahti on Saturday, taking 5,280 votes (52.7%) to Lahti\u2019s 4,734 (47.3%), according to the city\u2019s complete preliminary results. Voters cast 10,425 ballots \u2014 turnout of nearly 39 percent, up from about 36 percent in 2022.",
-      "Six councillors were elected: Paul Lambert (5,252 votes), Callan Morrison (4,892), Amy Lubik (4,047), Kyla Knowles (4,004), Peter Thomasen (3,837) and Alexandra Chan (3,801). Lubik, Knowles and Morrison return as incumbents; Lambert, Thomasen and Chan are newcomers to council. Lurbiecki and Chan both ran with the Port\u00A0Moody Voice team.",
-      "For school trustee, voters elected Jessica Morrison (4,504 votes) and Tracy Green (4,190).",
-      "These are preliminary results \u2014 the chief election officer\u2019s official declaration is due by 4 PM on Wednesday, October 21. The new council will be sworn in and hold its inaugural meeting in the coming weeks. And Port\u00A0Moody votes again soon: the provincial election for the Port\u00A0Moody-Burquitlam riding is Saturday, October 24, with advance voting open through Wednesday, October 21."
+      "Port\u00A0Moody has a new mayor. Haven Lurbiecki defeated incumbent Meghan Lahti on Saturday, taking 5,400 votes (52.7%) to Lahti\u2019s 4,854 (47.3%), according to the city\u2019s official results. Voters cast 10,425 ballots \u2014 turnout of nearly 39 percent, up from about 36 percent in 2022.",
+      "Six councillors were elected: Paul Lambert (5,357 votes), Callan Morrison (5,026), Amy Lubik (4,167), Kyla Knowles (4,119), Peter Thomasen (3,930) and Alexandra Chan (3,892). Lubik, Knowles and Morrison return as incumbents; Lambert, Thomasen and Chan are newcomers to council. Lurbiecki and Chan both ran with the Port\u00A0Moody Voice team.",
+      "For school trustee, voters elected Jessica Morrison (4,610 votes) and Tracy Green (4,289).",
+      "These are the official results, as declared by the Chief Election Officer on Wednesday, October 21. The new council will be sworn in at the Inaugural Council Meeting at Inlet Theatre (100 Newport Drive) on Tuesday, November 3, 2026, at 7pm (doors at 6:30pm), with a reception to follow \u2014 both open to the public. And Port\u00A0Moody votes again soon: the provincial election for the Port\u00A0Moody-Burquitlam riding is Saturday, October 24, with final voting from 8 AM to 8 PM."
     ]
   },
 
