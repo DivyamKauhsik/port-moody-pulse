@@ -478,6 +478,18 @@ window.PMP_ARTICLES = {
     body: [],
   },
 
+  varga: {
+    page: "michael-varga-the-firehall-is-his-kitchen",
+    liveDate: "2026-10-30",
+    related: ["juraj", "ahyoung"],
+    keywords: ["Michael Varga", "MasterChef Canada", "Chopped Canada", "Vancouver Fire Rescue Services"],
+    tag: "Community \u00B7 People",
+    title: "The Firehall Is His Kitchen: Michael Varga's Story",
+    desc: "Michael Varga has spent 20 years as a Vancouver firefighter, and his firehall kitchen is where the crew becomes a second family. The Chopped Canada winner and MasterChef Canada competitor calls Port Moody home.",
+    meta: "By Divyam Kaushik \u00B7 4 min read",
+    body: [],
+  },
+
   electionresults: {
     page: "election-results-2026",
     keywords: ["election results", "Port Moody election 2026"],
@@ -505,6 +517,7 @@ const PMP_IMG = {
   ashney:    { src: "/images/ashney-rebello.jpg", alt: "Ashney Rebello of Ashney Artisan in Port Moody", credit: "Courtesy of Ashney Rebello" },
   ahyoung:   { src: "/images/ahyoung-baek.jpg", alt: "Chef Ahyoung Baek of Pasta Polo in Coquitlam", credit: "Courtesy of Ahyoung Baek" },
   juraj:     { src: "/images/juraj-dado.jpg", alt: "Chef Juraj Dado of Saint St Grill in Port Moody", credit: "Courtesy of Juraj Dado" },
+  varga:     { src: "/images/michael-varga-masterchef.jpg", alt: "Michael Varga competing on MasterChef Canada", credit: "Michael Varga" },
   trails:    { src: "/images/burrard-inlet-sailboats.jpg", alt: "Sailboats on Burrard Inlet at Port Moody", credit: "Wikimedia Commons", creditUrl: "https://commons.wikimedia.org/wiki/File:Burrard_Inlet,_Port_Moody,_British_Columbia.jpg" },
   portwood:  { src: "/images/stories/portwood-centre.jpg", alt: "The Portwood presentation centre on St. Johns Street in Port Moody", credit: "Port Moody Pulse" },
   electionresults: { src: "/images/voter-guide-og.png", alt: "Port Moody Pulse voter guide", credit: "Port Moody Pulse" },
