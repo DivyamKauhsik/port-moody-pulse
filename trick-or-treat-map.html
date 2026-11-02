@@ -122,6 +122,8 @@
     .map-signup button:disabled{opacity:.7;cursor:wait}
     .map-signup .form-msg{margin:14px 0 0;font-size:15px;font-weight:600;color:#ffe9a8;min-height:22px}
     .map-signup .form-msg:empty{display:none}
+    .map-cta-btn{display:inline-block;background:var(--brass-bright);color:#3a2c12;font-weight:800;font-size:15px;padding:13px 26px;border-radius:999px;text-decoration:none}
+    .map-cta-btn:hover{filter:brightness(1.06);text-decoration:none}
     @media(max-width:760px){.map-signup{padding:28px 22px}.map-signup .signup{flex-direction:column}.map-signup button{width:100%}}
 
     footer.site{background:var(--inlet-900);color:#A8C0BD;padding:40px 0 24px;margin-top:0}
@@ -173,14 +175,10 @@
 
     <section class="map-signup-wrap">
       <div class="wrap">
-        <section class="map-signup" aria-label="Subscribe to Port Moody Pulse">
-          <h2>Get the Christmas lights map first.</h2>
-          <p>One good email a week, free. The December lights map lands in inboxes before it goes public.</p>
-          <form class="signup" data-form="map" novalidate>
-            <input type="email" name="email" autocomplete="email" inputmode="email" aria-label="Email address" placeholder="Your email address" required>
-            <button type="submit" data-subscribe="map">Get the next map <span aria-hidden="true">&#8594;</span></button>
-          </form>
-          <p class="form-msg" role="status" aria-live="polite"></p>
+        <section class="map-signup" aria-label="Christmas lights map">
+          <h2>The Christmas lights map is live.</h2>
+          <p>Port Moody and the Tri-Cities, glowing — the brightest displays and the season&#8217;s light-ups, on one map.</p>
+          <a class="map-cta-btn" href="/christmas-lights-map.html">See the Christmas map <span aria-hidden="true">&#8594;</span></a>
         </section>
       </div>
     </section>
