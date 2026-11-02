@@ -108,6 +108,22 @@
     .spot .sn{font-size:14.5px;color:var(--ink-2)}
     .privacy{margin-top:28px;font-size:13.5px;color:var(--mist);border-top:1px solid var(--line);padding-top:20px}
 
+    /* retired-map newsletter signup (points at the next map) */
+    .map-signup-wrap{padding:44px 0 0}
+    .map-signup-wrap .wrap{max-width:980px}
+    .map-signup{background:var(--inlet-900);color:#FBF7EE;border-radius:18px;padding:36px 34px}
+    .map-signup h2{font-family:var(--fd);font-size:28px;font-weight:600;margin:0 0 8px;color:#FBF7EE}
+    .map-signup p{margin:0 0 20px;font-size:15.5px;color:rgba(251,247,238,.75);max-width:620px;line-height:1.6}
+    .map-signup .signup{display:flex;gap:12px;flex-wrap:wrap;max-width:560px}
+    .map-signup input[type=email]{flex:1;min-width:220px;font:inherit;font-size:16px;padding:13px 18px;border:2px solid transparent;border-radius:999px;background:#fff;color:var(--ink)}
+    .map-signup input[aria-invalid=true]{border-color:#e88}
+    .map-signup button{background:var(--brass-bright);color:#3a2c12;border:none;font-weight:800;font-size:15px;padding:13px 26px;border-radius:999px;cursor:pointer}
+    .map-signup button:hover{filter:brightness(1.06)}
+    .map-signup button:disabled{opacity:.7;cursor:wait}
+    .map-signup .form-msg{margin:14px 0 0;font-size:15px;font-weight:600;color:#ffe9a8;min-height:22px}
+    .map-signup .form-msg:empty{display:none}
+    @media(max-width:760px){.map-signup{padding:28px 22px}.map-signup .signup{flex-direction:column}.map-signup button{width:100%}}
+
     footer.site{background:var(--inlet-900);color:#A8C0BD;padding:40px 0 24px;margin-top:0}
     .foot-bot{font-size:12.5px;color:#93ABA8;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
     .tagline{font-family:var(--fd);font-style:italic;color:#B6D0CC}
@@ -149,14 +165,23 @@
   <main>
     <section class="map-hero">
       <div class="wrap">
-        <div class="hero-eyebrow">Halloween 2026</div>
+        <div class="hero-eyebrow">Halloween 2026 · Closed</div>
         <h1 class="hero-title">The Trick-or-Treat Map</h1>
-        <p class="hero-sub">Every Halloween, Port&#160;Moody goes all out. This year we&#8217;re mapping it &#8212; the spookiest decorated houses in town, plus the Halloween events happening around town, plotted for Halloween night. Tap any pin for the details. Built from neighbour sightings, one tag at a time.</p>
-        <div class="how">
-          <div class="step"><div class="n">1. Spot</div><div class="t">See a decked-out house on your walk? Snap it.</div></div>
-          <div class="step"><div class="n">2. Tag + follow</div><div class="t">Tag <b>@portmoodypulse</b> in your Story or post, add the street name in your caption (just the street, never the house number), and follow <b>@portmoodypulse</b> and <b>@cannolikingvancouver</b>. Every tagged house is an entry in the Cannoli King draw: three cannoli flights, drawn Sun, Nov 1. Winners collect their prize from Cannoli King, 950-1125 Seaborne Ave, Port Coquitlam, by Wed, Nov 4 at 5 PM.</div></div>
-          <div class="step"><div class="n">3. We pin it</div><div class="t">We use the street you name to drop a pin on that block, never at an exact address, and we update the map all week as photos come in. The best sightings get reposted to our Stories.</div></div>
-        </div>
+        <p class="hero-sub">Halloween 2026 is done. Thanks to every neighbour who tagged a spooky house — the map stays up as this year&#8217;s record. Next up: the Christmas lights map, landing in December.</p>
+      </div>
+    </section>
+
+    <section class="map-signup-wrap">
+      <div class="wrap">
+        <section class="map-signup" aria-label="Subscribe to Port Moody Pulse">
+          <h2>Get the Christmas lights map first.</h2>
+          <p>One good email a week, free. The December lights map lands in inboxes before it goes public.</p>
+          <form class="signup" data-form="map" novalidate>
+            <input type="email" name="email" autocomplete="email" inputmode="email" aria-label="Email address" placeholder="Your email address" required>
+            <button type="submit" data-subscribe="map">Get the next map <span aria-hidden="true">&#8594;</span></button>
+          </form>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+        </section>
       </div>
     </section>
 
@@ -167,7 +192,7 @@
           <b>The first pins drop soon.</b> We&#8217;re collecting sightings now &#8212; spot a spooky house? Tag <b>@portmoodypulse</b> on Instagram and it lands here.
         </div>
         <div class="event-list" id="event-list" hidden>
-          <h2>Halloween events around town</h2>
+          <h2>Halloween 2026 events</h2>
           <p class="ev-sub">Tap a ghost pin on the map, or browse the list. Details checked against the organizers' own listings on Oct 22, 2026.</p>
           <div id="event-items"></div>
         </div>
@@ -175,7 +200,7 @@
           <h2>Spooky sightings</h2>
           <div id="spot-items"></div>
         </div>
-        <p class="privacy">Pins are block-level only &#8212; we never publish exact home addresses. Spotted a house we missed? Tag @portmoodypulse on Instagram and name the street.</p>
+        <p class="privacy">Pins are block-level only &#8212; we never publish exact home addresses. This is the record of the 2026 map.</p>
       </div>
     </section>
   </main>
@@ -329,6 +354,45 @@
         map.fitBounds(bounds.pad(0.25));
       }
     }
+  </script>
+  <script>
+  (function(){
+    var EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    async function mapSubscribe(which){
+      var form=document.querySelector('[data-form="'+which+'"]');
+      if(!form)return;
+      var input=form.querySelector('input[type="email"]');
+      var button=form.querySelector('[data-subscribe]');
+      var email=input?input.value.trim():"";
+      var msg=form.parentElement?form.parentElement.querySelector('.form-msg'):null;
+      var original=button?button.innerHTML:"";
+      if(!EMAIL.test(email)){
+        if(msg){msg.textContent="Please enter a valid email address.";}
+        if(input){input.setAttribute("aria-invalid","true");input.focus();}
+        return;
+      }
+      if(input)input.removeAttribute("aria-invalid");
+      if(button){button.disabled=true;button.textContent="Subscribing…";}
+      if(msg){msg.textContent="";}
+      try{
+        var response=await fetch("/api/subscribe",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:email})});
+        var data=await response.json();
+        if(!response.ok||!data.ok)throw new Error(data.message||"Something went wrong. Please try again.");
+        if(msg){msg.textContent=data.message||"You’re on the list — welcome to Port Moody Pulse!";}
+        if(input)input.value="";
+      }catch(error){
+        if(msg){msg.textContent=error.message||"Something went wrong. Please try again.";}
+      }finally{
+        if(button){button.disabled=false;button.innerHTML=original;}
+      }
+    }
+    document.querySelectorAll("[data-subscribe]").forEach(function(b){
+      b.addEventListener("click",function(e){e.preventDefault();mapSubscribe(b.getAttribute("data-subscribe"));});
+    });
+    document.querySelectorAll("[data-form]").forEach(function(f){
+      f.addEventListener("submit",function(e){e.preventDefault();mapSubscribe(f.getAttribute("data-form"));});
+    });
+  })();
   </script>
 </body>
 </html>
