@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G0YECLVEMJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-G0YECLVEMJ');
+</script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Port Moody Christmas Lights Map &#8212; 2026 | Port&#160;Moody Pulse</title>
+  <meta name="description" content="Port Moody and the Tri-Cities' brightest Christmas light displays and holiday light-ups, on one map — Lafarge Lake, the CPKC Holiday Train, and neighbourhood houses. Spot a glowing house? Tag @portmoodypulse and we'll add it. Block-level pins only." />
+  <link rel="canonical" href="https://www.portmoodypulse.ca/christmas-lights-map.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#0A3537">
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Port Moody Pulse" />
+  <meta property="og:title" content="Port Moody Christmas Lights Map &#8212; 2026" />
+  <meta property="og:description" content="The brightest Christmas light displays in Port Moody and the Tri-Cities, on one map. Tag @portmoodypulse to add a house." />
+  <meta property="og:url" content="https://www.portmoodypulse.ca/christmas-lights-map.html" />
+  <meta property="og:image" content="https://www.portmoodypulse.ca/apple-touch-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Port Moody Christmas Lights Map &#8212; 2026" />
+  <meta name="twitter:description" content="The brightest Christmas light displays in Port Moody and the Tri-Cities, on one map. Tag @portmoodypulse to add a house." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;0,700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Port Moody Christmas Lights Map \u2014 2026",
+  "url": "https://www.portmoodypulse.ca/christmas-lights-map.html",
+  "description": "A community map of the brightest Christmas light displays in Port Moody and the Tri-Cities, built from neighbour sightings.",
+  "publisher": { "@type": "Organization", "name": "Port Moody Pulse", "url": "https://www.portmoodypulse.ca/" }
+}
+  </script>
+  <style>
+    :root {
+      --inlet-900:#0A3537; --inlet:#0E4F4E; --tide:#15706E;
+      --brass:#C7903B; --brass-bright:#E0A23C; --brass-deep:#9C6E22; --brass-text:#82591A;
+      --paper:#FBF7EE; --paper-2:#F4EEDF; --card:#FFFFFF;
+      --ink:#15302E; --ink-2:#3B524F; --mist:#54655F; --line:#E7E0D0;
+      --fd:'Newsreader',Georgia,'Times New Roman',serif;
+      --fb:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--paper);color:var(--ink);font-family:var(--fb);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+    .util{background:var(--inlet-900);color:#B6D0CC;font-size:12.5px}
+    .util .wrap{display:flex;align-items:center;justify-content:space-between;min-height:40px;gap:14px}
+    .soc{display:flex;gap:11px}
+    .soc a{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.22);border-radius:50%;color:#CBE0DC;font-size:11px;font-weight:800}
+    .soc a:hover{color:#fff;border-color:var(--brass-bright);text-decoration:none}
+
+    .mast{background:var(--paper);border-bottom:1px solid var(--line)}
+    .mast .wrap{display:flex;align-items:center;gap:20px;min-height:78px}
+    .brand{display:flex;align-items:center;gap:13px;flex:none}
+    .brand svg{width:42px;height:42px;flex:none}
+    .brand .word{font-family:var(--fd);font-weight:600;font-size:25px;color:var(--inlet);letter-spacing:-.015em;line-height:1}
+    .brand .word b{color:var(--brass-deep);font-weight:600}
+    .back-link{margin-left:auto;font-size:14px;font-weight:600;color:var(--ink-2);display:flex;align-items:center;gap:6px}
+    .back-link:hover{color:var(--tide);text-decoration:none}
+
+    .map-hero{background:var(--inlet-900);padding:64px 0 56px}
+    .map-hero .wrap{max-width:820px}
+    .hero-eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-bright);margin-bottom:14px}
+    .hero-title{font-family:var(--fd);font-size:clamp(32px,4vw,48px);font-weight:600;color:#FBF7EE;line-height:1.1;margin-bottom:16px}
+    .hero-sub{font-size:17px;color:rgba(251,247,238,0.72);line-height:1.55}
+    .hero-sub a{color:var(--brass-bright);font-weight:600}
+    .how{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+    .how .step{flex:1;min-width:200px;background:rgba(255,255,255,.06);border:1px solid rgba(224,162,60,.35);border-radius:14px;padding:18px 20px}
+    .how .n{font-family:var(--fd);font-weight:700;font-size:22px;color:var(--brass-bright)}
+    .how .t{font-size:14.5px;color:rgba(251,247,238,.85);margin-top:6px;line-height:1.55}
+
+    .map-body{padding:56px 0 72px}
+    .map-body .wrap{max-width:980px}
+    #map{height:520px;border-radius:18px;border:1px solid var(--line);box-shadow:0 12px 32px rgba(10,53,55,.10);z-index:1}
+    .light-pin{background:var(--paper);border:2px solid var(--brass-bright);border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 3px 10px rgba(10,53,55,.25)}
+    .leaflet-popup-content-wrapper{border-radius:12px}
+    .leaflet-popup-content{font-family:var(--fb);font-size:14px;line-height:1.5;margin:12px 16px}
+    .leaflet-popup-content b{color:var(--inlet)}
+    .tree-pin{background:var(--inlet-900);border:2px solid var(--brass-bright);border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:17px;box-shadow:0 3px 10px rgba(10,53,55,.3)}
+    .pop-venue{font-size:15px}
+    .pop-ev{margin-top:9px}
+    .pop-date{font-weight:700;color:var(--brass-text)}
+    .pop-link{display:inline-block;margin-top:4px;font-weight:600;color:var(--tide)}
+    .event-list{margin-top:34px}
+    .event-list h2{font-family:var(--fd);font-size:26px;font-weight:600;color:var(--inlet);margin-bottom:6px}
+    .event-list .ev-sub{font-size:14.5px;color:var(--mist);margin-bottom:16px}
+    .empty-note{margin-top:22px;background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:22px 26px;font-size:15.5px;color:var(--ink-2)}
+    .empty-note b{color:var(--inlet)}
+    .spot-list{margin-top:34px}
+    .spot-list h2{font-family:var(--fd);font-size:26px;font-weight:600;color:var(--inlet);margin-bottom:16px}
+    .spot{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:14px;display:flex;gap:16px;align-items:flex-start}
+    .spot .dot{flex:none;width:34px;height:34px;border-radius:50%;background:var(--paper);border:2px solid var(--brass-bright);display:flex;align-items:center;justify-content:center;font-size:17px}
+    .spot .sb{font-weight:700;color:var(--inlet);font-size:16px}
+    .spot .sn{font-size:14.5px;color:var(--ink-2)}
+    .privacy{margin-top:28px;font-size:13.5px;color:var(--mist);border-top:1px solid var(--line);padding-top:20px}
+
+    /* retired-map newsletter signup (points at the next map) */
+    .map-signup-wrap{padding:44px 0 0}
+    .map-signup-wrap .wrap{max-width:980px}
+    .map-signup{background:var(--inlet-900);color:#FBF7EE;border-radius:18px;padding:36px 34px}
+    .map-signup h2{font-family:var(--fd);font-size:28px;font-weight:600;margin:0 0 8px;color:#FBF7EE}
+    .map-signup p{margin:0 0 20px;font-size:15.5px;color:rgba(251,247,238,.75);max-width:620px;line-height:1.6}
+    .map-signup .signup{display:flex;gap:12px;flex-wrap:wrap;max-width:560px}
+    .map-signup input[type=email]{flex:1;min-width:220px;font:inherit;font-size:16px;padding:13px 18px;border:2px solid transparent;border-radius:999px;background:#fff;color:var(--ink)}
+    .map-signup input[aria-invalid=true]{border-color:#e88}
+    .map-signup button{background:var(--brass-bright);color:#3a2c12;border:none;font-weight:800;font-size:15px;padding:13px 26px;border-radius:999px;cursor:pointer}
+    .map-signup button:hover{filter:brightness(1.06)}
+    .map-signup button:disabled{opacity:.7;cursor:wait}
+    .map-signup .form-msg{margin:14px 0 0;font-size:15px;font-weight:600;color:#ffe9a8;min-height:22px}
+    .map-signup .form-msg:empty{display:none}
+    @media(max-width:760px){.map-signup{padding:28px 22px}.map-signup .signup{flex-direction:column}.map-signup button{width:100%}}
+
+    footer.site{background:var(--inlet-900);color:#A8C0BD;padding:40px 0 24px;margin-top:0}
+    .foot-bot{font-size:12.5px;color:#93ABA8;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    .tagline{font-family:var(--fd);font-style:italic;color:#B6D0CC}
+
+    @media(max-width:720px){
+      .wrap{padding:0 18px}
+      #map{height:420px}
+      .how .step{min-width:100%}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="util">
+    <div class="wrap">
+      <div>Port&#160;Moody, British Columbia</div>
+      <div class="soc">
+        <a href="https://www.instagram.com/portmoodypulse?igsh=Y2xleTNib2l0YzMz" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://www.facebook.com/share/1GLMNEjPJS/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="mast">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Port&#160;Moody Pulse home">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <defs><linearGradient id="lgH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A6E6B"/><stop offset="1" stop-color="#0A3537"/></linearGradient></defs>
+          <circle cx="50" cy="50" r="50" fill="url(#lgH)"/>
+          <circle cx="50" cy="36.6" r="3.2" fill="#E0A23C"/>
+          <path d="M28.2 54.5 L37.2 54.5 L39.8 54.5 L42 47 L44.4 61.2 L46.6 54.5 Q50.3 46.8 54 54.5 Q57.7 62.2 61.4 54.5 Q65.1 47 68.8 54.5 L71.8 54.5" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="word">Port&#160;Moody <b>Pulse</b></span>
+      </a>
+      <a class="back-link" href="/">&#8592; Back to newsletter</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="map-hero">
+      <div class="wrap">
+        <div class="hero-eyebrow">Christmas 2026</div>
+        <h1 class="hero-title">The Christmas Lights Map</h1>
+        <p class="hero-sub">Every December, Port Moody and the Tri-Cities glow. We&#8217;re mapping the brightest displays and the season&#8217;s light-ups &#8212; from 100,000+ lights around Lafarge Lake to the Holiday Train rolling into Port Moody on Dec 20. Tap any pin for the details.</p>
+        <div class="how">
+          <div class="step"><div class="n">1. Spot</div><div class="t">See a house glowing on your evening walk? Snap it.</div></div>
+          <div class="step"><div class="n">2. Tag</div><div class="t">Tag <b>@portmoodypulse</b> in your Story or post, and add the street name in your caption (just the street, never the house number).</div></div>
+          <div class="step"><div class="n">3. We pin it</div><div class="t">We use the street you name to drop a pin on that block, never at an exact address, and we update the map all December as photos come in. The best sightings get reposted to our Stories.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-signup-wrap">
+      <div class="wrap">
+        <section class="map-signup" aria-label="Subscribe to Port Moody Pulse">
+          <h2>Never miss a map.</h2>
+          <p>One good email a week, free &#8212; maps, events, and the people of Port Moody. New pins land here all December; subscribers hear about them first.</p>
+          <form class="signup" data-form="map" novalidate>
+            <input type="email" name="email" autocomplete="email" inputmode="email" aria-label="Email address" placeholder="Your email address" required>
+            <button type="submit" data-subscribe="map">Join the Pulse <span aria-hidden="true">&#8594;</span></button>
+          </form>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+        </section>
+      </div>
+    </section>
+
+    <section class="map-body">
+      <div class="wrap">
+        <div id="map" role="application" aria-label="Map of Christmas light displays in Port Moody and the Tri-Cities"></div>
+        <div class="empty-note" id="empty-note" hidden>
+          <b>The first house pins drop soon.</b> We&#8217;re collecting sightings now &#8212; spot a glowing house? Tag <b>@portmoodypulse</b> on Instagram and it lands here.
+        </div>
+        <div class="event-list" id="event-list" hidden>
+          <h2>Christmas events and light-ups</h2>
+          <p class="ev-sub">Tap a &#127876; pin on the map, or browse the list. Dates checked against the organizers&#8217; own listings on Nov 2, 2026.</p>
+          <div id="event-items"></div>
+        </div>
+        <div class="spot-list" id="spot-list" hidden>
+          <h2>Brightest houses</h2>
+          <div id="spot-items"></div>
+        </div>
+        <p class="privacy">Pins are block-level only &#8212; we never publish exact home addresses. Spotted a house we missed? Tag @portmoodypulse on Instagram and name the street.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="foot-bot">
+        <div>&#169; 2026 Port&#160;Moody Pulse &#183; Independent community newsletter. Not affiliated with the City of Port&#160;Moody.</div>
+        <div class="tagline">The heartbeat of Port&#160;Moody.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    // ── Brightest houses (decorated houses/areas): { lat, lng, block, note } ──
+    // Pins are block-level on purpose. Get coords by searching the block in any map app.
+    const LIGHT_SIGHTINGS = [
+    ];
+
+    // ── Christmas events and light-ups: one entry per event. Venues sharing a pin are grouped automatically. ──
+    // Every event below was checked against the organizer's own listing on Nov 2, 2026.
+    const CHRISTMAS_EVENTS = [
+      { lat: 49.28707, lng: -122.79051, venue: "Lafarge Lake, Town Centre Park, 1299 Pinetree Way, Coquitlam",
+        title: "Lights at Lafarge",
+        date: "Opens Fri, Nov 27 · opening night 5 PM to 8 PM",
+        note: "Metro Vancouver's largest free outdoor winter lights display: 100,000+ lights on the 1.2-km loop around Lafarge Lake. Opening night brings food trucks and live entertainment. Season hours not yet posted by the City — check coquitlam.ca before you go. SkyTrain: Lafarge Lake–Douglas station.",
+        link: "https://vancouver.christmas/lights-at-lafarge-in-coquitlam/", linkLabel: "Full guide at vancouver.christmas" },
+      { lat: 49.27951, lng: -122.84906, venue: "Rocky Point Park pier, 2800 Murray St, Port Moody",
+        title: "Holiday Cheer at the Pier",
+        date: "Sat, Nov 28",
+        note: "The City's holiday kickoff at the pier: twinkling lights, carolers and festive games.",
+        link: "https://www.portmoody.ca/arts-culture-and-heritage/events/events-at-a-glance/", linkLabel: "City events calendar" },
+      { lat: 49.26175, lng: -122.781, venue: "Leigh Square / Port Coquitlam Community Centre, 2150 Wilson Ave, Port Coquitlam",
+        title: "Christmas in the Square",
+        date: "Sat, Nov 28 · 10 AM to 6 PM",
+        note: "Port Coquitlam's Winter in the City kickoff: holiday market, live music, photos with Santa, and the tree lighting at 5 PM in Terry Fox Hometown Square. Free.",
+        link: "https://vancouversbestplaces.com/metro-vancouver/port-coquitlam/winter-in-the-city-christmas-port-coquitlam/port-coquitlam-christmas-square-winter-market/", linkLabel: "Details at vancouversbestplaces.com" },
+      { lat: 49.2854, lng: -122.79071, venue: "Evergreen Cultural Centre, 1205 Pinetree Way, Coquitlam",
+        title: "Coquitlam Christmas Night Market",
+        date: "Sun, Nov 29 (4 PM to 8 PM) · Fri, Dec 11 · Sat, Dec 12",
+        note: "Artisan night market right beside Lights at Lafarge — pair the two in one evening.",
+        link: "https://vancouversbestplaces.com/metro-vancouver/coquitlam/christmas-lights-at-lafarge/coquitlam-christmas-night-market/?utm_medium=paid&utm_source=fb&utm_id=6622348479349&utm_content=6622348513149&utm_term=6622348508149&utm_campaign=6622348479349", linkLabel: "Details at vancouversbestplaces.com" },
+      { lat: 49.2817, lng: -122.8296, venue: "City Hall Galleria, 100 Newport Dr, Port Moody",
+        title: "Port Moody Christmas Craft Fair",
+        date: "Sat, Dec 5",
+        note: "The 11th annual craft fair: 40+ vendors with gifts, gourmet food, candles, jewellery and more. $2 admission.",
+        link: "https://www.todocanada.ca/christmas-markets-craft-fairs-vancouver/", linkLabel: "Listing at to-docanada.ca" },
+      { lat: 49.26251, lng: -122.78101, venue: "Downtown Port Coquitlam (Shaughnessy St)",
+        title: "Parade of Lights",
+        date: "Sat, Dec 5 · 5 PM",
+        note: "Third annual: a procession of city vehicles, community groups and local businesses, all decorated in festive lights, through downtown PoCo.",
+        link: "https://www.portcoquitlam.ca/explore-poco/events/winter-city/parade-lights", linkLabel: "City of Port Coquitlam" },
+      { lat: 49.28333, lng: -122.832, venue: "300 Ioco Rd, Port Moody (behind the Recreation Complex)",
+        title: "CPKC Holiday Train — Port Moody",
+        date: "Sun, Dec 20 · festivities 4 PM to 6 PM, concert 5:15 PM to 5:45 PM",
+        note: "The train rolls in glowing with thousands of lights. Free concert with the Sam Roberts Band and Owen Riegling, plus a bonfire, hot chocolate and chili. Food and cash donations go to SHARE Family & Community Services. Best viewing from Trasolini Field.",
+        link: "https://vancouversbestplaces.com/events-calendar/festivals-and-events/cp-holiday-train-christmas-vancouver/port-moody-holiday-train/", linkLabel: "Port Moody event guide" },
+      { lat: 49.26149, lng: -122.77436, venue: "Port Coquitlam West Coast Express Station, 2125 Kingsway Ave",
+        title: "CPKC Holiday Train — Port Coquitlam",
+        date: "Sun, Dec 20 · 6:45 PM to 7:15 PM",
+        note: "Same performers, second stop of the night — catch Port Moody first, then PoCo. You can do both.",
+        link: "https://vancouversbestplaces.com/events-calendar/festivals-and-events/cp-holiday-train-christmas-vancouver/cpkc-holiday-train-port-coquitlam/", linkLabel: "Port Coquitlam event guide" }
+    ];
+
+    const map = L.map('map', { scrollWheelZoom: false }).setView([49.275, -122.815], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    map.on('focus', () => map.scrollWheelZoom.enable());
+    map.on('blur', () => map.scrollWheelZoom.disable());
+
+    const pin = L.divIcon({ className: '', html: '<div class="light-pin">💡</div>', iconSize: [34, 34], iconAnchor: [17, 17] });
+    const treePin = L.divIcon({ className: '', html: '<div class="tree-pin">🎄</div>', iconSize: [34, 34], iconAnchor: [17, 17] });
+    const allPoints = [];
+
+    // Event pins, grouped by venue so one pin can hold several events
+    const venues = {};
+    CHRISTMAS_EVENTS.forEach(e => {
+      const key = e.lat + ',' + e.lng;
+      if (!venues[key]) venues[key] = { lat: e.lat, lng: e.lng, venue: e.venue, events: [] };
+      venues[key].events.push(e);
+    });
+    Object.values(venues).forEach(v => {
+      let html = '<div class="pop-venue"><b>' + v.venue + '</b></div>';
+      v.events.forEach(e => {
+        html += '<div class="pop-ev"><b>' + e.title + '</b><br><span class="pop-date">' + e.date + '</span><br>' + e.note;
+        if (e.link) html += '<br><a class="pop-link" href="' + e.link + '" target="_blank" rel="noopener">' + e.linkLabel + ' &#8599;</a>';
+        html += '</div>';
+      });
+      L.marker([v.lat, v.lng], { icon: treePin }).addTo(map).bindPopup(html, { maxWidth: 320 });
+      allPoints.push([v.lat, v.lng]);
+    });
+
+    // Event list cards, in date order
+    if (CHRISTMAS_EVENTS.length > 0) {
+      document.getElementById('event-list').hidden = false;
+      const evList = document.getElementById('event-items');
+      CHRISTMAS_EVENTS.forEach(e => {
+        const el = document.createElement('div');
+        el.className = 'spot';
+        let inner = '<div class="dot">👻</div><div><div class="sb">' + e.title + '</div>' +
+          '<div class="sn"><b>' + e.date + '</b> · ' + e.venue + '<br>' + e.note;
+        if (e.link) inner += ' <a href="' + e.link + '" target="_blank" rel="noopener" style="font-weight:600;color:var(--tide)">' + e.linkLabel + ' &#8599;</a>';
+        inner += '</div></div>';
+        el.innerHTML = inner;
+        evList.appendChild(el);
+      });
+    }
+
+    // Brightest-house pins + list
+    const list = document.getElementById('spot-items');
+    if (LIGHT_SIGHTINGS.length === 0 && CHRISTMAS_EVENTS.length === 0) {
+      document.getElementById('empty-note').hidden = false;
+    } else {
+      if (LIGHT_SIGHTINGS.length > 0) document.getElementById('spot-list').hidden = false;
+      LIGHT_SIGHTINGS.forEach(s => {
+        L.marker([s.lat, s.lng], { icon: pin }).addTo(map)
+          .bindPopup('<b>' + s.block + '</b><br>' + s.note);
+        allPoints.push([s.lat, s.lng]);
+        const el = document.createElement('div');
+        el.className = 'spot';
+        el.innerHTML = '<div class="dot">💡</div><div><div class="sb">' + s.block + '</div><div class="sn">' + s.note + '</div></div>';
+        list.appendChild(el);
+      });
+      if (allPoints.length > 0) {
+        const bounds = L.latLngBounds(allPoints);
+        map.fitBounds(bounds.pad(0.25));
+      }
+    }
+  </script>
+  <script>
+  (function(){
+    var EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    async function mapSubscribe(which){
+      var form=document.querySelector('[data-form="'+which+'"]');
+      if(!form)return;
+      var input=form.querySelector('input[type="email"]');
+      var button=form.querySelector('[data-subscribe]');
+      var email=input?input.value.trim():"";
+      var msg=form.parentElement?form.parentElement.querySelector('.form-msg'):null;
+      var original=button?button.innerHTML:"";
+      if(!EMAIL.test(email)){
+        if(msg){msg.textContent="Please enter a valid email address.";}
+        if(input){input.setAttribute("aria-invalid","true");input.focus();}
+        return;
+      }
+      if(input)input.removeAttribute("aria-invalid");
+      if(button){button.disabled=true;button.textContent="Subscribing…";}
+      if(msg){msg.textContent="";}
+      try{
+        var response=await fetch("/api/subscribe",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:email})});
+        var data=await response.json();
+        if(!response.ok||!data.ok)throw new Error(data.message||"Something went wrong. Please try again.");
+        if(msg){msg.textContent=data.message||"You’re on the list — welcome to Port Moody Pulse!";}
+        if(input)input.value="";
+      }catch(error){
+        if(msg){msg.textContent=error.message||"Something went wrong. Please try again.";}
+      }finally{
+        if(button){button.disabled=false;button.innerHTML=original;}
+      }
+    }
+    document.querySelectorAll("[data-subscribe]").forEach(function(b){
+      b.addEventListener("click",function(e){e.preventDefault();mapSubscribe(b.getAttribute("data-subscribe"));});
+    });
+    document.querySelectorAll("[data-form]").forEach(function(f){
+      f.addEventListener("submit",function(e){e.preventDefault();mapSubscribe(f.getAttribute("data-form"));});
+    });
+  })();
+  </script>
+</body>
+</html>
