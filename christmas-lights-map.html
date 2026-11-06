@@ -13,7 +13,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Port Moody Christmas Lights Map &#8212; 2026 | Port&#160;Moody Pulse</title>
-  <meta name="description" content="Port Moody and the Tri-Cities' brightest Christmas light displays and holiday light-ups, on one map — Lafarge Lake, the CPKC Holiday Train, and neighbourhood houses. Spot a glowing house? Tag @portmoodypulse and we'll add it. Block-level pins only." />
+  <meta name="description" content="Port Moody and the Tri-Cities' holiday light-ups, on one map — Lafarge Lake, the CPKC Holiday Train, and every Christmas event in the season." />
   <link rel="canonical" href="https://www.portmoodypulse.ca/christmas-lights-map.html" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -21,12 +21,12 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Port Moody Pulse" />
   <meta property="og:title" content="Port Moody Christmas Lights Map &#8212; 2026" />
-  <meta property="og:description" content="The brightest Christmas light displays in Port Moody and the Tri-Cities, on one map. Tag @portmoodypulse to add a house." />
+  <meta property="og:description" content="The brightest Christmas light displays and holiday light-ups in Port Moody and the Tri-Cities, on one map." />
   <meta property="og:url" content="https://www.portmoodypulse.ca/christmas-lights-map.html" />
   <meta property="og:image" content="https://www.portmoodypulse.ca/apple-touch-icon.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Port Moody Christmas Lights Map &#8212; 2026" />
-  <meta name="twitter:description" content="The brightest Christmas light displays in Port Moody and the Tri-Cities, on one map. Tag @portmoodypulse to add a house." />
+  <meta name="twitter:description" content="The brightest Christmas light displays and holiday light-ups in Port Moody and the Tri-Cities, on one map." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;0,700;800&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
   "@type": "WebPage",
   "name": "Port Moody Christmas Lights Map \u2014 2026",
   "url": "https://www.portmoodypulse.ca/christmas-lights-map.html",
-  "description": "A community map of the brightest Christmas light displays in Port Moody and the Tri-Cities, built from neighbour sightings.",
+  "description": "A community map of the Christmas light displays and holiday light-ups in Port Moody and the Tri-Cities.",
   "publisher": { "@type": "Organization", "name": "Port Moody Pulse", "url": "https://www.portmoodypulse.ca/" }
 }
   </script>
@@ -78,15 +78,10 @@
     .hero-title{font-family:var(--fd);font-size:clamp(32px,4vw,48px);font-weight:600;color:#FBF7EE;line-height:1.1;margin-bottom:16px}
     .hero-sub{font-size:17px;color:rgba(251,247,238,0.72);line-height:1.55}
     .hero-sub a{color:var(--brass-bright);font-weight:600}
-    .how{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
-    .how .step{flex:1;min-width:200px;background:rgba(255,255,255,.06);border:1px solid rgba(224,162,60,.35);border-radius:14px;padding:18px 20px}
-    .how .n{font-family:var(--fd);font-weight:700;font-size:22px;color:var(--brass-bright)}
-    .how .t{font-size:14.5px;color:rgba(251,247,238,.85);margin-top:6px;line-height:1.55}
 
     .map-body{padding:56px 0 72px}
     .map-body .wrap{max-width:980px}
     #map{height:520px;border-radius:18px;border:1px solid var(--line);box-shadow:0 12px 32px rgba(10,53,55,.10);z-index:1}
-    .light-pin{background:var(--paper);border:2px solid var(--brass-bright);border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 3px 10px rgba(10,53,55,.25)}
     .leaflet-popup-content-wrapper{border-radius:12px}
     .leaflet-popup-content{font-family:var(--fb);font-size:14px;line-height:1.5;margin:12px 16px}
     .leaflet-popup-content b{color:var(--inlet)}
@@ -98,15 +93,10 @@
     .event-list{margin-top:34px}
     .event-list h2{font-family:var(--fd);font-size:26px;font-weight:600;color:var(--inlet);margin-bottom:6px}
     .event-list .ev-sub{font-size:14.5px;color:var(--mist);margin-bottom:16px}
-    .empty-note{margin-top:22px;background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:22px 26px;font-size:15.5px;color:var(--ink-2)}
-    .empty-note b{color:var(--inlet)}
-    .spot-list{margin-top:34px}
-    .spot-list h2{font-family:var(--fd);font-size:26px;font-weight:600;color:var(--inlet);margin-bottom:16px}
     .spot{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:14px;display:flex;gap:16px;align-items:flex-start}
     .spot .dot{flex:none;width:34px;height:34px;border-radius:50%;background:var(--paper);border:2px solid var(--brass-bright);display:flex;align-items:center;justify-content:center;font-size:17px}
     .spot .sb{font-weight:700;color:var(--inlet);font-size:16px}
     .spot .sn{font-size:14.5px;color:var(--ink-2)}
-    .privacy{margin-top:28px;font-size:13.5px;color:var(--mist);border-top:1px solid var(--line);padding-top:20px}
 
     /* retired-map newsletter signup (points at the next map) */
     .map-signup-wrap{padding:44px 0 0}
@@ -131,7 +121,6 @@
     @media(max-width:720px){
       .wrap{padding:0 18px}
       #map{height:420px}
-      .how .step{min-width:100%}
     }
   </style>
 </head>
@@ -167,12 +156,7 @@
       <div class="wrap">
         <div class="hero-eyebrow">Christmas 2026</div>
         <h1 class="hero-title">The Christmas Lights Map</h1>
-        <p class="hero-sub">Every December, Port Moody and the Tri-Cities glow. We&#8217;re mapping the brightest displays and the season&#8217;s light-ups &#8212; from 100,000+ lights around Lafarge Lake to the Holiday Train rolling into Port Moody on Dec 20. Tap any pin for the details.</p>
-        <div class="how">
-          <div class="step"><div class="n">1. Spot</div><div class="t">See a house glowing on your evening walk? Snap it.</div></div>
-          <div class="step"><div class="n">2. Tag</div><div class="t">Tag <b>@portmoodypulse</b> in your Story or post, and add the street name in your caption (just the street, never the house number).</div></div>
-          <div class="step"><div class="n">3. We pin it</div><div class="t">We use the street you name to drop a pin on that block, never at an exact address, and we update the map all December as photos come in. The best sightings get reposted to our Stories.</div></div>
-        </div>
+        <p class="hero-sub">Every December, Port Moody and the Tri-Cities glow. We&#8217;re mapping the season&#8217;s light-ups &#8212; from 100,000+ lights around Lafarge Lake to the Holiday Train rolling into Port Moody on Dec 20. Tap any pin for the details.</p>
       </div>
     </section>
 
@@ -180,7 +164,7 @@
       <div class="wrap">
         <section class="map-signup" aria-label="Subscribe to Port Moody Pulse">
           <h2>Never miss a map.</h2>
-          <p>One good email a week, free &#8212; maps, events, and the people of Port Moody. New pins land here all December; subscribers hear about them first.</p>
+          <p>One good email a week, free &#8212; maps, events, and the people of Port Moody. New events land here all December; subscribers hear about them first.</p>
           <form class="signup" data-form="map" novalidate>
             <input type="email" name="email" autocomplete="email" inputmode="email" aria-label="Email address" placeholder="Your email address" required>
             <button type="submit" data-subscribe="map">Join the Pulse <span aria-hidden="true">&#8594;</span></button>
@@ -193,19 +177,11 @@
     <section class="map-body">
       <div class="wrap">
         <div id="map" role="application" aria-label="Map of Christmas light displays in Port Moody and the Tri-Cities"></div>
-        <div class="empty-note" id="empty-note" hidden>
-          <b>The first house pins drop soon.</b> We&#8217;re collecting sightings now &#8212; spot a glowing house? Tag <b>@portmoodypulse</b> on Instagram and it lands here.
-        </div>
         <div class="event-list" id="event-list" hidden>
           <h2>Christmas events and light-ups</h2>
           <p class="ev-sub">Tap a &#127876; pin on the map, or browse the list. Dates checked against the organizers&#8217; own listings on Nov 2, 2026.</p>
           <div id="event-items"></div>
         </div>
-        <div class="spot-list" id="spot-list" hidden>
-          <h2>Brightest houses</h2>
-          <div id="spot-items"></div>
-        </div>
-        <p class="privacy">Pins are block-level only &#8212; we never publish exact home addresses. Spotted a house we missed? Tag @portmoodypulse on Instagram and name the street.</p>
       </div>
     </section>
   </main>
@@ -221,11 +197,6 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    // ── Brightest houses (decorated houses/areas): { lat, lng, block, note } ──
-    // Pins are block-level on purpose. Get coords by searching the block in any map app.
-    const LIGHT_SIGHTINGS = [
-    ];
-
     // ── Christmas events and light-ups: one entry per event. Venues sharing a pin are grouped automatically. ──
     // Every event below was checked against the organizer's own listing on Nov 2, 2026.
     const CHRISTMAS_EVENTS = [
@@ -279,7 +250,6 @@
     map.on('focus', () => map.scrollWheelZoom.enable());
     map.on('blur', () => map.scrollWheelZoom.disable());
 
-    const pin = L.divIcon({ className: '', html: '<div class="light-pin">💡</div>', iconSize: [34, 34], iconAnchor: [17, 17] });
     const treePin = L.divIcon({ className: '', html: '<div class="tree-pin">🎄</div>', iconSize: [34, 34], iconAnchor: [17, 17] });
     const allPoints = [];
 
@@ -308,7 +278,7 @@
       CHRISTMAS_EVENTS.forEach(e => {
         const el = document.createElement('div');
         el.className = 'spot';
-        let inner = '<div class="dot">👻</div><div><div class="sb">' + e.title + '</div>' +
+        let inner = '<div class="dot">🎄</div><div><div class="sb">' + e.title + '</div>' +
           '<div class="sn"><b>' + e.date + '</b> · ' + e.venue + '<br>' + e.note;
         if (e.link) inner += ' <a href="' + e.link + '" target="_blank" rel="noopener" style="font-weight:600;color:var(--tide)">' + e.linkLabel + ' &#8599;</a>';
         inner += '</div></div>';
@@ -317,25 +287,10 @@
       });
     }
 
-    // Brightest-house pins + list
-    const list = document.getElementById('spot-items');
-    if (LIGHT_SIGHTINGS.length === 0 && CHRISTMAS_EVENTS.length === 0) {
-      document.getElementById('empty-note').hidden = false;
-    } else {
-      if (LIGHT_SIGHTINGS.length > 0) document.getElementById('spot-list').hidden = false;
-      LIGHT_SIGHTINGS.forEach(s => {
-        L.marker([s.lat, s.lng], { icon: pin }).addTo(map)
-          .bindPopup('<b>' + s.block + '</b><br>' + s.note);
-        allPoints.push([s.lat, s.lng]);
-        const el = document.createElement('div');
-        el.className = 'spot';
-        el.innerHTML = '<div class="dot">💡</div><div><div class="sb">' + s.block + '</div><div class="sn">' + s.note + '</div></div>';
-        list.appendChild(el);
-      });
-      if (allPoints.length > 0) {
-        const bounds = L.latLngBounds(allPoints);
-        map.fitBounds(bounds.pad(0.25));
-      }
+    // Fit the map to the event pins
+    if (allPoints.length > 0) {
+      const bounds = L.latLngBounds(allPoints);
+      map.fitBounds(bounds.pad(0.25));
     }
   </script>
   <script>
