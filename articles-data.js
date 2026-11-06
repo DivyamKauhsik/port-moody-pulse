@@ -490,6 +490,19 @@ window.PMP_ARTICLES = {
     body: [],
   },
 
+
+  royer: {
+    page: "zoe-royer-mine-is-really-a-love-story",
+    liveDate: "2026-11-06",
+    related: ["varga", "ahyoung"],
+    keywords: ["Zoe Royer", "Port Moody MP", "Port Moody–Coquitlam"],
+    tag: "Community \u00b7 People",
+    title: "Mine Is Really a Love Story: Zoe Royer's Story",
+    desc: "Zoe Royer came to Port Moody in 2004 and never left. The Member of Parliament for Port Moody–Coquitlam looks back on more than 20 years here, in her own words.",
+    meta: "By Divyam Kaushik \u00b7 5 min read",
+    body: [],
+  },
+
   electionresults: {
     page: "election-results-2026",
     keywords: ["election results", "Port Moody election 2026"],
