@@ -498,6 +498,8 @@ function urlEntry(loc, lastmod, changefreq, priority) {
 }
 let sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 sm += urlEntry(`${ORIGIN}/`, TODAY, 'weekly', '1.0');
+sm += urlEntry(`${ORIGIN}/port-moody.html`, TODAY, 'weekly', '0.9');
+sm += urlEntry(`${ORIGIN}/christmas-lights-map.html`, TODAY, 'weekly', '0.8');
 let smCount = 0;
 for (const old of Object.keys(ARTICLES)) {
   if (!isLive(old)) continue;   // embargoed stories stay out of the sitemap until they launch
@@ -515,7 +517,7 @@ sm += urlEntry(`${ORIGIN}/moving-to-port-moody.html`, '2026-09-28', 'monthly', '
 sm += urlEntry(`${ORIGIN}/trick-or-treat-map.html`, '2026-10-21', 'weekly', '0.7');
 sm += `\n\n</urlset>\n`;
 fs.writeFileSync(path.join(SITE, 'sitemap.xml'), sm);
-console.log('sitemap.xml rewritten with', smCount + 11, 'urls');
+console.log('sitemap.xml rewritten with', smCount + 12, 'urls');
 console.log('DONE');
 
 // deploy nudge 2026-10-20: pick up index.html footer link (moving-to-port-moody)
