@@ -503,6 +503,18 @@ window.PMP_ARTICLES = {
     body: [],
   },
 
+  kawa: {
+    page: "she-built-the-boutique-she-couldnt-find",
+    liveDate: "2026-11-13",
+    related: ["royer", "varga"],
+    keywords: ["Ethereal Bridal", "Elena Kawa", "Szymon Kawa", "Port Moody bridal boutique"],
+    tag: "Community \u00b7 People",
+    title: "She Built the Boutique She Couldn't Find: Elena and Szymon Kawa's Story",
+    desc: "Elena and Szymon Kawa opened Ethereal Bridal on Clarke Street after a bad dress-shopping day. Their story, in their words.",
+    meta: "By Divyam Kaushik \u00b7 4 min read",
+    body: [],
+  },
+
   electionresults: {
     page: "election-results-2026",
     keywords: ["election results", "Port Moody election 2026"],
@@ -531,6 +543,7 @@ const PMP_IMG = {
   ahyoung:   { src: "/images/ahyoung-baek.jpg", alt: "Chef Ahyoung Baek of Pasta Polo in Coquitlam", credit: "Courtesy of Ahyoung Baek" },
   juraj:     { src: "/images/juraj-dado.jpg", alt: "Chef Juraj Dado of Saint St Grill in Port Moody", credit: "Courtesy of Juraj Dado" },
   varga:     { src: "/images/michael-varga-masterchef.jpg", alt: "Michael Varga competing on MasterChef Canada", credit: "Michael Varga" },
+  kawa:      { src: "/images/ethereal-bridal-01.jpg", alt: "Elena and Szymon Kawa of Ethereal Bridal on Clarke Street", credit: "Courtesy of Ethereal Bridal" },
   trails:    { src: "/images/burrard-inlet-sailboats.jpg", alt: "Sailboats on Burrard Inlet at Port Moody", credit: "Wikimedia Commons", creditUrl: "https://commons.wikimedia.org/wiki/File:Burrard_Inlet,_Port_Moody,_British_Columbia.jpg" },
   portwood:  { src: "/images/stories/portwood-centre.jpg", alt: "The Portwood presentation centre on St. Johns Street in Port Moody", credit: "Port Moody Pulse" },
   electionresults: { src: "/images/voter-guide-og.png", alt: "Port Moody Pulse voter guide", credit: "Port Moody Pulse" },
