@@ -66,6 +66,7 @@ function metaDesc(text) {
 const KNOWN_DATES = {
   ahyoung: '2026-10-02',
   juraj: '2026-10-09',
+  kawa: '2026-11-13',
   ming: '2026-07-19', cobbler: '2026-07-19', dogparks: '2026-07-19',
   water: '2026-07-19', provincial: '2026-07-19', inlet: '2026-06-30',
   towers: '2026-06-30', tax: '2026-06-30', spike: '2026-06-30',
