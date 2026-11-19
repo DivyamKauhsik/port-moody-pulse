@@ -179,7 +179,7 @@
         <div id="map" role="application" aria-label="Map of Christmas light displays in Port Moody and the Tri-Cities"></div>
         <div class="event-list" id="event-list" hidden>
           <h2>Christmas events and light-ups</h2>
-          <p class="ev-sub">Tap a &#127876; pin on the map, or browse the list. Dates checked against the organizers&#8217; own listings on Nov 2, 2026.</p>
+          <p class="ev-sub">Tap a &#127876; pin on the map, or browse the list. New events added Nov 18, 2026; original listings checked Nov 2, 2026.</p>
           <div id="event-items"></div>
         </div>
       </div>
@@ -198,8 +198,18 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
     // ── Christmas events and light-ups: one entry per event. Venues sharing a pin are grouped automatically. ──
-    // Every event below was checked against the organizer's own listing on Nov 2, 2026.
+    // New events added Nov 18, 2026; original listings checked Nov 2, 2026.
     const CHRISTMAS_EVENTS = [
+      { lat: 49.279, lng: -122.84371, venue: "Site B, 3012 Murray St, Port Moody",
+        title: "Port Moody Christmas Market",
+        date: "Sat, Nov 21 · 10 AM to 4 PM",
+        note: "Where's The Pop-Up brings 40+ local vendors to Site B: handmade gifts, baked treats, live flash tattoos, tarot readings and live portraits. Free photos with Santa 11 AM to 3 PM; the first 20 customers get $10 market cash. Pet-friendly. Free.",
+        link: "https://www.instagram.com/p/DfsS_kVvoUS/", linkLabel: "Details on Instagram" },
+      { lat: 49.26727, lng: -122.89124, venue: "Oakdale, 550 Thompson Ave, Coquitlam",
+        title: "Oakdale Christmas Market",
+        date: "Sat, Nov 22 · 11 AM to 4 PM",
+        note: "A charity Christmas market with 60+ artisan vendors, free photos with Santa and Mrs. Claus 11:30 AM to 2 PM, free Grinch photos, face painting and balloon art, plus food trucks and a cookie-decorating station. Run by a registered charity supporting neurodivergent children. Free.",
+        link: "https://facebook.com/events/s/oakdale-christmas-craft-fair/1551860499266724/", linkLabel: "Facebook event" },
       { lat: 49.28707, lng: -122.79051, venue: "Lafarge Lake, Town Centre Park, 1299 Pinetree Way, Coquitlam",
         title: "Lights at Lafarge",
         date: "Opens Fri, Nov 27 · opening night 5 PM to 8 PM",
@@ -210,10 +220,20 @@
         date: "Sat, Nov 28",
         note: "The City's holiday kickoff at the pier: twinkling lights, carolers and festive games.",
         link: "https://www.portmoody.ca/arts-culture-and-heritage/events/events-at-a-glance/", linkLabel: "City events calendar" },
+      { lat: 49.26402, lng: -122.821, venue: "Dr. Charles Best Secondary, 2525 Como Lake Ave, Coquitlam",
+        title: "Dr. Charles Best Secondary Winter Market",
+        date: "Sat, Nov 28 · 11 AM to 4 PM",
+        note: "Over 100 local vendors at the school's winter market — shop local, with handmade goods from community makers. Entrance by donation.",
+        link: "https://facebook.com/groups/109506619662213/permalink/2197450570867797/", linkLabel: "Details in the Port Moody Community Group" },
+      { lat: 49.26175, lng: -122.781, venue: "Port Coquitlam Community Centre, 2150 Wilson Ave, Port Coquitlam",
+        title: "Christmas Market — Winter in the City",
+        date: "Sat, Nov 28 & Sun, Nov 29 · 10 AM to 6 PM",
+        note: "Downtown Port Coquitlam's Winter in the City weekend: a Christmas market with live entertainment, photos with Santa and kids' activities. Free.",
+        link: "https://www.portcoquitlam.ca/our-government/media-centre/winter-city-kicks-christmas-season-downtown-port-coquitlam-nov-28-and", linkLabel: "City of Port Coquitlam" },
       { lat: 49.26175, lng: -122.781, venue: "Leigh Square / Port Coquitlam Community Centre, 2150 Wilson Ave, Port Coquitlam",
         title: "Christmas in the Square",
-        date: "Sat, Nov 28 · 10 AM to 6 PM",
-        note: "Port Coquitlam's Winter in the City kickoff: holiday market, live music, photos with Santa, and the tree lighting at 5 PM in Terry Fox Hometown Square. Free.",
+        date: "Sat, Nov 28 · 4 PM to 7 PM",
+        note: "Port Coquitlam's Winter in the City kickoff: live music, photos with Santa, and the tree lighting at 5:15 PM in Terry Fox Hometown Square. Free.",
         link: "https://vancouversbestplaces.com/metro-vancouver/port-coquitlam/winter-in-the-city-christmas-port-coquitlam/port-coquitlam-christmas-square-winter-market/", linkLabel: "Details at vancouversbestplaces.com" },
       { lat: 49.2854, lng: -122.79071, venue: "Evergreen Cultural Centre, 1205 Pinetree Way, Coquitlam",
         title: "Coquitlam Christmas Night Market",
