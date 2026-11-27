@@ -527,6 +527,18 @@ window.PMP_ARTICLES = {
     body: [],
   },
 
+  kyla: {
+    page: "she-found-port-moody-by-accident-in-1996",
+    liveDate: "2026-11-27",
+    related: ["royer", "wei"],
+    keywords: ["Kyla Knowles", "Port Moody council", "Port Moody"],
+    tag: "Community \u00b7 People",
+    title: "She Found Port Moody by Accident in 1996 and Never Left: Kyla Knowles's Story",
+    desc: "Kyla Knowles found Port Moody by accident in 1996 and never left. Her story starts in Kitimat.",
+    meta: "By Divyam Kaushik \u00b7 6 min read",
+    body: [],
+  },
+
   electionresults: {
     page: "election-results-2026",
     keywords: ["election results", "Port Moody election 2026"],
@@ -556,6 +568,7 @@ const PMP_IMG = {
   juraj:     { src: "/images/juraj-dado.jpg", alt: "Chef Juraj Dado of Saint St Grill in Port Moody", credit: "Courtesy of Juraj Dado" },
   varga:     { src: "/images/michael-varga-masterchef.jpg", alt: "Michael Varga competing on MasterChef Canada", credit: "Michael Varga" },
   kawa:      { src: "/images/ethereal-bridal-01.jpg", alt: "Elena and Szymon Kawa of Ethereal Bridal on Clarke Street", credit: "Courtesy of Ethereal Bridal" },
+  kyla:      { src: "/images/kyla-knowles.jpg", alt: "Kyla Knowles", credit: "Kyla Knowles" },
   wei:       { src: "/images/wei-chou.jpg", alt: "Wei Chou at a BC Greens tent during the campaign", credit: "Wei Chou" },
   trails:    { src: "/images/burrard-inlet-sailboats.jpg", alt: "Sailboats on Burrard Inlet at Port Moody", credit: "Wikimedia Commons", creditUrl: "https://commons.wikimedia.org/wiki/File:Burrard_Inlet,_Port_Moody,_British_Columbia.jpg" },
   portwood:  { src: "/images/stories/portwood-centre.jpg", alt: "The Portwood presentation centre on St. Johns Street in Port Moody", credit: "Port Moody Pulse" },
